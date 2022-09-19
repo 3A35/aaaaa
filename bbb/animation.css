@@ -1,0 +1,72 @@
+#waiceng{
+    width: 500px;
+    height: 375px;
+    position: absolute;
+    border-radius: 5px;
+    overflow: hidden;  //使div框中只能顯示一張圖片，其餘的將被隱藏。
+}
+
+#photos img{
+    width: 500px;
+    height: 375px;
+    float: left;     //使圖片向左浮動，又由於是定位是absolute,所以就浮到上一行去了;
+}
+
+#photos{
+    position: absolute;
+    width: calc(500px * 6);  //使盒子能夠容納圖片的寬度，以至於不被撐破。
+}
+
+
+.play{
+    animation: leftMove 10s ease-out infinite; /*無限迴圈這個過程*/
+}
+
+@keyframes leftMove{
+    0%{margin-left: 0px;}
+    20%{margin-left: -500px;}
+    40%{margin-left: -1000px;}
+    60%{margin-left: -1500px;}
+    80%{margin-left: -2000px;}
+    100%{margin-left: -2500px;}
+}
+
+.num{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 345px;
+    background-color: green;
+    cursor: pointer;  //滑鼠覆蓋上按鈕成手的樣子
+    z-index: 1;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+}
+
+.num:hover,#photos:hover{
+    animation-play-state: paused; //當滑鼠覆蓋在按鈕上或滑鼠覆蓋在
+   
+}
+
+.num:hover{
+    background-color: blue; //滑鼠覆蓋上去按鈕會換成藍色。
+}
+
+
+.num:nth-child(4){margin-right: 30px;}
+.num:nth-child(3){margin-right: 60px;}
+.num:nth-child(2){margin-right: 90px;}
+.num:nth-child(1){margin-right: 120px;}//將按鈕設定間隔，使其都可以呈現
+/*將數字與圖片資訊進行繫結*/
+#a1:hover ~ #photos{animation: move1 .5s ease-out forwards;}
+#a2:hover ~ #photos{animation: move2 .5s ease-out forwards;}
+#a3:hover ~ #photos{animation: move3 .5s ease-out forwards;}
+#a4:hover ~ #photos{animation: move4 .5s ease-out forwards;}
+#a5:hover ~ #photos{animation: move5 .5s ease-out forwards;}
+@keyframes move1{100%{margin-left: 0px;}}
+@keyframes move2{100%{margin-left: -500px;}}
+@keyframes move3{100%{margin-left: -1000px;}}
+@keyframes move4{100%{margin-left: -1500px;}}
+@keyframes move5{100%{margin-left: -2000px;}}
