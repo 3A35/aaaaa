@@ -19,7 +19,7 @@
 
 
 .play{
-    animation: leftMove  10s  ease-out infinite; /*無限迴圈這個過程*/
+    animation: leftMove  8s  ease-out infinite; /*無限迴圈這個過程*/
 }
 
 @keyframes leftMove{
