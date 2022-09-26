@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+<title> canvas </title>
+
+<script type="text/javascript">
+
+
+var ccc=1;
+var bbb=9;
+function get_num(num){
+ if (num==1000) { fff=10;}
+ if (num==1001) { fff=20;}
+var  ddd=fff+ccc
+
+document.getElementById("img").src=ddd+".jpg";
+if (num==1) { ccc++;}
+if (num==2) { ccc--;}
+if (ccc==0) { ccc=5;}
+if (ccc==6) { ccc=1;}
+else  {};
+}
+</script>
+</head>
+<body>
+<div style="font-size:150px">阿琪的家</div>
+<img id="img" src="miki.jpg" width="800" height="600" align="right">
+<div style="font-size:200px">
+<button onclick="get_num(1000)"><div style="font-size:80px">8-23 遊樂場</div></button>
+<button onclick="get_num(1001)"><div style="font-size:80px">***玩雪***</div></button>
+<button onclick="get_num(2)"><div style="font-size:100px">上一頁</div></button>
+<button  onclick="get_num(1)"><div style="font-size:100px">下一頁</div> </button>
+
+
+</div>
+
+</body>
+</html>
