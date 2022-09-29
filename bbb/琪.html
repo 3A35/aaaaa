@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <head>
-<title> canvas </title>
+<title>麻糬&MIKI 的日記</title>
 
 <script type="text/javascript">
-
-
 var ccc=1;
 var bbb=9;
 function get_num(num){
+if (num==3) { window.location.reload();}
+ document.getElementById("se").style.display="none" ;
+
+ document.getElementById("bu").style.display="block" ;
+
+
+
  if (num==1000) { fff=10;}
  if (num==1001) { fff=20;}
  if (num==1002) { fff=30;}
 var  ddd=fff+ccc
 
-document.getElementById("img").src=ddd+".jpg";
+document.getElementById("im").style.display="block" ;
+
+document.getElementById("im").src=ddd+".jpg"; 
+
+        
 if (num==1) { ccc++;}
 if (num==2) { ccc--;}
 if (ccc==0) { ccc=5;}
 if (ccc==6) { ccc=1;}
-else  {};
+
 }
 </script>
 </head>
 <body>
-<div style="font-size:70px;color:red;">麻糬&MIKI</div>
-<img id="img" src="miki.jpg" width="1000" height="1200" align="right">
-<div style="font-size:100px">
-<button onclick="get_num(1000)"><div style="font-size:70px">8-23 遊樂場</div></button>
-<button onclick="get_num(1001)"><div style="font-size:70px">8-25 玩雪</div></button>
-<button onclick="get_num(1002)"><div style="font-size:70px">麻糬洗澡</div></button>
-<button onclick="get_num(2)"><div style="font-size:90px">上一頁</div></button>
-<button  onclick="get_num(1)"><div style="font-size:90px">下一頁</div> </button>
+<div style="font-size:160px;color:red;">麻糬&MIKI 的日記</div>
 
 
+  <img  id="im" src="miki.jpg" width="1200" height="1400" style="display:none" align="left">
+  
+
+<div  id="se" style="font-size:200px">
+<button onclick="get_num(1000)"><div style="font-size:120px">8-23 遊樂場</div></button>
+<button onclick="get_num(1001)"><div style="font-size:120px">8-25 玩雪</div></button>
+<button onclick="get_num(1002)"><div style="font-size:120px">9-10 麻糬洗澡</div></button>
 </div>
+
+<div  id="bu" style="display:none;">
+<button onclick="get_num(2)"><div style="font-size:150px">上一張</div></button>
+<button  onclick="get_num(1)"><div style="font-size:150px">下一張</div> </button>
+<button  onclick="get_num(3)"><div style="font-size:120px">回 主 畫 面 </div> </button>
+</div>
+
+
 
 </body>
 </html>
