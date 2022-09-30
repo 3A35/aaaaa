@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <head>
 <title>麻糬&MIKI 的日記</title>
+<style type="text/css">
+
+.video-back{
+position:fixed;
+top:0;
+left:0;
+min-width:100%;
+min-height:100%;
+}
+
+.butt{
+position:absolute;
+top:10%
+left:10%
+
+
+}
+</style>
+
+</head>
 
 <script type="text/javascript">
 
@@ -9,6 +29,7 @@ var bbb=9;
 
 function back(){
 
+document.getElementById("vi").style.display="block" ;
 document.getElementById("bu").style.display="none";
 document.getElementById("im").style.display="none";
 document.getElementById("se").style.display="block";
@@ -19,7 +40,7 @@ document.getElementById("ba").style.display="none";
  function get(){
  document.getElementById("se").style.display="block" ;
  document.getElementById("in").style.display="none" ;
- 
+ document.getElementById("vi").style.display="block" ;
     var mp = "1.mp3";
         var mp = new Audio(mp);     
      mp.play();
@@ -28,6 +49,7 @@ document.getElementById("ba").style.display="none";
 
 
  function get_num(num){
+ document.getElementById("vi").style.display="none" ;
 
  document.getElementById("se").style.display="none" ;
 
@@ -53,11 +75,18 @@ if (ccc==6) { ccc=1;}
 </script>
 </head>
 <body>
+
+<div  id="vi" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="a.mp4">
+</video>
+</div>
+
 <div style="font-size:160px;color:red;"></div>
 
 <img  id="im" src="miki.jpg" width="1200" height="1400" style="display:none" align="left">
   
-<div  id="se" style="font-size:100px;display:none;">
+<div class="butt"  id="se" style="font-size:100px;display:none;">
 <button onclick="get_num(1000)"><div style="font-size:80px;color:red;">8-23 遊樂場</div></button>
 <button onclick="get_num(1001)"><div style="font-size:80px;color:blue;">8-25 玩雪</div></button>
 <button onclick="get_num(1002)"><div style="font-size:80px;color:green;">9-10 麻糬洗澡</div></button>
@@ -73,19 +102,13 @@ if (ccc==6) { ccc=1;}
 <input type="image" src="miki.jpg" width="1000" height="1200"  onClick="get()">
 </div>
 
-
-
-
-
-
-
-
-
-
-
 <div  id="ba" style="display:none;">
 <button  onclick="back()"><div style="font-size:150px;color:green;">回 主 畫 面</div> </button>
 </div>
+
+
+
+
 
 <audio id="myaudio"1.mp3" controls="controls" hidden="true"></audio>
 
