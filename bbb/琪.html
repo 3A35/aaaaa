@@ -14,9 +14,9 @@ min-height:100%;
 
 .butt{
 position: fixed;
-  top: 100px;
-  left: 10px;
-  width: 800px;
+  top: 150px;
+  right: 10px;
+  width: 350px;
   line-height: 50px;
 }
 
@@ -52,16 +52,30 @@ document.getElementById("ba").style.display="none";
  document.getElementById("vi").style.display="block" ;
  document.getElementById("se").style.display="block" ;
  document.getElementById("in").style.display="none" ;
+ document.getElementById("imgId").style.display="block" ;
+
 
   m1=document.getElementById("m1");
   b1=document.getElementById("b1");
   s1=document.getElementById("s1");
   d1=document.getElementById("d1");
   m1.play();
+ setInterval(step, 1500);
+
+ var um = 1;
+ function step() {
+ if (um < 12) {
+  um++;
+ } else {
+  um = 1;
+ }
+ document.getElementById("imgId").src='1 ('+ um + ').jpg';
 }
 
-
+ }
  function get_num(num){
+ document.getElementById("imgId").style.display="none" ;
+
  document.getElementById("vi").style.display="none" ;
 
  document.getElementById("vi1").style.display="none" ;
@@ -71,6 +85,11 @@ document.getElementById("ba").style.display="none";
  document.getElementById("bu").style.display="block" ;
 
  document.getElementById("ba").style.display="block";
+
+document.getElementById("do").style.display="block";
+
+
+
  m1.pause();
  b1.pause();
  if (num==1000) { 
@@ -119,28 +138,28 @@ if (ccc==6) { ccc=1;}
 <div style="font-size:160px;color:red;"></div>
 
 <img  id="im" src="miki.jpg" width="1200" height="1400" style="display:none" align="left">
-  
+<img src="1 (1).jpg" width="800" height="1000" left:100px id="imgId" style="position:fixed;top:500px;display:none"/>  
 
 <div class="butt"  id="se" style="display:none;">
 <div>  
-<button onclick="get_num(1000)"><div  style="font-size:100px;color:blue;background-color:yellow;"   >8-23 遊  樂  場  </button>
+<button onclick="get_num(1000)"><div  style="font-size:80px;color:blue;background-color:yellow;"   >8-23 遊  樂  場  </button>
 </div>
 <div>
-<button onclick="get_num(1001)"><div style="font-size:100px;color:red;background-color:blue;"   >8-25  玩       雪   </div></button>
+<button onclick="get_num(1001)"><div style="font-size:80px;color:red;background-color:blue;"   >8-25  玩       雪   </div></button>
 </div>
 <div>
-<button onclick="get_num(1002)"><div style="font-size:100px;color:Purple;background-color:yellow;" >9-10 麻糬洗澡 </div></button>
+<button onclick="get_num(1002)"><div style="font-size:80px;color:Purple;background-color:yellow;" >9-10 麻糬洗澡 </div></button>
 </div>
 <div>
-<button onclick="get_num(1003)"><div style="font-size:100px;color:white;background-color:red;" >3-5  逛  夜   市  </div></button>
+<button onclick="get_num(1003)"><div style="font-size:80px;color:white;background-color:red;" >3-5  逛  夜   市  </div></button>
 </div>
 </div>
 
 
 
 <div  id="bu" style="display:none;">
-<button onclick="get_num(2)"><div style="font-size:150px;color:red;background-color:blue;">上一張</div></button>
-<button  onclick="get_num(1)"><div style="font-size:150px;color:white;background-color:red;">下一張</div> </button>
+<button onclick="get_num(2)"><div style="font-size:160px;color:red;background-color:blue;">上一張</div></button>
+<button  onclick="get_num(1)"><div style="font-size:160px;color:white;background-color:red;">下一張</div> </button>
 </div>
 
 <div id="in"  >
@@ -148,7 +167,7 @@ if (ccc==6) { ccc=1;}
 </div>
 
 <div  id="ba" style="display:none;">
-<button  onclick="back()"><div style="font-size:130px;color:green;background-color:yellow;">回 主 畫 面</div> </button>
+<button  onclick="back()"><div style="font-size:140px;color:green;background-color:yellow;">回 主 畫 面</div> </button>
 </div>
 
 
