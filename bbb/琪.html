@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title>麻糬&MIKI 的日記</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <style type="text/css">
 
 .video-back{
@@ -16,7 +17,7 @@ position:absolute;
     line-width: 250px;
    line-height: 40px;
     font-size: 20px;
- line-height: 130px;
+ line-height: 250px;
  margin: auto;
 }
 
@@ -37,7 +38,7 @@ function back(){
  b1.play();
 
 
-document.getElementById("vi").style.display="block" ;
+document.getElementById("vi1").style.display="block" ;
 document.getElementById("bu").style.display="none";
 document.getElementById("im").style.display="none";
 document.getElementById("se").style.display="block";
@@ -46,8 +47,8 @@ document.getElementById("ba").style.display="none";
 }
 
  function get(){
- document.getElementById("se").style.display="block" ;
  document.getElementById("in").style.display="none" ;
+ document.getElementById("se").style.display="block" ;
  document.getElementById("vi").style.display="block" ;
   m1=document.getElementById("m1");
   b1=document.getElementById("b1");
@@ -59,6 +60,8 @@ document.getElementById("ba").style.display="none";
 
  function get_num(num){
  document.getElementById("vi").style.display="none" ;
+
+ document.getElementById("vi1").style.display="none" ;
 
  document.getElementById("se").style.display="none" ;
 
@@ -104,6 +107,12 @@ if (ccc==6) { ccc=1;}
 </video>
 </div>
 
+<div  id="vi1" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="b.mp4">
+</video>
+</div>
+
 <div style="font-size:160px;color:red;"></div>
 
 <img  id="im" src="miki.jpg" width="1200" height="1400" style="display:none" align="left">
@@ -128,8 +137,8 @@ if (ccc==6) { ccc=1;}
 
 
 <div  id="bu" style="display:none;">
-<button onclick="get_num(2)"><div style="font-size:150px;color:red;">上一張</div></button>
-<button  onclick="get_num(1)"><div style="font-size:150px;color:red;">下一張</div> </button>
+<button onclick="get_num(2)"><div style="font-size:110px;color:red;">上一張</div></button>
+<button  onclick="get_num(1)"><div style="font-size:110px;color:red;">下一張</div> </button>
 </div>
 
 <div id="in"  >
@@ -137,13 +146,13 @@ if (ccc==6) { ccc=1;}
 </div>
 
 <div  id="ba" style="display:none;">
-<button  onclick="back()"><div style="font-size:150px;color:green;">回 主 畫 面</div> </button>
+<button  onclick="back()"><div style="font-size:100px;color:green;">回 主 畫 面</div> </button>
 </div>
 
 
 <audio id="m1" src="m1.mp3" loop controls="controls" hidden="true"></audio>
 <audio id="s1" src="s1.mp3" loop controls="controls" hidden="true"></audio>
-<audio id="d1" src="d1.m4a" loop controls="controls" hidden="true"></audio>
+<audio id="d1" src="d1.mp3" loop controls="controls" hidden="true"></audio>
 <audio id="b1" src="b1.mp3" loop controls="controls" hidden="true"></audio>
 
 </body>
