@@ -14,9 +14,9 @@ min-height:100%;
 
 .butt{
 position: fixed;
-  top: 150px;
+  top: 50px;
   right: 10px;
-  width: 350px;
+  width: 400px;
   line-height: 50px;
 }
 
@@ -39,7 +39,7 @@ function back(){
  d1.pause(); 
  b1.play();
 
-
+document.getElementById("imgId").style.display="block" ;
 document.getElementById("vi1").style.display="block" ;
 document.getElementById("bu").style.display="none";
 document.getElementById("im").style.display="none";
@@ -64,7 +64,7 @@ document.getElementById("ba").style.display="none";
 
  var um = 1;
  function step() {
- if (um < 12) {
+ if (um < 40) {
   um++;
  } else {
   um = 1;
@@ -86,7 +86,6 @@ document.getElementById("ba").style.display="none";
 
  document.getElementById("ba").style.display="block";
 
-document.getElementById("do").style.display="block";
 
 
 
@@ -137,21 +136,21 @@ if (ccc==6) { ccc=1;}
 
 <div style="font-size:160px;color:red;"></div>
 
-<img  id="im" src="miki.jpg" width="1200" height="1400" style="display:none" align="left">
-<img src="1 (1).jpg" width="800" height="1000" left:100px id="imgId" style="position:fixed;top:500px;display:none"/>  
+<img  id="im" src="miki.jpg" width="1200" height="1400" style="display:none"  align="left">
+<img src="1 (1).jpg" width="700" height="900" align="left" id="imgId" style="position:fixed;top:500px;display:none"/>  
 
 <div class="butt"  id="se" style="display:none;">
 <div>  
-<button onclick="get_num(1000)"><div  style="font-size:80px;color:blue;background-color:yellow;"   >8-23 遊  樂  場  </button>
+<button onclick="get_num(1000)"><div  style="font-size:50px;color:blue;background-color:yellow;"   >8-23 遊  樂  場  </button>
 </div>
 <div>
-<button onclick="get_num(1001)"><div style="font-size:80px;color:red;background-color:blue;"   >8-25  玩       雪   </div></button>
+<button onclick="get_num(1001)"><div style="font-size:50px;color:red;background-color:blue;"   >8-25  玩       雪   </div></button>
 </div>
 <div>
-<button onclick="get_num(1002)"><div style="font-size:80px;color:Purple;background-color:yellow;" >9-10 麻糬洗澡 </div></button>
+<button onclick="get_num(1002)"><div style="font-size:50px;color:Purple;background-color:yellow;" >9-10 麻糬洗澡 </div></button>
 </div>
 <div>
-<button onclick="get_num(1003)"><div style="font-size:80px;color:white;background-color:red;" >3-5  逛  夜   市  </div></button>
+<button onclick="get_num(1003)"><div style="font-size:50px;color:white;background-color:red;" >3-5  逛  夜   市  </div></button>
 </div>
 </div>
 
