@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>背景切换</title>
+
+<script type="text/javascript">
+function hhh() {
+ setInterval(step, 1000);
+ }
+ var num = 1;
+ function step() {
+ if (num < 12) {
+  num++;
+ } else {
+  num = 1;
+ }
+ document.getElementById("imgId").src='1 ('+ num + ').jpg';
+}
+</script>
+</head>
+
+<body>
+<img src="1 (1).jpg" width="500" height="500" id="imgId" style="position:absolute;top:300px;left:100px;"/>
+<button  onclick="hhh( )"><div style="font-size:150px;color:red;">播放</div> </button>
+</body>
+</html>
