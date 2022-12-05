@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
-<H1>每月利息3分  循環利息的計算</H1> 
+
+<div  style="font-size:120px" >每月利息3分  循環利息的計算</div>
 <title> </title>
 <meta charset="utf-8">
 <script type="text/javascript">
@@ -10,14 +11,15 @@ let inp = document.getElementById("period").value;
 
 let ina = document.getElementById("amount").value; 
  let inad=ina;
+ let inpp=inp;
  inp++ ;
 for(i=1;i<inp;i++){
 ina=ina*1.03;
   }
 
-var inaa=inad+"元借"+inp+"個月 本金+循環利息 需還 "+Math.round(ina)+" 元"
+var inaa=inad+"元借"+inpp+"個月 本金+循環利息需還 "+Math.round(ina)+" 元"
 
-document.write("<span style='font-size:36px'>"+inaa+"</span>" );
+document.write("<span style='font-size:90px'>"+inaa+"</span>" );
 
 }
 
@@ -28,18 +30,17 @@ document.write("<span style='font-size:36px'>"+inaa+"</span>" );
 </style>
 </head>
 <body>
+<div  style="font-size:100px" >請輸入要借的金額</div>
 
-<H1>請輸入要借的金額</H1>
+<input type="text" style="font-size:80px"  maxlength="8"  id="amount" />
 
-<input type="text" style="font-size:50px"  maxlength="8"  id="amount" />
+<div  style="font-size:100px" >請輸入  要借幾個月</div>
+<H1></H1>
 
-
-<H1>請輸入  要借幾個月</H1>
-
-<input type="text"  style="font-size:50px" maxlength="3"  id="period" />
+<input type="text"  style="font-size:80px" maxlength="3"  id="period" />
 <BR>
 <BR>
-  <button type="button" style="font-size:40px" onclick="get()">開始查詢</button> 
+  <button type="button" style="font-size:90px" onclick="get()">開始查詢</button> 
 
 
 </body>
