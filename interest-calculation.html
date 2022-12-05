@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+<H1>循環利計算</H1> 
+<title> </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+function get()
+{
+let inp = document.getElementById("period").value; 
+
+let ina = document.getElementById("amount").value; 
+
+ inp++ ;
+for(i=1;i<inp;i++){
+ina=ina*1.03;
+  }
+document.write("本金加循環利共 "+Math.round(ina)+" 元");
+
+}
+
+</script>
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<H3>請輸入借款期數  單位月</H3>
+
+<input type="text" maxlength="3"  id="period" />
+
+  <button type="button"  onclick="get()"> 開始查詢 </button> 
+
+<H3>請輸入借款金額</H3>
+
+<input type="text" maxlength="8"  id="amount" />
+
+
+</body>
+</html>
