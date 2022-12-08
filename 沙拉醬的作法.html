@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+
+<div  style="font-size:110px" >沙拉醬的作法</div>
+<title> </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+function get()
+{
+let eg = document.getElementById("egg").value; 
+
+   let  lemon5juice=eg/3.3333  ;
+
+   let  caster5sugar=eg  ;
+
+
+ 
+   let   salad5oil=eg*6.4  ;
+
+
+
+var  recipe1="全蛋"+eg+"克 "+"  檸檬汁"+Math.round(lemon5juice)+"克" ;
+var  recipe2="沙拉油"+Math.round(salad5oil)+"克  "+"  砂糖"+eg+"克" ;
+
+document.write("<span style='font-size:70px'>"+"食材比例為"+"</span><br>" );
+
+document.write("<span style='font-size:60px'>"+recipe1+"</span><br>" );
+document.write("<span style='font-size:60px'>"+recipe2+"</span>" );
+
+}
+
+</script>
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div  style="font-size:90px" >請輸入全蛋的重量</div>
+
+<input type="text" style="font-size:70px"  maxlength="3"  id="egg" />
+
+
+<button type="button" style="font-size:80px" onclick="get()">食材比例查詢</button> 
+
+</body>
+</html>
