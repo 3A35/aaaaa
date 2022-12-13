@@ -15,6 +15,12 @@ document.getElementById("ba").style.display="none";
 
 }
 
+function get(){
+ document.getElementById("in").style.display="none";
+ document.getElementById("se").style.display="block";
+ }
+
+
  function get_num(num){
 
  document.getElementById("se").style.display="none" ;
@@ -72,7 +78,7 @@ position: fixed;
 <img  id="im" src="miki.jpg"  width="1200" height="1400" style="display:none"  align="left">
 
 
-<div class="butt"  id="se" style="display:block;">
+<div class="butt"  id="se" style="display:none;">
 
 <div>  
 <button onclick="get_num(-1)"><div  style="font-size:90px;color:blue;background-color:yellow;"   >1. 模組</button>
@@ -97,6 +103,12 @@ position: fixed;
 <button onclick="get_num(2)"><div style="font-size:160px;color:red;background-color:blue;">上一張</div></button>
 <button  onclick="get_num(1)"><div style="font-size:160px;color:white;background-color:red;">下一張</div> </button>
 </div>
+
+
+<div id="in"  >
+<input type="image" src="6P.jpg" width="1000" height="1200"  onClick="get()">
+</div>
+
 
 
 <div  id="ba" style="display:none;">
