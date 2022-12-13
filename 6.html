@@ -1,0 +1,109 @@
+<html style="touch-action: none;">
+<head>
+<title>  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+var ccc=1;
+var bbb=9;
+
+function back(){
+
+document.getElementById("bu").style.display="none";
+document.getElementById("im").style.display="none";
+document.getElementById("se").style.display="block";
+document.getElementById("ba").style.display="none";
+
+}
+
+ function get_num(num){
+
+ document.getElementById("se").style.display="none" ;
+
+ document.getElementById("bu").style.display="block" ;
+
+ document.getElementById("ba").style.display="block";
+
+ if (num==-1) { 
+ fff=1;
+}
+ if (num==-2) { 
+ fff=2;
+}
+ if (num==-3) { 
+ fff=3;
+ }
+ if (num==-4) { 
+ fff=4;
+}
+
+
+document.getElementById("im").style.display="block" ;
+
+document.getElementById("im").src=fff+' ('+ ccc + ').jpg';
+              
+if (num==1) { ccc++;}
+if (num==2) { ccc--;}
+if (ccc==0) { ccc=3;}
+if (ccc==4) { ccc=1;}
+}
+</script>
+<style type="text/css">
+ 
+<!--   .butt{
+position: fixed;
+  top: 20px;
+  right: 0px;
+  left: 0px;
+  width: 1200px;
+  line-height: 20px;
+-->
+}
+
+</style>
+</head>
+<body>
+
+<div   style="display:none">
+<div style="font-size:20px;color:blue;">六捷電子材料行</div>
+<div style="font-size:20px">電話:02-2678-6565  行動 0985-842-121</div>
+<div style="font-size:20px;color:green;">住址:鶯歌文化路517號(耶穌教會對面)</div>
+</div>
+
+<img  id="im" src="miki.jpg"  width="1200" height="1400" style="display:none"  align="left">
+
+
+<div class="butt"  id="se" style="display:block;">
+
+<div>  
+<button onclick="get_num(-1)"><div  style="font-size:90px;color:blue;background-color:yellow;"   >1. 模組</button>
+</div>
+<br>  <br>
+<div>
+<button onclick="get_num(-2)"><div style="font-size:90px;color:red;background-color:blue;"   >2. AV線材</div></button>
+</div>
+<br>  <br>
+<div>
+<button onclick="get_num(-3)"><div style="font-size:90px;color:Purple;background-color:yellow;" >3. 開關</div></button>
+</div>
+<br>  <br>
+<div>
+<button onclick="get_num(-4)"><div style="font-size:90px;color:white;background-color:red;" >4. 冰箱零件</div></button>
+</div>
+
+</div>
+
+
+<div  id="bu" style="display:none;">
+<button onclick="get_num(2)"><div style="font-size:160px;color:red;background-color:blue;">上一張</div></button>
+<button  onclick="get_num(1)"><div style="font-size:160px;color:white;background-color:red;">下一張</div> </button>
+</div>
+
+
+<div  id="ba" style="display:none;">
+<button  onclick="back()"><div style="font-size:140px;color:green;background-color:yellow;">回 主 畫 面</div> </button>
+</div>
+
+</div>
+
+</body>
+</html>
