@@ -1,4 +1,4 @@
-<html style="touch-action: none;">
+<!DOCTYPE html>
 <head>
 <title>  </title>
 <meta charset="utf-8">
@@ -89,6 +89,18 @@ document.getElementById("mid").style.display="none";
  }
  if (num==-4) { 
  fff=4;
+ if (num==-5) { 
+ fff=5;
+}
+ if (num==-6) { 
+ fff=6;
+}
+ if (num==-7) { 
+ fff=7;
+ }
+ if (num==-8) { 
+ fff=8;
+
 }
 
 
@@ -98,8 +110,8 @@ document.getElementById("im").src=fff+' ('+ ccc + ').jpg';
               
 if (num==1) { ccc++;}
 if (num==2) { ccc--;}
-if (ccc==0) { ccc=3;}
-if (ccc==4) { ccc=1;}
+if (ccc==0) { ccc=8;}
+if (ccc==9) { ccc=1;}
 }
 </script>
 <style type="text/css">
@@ -162,7 +174,26 @@ position: fixed;
 <div>
 <button onclick="get_num(-4)"><div style="font-size:80px;color:blue;" >4. 冰箱零件</div></button>
 </div>
-
+<br>  <br>
+<div>
+<button onclick="get_num(-5)"><div style="font-size:80px;color:red;"   >5.   IC   </div></button>
+</div>
+<br>  <br>
+<div>
+<button onclick="get_num(-6)"><div style="font-size:80px;color:black;" >6. 洞洞板 </div></button>
+</div>
+<br>  <br>
+<div>
+<button onclick="get_num(-7)"><div style="font-size:80px;color:blue;" >7. 麵包板 </div></button>
+</div>
+<br>  <br>
+<div>
+<button onclick="get_num(-8)"><div style="font-size:80px;color:black;" >8. USB電流顯示器 </div></button>
+</div>
+<br>  <br>
+<div>
+<button onclick="get_num(-9)"><div style="font-size:80px;color:blue;" >9. 製冷晶片 </div></button>
+</div>
 
 </div>
 
