@@ -12,9 +12,6 @@ document.getElementById("in").style.display="none";
 document.getElementById("mid").style.display="block";
 }
 
-
-
-
 function rm(){
 document.getElementById("se").style.display="none";
 document.getElementById("bu").style.display="none";
@@ -40,7 +37,6 @@ document.getElementById("mid").style.display="none";
  document.getElementById("bam").style.display="block";
  }
 
-
 function m2(){
  document.getElementById("in").style.display="none";
  document.getElementById("se").style.display="block";
@@ -48,7 +44,6 @@ document.getElementById("mid").style.display="none";
  document.getElementById("ba").style.display="none";
  document.getElementById("bam").style.display="block";
  }
-
 
  function get_num(num){
 
@@ -88,16 +83,32 @@ if (ccc==1000) { ccc=1;}
 position: fixed;
   top: 120px;
   right: 0px;
-
 }
 
+.page {
+  position: fixed;
+  bottom: 220px;
+  right: 200px;
+  width: 878px;
+  height:150px;
+  background-color: yellow;
+}
+
+
+.upper {
+  position: fixed;
+  bottom: 10px;
+  right: 420px;
+  width: 500px;
+  height:130px;
+  background-color: yellow;
+}
 
 
 
 </style>
 </head>
 <body>
-
 
 <div  id="m11" style="display:none">
 <div style="font-size:60px;color:blue;">六捷電子材料行</div>
@@ -107,11 +118,7 @@ position: fixed;
 <div style="font-size:50px;color:green;">住址:鶯歌文化路517號(耶穌教會對面)</div>
 </div>
 
-
-
-<img  id="im" src="miki.jpg"  width="1300"  height="1700" style="display:none"  align="left">
-
-
+<img  id="im" src="miki.jpg"  width="1300"  style="display:none"  align="left">
 
 <div  id="mid" style="display:none;" >
 <button onclick="m1( )"><div  style="font-size:80px;color:blue;"   >交通資訊</button>
@@ -121,11 +128,7 @@ position: fixed;
 <button onclick="m3( )"><div  style="font-size:80px;color:blue;"   >電子材料查詢</button>
 </div>
 
-
-
 <div class="butt"  id="se" style="display:none;">
-
-
 
 <div>  
 <button onclick="get_num(1)"><div  style="font-size:80px;color:blue;"   >1. 模組</button>
@@ -166,32 +169,24 @@ position: fixed;
 
 </div>
 
-
-
-
-<div  id="bu" style="display:none;">
+<div class="page" id="bu" style="display:none;">
 <button onclick="get_num(20000)"><div style="font-size:140px;color:red;background-color:blue;">上一張  </div></button>
 <button  onclick="get_num(10000)"><div style="font-size:140px;color:white;background-color:red;">下一張</div> </button>
 <br> 
 </div>
-
-
 
 <div id="in" style="display:block; background-size:cover;" >
 <input type="image" src="7.jpg"  onClick="get()">
 </div>
 
 
-<div  id="ba" style="display:none;">
+<div class="upper"  id="ba" style="display:none;">
 <button  onclick="back()"><div style="font-size:120px;color:green;background-color:yellow;">回上一層 </div> </button>
  </div>
-
 
 <div class="mpos"  id="bam" style="display:none;">
 <button  onclick="rm()"><div style="font-size:80px;color:green;background-color:yellow;">回主畫面</div> </button>
 </div>
-
-
 
 </body>
 </html>
