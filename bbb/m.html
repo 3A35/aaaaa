@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+<title>  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+ document.getElementById("mv").style.display="block" ;
+ 
+ document.getElementById("in").style.display="none" ;
+ 
+ b1=document.getElementById("b1");
+ 
+  b1.play();
+ setInterval(step, 1500);
+ }
+
+
+</script>
+
+<style type="text/css">
+.video-back{
+position:fixed;
+top:0;
+left:0;
+min-width:100%;
+min-height:100%;
+}
+
+</style>
+</head>
+<body>
+
+<audio id="b1" src="ms.mp4" loop controls="controls" hidden="true"></audio>
+
+<div  id="mv" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="m.mp4">
+</video>
+</div>
+
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1000" height="1200"  onClick="get()">
+</div>
+
+</body>
+</html>
