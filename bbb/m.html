@@ -6,6 +6,8 @@
 
  function get(){
  document.getElementById("mv").style.display="block" ;
+
+document.getElementById("tid").style.display="block" ;
  
  document.getElementById("in").style.display="none" ;
  
@@ -27,6 +29,16 @@ min-width:100%;
 min-height:100%;
 }
 
+
+ .tcl{
+position: fixed;
+  top: 10px;
+  left: 100px;
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -40,10 +52,19 @@ min-height:100%;
 </div>
 
 
-
 <div id="in"  >
 <input type="image" src="miki.jpg" width="1000" height="1200"  onClick="get()">
 </div>
+
+
+<div class="tcl"  id="tid" style="display:none;">
+<div style="font-size:110px;color:yellow;font-weight:bold;">******阿琪祝大家******</div>
+ <br>                 
+<div style="font-size:110px;color:red;font-weight:bold;">聖誕節快樂 !</div>
+</div>
+
+
+
 
 </body>
 </html>
