@@ -8,9 +8,31 @@ window.onload =function(){
 
  document.getElementById("tiddd").style.display="block" ;  
 
+
+
+
+}
+
+function sho(){
+ document.getElementById("tiddd").style.display="none" ;  
+document.getElementById("shid").style.display="block" ;
+document.getElementById("b1last").style.display="block" ;
+document.getElementById("shidt").style.display="block" ;
+
+
+
+b1last=document.getElementById("b1last");
+ b1last.play();
+setTimeout(get,20000)
 }
 
  function get(){
+
+document.getElementById("shidt").style.display="none" ;
+
+document.getElementById("shid").style.display="none" ;
+
+b1last.pause();
 
 document.getElementById("tiddd").style.display="none" ;  
 
@@ -24,10 +46,10 @@ document.getElementById("tpid").style.display="block" ;
  
  b1=document.getElementById("b1");
 
-setInterval(step, 500);
+setInterval(ep, 500);
 
 var i=1
- function step() {
+ function ep() {
  if((i%2)===0){
   document.getElementById("tpid").style.display="block" ;    
  }else{
@@ -78,7 +100,7 @@ position: fixed;
 <body>
 
 <audio id="b1" src="jingle.mp4" loop controls="controls" hidden="true"></audio>
-<audio id="b1last" src="Last Christmas.mp4" loop"></audio>
+<audio id="b1last" src="Last Christmas.m4a" loop"></audio>
 
 
 <div  id="mv" style="display:none;">
@@ -88,8 +110,18 @@ position: fixed;
 </div>
 
 
+<div  id="shid" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="school.mp4">
+</video>
+</div>
+
+
+
+
+
 <div id="in"  >
-<input type="image" src="christmasp.jpg" width="1000" height="1200"  onClick="get()">
+<input type="image" src="christmasp.jpg" width="1000" height="1200"  onClick="sho()">
 </div>
 
 <div class="tct"  id="tpid" style="display:none;">
@@ -109,6 +141,16 @@ position: fixed;
                
 <div style="font-size:120px;color:yellow;font-weight:bold;">聖 誕 節 快 樂 !</div>
 </div>
+
+
+
+<div class="tclm"  id="shidt" style="display:none;">
+<div style="font-size:120px;color:orange;font-weight:bold;">2022 復興商工</div>
+               
+<div style="font-size:120px;color:yellow;font-weight:bold;">聖誕節 展覽會場</div>
+</div>
+
+
 
 </body>
 </html>
