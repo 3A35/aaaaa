@@ -19,11 +19,17 @@ document.getElementById("shid").style.display="block" ;
 document.getElementById("b1last").style.display="block" ;
 document.getElementById("shidt").style.display="block" ;
 
+document.getElementById("b1").style.display="block" ;
+ 
+b1=document.getElementById("b1");
+
+ b1.pause();
+
 
 
 b1last=document.getElementById("b1last");
  b1last.play();
-setTimeout(get,40000)
+setTimeout(get,5000)
 }
 
  function get(){
@@ -33,6 +39,8 @@ document.getElementById("shidt").style.display="none" ;
 document.getElementById("shid").style.display="none" ;
 
 b1last.pause();
+
+ b1.play();
 
 document.getElementById("tiddd").style.display="none" ;  
 
@@ -46,11 +54,7 @@ document.getElementById("tpid").style.display="block" ;
   
 document.getElementById("tpid").style.display="block" ;  
 
-document.getElementById("b1").style.display="block" ;
- 
-b1=document.getElementById("b1");
 
-  b1.play();
 
 }
 
