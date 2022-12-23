@@ -23,7 +23,7 @@ document.getElementById("shidt").style.display="block" ;
 
 b1last=document.getElementById("b1");
  b1.play();
-setTimeout(get,8000)
+setTimeout(get,40000)
 }
 
  function get(){
@@ -45,9 +45,9 @@ document.getElementById("tpid").style.display="block" ;
  document.getElementById("in").style.display="none" ;
  
  
+ 
 
-setInterval(ep, 300);
-
+ var  clo=window.setInterval(ep, 300);
 var i=1
  function ep() {
  if((i%2)===0){
@@ -57,19 +57,21 @@ var i=1
  }
  i++;
 }
- 
-setTimeout(mp,8000)
 
- }
+setTimeout(mp,30000)
+
 
 function mp(){
-b1.pause();
-window.open(' http://3a35.github.io/aaaaa/bbb/mp ');
+document.getElementById("treeid").style.display="block" ;   
+document.getElementById("tpid").style.display="none" ;  
+ 
+ clearInterval(clo);
 
 
+document.getElementById("mv").style.display="none" ; 
 }
 
-
+}
 
 
 
@@ -131,8 +133,16 @@ position: fixed;
 
 
 <div id="in"  >
-<input type="image" src="christmasp.jpg" width="1000" height="1200"  onClick="sho()">
+<input type="image" src="christmasp.jpg" width="1400"   onClick="sho()">
 </div>
+
+
+<div id="treeid"   style="display:none;" >
+<input type="image" src="tree.jpg" width="1400"   >
+</div>
+
+
+
 
 <div class="tct"  id="tpid" style="display:none;">
 <div style="font-size:90px;color:silver;font-weight:bold;">Merry  Chrismas ! </div>
