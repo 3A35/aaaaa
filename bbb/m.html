@@ -84,6 +84,8 @@ setTimeout(lasttree,20000)
  function lasttree(){
 document.getElementById("waiceng").style.display="none" ; 
 document.getElementById("lastid").style.display="block" ; 
+document.getElementById("photosl").style.display="block" ; 
+document.getElementById("photosr").style.display="block" ; 
 }
 </script>
 
@@ -154,6 +156,53 @@ position: fixed;
     90%{margin-left: -11700px;}
     100%{margin-left: -13000px;}
 }
+
+
+.playr{
+    animation: rmove  1s  ; /*無限迴圈這個過程*/
+    animation-fill-mode:forwards;
+   }
+
+.playl{
+    animation: lmove  2s  ; /*無限迴圈這個過程*/
+    animation-fill-mode:forwards;
+    }
+
+@keyframes rmove{
+     100%{margin-right: -1300px;}
+}
+
+@keyframes lmove{
+     100%{margin-left: -1840px;}
+}
+
+#photosr{
+ position: fixed;
+ top:50px;
+  right: 2000px;
+       }
+
+#photosl{
+ position: fixed;
+ top: 200px;
+  left: 2000px;
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -239,6 +288,15 @@ position: fixed;
                          </div>
               </div>
 
+
+
+<div id = "photosl" class = "playl"   style="display:none;">
+<div style="font-size:90px;color:yellow;font-weight: bold;">聖誕節快樂</div>
+                     </div>
+
+<div id = "photosr" class = "playr" style="display:none;">
+<div style="font-size:90px;color:pink;font-weight: bold;">***祝大家***</div>
+                     </div>
 
 
 
