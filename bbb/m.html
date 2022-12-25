@@ -27,7 +27,7 @@ document.getElementById("shidt").style.display="block" ;
 
 b1last=document.getElementById("b1");
  b1.play();
-setTimeout(get,40000)
+setTimeout(get,20000)
 }
 
  function get(){
@@ -62,7 +62,7 @@ var i=1
  i++;
 }
 
-setTimeout(mp,30000)
+setTimeout(mp,14000)
 
 
 function mp(){
@@ -76,12 +76,15 @@ document.getElementById("tpid").style.display="none" ;
 
 document.getElementById("tid").style.display="none" ; 
 document.getElementById("mv").style.display="none" ; 
+
+setTimeout(lasttree,20000)
+}
 }
 
+ function lasttree(){
+document.getElementById("waiceng").style.display="none" ; 
+document.getElementById("lastid").style.display="block" ; 
 }
-
-
-
 </script>
 
 <style type="text/css">
@@ -186,7 +189,9 @@ position: fixed;
 </div>
 
 
-
+<div id="lastid" style="display:none;" >
+<input type="image" src="lasttree.jpg" width="1200"  height="1800"  >
+</div>
 
 
 
