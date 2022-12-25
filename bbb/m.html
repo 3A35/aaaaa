@@ -27,7 +27,7 @@ document.getElementById("shidt").style.display="block" ;
 
 b1last=document.getElementById("b1");
  b1.play();
-setTimeout(get,14000)
+setTimeout(get,13000)
 }
 
  function get(){
@@ -62,7 +62,7 @@ var i=1
  i++;
 }
 
-setTimeout(mp,14000)
+setTimeout(mp,13000)
 
 
 function mp(){
@@ -86,7 +86,26 @@ document.getElementById("waiceng").style.display="none" ;
 document.getElementById("lastid").style.display="block" ; 
 document.getElementById("photosl").style.display="block" ; 
 document.getElementById("photosr").style.display="block" ; 
+setTimeout(chcolor,2000)
 }
+
+ function chcolor(){
+
+ var  clo2=window.setInterval(ep2, 300);
+var ii=1
+ function ep2() {
+ if((ii%2)===0){
+  document.getElementById("photosr2").style.color="orange";
+  document.getElementById("photosl2").style.color="pink";    
+ }else{
+ document.getElementById("photosr2").style.color="yellow";
+  document.getElementById("photosl2").style.color="green";      
+ }
+ ii++;
+}
+ 
+
+  }
 </script>
 
 <style type="text/css">
@@ -159,12 +178,12 @@ position: fixed;
 
 
 .playr{
-    animation: rmove  1s  ; /*無限迴圈這個過程*/
+    animation: rmove  3s  ; /*無限迴圈這個過程*/
     animation-fill-mode:forwards;
    }
 
 .playl{
-    animation: lmove  2s  ; /*無限迴圈這個過程*/
+    animation: lmove  3s  ; /*無限迴圈這個過程*/
     animation-fill-mode:forwards;
     }
 
@@ -291,11 +310,11 @@ position: fixed;
 
 
 <div id = "photosl" class = "playl"   style="display:none;">
-<div style="font-size:90px;color:yellow;font-weight: bold;">聖誕節快樂</div>
+<div id = "photosl2" style="font-size:90px;color:yellow;font-weight: bold;">聖誕節快樂</div>
                      </div>
 
 <div id = "photosr" class = "playr" style="display:none;">
-<div style="font-size:90px;color:pink;font-weight: bold;">***祝大家***</div>
+<div id = "photosr2" style="font-size:90px;color:pink;font-weight: bold;">***祝大家***</div>
                      </div>
 
 
