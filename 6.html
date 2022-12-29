@@ -11,6 +11,8 @@ function enter_fun(){
 document.getElementById("enter_id").style.display="none";
 
 document.getElementById("merchant_main_menu_id").style.display="block";
+document.getElementById("main_background_id").style.display="block";
+
 }
 
 function  back_to_home_screen_fun(){
@@ -51,14 +53,6 @@ document.getElementById("back_to_home_screen_id").style.display="block";
 }
 
 
-
-
-
-
-
-
-
-
 function m1_fun(){
  document.getElementById("enter_id").style.display="none";
 document.getElementById("product_category_id2").style.display="none";
@@ -90,9 +84,6 @@ document.getElementById("merchant_main_menu_id").style.display="none";
 document.getElementById("back_to_home_screen_id").style.display="block";
  document.getElementById("business_information_id").style.display="block";
  }
-
-
-
 
 
  function type_level_one(num){
@@ -137,6 +128,22 @@ if (ccc==1000) { ccc=1;}
 }
 </script>
 <style type="text/css">
+
+ .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+ .bg img {
+            min-height: 100%;
+            width: 100%;
+
+        }
+
+
  
  .back_to_home_screen_class{
 position: fixed;
@@ -181,11 +188,11 @@ position: fixed;
 <body>
 
 <div  id="business_information_id" style="display:none">
-<div style="font-size:80px;color:blue;">六捷電子材料行</div>
-<div style="font-size:70px;color:red;">電話:02-2678-6565</div>
-<div style="font-size:70px;">行動 0985-842-121</div>
-<div style="font-size:80px;color:blue;">LINE ID :  10500</div>
-<div style="font-size:60px;color:green;">住址:鶯歌文化路517號(耶穌教會對面)</div>
+<div style="font-size:60px;color:blue;">六捷電子材料行</div>
+<div style="font-size:50px;color:red;">電話:02-2678-6565</div>
+<div style="font-size:50px;">行動 0985-842-121</div>
+<div style="font-size:50px;color:blue;">LINE ID :  10500</div>
+<div style="font-size:50px;color:green;">住址:鶯歌文化路517號(耶穌教會對面)</div>
 </div>
 
 <img  id="miki_id" src="miki.jpg"  width="1300"  style="display:none"  align="left">
@@ -254,14 +261,12 @@ position: fixed;
 </div>
 
 
-
 <div  id="product_category_id2" style="display:none;">
 <div  >
 <button onclick="type_level_one(13)"><div style="font-size:80px;color:blue;" >13. 電阻 </div></button>
 </div>
 <br>
 </div>
-
 
 
 <div class="previous_next_class" id="previous_next_id" style="display:none;">
@@ -284,13 +289,24 @@ position: fixed;
  </div>
 
 
-
-
-
-
 <div class="back_to_home_screen_class"  id="back_to_home_screen_id" style="display:none;">
 <button  onclick="back_to_home_screen_fun()"><div style="font-size:100px;color:green;background-color:yellow;">回主畫面</div> </button>
 </div>
 
+
+
+
+<div    id="main_background_id" style="display:none;" >
+<input type="image" class="bg"   src="background2.jpg"   >
+</div>
+
+
+
+
 </body>
+
+
+
+
+
 </html>
