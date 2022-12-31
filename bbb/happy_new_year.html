@@ -5,7 +5,7 @@
 <script type="text/javascript">
 
  function sho(){
-
+document.getElementById("bg").style.display="block";
 document.getElementById("in").style.display="none";
 document.getElementById("tid").style.display="block";
 
@@ -21,14 +21,14 @@ var  clo1=window.setInterval(ep1, 1);
 
 
 ;
- var yyy=1500;
+ var yyy=1600;
 
 
  function ep1(){
 
   yyy--;
   yyy--;
- if (yyy==100) { 
+ if (yyy==400) { 
 clearInterval(clo1);
 }
 
@@ -42,13 +42,13 @@ clearInterval(clo1);
 var ii=1
  function ep2() {
  if((ii%2)===0){
-   document.getElementById("ph1").style.color="orange";
-  document.getElementById("ph2").style.color="orange"; 
+   document.getElementById("ph1").style.color="Purple";
+  document.getElementById("ph2").style.color="grey"; 
  document.getElementById("ph3").style.color="pink";
    
  }else{
   document.getElementById("ph1").style.color="yellow";
-  document.getElementById("ph2").style.color="yellow"; 
+  document.getElementById("ph2").style.color="red"; 
  document.getElementById("ph3").style.color="green";
        
  }
@@ -94,10 +94,10 @@ position: fixed;
 <div  class="ttt"  id="tid" style="display:none;">
 
 <div id="ph1" style="font-size:140px;color:red;font-weight:bold;">迎接  2023</div>
-
-<div id="ph2" style="font-size:110px;color:yellow;font-weight:bold;">** 祝  大  家**</div>
-
-<div  id="ph3" style="font-size:110px;color:red;font-weight:bold;">Happy New Year !</div>
+<br> <br> 
+<div id="ph2" style="font-size:130px;color:yellow;font-weight:bold;">** 祝  大  家**</div>
+<br> <br> 
+<div  id="ph3" style="font-size:140px;color:red;font-weight:bold;">Happy New Year !</div>
                
 
 </div>
@@ -106,7 +106,7 @@ position: fixed;
 <input type="image" src="in.jpg"  width="1200"  height="1200"  onClick="sho()">
 </div>
 
-<div id="bg"    >
+<div id="bg"   style="display:none;" >
 <input type="image" src="101.jpg"  >
 </div>
 
