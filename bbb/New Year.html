@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+<title>  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function sho(){
+document.getElementById("bg").style.display="block";
+document.getElementById("in").style.display="none";
+document.getElementById("tid").style.display="block";
+
+ b1=document.getElementById("b1");
+ 
+  b1.play();
+
+var fff;
+var si;
+fff=document.getElementById("tid"); 
+si1=document.getElementById("ph1"); 
+si2=document.getElementById("ph2"); 
+si3=document.getElementById("ph3"); 
+var  clo1=window.setInterval(ep1, 1);
+
+
+
+
+ var yyy=1600;
+ var kkk=30;
+
+ function ep1(){
+  
+  yyy--;
+  yyy--;
+
+ if (yyy<220) { 
+kkk++;
+}
+
+
+ if (yyy==50) { 
+clearInterval(clo1);
+}
+ else { 
+ fff.style.top=yyy+"px";
+ fff.style.left="200px";
+si1.style.fontSize=kkk+ "px";
+si2.style.fontSize=kkk+ "px";
+si3.style.fontSize=kkk+ "px";
+}
+
+
+}
+
+ var  clo2=window.setInterval(ep2, 300);
+var ii=1
+ function ep2() {
+ if(ii==1){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="yellow"; 
+  document.getElementById("ph3").style.color="green";
+   
+ }
+ if(ii==2){
+  document.getElementById("ph1").style.color="yellow";
+  document.getElementById("ph2").style.color="red"; 
+ document.getElementById("ph3").style.color="yellow";
+}  
+
+ if(ii==3){
+  document.getElementById("ph1").style.color="Purple";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="green";
+}   
+     
+
+ if(ii==4){
+  document.getElementById("ph1").style.color="orange";
+  document.getElementById("ph2").style.color="red"; 
+ document.getElementById("ph3").style.color="yellow";
+}   
+
+ if(ii==5){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="brown";
+}  
+
+ if(ii==6){
+  document.getElementById("ph1").style.color="Pink";
+  document.getElementById("ph2").style.color="brown"; 
+ document.getElementById("ph3").style.color="yellow";
+}   
+     
+
+ if(ii==7){
+  document.getElementById("ph1").style.color="green";
+  document.getElementById("ph2").style.color="Pink"; 
+ document.getElementById("ph3").style.color="red";
+}   
+
+
+
+
+
+
+
+
+ ii++;
+if(ii==8) {ii=1;}
+
+}
+
+
+
+
+
+
+
+}
+</script>
+
+<style type="text/css">
+
+ .ttt{
+position: fixed;
+  top: 1600px;
+  left: 280px;
+}
+
+.bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+ .bbbg img {
+            min-height: 100%;
+            width: 100%;
+
+        }
+
+
+
+
+
+</style>
+</head>
+<body>
+<div  class="ttt"  id="tid" style="display:none;">
+
+<div id="ph1" style="color:red;font-weight:bold;" >元 旦 快 樂</div>
+<br> <br> <br> 
+<div id="ph2" style="color:red;font-weight:bold;">--- 祝  大  家---</div>
+<br> <br> <br> 
+<div  id="ph3" style="color:red;font-weight:bold;">兔年行大運 !</div>
+               
+
+</div>
+
+<div id="in"    >
+<input type="image" src="in.jpg"  width="1200"  height="2000"  onClick="sho()">
+</div>
+
+<div id="bg"   style="display:none;" >
+<input type="image" src="rabbit.jpg" width="1200"  height="2000"  >
+</div>
+
+<audio id="b1" src="bgm.mp4" loop controls="controls" hidden="true"></audio>
+</body>
+</html>
