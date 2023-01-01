@@ -26,25 +26,25 @@ var  clo1=window.setInterval(ep1, 1);
 
 
 
- var yyy=1600;
- var kkk=30;
+ var yyy=2000;
+ var kkk=70;
 
  function ep1(){
   
   yyy--;
-  yyy--;
+  
 
- if (yyy<220) { 
+ if (yyy<140) { 
 kkk++;
 }
 
 
- if (yyy==50) { 
+ if (yyy==10) { 
 clearInterval(clo1);
 }
  else { 
  fff.style.top=yyy+"px";
- fff.style.left="200px";
+ fff.style.left="10px";
 si1.style.fontSize=kkk+ "px";
 si2.style.fontSize=kkk+ "px";
 si3.style.fontSize=kkk+ "px";
@@ -53,27 +53,27 @@ si3.style.fontSize=kkk+ "px";
 
 }
 
- var  clo2=window.setInterval(ep2, 300);
+ var  clo2=window.setInterval(ep2, 200);
 var ii=1
  function ep2() {
  if(ii==1){
   document.getElementById("ph1").style.color="red";
   document.getElementById("ph2").style.color="yellow"; 
   document.getElementById("ph3").style.color="green";
-   bg.style.opacity="0.7"; 
+   bg.style.opacity="0.8"; 
  }
  if(ii==2){
   document.getElementById("ph1").style.color="yellow";
   document.getElementById("ph2").style.color="red"; 
  document.getElementById("ph3").style.color="yellow";
- bg.style.opacity="0.5"; 
+ bg.style.opacity="0.6"; 
 }  
 
  if(ii==3){
   document.getElementById("ph1").style.color="Purple";
   document.getElementById("ph2").style.color="orange"; 
  document.getElementById("ph3").style.color="green";
- bg.style.opacity="0.3"; 
+ bg.style.opacity="0.4"; 
 }   
      
 
@@ -81,21 +81,21 @@ var ii=1
   document.getElementById("ph1").style.color="orange";
   document.getElementById("ph2").style.color="red"; 
  document.getElementById("ph3").style.color="yellow";
- bg.style.opacity="0"; 
+ bg.style.opacity="0.2"; 
 }   
 
  if(ii==5){
   document.getElementById("ph1").style.color="red";
   document.getElementById("ph2").style.color="orange"; 
  document.getElementById("ph3").style.color="brown";
- bg.style.opacity="0.3"; 
+ bg.style.opacity="0"; 
 }  
 
  if(ii==6){
   document.getElementById("ph1").style.color="Pink";
   document.getElementById("ph2").style.color="brown"; 
  document.getElementById("ph3").style.color="yellow";
- bg.style.opacity="0.7"; 
+ bg.style.opacity="0.2"; 
 }   
      
 
@@ -103,18 +103,36 @@ var ii=1
   document.getElementById("ph1").style.color="green";
   document.getElementById("ph2").style.color="Pink"; 
  document.getElementById("ph3").style.color="red";
- bg.style.opacity="1"; 
+ bg.style.opacity="0.4"; 
+}   
+
+ if(ii==8){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="green"; 
+ document.getElementById("ph3").style.color="red";
+ bg.style.opacity="0.6"; 
 }   
 
 
+ if(ii==9){
+  document.getElementById("ph1").style.color="orange";
+  document.getElementById("ph2").style.color="red"; 
+ document.getElementById("ph3").style.color="yellow";
+ bg.style.opacity="0.8"; 
+}   
 
-
-
+ if(ii==10){
+  document.getElementById("ph1").style.color="Purple";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="green";
+ bg.style.opacity="1"; 
+}   
+     
 
 
 
  ii++;
-if(ii==8) {ii=1;}
+if(ii==11) {ii=1;}
 
 }
 
@@ -158,10 +176,10 @@ position: fixed;
 <body>
 <div  class="ttt"  id="tid" style="display:none;">
 
-<div id="ph1" style="color:red;font-weight:bold;" >元 旦 快 樂</div>
-<br> <br> <br> 
+<div id="ph1" style="color:red;font-weight:bold;" > 元 旦 快 樂</div>
+<br> <br> <br>  <br>
 <div id="ph2" style="color:red;font-weight:bold;">--- 祝  大  家---</div>
-<br> <br> <br> 
+<br> <br> <br>  <br>
 <div  id="ph3" style="color:red;font-weight:bold;">兔年行大運 !</div>
                
 
