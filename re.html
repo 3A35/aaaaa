@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<title>  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+function  enlargefu(item){
+document.getElementById("enlargeid").style.display="block";
+document.getElementById("enlargeid").src=uuu+' ('+ item + ').jpg';
+}
+
+
+function  lcd(fff){
+uuu=fff;
+document.getElementById("lcd").style.display="none";
+document.getElementById("all").style.display="block";
+for(i=1;i<16;){
+hh="productid"+i
+hhhh=hh;
+var img = new Image();
+   
+ img.src =document.getElementById(hh).src=fff+' ('+ i + ').jpg';
+i++;
+
+}
+   
+ 
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+<style type="text/css">
+
+.product1cl{
+  style=display:none;
+  position: relative;
+  width:200px;height:200px;}
+
+
+.enlargecl{
+ style=display:none;
+  position: relative;
+  top: 0px;
+  
+  left: 0px;
+  width:1200px;height:1600px;}
+
+
+</style>
+</head>
+<body>
+
+<div  id="all"  style="display:none;">
+<input  type="image" id="productid1"  class="product1cl"   onClick="enlargefu(1)" >
+<input  type="image" id="productid2"  class="product1cl"   onClick="enlargefu(2)" >
+<input  type="image" id="productid3"  class="product1cl"   onClick="enlargefu(3)" >
+<input  type="image" id="productid4"  class="product1cl"   onClick="enlargefu(4)" >
+<input  type="image" id="productid5"  class="product1cl"   onClick="enlargefu(5)" >
+<input  type="image" id="productid6"  class="product1cl"   onClick="enlargefu(6)" >
+<input  type="image" id="productid7"  class="product1cl"   onClick="enlargefu(7)" >
+<input  type="image" id="productid8"  class="product1cl"   onClick="enlargefu(8)" >
+<input  type="image" id="productid9"  class="product1cl"   onClick="enlargefu(9)" >
+<input  type="image" id="productid10" class="product1cl"   onClick="enlargefu(10)" >
+<input  type="image" id="productid11" class="product1cl"   onClick="enlargefu(11)" >
+<input  type="image" id="productid12" class="product1cl"   onClick="enlargefu(12)" >
+<input  type="image" id="productid13" class="product1cl"   onClick="enlargefu(13)" >
+<input  type="image" id="productid14" class="product1cl"   onClick="enlargefu(14)" >
+<input  type="image" id="productid15" class="product1cl"   onClick="enlargefu(15)" >
+
+</div>
+
+
+<div  id="lcd" style="display:block;">
+<button onclick="lcd(1)"><div  style="font-size:80px;color:blue;"   >1. 國際 </button>
+<button onclick="lcd(2)"><div  style="font-size:80px;color:blue;"   >2. 新力 </button>
+</div>
+
+<div  id="enlargeid" style="display:none;">
+<input  type="image"   class="enlargecl"    >
+</div>
+
+</body>
+</html>
