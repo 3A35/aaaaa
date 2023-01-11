@@ -5,7 +5,10 @@
 <script type="text/javascript">
 
 function  enlargefu(item){
-document.getElementById("enlargeid").style.display="block";
+document.getElementById("all").style.display="none";
+document.getElementById("closeid").style.display="block"
+document.getElementById("enlargeid").style.display="block"
+
 document.getElementById("enlargeid").src=uuu+' ('+ item + ').jpg';
 }
 
@@ -20,6 +23,7 @@ hhhh=hh;
 var img = new Image();
    
  img.src =document.getElementById(hh).src=fff+' ('+ i + ').jpg';
+
 i++;
 
 }
@@ -28,10 +32,11 @@ i++;
 }
 
 
-
-
-
-
+function  closefu(){
+document.getElementById("enlargeid").style.display="none";
+document.getElementById("closeid").style.display="none"
+document.getElementById("all").style.display="block";
+}
 
 
 
@@ -42,12 +47,12 @@ i++;
 .product1cl{
   style=display:none;
   position: relative;
-  width:200px;height:200px;}
+  width:400px;height:600px;}
 
 
 .enlargecl{
- style=display:none;
-  position: relative;
+ 
+ position: relative;
   top: 0px;
   
   left: 0px;
@@ -83,8 +88,11 @@ i++;
 <button onclick="lcd(2)"><div  style="font-size:80px;color:blue;"   >2. 新力 </button>
 </div>
 
-<div  id="enlargeid" style="display:none;">
-<input  type="image"   class="enlargecl"    >
+
+<input type="image" id="enlargeid"  class="enlargecl" onClick="close()" style="display:none;">
+
+<div  id="closeid" style="display:none;">
+<button onclick="closefu()"><div  style="font-size:150px;color:blue;"   >關 閉</button>
 </div>
 
 </body>
