@@ -5,6 +5,7 @@
 <script type="text/javascript">
 
 function  enlargefu(item){
+document.getElementById("mainid").style.display="none";
 document.getElementById("all").style.display="none";
 document.getElementById("closeid").style.display="block"
 document.getElementById("enlargeid").style.display="block"
@@ -16,6 +17,7 @@ document.getElementById("enlargeid").src=uuu+' ('+ item + ').jpg';
 function  lcd(fff){
 uuu=fff;
 document.getElementById("lcd").style.display="none";
+document.getElementById("mainid").style.display="block";
 document.getElementById("all").style.display="block";
 for(i=1;i<16;){
 hh="productid"+i
@@ -36,18 +38,26 @@ function  closefu(){
 document.getElementById("enlargeid").style.display="none";
 document.getElementById("closeid").style.display="none"
 document.getElementById("all").style.display="block";
+document.getElementById("mainid").style.display="block";
 }
 
+function  mainfu(){
+document.getElementById("all").style.display="none";
+document.getElementById("lcd").style.display="block";
 
+}
 
 </script>
 
 <style type="text/css">
+ 
 
 .product1cl{
   style=display:none;
   position: relative;
-  width:400px;height:600px;}
+  top: 200px;
+  eft: 0px;
+  width:350px;height:550px;}
 
 
 .enlargecl{
@@ -57,6 +67,25 @@ document.getElementById("all").style.display="block";
   
   left: 0px;
   width:1200px;height:1600px;}
+
+
+.maincl{
+ 
+ position: fixed;
+  top: 0px;
+  
+  left: 0px;}
+
+.lcdcl{
+ 
+ position: relative;
+  top: 150px;
+  
+  left: 0px;}
+ 
+
+
+
 
 
 </style>
@@ -83,9 +112,17 @@ document.getElementById("all").style.display="block";
 </div>
 
 
-<div  id="lcd" style="display:block;">
-<button onclick="lcd(1)"><div  style="font-size:80px;color:blue;"   >1. 國際 </button>
-<button onclick="lcd(2)"><div  style="font-size:80px;color:blue;"   >2. 新力 </button>
+<div  id="lcd" class="lcdcl"    style="display:block;">
+<button onclick="lcd(1)"><div  style="font-size:80px;color:blue;"   >1. 延長線 </button>
+<button onclick="lcd(2)"><div  style="font-size:80px;color:blue;"   >2. led燈泡 </button>
+<button onclick="lcd(3)"><div  style="font-size:80px;color:blue;"   >3. 燈泡 </button>
+<button onclick="lcd(4)"><div  style="font-size:80px;color:blue;"   >4. 燈管 </button>
+<button onclick="lcd(5)"><div  style="font-size:80px;color:blue;"   >5. 冷氣遙控器 </button>
+<button onclick="lcd(6)"><div  style="font-size:80px;color:blue;"   >6. 機上盒遙控器 </button>
+<button onclick="lcd(7)"><div  style="font-size:80px;color:blue;"   >7. 液晶電視遙控器 </button>
+<button onclick="lcd(8)"><div  style="font-size:80px;color:blue;"   >8. 洗衣機濾網 </button>
+<button onclick="lcd(9)"><div  style="font-size:80px;color:blue;"   >9. 電池 </button>
+<button onclick="lcd(10)"><div  style="font-size:80px;color:blue;"   >10. 手電筒 </button>
 </div>
 
 
@@ -94,6 +131,11 @@ document.getElementById("all").style.display="block";
 <div  id="closeid" style="display:none;">
 <button onclick="closefu()"><div  style="font-size:150px;color:blue;"   >關 閉</button>
 </div>
+
+<div  id="mainid"  class="maincl"  style="display:none;">
+<button onclick="mainfu()"><div  style="font-size:100px;color:blue;"   >回主畫面</button>
+</div>
+
 
 </body>
 </html>
