@@ -5,7 +5,7 @@
 <script type="text/javascript">
 
 function  enlargefu(item){
-document.getElementById("mainid").style.display="none";
+document.getElementById("conid").style.display="none";
 document.getElementById("all").style.display="none";
 document.getElementById("closeid").style.display="block"
 document.getElementById("enlargeid").style.display="block"
@@ -18,7 +18,7 @@ function  lcd(fff){
 
 uuu=fff;
 document.getElementById("lcd").style.display="none";
-document.getElementById("mainid").style.display="block";
+document.getElementById("conid").style.display="block";
 document.getElementById("all").style.display="block";
 for(i=1;i<16;){
 
@@ -27,7 +27,7 @@ hhhh=hh;
 var img = new Image();
    
  img.src =document.getElementById(hh).src="shop"+fff+' ('+ i + ').jpg';
- onerror="this.src='images/7.jpg'"
+ 
 i++;
 
 }
@@ -40,29 +40,21 @@ function  closefu(){
 document.getElementById("enlargeid").style.display="none";
 document.getElementById("closeid").style.display="none"
 document.getElementById("all").style.display="block";
-document.getElementById("mainid").style.display="block";
+document.getElementById("conid").style.display="block";
 }
 
-function  mainfu(){
-document.getElementById("mainid").style.display="none";
+function  confu(){
+document.getElementById("conid").style.display="none";
 document.getElementById("all").style.display="none";
 document.getElementById("lcd").style.display="block";
 
 }
 
 
-function  infu(){
-document.getElementById("inid").style.display="none";
-document.getElementById("lcd").style.display="block";
-document.getElementById("conid").style.display="block";
-
-}
 
 
-function  error(){
-err=100;
 
-}
+
 </script>
 
 <style type="text/css">
@@ -85,12 +77,7 @@ err=100;
   width:1200px;height:1600px;}
 
 
-.maincl{
- 
- position: fixed;
-  top: 0px;
-  
-  left: 0px;}
+
 
 .lcdcl{
  
@@ -98,6 +85,15 @@ err=100;
   top: 150px;
   
   left: 0px;}
+
+.concl{
+ 
+ position: fixed;
+  top: 0px;
+  
+  left: 600px;}
+
+
  
 
 </style>
@@ -105,26 +101,26 @@ err=100;
 <body>
 
 <div  id="all"  style="display:none;">
-<input  type="image" id="productid1"  class="product1cl" onerror="this.src="none.jpg"   onClick="enlargefu(1)" >
-<input  type="image" id="productid2"  class="product1cl" onerror="this.src="none.jpg"  onClick="enlargefu(2)" >
-<input  type="image" id="productid3"  class="product1cl" src="none.jpg"  onClick="enlargefu(3)" >
-<input  type="image" id="productid4"  class="product1cl" src="none.jpg" onClick="enlargefu(4)" >
-<input  type="image" id="productid5"  class="product1cl" src="none.jpg"  onClick="enlargefu(5)" >
-<input  type="image" id="productid6"  class="product1cl" src="none.jpg"  onClick="enlargefu(6)" >
-<input  type="image" id="productid7"  class="product1cl" src="none.jpg"  onClick="enlargefu(7)" >
-<input  type="image" id="productid8"  class="product1cl" src="none.jpg" onClick="enlargefu(8)" >
-<input  type="image" id="productid9"  class="product1cl" src="none.jpg"  onClick="enlargefu(9)" >
-<input  type="image" id="productid10" class="product1cl" src="none.jpg"  onClick="enlargefu(10)" >
-<input  type="image" id="productid11" class="product1cl" src="none.jpg" onClick="enlargefu(11)" >
-<input  type="image" id="productid12" class="product1cl" src="none.jpg"  onClick="enlargefu(12)" >
-<input  type="image" id="productid13" class="product1cl" src="none.jpg"  onClick="enlargefu(13)" >
+<input  type="image" id="productid1"  class="product1cl"   onClick="enlargefu(1)" >
+<input  type="image" id="productid2"  class="product1cl"   onClick="enlargefu(2)" >
+<input  type="image" id="productid3"  class="product1cl"   onClick="enlargefu(3)" >
+<input  type="image" id="productid4"  class="product1cl"  onClick="enlargefu(4)" >
+<input  type="image" id="productid5"  class="product1cl"   onClick="enlargefu(5)" >
+<input  type="image" id="productid6"  class="product1cl"   onClick="enlargefu(6)" >
+<input  type="image" id="productid7"  class="product1cl"  onClick="enlargefu(7)" >
+<input  type="image" id="productid8"  class="product1cl"  onClick="enlargefu(8)" >
+<input  type="image" id="productid9"  class="product1cl"   onClick="enlargefu(9)" >
+<input  type="image" id="productid10" class="product1cl"   onClick="enlargefu(10)" >
+<input  type="image" id="productid11" class="product1cl"  onClick="enlargefu(11)" >
+<input  type="image" id="productid12" class="product1cl"   onClick="enlargefu(12)" >
+<input  type="image" id="productid13" class="product1cl"   onClick="enlargefu(13)" >
 <input  type="image" id="productid14" class="product1cl" src="none.jpg"  onClick="enlargefu(14)" >
 <input  type="image" id="productid15" class="product1cl" src="none.jpg"  onClick="enlargefu(15)" >
 
 </div>
 
 
-<div  id="lcd" class="lcdcl"    style="display:none;">
+<div  id="lcd" class="lcdcl"    style="display:block;">
 <button onclick="lcd(1)"><div  style="font-size:80px;color:blue;"   >1. 延長線 </button>
 <button onclick="lcd(2)"><div  style="font-size:80px;color:blue;"   >2. led燈泡 </button>
 <button onclick="lcd(3)"><div  style="font-size:80px;color:blue;"   >3. 燈泡 </button>
@@ -144,16 +140,13 @@ err=100;
 <button onclick="closefu()"><div  style="font-size:150px;color:blue;"   >關 閉</button>
 </div>
 
-<div  id="mainid"  class="maincl"  style="display:none;">
-<button onclick="mainfu()"><div  style="font-size:100px;color:blue;"   >回主畫面</button>
-</div>
-
-<input type="image" src="7.jpg" id="inid"  class="incl" onClick="infu()" >
 
 
-<div  id="conid" style="display:none;">
+
+
+<div  id="conid"  class="concl" style="display:none;">
 <a href="https://3a35.github.io/aaaaa/re">
-<button><H1>返回主畫面</H1></button>
+<button><div style="font-size:80px;color:blue;">返回主畫面</div></button>
 </a> 
 </div>
 
