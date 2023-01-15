@@ -10,8 +10,15 @@ document.getElementById("conid").style.display="none";
 document.getElementById("all").style.display="none";
 document.getElementById("closeid").style.display="block"
 document.getElementById("enlargeid").style.display="block"
+document.getElementById("enlargetid").style.display="block"
+jjj=uuu+"-"+item
 
+tt=localStorage.getItem(jjj);
 document.getElementById("enlargeid").src="shop"+uuu+' ('+ item + ').jpg';
+ document.getElementById("enlargetid").innerHTML=tt;
+
+
+
 }
 
 
@@ -39,6 +46,7 @@ i++;
 
 function  closefu(){
 document.getElementById("enlargeid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
 document.getElementById("closeid").style.display="none"
 document.getElementById("all").style.display="block";
 document.getElementById("conid").style.display="block";
@@ -78,11 +86,20 @@ document.getElementById("lcd").style.display="block";
   left: 0px;
   width:1200px;height:1600px;}
 
-
+.enlargetcl{
+   font-size: 60px;
+ touch-action: none;
+ position: relative;
+  top:1620px;
+  
+  left: 0px;
+  width:1200px;
+ 
+}
 
 
 .lcdcl{
- touch-action:auto;
+ touch-action:none;
  position: relative;
   top: 150px;
   
@@ -135,8 +152,11 @@ document.getElementById("lcd").style.display="block";
 <button onclick="lcd(10)"><div  style="font-size:80px;color:blue;"   >10. 手電筒 </button>
 </div>
 
+<input type="image" id="enlargeid"  class="enlargecl" style="display:none;" onClick="close()" >
 
-<input type="image" id="enlargeid"  class="enlargecl" onClick="close()" style="display:none;">
+<div id="enlargetid" class="enlargetcl" style="display:none;"  >
+<div>六捷電子材料行六捷電子材料行六捷電子材料行</div>
+</div>
 
 <div  id="closeid" style="display:none;">
 <button onclick="closefu()"><div  style="font-size:150px;color:blue;"   >返 回</button>
