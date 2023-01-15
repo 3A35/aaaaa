@@ -11,11 +11,17 @@ document.getElementById("all").style.display="none";
 document.getElementById("closeid").style.display="block"
 document.getElementById("enlargeid").style.display="block"
 document.getElementById("enlargetid").style.display="block"
-jjj=uuu+"-"+item
-
-tt=localStorage.getItem(jjj);
 document.getElementById("enlargeid").src="shop"+uuu+' ('+ item + ').jpg';
- document.getElementById("enlargetid").innerHTML=tt;
+
+ddd=uuu+"-"+item+"-";
+r1=localStorage.getItem(ddd+1);
+r2=localStorage.getItem(ddd+2);
+r3=localStorage.getItem(ddd+3);
+r4=localStorage.getItem(ddd+4);
+
+sum="商品代號"+r1+" "+"名稱:"+r2+" "+"說明:"+r3+" "+"價格:"+r4
+
+ document.getElementById("enlargetid").innerHTML=sum;
 
 
 
@@ -80,7 +86,7 @@ document.getElementById("lcd").style.display="block";
 
 .enlargecl{
  touch-action: auto;
- position: fixed;
+ position: relative;
   top: 0px;
   
   left: 0px;
@@ -89,8 +95,8 @@ document.getElementById("lcd").style.display="block";
 .enlargetcl{
    font-size: 60px;
  touch-action: auto;
- position: fixed;
-  top:1310px;
+ position: relative;
+  top:20px;
   
   left: 0px;
   width:1100px;
@@ -114,10 +120,10 @@ document.getElementById("lcd").style.display="block";
 
 .closecl{
  touch-action: auto;
- position: fixed;
-  top: 1400px;
+ position: relative;
+  top: 20px;
   
-  left: 500px;}
+  left: 300px;}
  
 
 </style>
@@ -164,7 +170,7 @@ document.getElementById("lcd").style.display="block";
 </div>
 
 <div  id="closeid" class="closecl" style="display:none;">
-<button onclick="closefu()"><div  style="font-size:150px;color:blue;"   >返 回</button>
+<button onclick="closefu()"><div  style="font-size:80px;color:blue;"   >返 回</button>
 </div>
 
 
@@ -173,7 +179,7 @@ document.getElementById("lcd").style.display="block";
 
 <div  id="conid"  class="concl" style="display:none;">
 <a href="https://3a35.github.io/aaaaa/sh/re">
-<button><div style="font-size:100px;color:blue;">回主選單</div></button>
+<button><div style="font-size:80px;color:blue;">回主選單</div></button>
 </a> 
 </div>
 
