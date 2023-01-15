@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+<title>讀+寫  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+k=1;
+do {
+for(i=1;i<11;i++){
+
+var ppp =k+"-"+i
+var  yyy="商品編號:"+ppp +" 名稱"  
+localStorage.setItem(ppp,yyy);
+
+}
+
+
+var  tt;
+tt=localStorage.getItem(k+"-8");
+ document.write(tt);
+k++;
+} while (k < 31);
+</script>
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+</body>
+</html>
+
+
