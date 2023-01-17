@@ -8,6 +8,9 @@
 function  enlargefu(item){
 document.getElementById("conid").style.display="none";
 document.getElementById("all").style.display="none";
+document.getElementById("welcomeid").style.display="block";
+document.getElementById("loginid").style.display="block";
+document.getElementById("establishid").style.display="block";
 document.getElementById("closeid").style.display="block"
 document.getElementById("enlargeid").style.display="block"
 document.getElementById("enlargetid").style.display="block"
@@ -51,6 +54,9 @@ i++;
 
 
 function  closefu(){
+document.getElementById("loginid").style.display="none";
+document.getElementById("establishid").style.display="none";
+document.getElementById("welcomeid").style.display="none";
 document.getElementById("enlargeid").style.display="none";
 document.getElementById("enlargetid").style.display="none";
 document.getElementById("closeid").style.display="none"
@@ -122,13 +128,13 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 .enlargecl{
  touch-action: auto;
  position: relative;
-  top:0px;
+  top:100px;
   
   left: 0px;
-  width:1300px;height:1600px}
+  width:1200px;height:1400px}
 
 .enlargetcl{
-   font-size: 90px;
+   font-size: 70px;
  touch-action: auto;
  position: relative;
   top:0px;
@@ -142,7 +148,7 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 .lcdcl{
  touch-action:auto;
  position: relative;
-  top: 450px;
+  top: 20px;
   
   left: 0px;}
 
@@ -161,41 +167,41 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
   left: 300px;}
  
 .account_numbercl{
-   font-size: 90px;
+   font-size: 70px;
  
  position: relative;
-  top:300px;
+  top:100px;
   
-  left: 400px;
+  left: 0px;
   }
 
 
 .establishcl{
-   font-size:90px;
+   font-size:70px;
   position:fixed;
-  top:150px;
-  left:400px;}
+  top:0px;
+  left:780px;}
 
 
 .welcomecl{
-   font-size: 90px;
+   font-size: 70px;
  
  position:fixed;
-  top:10px;
+  top:0px;
   
-  left: 10px;
+  left: 0px;
   }
 
-.logincl{font-size:90px;
+.logincl{font-size:70px;
  position:fixed;
-  top:150px;
-  left: 100px;}
+  top:0px;
+  left: 600px;}
 
 
 
 .login_readcl{position:relative;
-  top:300px;
-    left: 10px; }
+  top:100px;
+    left: 0px; }
 
 
 
@@ -204,21 +210,21 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 </head>
 <body>
 
-<div id="welcomeid" class="welcomecl"  >
+<div id="welcomeid" class="welcomecl" style="display:none;" >
 <div>welcome</div>
 </div>
 
 
-<div id="loginid" class="logincl"  >
-<button onclick="loginfu()"><div  style="font-size:90px;color:blue;"   >登入</button>
+<div id="loginid" class="logincl"  style="display:none;" >
+<button onclick="loginfu()"><div  style="font-size:70px;color:blue;"   >登入</button>
 </div>
 
 
 
 <div  id="login_readid" class="login_readcl" style="display:none;"  >
-<div  style="font-size:90px" >請輸入行動號碼</div>
-<input type="text" style="font-size:90px"  maxlength="10"  id="login_read_mobile" />
-<button type="button" style="font-size:90px" onclick="login_endfu()">確 認</button> 
+<div  style="font-size:70px" >請輸入行動號碼</div>
+<input type="text" style="font-size:70px"  maxlength="10"  id="login_read_mobile" />
+<button type="button" style="font-size:70px" onclick="login_endfu()">確 認</button> 
 
 </div>
 
@@ -231,20 +237,20 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 
 
 
-<div  id="establishid" class="establishcl" >
-<button onclick="establishfu()"><div  style="font-size:90px;color:blue;"   >建立帳號</button>
+<div  id="establishid" class="establishcl" style="display:none;">
+<button onclick="establishfu()"><div  style="font-size:70px;color:blue;"   >建檔</button>
 </div>
 
 
 <div  id="account_numberid" class="account_numbercl"    style="display:none;"                    >
-<div  style="font-size:90px" >請輸入行動號碼</div>
+<div  style="font-size:70px" >請輸入行動號碼</div>
 
-<input type="text" style="font-size:90px"  maxlength="10"  id="mobile_phoneid" />
-<div  style="font-size:90px" >請輸入姓名</div>
-<input type="text" style="font-size:90px"  maxlength="30"  id="nameid" />
+<input type="text" style="font-size:70px"  maxlength="10"  id="mobile_phoneid" />
+<div  style="font-size:70px" >請輸入姓名</div>
+<input type="text" style="font-size:70px"  maxlength="30"  id="nameid" />
 
 
-<button type="button" style="font-size:90px" onclick="confirmfu()">確 認</button> 
+<button type="button" style="font-size:70px" onclick="confirmfu()">確 認</button> 
 
 </div>
 
