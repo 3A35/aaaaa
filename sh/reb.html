@@ -9,6 +9,8 @@ function  enlargefu(item){
 document.getElementById("conid").style.display="none";
 document.getElementById("all").style.display="none";
 document.getElementById("welcomeid").style.display="block";
+var  nnn=localStorage.getItem(22222);
+document.getElementById("welcomeid").innerHTML="歡迎"+nnn+"光臨";
 document.getElementById("loginid").style.display="block";
 document.getElementById("establishid").style.display="block";
 document.getElementById("closeid").style.display="block"
@@ -86,7 +88,7 @@ rr1=localStorage.getItem(mobile+"-"+1);
 rr2=localStorage.getItem(mobile+"-"+2);
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("welcomeid").innerHTML="歡迎"+rr2+"光臨"
-
+localStorage.setItem(22222,rr2);
 }
 
 
@@ -106,7 +108,7 @@ rrr1=localStorage.getItem(login+"-"+1);
 rrr2=localStorage.getItem(login+"-"+2);
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
-
+localStorage.setItem(22222,rrr2);
 }
 
 
@@ -155,7 +157,7 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 .concl{
  touch-action: auto;
  position: fixed;
-  top: 1000px;
+  top: 300px;
   
   left: 200px;}
 
