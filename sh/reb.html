@@ -9,8 +9,9 @@ function  enlargefu(item){
 document.getElementById("conid").style.display="none";
 document.getElementById("all").style.display="none";
 document.getElementById("welcomeid").style.display="block";
-var  nnn=localStorage.getItem(22222);
-document.getElementById("welcomeid").innerHTML="歡迎"+nnn+"光臨";
+var  mo=localStorage.getItem(11111);
+var  na=localStorage.getItem(22222);
+document.getElementById("welcomeid").innerHTML="歡迎"+na+"光臨";
 document.getElementById("loginid").style.display="block";
 document.getElementById("establishid").style.display="block";
 document.getElementById("closeid").style.display="block"
@@ -88,6 +89,7 @@ rr1=localStorage.getItem(mobile+"-"+1);
 rr2=localStorage.getItem(mobile+"-"+2);
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("welcomeid").innerHTML="歡迎"+rr2+"光臨"
+localStorage.setItem(11111,rr1);
 localStorage.setItem(22222,rr2);
 }
 
@@ -108,6 +110,7 @@ rrr1=localStorage.getItem(login+"-"+1);
 rrr2=localStorage.getItem(login+"-"+2);
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
+localStorage.setItem(11111,rrr1);
 localStorage.setItem(22222,rrr2);
 }
 
@@ -130,16 +133,16 @@ localStorage.setItem(22222,rrr2);
 .enlargecl{
  touch-action: auto;
  position: relative;
-  top:100px;
+  top:300px;
   
   left: 0px;
-  width:1200px;height:1400px}
+  width:1000px;height:1200px}
 
 .enlargetcl{
    font-size: 70px;
  touch-action: auto;
  position: relative;
-  top:0px;
+  top:10px;
   
   left: 0px;
   width:1100px;
@@ -150,7 +153,7 @@ localStorage.setItem(22222,rrr2);
 .lcdcl{
  touch-action:auto;
  position: relative;
-  top: 20px;
+  top: 10px;
   
   left: 0px;}
 
@@ -169,24 +172,58 @@ localStorage.setItem(22222,rrr2);
   left: 300px;}
  
 .account_numbercl{
-   font-size: 70px;
+   font-size: 90px;
  
  position: relative;
-  top:100px;
+  top:250px;
   
   left: 0px;
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .establishcl{
-   font-size:70px;
+   font-size:90px;
   position:fixed;
-  top:0px;
-  left:780px;}
+  top:120px;
+  left:300px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .welcomecl{
-   font-size: 70px;
+   font-size: 90px;
  
  position:fixed;
   top:0px;
@@ -196,14 +233,49 @@ localStorage.setItem(22222,rrr2);
 
 .logincl{font-size:70px;
  position:fixed;
-  top:0px;
-  left: 600px;}
+  top:120px;
+  left: 50px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 .login_readcl{position:relative;
-  top:100px;
+  top:250px;
     left: 0px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -218,7 +290,7 @@ localStorage.setItem(22222,rrr2);
 
 
 <div id="loginid" class="logincl"  style="display:none;" >
-<button onclick="loginfu()"><div  style="font-size:70px;color:blue;"   >登入</button>
+<button onclick="loginfu()"><div  style="font-size:90px;color:blue;"   >登入</button>
 </div>
 
 
@@ -240,19 +312,19 @@ localStorage.setItem(22222,rrr2);
 
 
 <div  id="establishid" class="establishcl" style="display:none;">
-<button onclick="establishfu()"><div  style="font-size:70px;color:blue;"   >建檔</button>
+<button onclick="establishfu()"><div  style="font-size:90px;color:blue;"   >建檔</button>
 </div>
 
 
 <div  id="account_numberid" class="account_numbercl"    style="display:none;"                    >
-<div  style="font-size:70px" >請輸入行動號碼</div>
+<div  style="font-size:90px" >請輸入行動號碼</div>
 
-<input type="text" style="font-size:70px"  maxlength="10"  id="mobile_phoneid" />
-<div  style="font-size:70px" >請輸入姓名</div>
-<input type="text" style="font-size:70px"  maxlength="30"  id="nameid" />
+<input type="text" style="font-size:90px"  maxlength="10"  id="mobile_phoneid" />
+<div  style="font-size:90px" >請輸入姓名</div>
+<input type="text" style="font-size:90px"  maxlength="30"  id="nameid" />
 
 
-<button type="button" style="font-size:70px" onclick="confirmfu()">確 認</button> 
+<button type="button" style="font-size:90px" onclick="confirmfu()">確 認</button> 
 
 </div>
 
