@@ -4,20 +4,11 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 
-window.onload =function(){
-
-document.getElementById("waiceng").style.display="none" ; 
-
-
-
-
-
-
-
-}
 
 function sho(){
-
+document.getElementById("photosl").style.display="none" ; 
+document.getElementById("photosr").style.display="none" ;
+document.getElementById("lastid").style.display="none" ;
 document.getElementById("tiddd").style.display="block";  
 document.getElementById("shid").style.display="block" ;
 document.getElementById("b1last").style.display="block" ;
@@ -27,7 +18,7 @@ document.getElementById("b1last").style.display="block" ;
 
 b1last=document.getElementById("b1");
  b1.play();
-setTimeout(get,13000)
+setTimeout(get,10000)
 }
 
  function get(){
@@ -62,7 +53,7 @@ var i=1
  i++;
 }
 
-setTimeout(mp,13000)
+setTimeout(mp,10000)
 
 
 function mp(){
@@ -103,9 +94,11 @@ var ii=1
  }
  ii++;
 }
- 
+ setTimeout(sho,6000);
 
   }
+
+
 </script>
 
 <style type="text/css">
