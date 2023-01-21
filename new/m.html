@@ -9,7 +9,7 @@ window.onload =function(){
 document.getElementById("waiceng").style.display="none" ; 
 
 
- document.getElementById("tiddd").style.display="block" ;  
+
 
 
 
@@ -17,11 +17,11 @@ document.getElementById("waiceng").style.display="none" ;
 }
 
 function sho(){
- 
- document.getElementById("tiddd").style.display="none" ;  
+
+document.getElementById("tiddd").style.display="block";  
 document.getElementById("shid").style.display="block" ;
 document.getElementById("b1last").style.display="block" ;
-document.getElementById("shidt").style.display="block" ;
+
 
 
 
@@ -32,13 +32,13 @@ setTimeout(get,13000)
 
  function get(){
 
-document.getElementById("shidt").style.display="none" ;
+
 
 document.getElementById("shid").style.display="none" ;
 
 
 
-document.getElementById("tiddd").style.display="none" ;  
+document.getElementById("tiddd").style.display="none";  
 
 document.getElementById("mv").style.display="block" ;
 
@@ -131,11 +131,7 @@ position: fixed;
 }
 
 
- .tclm{
-position: fixed;
-  top: 200px;
-  left: 150px;
-}
+
 
 
 #waiceng{
@@ -159,7 +155,7 @@ position: fixed;
 
 
 .play{
-    animation: leftMove  30s  ease-out infinite; /*無限迴圈這個過程*/
+    animation: leftMove  20s  ease-out infinite; /*無限迴圈這個過程*/
 }
 
 @keyframes leftMove{
@@ -188,7 +184,7 @@ position: fixed;
     }
 
 @keyframes rmove{
-     100%{margin-right: -1450px;}
+     100%{margin-right: -1650px;}
 }
 
 @keyframes lmove{
@@ -197,20 +193,24 @@ position: fixed;
 
 #photosr{
  position: fixed;
- top:300px;
+ top:400px;
   right: 2000px;
        }
 
 #photosl{
  position: fixed;
- top: 500px;
+ top: 700px;
   left: 2000px;
        }
 
 
 
 
-
+ .tclm{
+position: fixed;
+  top: 400px;
+  left: 150px;
+}
 
 
 
@@ -265,7 +265,7 @@ position: fixed;
 
 
 <div class="tct"  id="tpid" style="display:none;">
-<div style="font-size:90px;color:silver;font-weight:bold;">新年快樂 ! </div>
+<div style="font-size:90px;color:silver;font-weight:bold;">財源滾滾來!</div>
 </div>
 
 
@@ -277,18 +277,15 @@ position: fixed;
 
 
 <div class="tclm"  id="tiddd" style="display:none;">
-<div style="font-size:120px;color:orange;font-weight:bold;">----大吉大利------</div>
+<div style="font-size:120px;color:red;font-weight:bold;">---大吉大利---</div>
+
+<div style="font-size:120px;color:orange;font-weight:bold;">---花開富貴---</div>
                
-<div style="font-size:120px;color:yellow;font-weight:bold;">財 源 滾 滾 來</div>
+<div style="font-size:120px;color:yellow;font-weight:bold;">  心  想  事  成 </div>
 </div>
 
 
 
-<div class="tclm"  id="shidt" style="display:none;">
-<div style="font-size:140px;color:orange;font-weight:bold;">大吉大利</div>
-               
-<div style="font-size:140px;color:yellow;font-weight:bold;">新年快樂 !</div>
-</div>
 
 
   <div id="waiceng"  style="display:none;">
@@ -310,11 +307,11 @@ position: fixed;
 
 
 <div id = "photosl" class = "playl"   style="display:none;">
-<div id = "photosl2" style="font-size:110px;color:yellow;font-weight: bold;">新 年 快 樂 !</div>
+<div id = "photosl2" style="font-size:130px;color:yellow;font-weight: bold;">新 年 快 樂 !</div>
                      </div>
 
 <div id = "photosr" class = "playr" style="display:none;">
-<div id = "photosr2" style="font-size:110px;color:pink;font-weight: bold;">***發大財***</div>
+<div id = "photosr2" style="font-size:130px;color:pink;font-weight: bold;">**恭喜發大財**</div>
                      </div>
 
 
