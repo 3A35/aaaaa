@@ -2,13 +2,55 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <script type="text/javascript">
+function pr() {
+document.getElementById("meid").style.display="none";
+  const nameElement = document.getElementById('fname');
+  const name = nameElement.value;
+
+
+const cou = document.getElementById('country');
+  const co = cou.value;
+ 
+
+
+
+const nu = document.getElementById('num');
+  const nud = nu.value;
+  
+ if(nud=="y2"){ fff="答對了  送你一個紅包";
+  document.getElementById("getid").style.display="block";
+  document.getElementById("ppp").style.display="block"; 
+}
+else {fff="答錯了 沒有紅包";}
+
+
+var  aaa=name+co;
+
+document.write("<span style='font-size:20px'>"+"今天是大年初二回娘家"+"</span>" );
+document.write("</br>");
+document.write("<span style='font-size:20px'>"+aaa+"</span>" );
+document.write("</br>");
+document.write("<span style='font-size:20px'>"+fff+"</span>" );
+ 
+}
+
+function get() {
+
+}
+
+   </script>
+
+
+
 <style>
-body {font-family: Arial, Helvetica, sans-serif;font-size:60px; }
+body {font-family: Arial, Helvetica, sans-serif; }
 * {box-sizing: border-box;}
 
 input[type=text], select, textarea {
   width: 100%;
-  font-size:60px;
+  
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -20,7 +62,7 @@ input[type=text], select, textarea {
 
 input[type=submit] {
   background-color: #04AA6D;
-  font-size:60px;
+ 
   color: white;
   padding: 12px 20px;
   border: none;
@@ -31,11 +73,11 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 
-   font-size:60px;
+  
 }
 
 .container {
-  font-size:60px;
+  
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -43,13 +85,18 @@ input[type=submit]:hover {
 
  .pcl{
 position:absolute;
-  top: 900px;
-  left: 100px;
-  width: 500px;
-  height:500px;
+  top: 0px;
+  left: 0px;
+ 
 }
 
-
+ .getcl{
+position:absolute;
+  top: 50px;
+  left: 50px;
+  width: 40px;
+ 
+}
 
 
 
@@ -90,48 +137,17 @@ position:absolute;
     <input type="submit" value="送出"  name="submit" onclick="pr();">
   </form>
   </div>
+<div   class="pcl" style="display:none;">
+<img id="ppp" src="11.jpg"  width="200" height="200" />
+</div>
 
 
-<img src="11.jpg" id="ppp" class="pcl" style="display:none;" >
+<div   id="getid" class="getcl"  style="display:none;" >
+<INPUT TYPE="button" VALUE="領取" onClick="get()">
+</div>
 
 </body>
 
 
-     <script type="text/javascript">
-function pr() {
-document.getElementById("meid").style.display="none";
-  const nameElement = document.getElementById('fname');
-  const name = nameElement.value;
-
-
-const cou = document.getElementById('country');
-  const co = cou.value;
- 
-
-
-
-const nu = document.getElementById('num');
-  const nud = nu.value;
-  
- if(nud=="y2"){ fff="答對了  送你一個紅包"; 
-
-document.getElementById("ppp").style.display="block";
-}
-else {fff="答錯了 沒有紅包";}
-
-
-var  aaa=name+co;
-
-document.write("<span style='font-size:100px'>"+"今天是大年初二回娘家"+"</span>" );
-document.write("</br>");
-document.write("<span style='font-size:100px'>"+aaa+"</span>" );
-document.write("</br>");
-document.write("<span style='font-size:100px'>"+fff+"</span>" );
-
-
-
-
-}
-   </script>
 
 </html>
