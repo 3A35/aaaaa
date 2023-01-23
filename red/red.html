@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;font-size:60px; }
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  font-size:60px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  font-size:60px;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+
+   font-size:60px;
+}
+
+.container {
+  font-size:60px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+ .pcl{
+position:absolute;
+  top: 900px;
+  left: 100px;
+  width: 500px;
+  height:500px;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<div class="container"  id="meid">
+  <form >
+    <label for="fname">請輸入你的名子</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    
+ <label for="country">請選擇你的性別</label>
+    <select id="country" name="country">
+      <option value="帥哥">男</option>
+      <option value="美女">女</option>
+      
+    </select>
+
+
+
+
+
+
+    <label for="numm">今天是大年初幾? 請選擇</label>
+    <select id="num" name="numer">
+      <option value="y1">初1</option>
+      <option value="y2">初2</option>
+      <option value="y3">初3</option>
+      <option value="y4">初4</option>
+      <option value="y5">初5</option>
+      <option value="y6">初6</option>
+    </select>
+
+   
+    <input type="submit" value="送出"  name="submit" onclick="pr();">
+  </form>
+  </div>
+
+
+<img src="11.jpg" id="ppp" class="pcl" style="display:none;" >
+
+</body>
+
+
+     <script type="text/javascript">
+function pr() {
+document.getElementById("meid").style.display="none";
+  const nameElement = document.getElementById('fname');
+  const name = nameElement.value;
+
+
+const cou = document.getElementById('country');
+  const co = cou.value;
+ 
+
+
+
+const nu = document.getElementById('num');
+  const nud = nu.value;
+  
+ if(nud=="y2"){ fff="答對了  送你一個紅包"; 
+
+document.getElementById("ppp").style.display="block";
+}
+else {fff="答錯了 沒有紅包";}
+
+
+var  aaa=name+co;
+
+document.write("<span style='font-size:100px'>"+"今天是大年初二回娘家"+"</span>" );
+document.write("</br>");
+document.write("<span style='font-size:100px'>"+aaa+"</span>" );
+document.write("</br>");
+document.write("<span style='font-size:100px'>"+fff+"</span>" );
+
+
+
+
+}
+   </script>
+
+</html>
