@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+<title>  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+function gfu(){
+ document.getElementById("rid").style.display="none" ;
+ 
+ document.getElementById("in").style.display="none" ;
+
+
+document.getElementById("gid").style.display="block" ;
+
+setTimeout(get,4000);
+}
+function get(){
+
+document.getElementById("gid").style.display="none" ;
+
+
+
+document.getElementById("imgId").style.display="block" ;
+ 
+ b1=document.getElementById("b1");
+ 
+  b1.play();
+ setInterval(step, 1300);
+
+ var um = 1;
+
+
+var ig = new Image(); 
+
+
+
+ function step() {
+  um++; 
+ig.src =document.getElementById("imgId").src='1 ('+ um + ').jpg';
+ig.onload = function(){  }
+ig.onerror =function(){
+um--;
+document.getElementById("imgId").src='1 (1).jpg';
+um=1;
+}
+ document.getElementById("imgId").src='1 ('+ um + ').jpg';
+}
+}
+
+
+
+</script>
+
+<style type="text/css">
+.video-back{
+position:fixed;
+top:0;
+left:0;
+min-width:100%;
+min-height:100%;
+}
+
+.butt{
+position: fixed;
+  top: 20px;
+  right: 50px;
+  width: 150px;
+  line-height: 20px;
+}
+
+.rcl{
+position: absolute;
+  top: 700px;
+  left:420px;
+ 
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<audio id="b1" src="b1.mp4" loop controls="controls" hidden="true"></audio>
+
+<img src="1 (1).jpg" width="1350"  id="imgId" style="display:none"/>  
+
+<img src="get.jpg" width="1350"  id="gid" style="display:none"/>  
+
+
+<div id="in"  >
+<input type="image" src="r1.jpg" width="1200" height="1800" onClick="gfu()">
+</div>
+
+
+
+<div  id="rid"  class="rcl" style="font-size:90px;color:Pink";>請領取紅包</dvi>
+
+
+</body>
+</html>
