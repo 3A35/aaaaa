@@ -54,12 +54,12 @@ kkk=85;
  function ep1(){
 
     yyy--;
-   if (yyy<140) { kkk++;}
+   if (yyy<90) { kkk++;}
  if (yyy==10) { clearInterval(clo1);
  clo2=setInterval(ep2,1);}
  else { 
  fff.style.top=yyy+"px";
- fff.style.left="80px";
+ fff.style.left="0px";
 si1.style.fontSize=kkk+ "px";
 si2.style.fontSize=kkk+ "px";
 si3.style.fontSize=kkk+ "px";}}
@@ -68,12 +68,12 @@ si3.style.fontSize=kkk+ "px";}}
 
 
   
-  ii=80;
+  ii=0;
  function ep2() {
 ii++;
 fff.style.left=ii+"px"; 
 
- if (ii==800) { 
+ if (ii==550) { 
 clearInterval(clo2);
 
 if (xcc==1) {
@@ -123,9 +123,9 @@ if (xcc==7) {
 
 if (xcc==8) {
 xcc=0;
- si1.innerHTML="新 年 快 樂";
- si2.innerHTML="--祝 大 家--";
- si3.innerHTML="兔年行大運 !";
+ si1.innerHTML="新年快樂";
+ si2.innerHTML="-祝大家-";
+ si3.innerHTML="兔年行大運";
  
 }
 
@@ -149,7 +149,7 @@ xcc ++;
  .ttt{
 position: fixed;
   top: 1600px;
-  left: 280px;
+  left: 0px;
 }
 
 .bg {
