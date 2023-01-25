@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>元旦快樂  </title>
+<title></title>
 <meta charset="utf-8">
 <script type="text/javascript">
 
@@ -52,10 +52,11 @@ kkk=85;
 
 
  function ep1(){
-
     yyy--;
-   if (yyy<90) { kkk++;}
- if (yyy==10) { clearInterval(clo1);
+    yyy--;
+    yyy--;
+   if (yyy<300) { kkk++;}
+ if (yyy<10) { clearInterval(clo1);
  clo2=setInterval(ep2,1);}
  else { 
  fff.style.top=yyy+"px";
@@ -71,9 +72,11 @@ si3.style.fontSize=kkk+ "px";}}
   ii=0;
  function ep2() {
 ii++;
+ii++;
+ii++;
 fff.style.left=ii+"px"; 
 
- if (ii==1200) { 
+ if (ii>1200) { 
 clearInterval(clo2);
 
 if (xcc==1) {
@@ -150,11 +153,10 @@ xcc ++;
 position: fixed;
   top: 1600px;
   left: 0px;
+ 
 white-space: nowrap; 
 overflow: hidden;
 text-overflow: ellipsis;
-
-
 }
 
 .bg {
@@ -182,9 +184,9 @@ text-overflow: ellipsis;
 
 <div id="ph1" style="color:red;font-weight:bold;" > 新 年 快 樂</div>
 <br> 
-<div id="ph2" style="color:red;font-weight:bold;">--祝  大  家--</div>
+<div id="ph2" style="color:orange;font-weight:bold;">--祝  大  家--</div>
 <br> 
-<div  id="ph3" style="color:red;font-weight:bold;">兔年行大運 !</div>
+<div  id="ph3" style="color:pink;font-weight:bold;">兔年行大運 !</div>
                
 
 </div>
