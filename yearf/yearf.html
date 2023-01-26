@@ -35,14 +35,17 @@ si3=document.getElementById("ph3");
  
 clo1=setInterval(ep1, 1);
 yyy=1800;
-kkk=85;
+kkk=95;
 
  function ep1(){
+si1.style.color="brown";
+si2.style.color="brown";
+si3.style.color="brown";
     yyy--;
     yyy--;
     yyy--;
-   if (yyy<300) { kkk++;}
- if (yyy<10) { clearInterval(clo1);
+   if (yyy<400) { kkk++;}
+ if (yyy<100) { clearInterval(clo1);
  clo2=setInterval(ep2,1);}
  else { 
  fff.style.top=yyy+"px";
@@ -54,6 +57,10 @@ si3.style.fontSize=kkk+ "px";}}
   
   ii=0;
  function ep2() {
+si1.style.color="red";
+si2.style.color="red";
+si3.style.color="red";
+
 ii++;
 ii++;
 ii++;
