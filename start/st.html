@@ -9,7 +9,7 @@ function pr() {
     answer=0;
     wrong=0;
 document.getElementById("meid").style.display="none";
- 
+  
   id1= document.getElementById('id1');
   id1 = id1.value;
  id2= document.getElementById('id2');
@@ -25,8 +25,7 @@ document.getElementById("meid").style.display="none";
  id5= document.getElementById('id5');
   id5 = id5.value;
 
-//  document.getElementById("backid").style.display="block";
-//  document.getElementById("ppp").style.display="block";
+
  if(id1=="y1"){ f1="第一題:答對";
   answer++;
 }
@@ -44,41 +43,40 @@ wrong++;
  if(id3=="y4"){ f3="第三題:答對";
     answer++;
 }
-else {f3="第三題:答錯了";
+else {f3="第三題:答錯";
 wrong++;
 }
 
- if(id4=="y1"){ f4="第4題:答對";
+ if(id4=="y1"){ f4="第四題:答對";
     answer++;
 }
-else {f4="第4題:答錯了";
+else {f4="第四題:答錯";
 wrong++;
 }
 
- if(id5=="y2"){ f5="第5題:答對";
+ if(id5=="y2"){ f5="第五題:答對";
     answer++;
 }
-else {f5="第5題:答錯";
+else {f5="第五題:答錯";
 wrong++;
 }
 
-Fraction=answer*20;
 
-//document.getElementById("backid").style.display="block";
-//  document.getElementById("ppp").style.display="block";
-document.getElementById("txsumid").style.display="block"; 
-sum=f1+"   "+f2+"   "+f3+"   "+f4+"   "+f5
+document.getElementById("txid").style.display="block";
+document.getElementById("txid1").style.display="block";
+document.getElementById("txid2").style.display="block";
+sum=f1+"   "+f2+"   "+f3+"   "+f4+"   "+f5+"   "
+sum1="總共答對"+answer+"題"+" "+"錯"+wrong+"題";
+fa=answer*20;
+sum2=fa+"分";
 document.getElementById("txid").innerHTML=sum;
-sum1="總共答對"+answer+"題"+" "+"答錯"+wrong+"題";
 document.getElementById("txid1").innerHTML=sum1;
-sum2=Fraction+"分";
 document.getElementById("txid2").innerHTML=sum2;
+ if(fa==100){ document.getElementById("pid").style.display="block";}
+else {document.getElementById("pid1").style.display="block";}
 
-// document.write("<span style='font-size:50px';background-color='blue';>"+"今天是大年初二回娘家"+"</span>" );
-// document.write("</br>");
-// document.write("<span style='font-size:50px'>"+aaa+"</span>" );
-// document.write("</br>");
-// document.write("<span style='font-size:50px'>"+fff+"</span>" );
+
+
   
 }
 
@@ -88,11 +86,11 @@ document.getElementById("txid2").innerHTML=sum2;
 
 
 <style>
-body {font-family: Arial, Helvetica, sans-serif;font-size:50px; }
+body {font-family: Arial, Helvetica, sans-serif;font-size:80px; }
 * {box-sizing: border-box;}
 
 input[type=text], select, textarea {
-  font-size:60px;
+  font-size:80px;
   width: 100%;
   
   padding: 12px;
@@ -105,7 +103,7 @@ input[type=text], select, textarea {
 }
 
 input[type=button] {
-   font-size:60px;
+   font-size:80px;
   background-color: #04AA6D;
  
   color: white;
@@ -116,14 +114,14 @@ input[type=button] {
 }
 
 input[type=submit]:hover {
- font-size:60px;
+ font-size:80px;
   background-color: #45a049;
 
   
 }
 
 .container {
-  font-size:60px;
+  font-size:80px;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -131,10 +129,17 @@ input[type=submit]:hover {
 
  .pcl{
 position:fixed;
-  top: 0px;
-  left: 0px;
- 
-}
+  top: 500px;
+  left: 300px;
+ }
+
+ .pcl1{
+position:fixed;
+  top: 500px;
+  left: 300px;
+ }
+
+
 
  .backcl{
 position:fixed;
@@ -147,23 +152,24 @@ position:fixed;
 
  .txcl{
 position:fixed;
-  top: 50px;
-  left:100px;
- font-size:50px;
+  top: 0px;
+  left:0px;
+ font-size:60px;
+ width:350px;
 }
 
  .txcl1{
 position:fixed;
-  top: 200px;
-  left:100px;
- font-size:50px;
+  top: 100px;
+  left:400px;
+ font-size:80px;
 }
 
  .txcl2{
 position:fixed;
-  top: 300px;
-  left:100px;
- font-size:90px;
+  top: 200px;
+  left:600px;
+ font-size:140px;
 }
 
 </style>
@@ -181,12 +187,12 @@ position:fixed;
       <option value="y4">初12</option>
     </select> 
  
-  <label for="st2">2.最長的車</label>
+  <label for="st2">2.掃地送窮神</label>
    <select id="id2" name="st2">
-      <option value="y1">火車</option>
-      <option value="y2">聯結車</option>
-      <option value="y3">塞車</option>
-      <option value="y4">禮車</option>
+      <option value="y1">初四</option>
+      <option value="y2">初五</option>
+      <option value="y3">初六</option>
+      <option value="y4">初七</option>
     </select>
 
  <label for="st3">3.今年是什麼年</label>
@@ -205,7 +211,7 @@ position:fixed;
       <option value="y4">2月11日</option>
     </select>
       
-  <label for="st5">5.2023元宵主燈在?</label>
+  <label for="st5">5.今年元宵主燈在?</label>
    <select id="id5" name="st5">
       <option value="y1">高雄</option>
       <option value="y2">台北</option>
@@ -217,15 +223,20 @@ position:fixed;
   </form>
   </div>
 
-<div id="txsumid" style="display:none;">
-<div id="txid"  class="txcl" >"aaaaaaaaaa"</div>
-<div id="txid1"  class="txcl1" >"bbbbbbbbbb"</div>
-<div id="txid2"  class="txcl2" >"ccccccccccc"</div>
+<div id="txid"  class="txcl" style="display:none;">"aaaaaaaaaa"</div>
+<div id="txid1"  class="txcl1" style="display:none;">"bbbbbbbbbb"</div>
+<div id="txid2"  class="txcl2" style="display:none;">"aaaaaaaaaa"</div>
+
+
+<div id="pid"  class="pcl" style="display:none;">
+<img  src="yes.jpg" width="800" />
 </div>
 
-<div id="ppp"  class="pcl" style="display:none;">
-<img  src="11.jpg" width="100" />
+<div id="pid1"  class="pcl1" style="display:none;">
+<img  src="no.jpg" width="800" />
 </div>
+
+
 
 
 <div   id="backid" class="backcl"  style="display:none;" >
