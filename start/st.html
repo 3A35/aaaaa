@@ -5,51 +5,72 @@
 
      <script type="text/javascript">
 function pr() {
+
+    answer=0;
+    wrong=0;
 document.getElementById("meid").style.display="none";
-  const nameElement = document.getElementById('fname');
-  const name = nameElement.value;
-
-
-const cou = document.getElementById('country');
-  const co = cou.value;
- 
-
-
-
-const nu = document.getElementById('num');
-  const nud = nu.value;
   
- if(nud=="y2"){ fff="答對了  送你一個紅包";
-  document.getElementById("getid").style.display="block";
-  document.getElementById("ppp").style.display="block"; 
+  id1= document.getElementById('id1');
+  id1 = id1.value;
+ id2= document.getElementById('id2');
+  id2 = id2.value;
+
+ id3= document.getElementById('id3');
+  id3 = id3.value;
+
+//  document.getElementById("backid").style.display="block";
+//  document.getElementById("ppp").style.display="block";
+ if(id1=="y1"){ f1="第一題:答對了";
+  answer++;
 }
-else {fff="答錯了 沒有紅包";}
-
-
-var  aaa=name+co;
-
-document.write("<span style='font-size:50px';background-color='blue';>"+"今天是大年初二回娘家"+"</span>" );
-document.write("</br>");
-document.write("<span style='font-size:50px'>"+aaa+"</span>" );
-document.write("</br>");
-document.write("<span style='font-size:50px'>"+fff+"</span>" );
- 
+else {f1="第一題:答錯了";
+wrong++;
 }
 
-function get() {
-
+ if(id2=="y3"){ f2="第二題:答對了";
+    answer++;
 }
+else {f2="第二題:答錯了";
+wrong++;
+}
+
+ if(id3=="y4"){ f3="第三題:答對了";
+    answer++;
+}
+else {f3="第三題:答錯了";
+wrong++;
+}
+
+
+
+
+
+//document.getElementById("backid").style.display="block";
+//  document.getElementById("ppp").style.display="block";
+
+sum=f1+"   "+f2+"   "+f3+"   "+"總共答對"+answer+"題"+" "+"答錯"+wrong+"題";
+document.getElementById("txid").innerHTML=sum;
+
+
+// document.write("<span style='font-size:50px';background-color='blue';>"+"今天是大年初二回娘家"+"</span>" );
+// document.write("</br>");
+// document.write("<span style='font-size:50px'>"+aaa+"</span>" );
+// document.write("</br>");
+// document.write("<span style='font-size:50px'>"+fff+"</span>" );
+  
+}
+
 
    </script>
 
 
 
 <style>
-body {font-family: Arial, Helvetica, sans-serif;font-size:30px; }
+body {font-family: Arial, Helvetica, sans-serif;font-size:20px; }
 * {box-sizing: border-box;}
 
 input[type=text], select, textarea {
-  font-size:30px;
+  font-size:60px;
   width: 100%;
   
   padding: 12px;
@@ -61,8 +82,8 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
-input[type=submit] {
-   font-size:30px;
+input[type=button] {
+   font-size:60px;
   background-color: #04AA6D;
  
   color: white;
@@ -73,31 +94,39 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
- font-size:30px;
+ font-size:60px;
   background-color: #45a049;
 
   
 }
 
 .container {
-  font-size:30px;
+  font-size:60px;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
 
  .pcl{
-position:absolute;
+position:fixed;
   top: 0px;
   left: 0px;
  
 }
 
- .getcl{
-position:absolute;
-  top: 50px;
-  left: 50px;
-  width: 40px;
+ .backcl{
+position:fixed;
+  top: 450px;
+  left:700px;
+  
+ 
+}
+
+
+ .txcl{
+position:fixed;
+  top: 400px;
+  left:300px;
  
 }
 
@@ -108,45 +137,47 @@ position:absolute;
 <body>
 
 
-<div class="container"  id="meid">
+<div id="meid" class="container"  >
   <form >
-    <label for="fname">請輸入你的名子</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    
- <label for="country">請選擇你的性別</label>
-    <select id="country" name="country">
-      <option value="帥哥">男</option>
-      <option value="美女">女</option>
-      
+    <label for="st1">1.銀行開工日</label>
+    <select id="id1" name="st1">
+      <option value="y1">初9</option>
+      <option value="y2">初10</option>
+      <option value="y3">初11</option>
+      <option value="y4">初12</option>
+    </select> 
+ 
+  <label for="st2">2.最長的車</label>
+   <select id="id2" name="st2">
+      <option value="y1">火車</option>
+      <option value="y2">聯結車</option>
+      <option value="y3">塞車</option>
+      <option value="y4">禮車</option>
     </select>
 
-
-
-
-
-
-    <label for="numm">今天是大年初幾? 請選</label>
-    <select id="num" name="numer">
-      <option value="y1">初1</option>
-      <option value="y2">初2</option>
-      <option value="y3">初3</option>
-      <option value="y4">初4</option>
-      <option value="y5">初5</option>
-      <option value="y6">初6</option>
+ <label for="st3">3.今年是什麼年</label>
+   <select id="id3" name="st3">
+      <option value="y1">鼠年</option>
+      <option value="y2">龍年</option>
+      <option value="y3">虎年</option>
+      <option value="y4">兔年</option>
     </select>
+     
 
    
-    <input type="submit" value="送出"  name="submit" onclick="pr();">
+  <input type="button" value="送出" onclick="pr();">
   </form>
   </div>
-<div   class="pcl" style="display:none;">
-<img id="ppp" src="11.jpg"  width="200" height="200" />
+
+<div id="txid"  class="txcl" style="display:block;">"aaaaaaaaaa"</div>
+
+<div id="ppp"  class="pcl" style="display:none;">
+<img  src="11.jpg" width="100" />
 </div>
 
 
-<div   id="getid" class="getcl"  style="display:none;" >
-<INPUT TYPE="button" VALUE="領取" onClick="get()">
+<div   id="backid" class="backcl"  style="display:none;" >
+<INPUT TYPE="button" VALUE="重新開始" onClick="pr();">
 </div>
 
 </body>
