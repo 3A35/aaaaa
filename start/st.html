@@ -9,7 +9,7 @@ function pr() {
     answer=0;
     wrong=0;
 document.getElementById("meid").style.display="none";
-  
+ 
   id1= document.getElementById('id1');
   id1 = id1.value;
  id2= document.getElementById('id2');
@@ -18,39 +18,61 @@ document.getElementById("meid").style.display="none";
  id3= document.getElementById('id3');
   id3 = id3.value;
 
+ id4= document.getElementById('id4');
+  id4 = id4.value;
+
+
+ id5= document.getElementById('id5');
+  id5 = id5.value;
+
 //  document.getElementById("backid").style.display="block";
 //  document.getElementById("ppp").style.display="block";
- if(id1=="y1"){ f1="第一題:答對了";
+ if(id1=="y1"){ f1="第一題:答對";
   answer++;
 }
-else {f1="第一題:答錯了";
+else {f1="第一題:答錯";
 wrong++;
 }
 
- if(id2=="y3"){ f2="第二題:答對了";
+ if(id2=="y3"){ f2="第二題:答對";
     answer++;
 }
-else {f2="第二題:答錯了";
+else {f2="第二題:答錯";
 wrong++;
 }
 
- if(id3=="y4"){ f3="第三題:答對了";
+ if(id3=="y4"){ f3="第三題:答對";
     answer++;
 }
 else {f3="第三題:答錯了";
 wrong++;
 }
 
+ if(id4=="y1"){ f4="第4題:答對";
+    answer++;
+}
+else {f4="第4題:答錯了";
+wrong++;
+}
 
+ if(id5=="y2"){ f5="第5題:答對";
+    answer++;
+}
+else {f5="第5題:答錯";
+wrong++;
+}
 
-
+Fraction=answer*20;
 
 //document.getElementById("backid").style.display="block";
 //  document.getElementById("ppp").style.display="block";
-
-sum=f1+"   "+f2+"   "+f3+"   "+"總共答對"+answer+"題"+" "+"答錯"+wrong+"題";
+document.getElementById("txsumid").style.display="block"; 
+sum=f1+"   "+f2+"   "+f3+"   "+f4+"   "+f5
 document.getElementById("txid").innerHTML=sum;
-
+sum1="總共答對"+answer+"題"+" "+"答錯"+wrong+"題";
+document.getElementById("txid1").innerHTML=sum1;
+sum2=Fraction+"分";
+document.getElementById("txid2").innerHTML=sum2;
 
 // document.write("<span style='font-size:50px';background-color='blue';>"+"今天是大年初二回娘家"+"</span>" );
 // document.write("</br>");
@@ -66,7 +88,7 @@ document.getElementById("txid").innerHTML=sum;
 
 
 <style>
-body {font-family: Arial, Helvetica, sans-serif;font-size:20px; }
+body {font-family: Arial, Helvetica, sans-serif;font-size:50px; }
 * {box-sizing: border-box;}
 
 input[type=text], select, textarea {
@@ -125,12 +147,24 @@ position:fixed;
 
  .txcl{
 position:fixed;
-  top: 400px;
-  left:300px;
- 
+  top: 50px;
+  left:100px;
+ font-size:50px;
 }
 
+ .txcl1{
+position:fixed;
+  top: 200px;
+  left:100px;
+ font-size:50px;
+}
 
+ .txcl2{
+position:fixed;
+  top: 300px;
+  left:100px;
+ font-size:90px;
+}
 
 </style>
 </head>
@@ -162,14 +196,32 @@ position:fixed;
       <option value="y3">虎年</option>
       <option value="y4">兔年</option>
     </select>
-     
 
+    <label for="st4">4.今年元宵節幾號</label>
+   <select id="id4" name="st4">
+      <option value="y1">2月5日</option>
+      <option value="y2">2月15日</option>
+      <option value="y3">2月8日</option>
+      <option value="y4">2月11日</option>
+    </select>
+      
+  <label for="st5">5.2023元宵主燈在?</label>
+   <select id="id5" name="st5">
+      <option value="y1">高雄</option>
+      <option value="y2">台北</option>
+      <option value="y3">台中</option>
+      <option value="y4">南投</option>
+    </select>
    
   <input type="button" value="送出" onclick="pr();">
   </form>
   </div>
 
-<div id="txid"  class="txcl" style="display:block;">"aaaaaaaaaa"</div>
+<div id="txsumid" style="display:none;">
+<div id="txid"  class="txcl" >"aaaaaaaaaa"</div>
+<div id="txid1"  class="txcl1" >"bbbbbbbbbb"</div>
+<div id="txid2"  class="txcl2" >"ccccccccccc"</div>
+</div>
 
 <div id="ppp"  class="pcl" style="display:none;">
 <img  src="11.jpg" width="100" />
