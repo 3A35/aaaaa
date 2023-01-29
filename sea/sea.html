@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+     <script type="text/javascript">
+function pr() {
+
+    answer=0;
+    wrong=0;
+document.getElementById("meid").style.display="none";
+  
+  id1= document.getElementById('id1');
+  id1 = id1.value;
+ id2= document.getElementById('id2');
+  id2 = id2.value;
+
+ id3= document.getElementById('id3');
+  id3 = id3.value;
+
+ id4= document.getElementById('id4');
+  id4 = id4.value;
+
+
+ id5= document.getElementById('id5');
+  id5 = id5.value;
+
+
+ if(id1=="y1"){ f1="第一題:答對";
+  answer++;
+}
+else {f1="第一題:答錯";
+wrong++;
+}
+
+ if(id2=="y3"){ f2="第二題:答對";
+    answer++;
+}
+else {f2="第二題:答錯";
+wrong++;
+}
+
+ if(id3=="y4"){ f3="第三題:答對";
+    answer++;
+}
+else {f3="第三題:答錯";
+wrong++;
+}
+
+ if(id4=="y1"){ f4="第四題:答對";
+    answer++;
+}
+else {f4="第四題:答錯";
+wrong++;
+}
+
+ if(id5=="y2"){ f5="第五題:答對";
+    answer++;
+}
+else {f5="第五題:答錯";
+wrong++;
+}
+
+
+document.getElementById("txid").style.display="block";
+document.getElementById("txid1").style.display="block";
+document.getElementById("txid2").style.display="block";
+sum=f1+"   "+f2+"   "+f3+"   "+f4+"   "+f5+"   "
+sum1="總共答對"+answer+"題"+" "+"錯"+wrong+"題";
+fa=answer*20;
+sum2=fa+"分";
+document.getElementById("txid").innerHTML=sum;
+document.getElementById("txid1").innerHTML=sum1;
+document.getElementById("txid2").innerHTML=sum2;
+flashing=1;
+
+suid=document.getElementById("suid");
+faid=document.getElementById("faid");
+
+
+
+ if(fa==100){ document.getElementById("pid").style.display="block";
+ suid.play();
+}
+else {document.getElementById("pid1").style.display="block";
+faid.play();
+}
+
+setInterval(step, 300);
+function step() {
+if (flashing==1) {document.getElementById("txid2").style.display="block";}
+if (flashing==2) {document.getElementById("txid2").style.display="none";}
+flashing++;
+if (flashing==3) {flashing=1;}
+}
+}
+   </script>
+
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;font-size:80px; }
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  font-size:80px;
+  width: 100%;
+  
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=button] {
+   font-size:80px;
+  background-color: #04AA6D;
+ 
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+ font-size:80px;
+  background-color: #45a049;
+
+  
+}
+
+.container {
+  font-size:80px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+ .pcl{
+position:fixed;
+  top: 600px;
+  left: 20px;
+ }
+
+ .pcl1{
+position:fixed;
+  top: 600px;
+  left: 20px;
+ }
+
+
+
+ .backcl{
+position:fixed;
+  top: 450px;
+  left:700px;
+  
+ 
+}
+
+
+ .txcl{
+position:fixed;
+  top: 0px;
+  left:0px;
+ font-size:60px;
+ width:350px;
+ color:blue;
+}
+
+ .txcl1{
+position:fixed;
+  top: 100px;
+  left:340px;
+ font-size:70px;
+ color:green;
+}
+
+ .txcl2{
+position:fixed;
+  top: 200px;
+  left:400px;
+ font-size:200px;
+ color:red;
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="meid" class="container"  >
+  <form >
+    <label for="st1">1.誰最聰明 ?</label>
+    <select id="id1" name="st1">
+      <option value="y1">宏德</option>
+      <option value="y2">世軒</option>
+      <option value="y3">志明</option>
+      <option value="y4">世海</option>
+    </select> 
+ 
+  <label for="st2">2.誰是海山舞王 ?</label>
+   <select id="id2" name="st2">
+      <option value="y1">宏德</option>
+      <option value="y2">志明</option>
+      <option value="y3">世軒</option>
+      <option value="y4">世海</option>
+    </select>
+
+ <label for="st3">3.誰最顧家 ?</label>
+   <select id="id3" name="st3">
+      <option value="y1">清溪</option>
+      <option value="y2">世軒</option>
+      <option value="y3">世海</option>
+      <option value="y4">志明</option>
+    </select>
+
+    <label for="st4">4.誰沒小3 ?</label>
+   <select id="id4" name="st4">
+      <option value="y1">志明</option>
+      <option value="y2">清溪</option>
+      <option value="y3">世海</option>
+      <option value="y4">世軒</option>
+    </select>
+      
+  <label for="st5">5.誰小3最多 ?</label>
+   <select id="id5" name="st5">
+      <option value="y1">志明</option>
+      <option value="y2">世軒</option>
+      <option value="y3">世海</option>
+      <option value="y4">2根</option>
+    </select>
+   
+  <input type="button" value="送出" onclick="pr();">
+  </form>
+  </div>
+
+<div id="txid"  class="txcl" style="display:none;">"aaaaaaaaaa"</div>
+<div id="txid1"  class="txcl1" style="display:none;">"bbbbbbbbbb"</div>
+<div id="txid2"  class="txcl2" style="display:none;">"aaaaaaaaaa"</div>
+
+
+<div id="pid"  class="pcl" style="display:none;">
+<img  src="yes.jpg" width="900" />
+</div>
+
+<div id="pid1"  class="pcl1" style="display:none;">
+<img  src="no.jpg" width="900" />
+</div>
+
+
+<div   id="backid" class="backcl"  style="display:none;" >
+<INPUT TYPE="button" VALUE="重新開始" onClick="pr();">
+</div>
+
+<audio id="suid" src="success.mp4"  controls="controls" hidden="true"></audio>
+
+<audio id="faid" src="fail.mp4"  controls="controls" hidden="true"></audio>
+
+
+
+
+
+</body>
+
+
+
+</html>

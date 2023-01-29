@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+     <script type="text/javascript">
+function pr() {
+
+    answer=0;
+    wrong=0;
+document.getElementById("meid").style.display="none";
+  
+  id1= document.getElementById('id1');
+  id1 = id1.value;
+ id2= document.getElementById('id2');
+  id2 = id2.value;
+
+ id3= document.getElementById('id3');
+  id3 = id3.value;
+
+ id4= document.getElementById('id4');
+  id4 = id4.value;
+
+
+ id5= document.getElementById('id5');
+  id5 = id5.value;
+
+
+ if(id1=="y1"){ f1="第一題:答對";
+  answer++;
+}
+else {f1="第一題:答錯";
+wrong++;
+}
+
+ if(id2=="y3"){ f2="第二題:答對";
+    answer++;
+}
+else {f2="第二題:答錯";
+wrong++;
+}
+
+ if(id3=="y4"){ f3="第三題:答對";
+    answer++;
+}
+else {f3="第三題:答錯";
+wrong++;
+}
+
+ if(id4=="y1"){ f4="第四題:答對";
+    answer++;
+}
+else {f4="第四題:答錯";
+wrong++;
+}
+
+ if(id5=="y2"){ f5="第五題:答對";
+    answer++;
+}
+else {f5="第五題:答錯";
+wrong++;
+}
+
+
+document.getElementById("txid").style.display="block";
+document.getElementById("txid1").style.display="block";
+document.getElementById("txid2").style.display="block";
+sum=f1+"   "+f2+"   "+f3+"   "+f4+"   "+f5+"   "
+sum1="總共答對"+answer+"題"+" "+"錯"+wrong+"題";
+fa=answer*20;
+sum2=fa+"分";
+document.getElementById("txid").innerHTML=sum;
+document.getElementById("txid1").innerHTML=sum1;
+document.getElementById("txid2").innerHTML=sum2;
+flashing=1;
+
+suid=document.getElementById("suid");
+
+
+
+
+ if(fa==100){ document.getElementById("pid").style.display="block";
+ suid.play();
+}
+else {document.getElementById("pid1").style.display="block";}
+
+setInterval(step, 300);
+function step() {
+if (flashing==1) {document.getElementById("txid2").style.display="block";}
+if (flashing==2) {document.getElementById("txid2").style.display="none";}
+flashing++;
+if (flashing==3) {flashing=1;}
+}
+}
+   </script>
+
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;font-size:80px; }
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  font-size:80px;
+  width: 100%;
+  
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=button] {
+   font-size:80px;
+  background-color: #04AA6D;
+ 
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+ font-size:80px;
+  background-color: #45a049;
+
+  
+}
+
+.container {
+  font-size:80px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+ .pcl{
+position:fixed;
+  top: 600px;
+  left: 20px;
+ }
+
+ .pcl1{
+position:fixed;
+  top: 600px;
+  left: 20px;
+ }
+
+
+
+ .backcl{
+position:fixed;
+  top: 450px;
+  left:700px;
+  
+ 
+}
+
+
+ .txcl{
+position:fixed;
+  top: 0px;
+  left:0px;
+ font-size:60px;
+ width:350px;
+ color:blue;
+}
+
+ .txcl1{
+position:fixed;
+  top: 100px;
+  left:340px;
+ font-size:70px;
+ color:green;
+}
+
+ .txcl2{
+position:fixed;
+  top: 200px;
+  left:500px;
+ font-size:200px;
+ color:red;
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="meid" class="container"  >
+  <form >
+    <label for="st1">1.銀行開工日 ?</label>
+    <select id="id1" name="st1">
+      <option value="y1">初9</option>
+      <option value="y2">初10</option>
+      <option value="y3">初11</option>
+      <option value="y4">初12</option>
+    </select> 
+ 
+  <label for="st2">2.掃地送窮神 ?</label>
+   <select id="id2" name="st2">
+      <option value="y1">初四</option>
+      <option value="y2">初五</option>
+      <option value="y3">初六</option>
+      <option value="y4">初七</option>
+    </select>
+
+ <label for="st3">3.今年是什麼年 ?</label>
+   <select id="id3" name="st3">
+      <option value="y1">鼠年</option>
+      <option value="y2">龍年</option>
+      <option value="y3">虎年</option>
+      <option value="y4">兔年</option>
+    </select>
+
+    <label for="st4">4.今年元宵節幾號 ?</label>
+   <select id="id4" name="st4">
+      <option value="y1">2月5日</option>
+      <option value="y2">2月15日</option>
+      <option value="y3">2月8日</option>
+      <option value="y4">2月11日</option>
+    </select>
+      
+  <label for="st5">5.今年元宵主燈在 ?</label>
+   <select id="id5" name="st5">
+      <option value="y1">高雄</option>
+      <option value="y2">台北</option>
+      <option value="y3">台中</option>
+      <option value="y4">南投</option>
+    </select>
+   
+  <input type="button" value="送出" onclick="pr();">
+  </form>
+  </div>
+
+<div id="txid"  class="txcl" style="display:none;">"aaaaaaaaaa"</div>
+<div id="txid1"  class="txcl1" style="display:none;">"bbbbbbbbbb"</div>
+<div id="txid2"  class="txcl2" style="display:none;">"aaaaaaaaaa"</div>
+
+
+<div id="pid"  class="pcl" style="display:none;">
+<img  src="yes.jpg" width="900" />
+</div>
+
+<div id="pid1"  class="pcl1" style="display:none;">
+<img  src="no.jpg" width="900" />
+</div>
+
+
+<div   id="backid" class="backcl"  style="display:none;" >
+<INPUT TYPE="button" VALUE="重新開始" onClick="pr();">
+</div>
+
+<audio id="suid" src="success.mp4"  controls="controls" hidden="true"></audio>
+
+
+
+
+
+</body>
+
+
+
+</html>
