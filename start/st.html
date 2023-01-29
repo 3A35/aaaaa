@@ -72,15 +72,28 @@ sum2=fa+"分";
 document.getElementById("txid").innerHTML=sum;
 document.getElementById("txid1").innerHTML=sum1;
 document.getElementById("txid2").innerHTML=sum2;
- if(fa==100){ document.getElementById("pid").style.display="block";}
-else {document.getElementById("pid1").style.display="block";}
+flashing=1;
+
+suid=document.getElementById("suid");
+faid=document.getElementById("faid");
 
 
 
-  
+ if(fa==100){ document.getElementById("pid").style.display="block";
+ suid.play();
+}
+else {document.getElementById("pid1").style.display="block";
+faid.play();
 }
 
-
+setInterval(step, 300);
+function step() {
+if (flashing==1) {document.getElementById("txid2").style.display="block";}
+if (flashing==2) {document.getElementById("txid2").style.display="none";}
+flashing++;
+if (flashing==3) {flashing=1;}
+}
+}
    </script>
 
 
@@ -130,13 +143,13 @@ input[type=submit]:hover {
  .pcl{
 position:fixed;
   top: 600px;
-  left: 100px;
+  left: 20px;
  }
 
  .pcl1{
 position:fixed;
   top: 600px;
-  left: 100px;
+  left: 20px;
  }
 
 
@@ -156,20 +169,23 @@ position:fixed;
   left:0px;
  font-size:60px;
  width:350px;
+ color:blue;
 }
 
  .txcl1{
 position:fixed;
   top: 100px;
   left:340px;
- font-size:80px;
+ font-size:70px;
+ color:green;
 }
 
  .txcl2{
 position:fixed;
   top: 200px;
-  left:500px;
- font-size:140px;
+  left:400px;
+ font-size:200px;
+ color:red;
 }
 
 </style>
@@ -237,11 +253,17 @@ position:fixed;
 </div>
 
 
-
-
 <div   id="backid" class="backcl"  style="display:none;" >
 <INPUT TYPE="button" VALUE="重新開始" onClick="pr();">
 </div>
+
+<audio id="suid" src="success.mp4"  controls="controls" hidden="true"></audio>
+
+<audio id="faid" src="fail.mp4"  controls="controls" hidden="true"></audio>
+
+
+
+
 
 </body>
 
