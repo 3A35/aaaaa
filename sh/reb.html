@@ -5,7 +5,7 @@
 
 <script type="text/javascript">
 
-function  enlargefu(item){
+function  enlargetpfu(item){
 document.getElementById("conid").style.display="none";
 document.getElementById("all").style.display="none";
 document.getElementById("welcomeid").style.display="block";
@@ -15,9 +15,9 @@ document.getElementById("welcomeid").innerHTML="歡迎"+na+"光臨";
 document.getElementById("loginid").style.display="block";
 document.getElementById("establishid").style.display="block";
 document.getElementById("closeid").style.display="block"
-document.getElementById("enlargeid").style.display="block"
+document.getElementById("enlargetpid").style.display="block"
 document.getElementById("enlargetid").style.display="block"
-document.getElementById("enlargeid").src=uuu+' ('+ item + ').jpg';
+document.getElementById("enlargetpid").src=uuu+' ('+ item + ').jpg';
 
 ddd=uuu+"-"+item+"-";
 r1=localStorage.getItem(ddd+1);
@@ -60,7 +60,7 @@ function  closefu(){
 document.getElementById("loginid").style.display="none";
 document.getElementById("establishid").style.display="none";
 document.getElementById("welcomeid").style.display="none";
-document.getElementById("enlargeid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
 document.getElementById("enlargetid").style.display="none";
 document.getElementById("closeid").style.display="none"
 document.getElementById("all").style.display="block";
@@ -130,7 +130,7 @@ localStorage.setItem(22222,rrr2);
   width:450px;height:600px;}
 
 
-.enlargecl{
+.enlargetpcl{
  touch-action: auto;
  position: relative;
   top:300px;
@@ -331,21 +331,21 @@ localStorage.setItem(22222,rrr2);
 
 
 <div  id="all"  style="display:none;">
-<input  type="image" id="productid1"  class="product1cl"  onClick="enlargefu(1)" >
-<input  type="image" id="productid2"  class="product1cl"  onClick="enlargefu(2)" >
-<input  type="image" id="productid3"  class="product1cl"  onClick="enlargefu(3)" >
-<input  type="image" id="productid4"  class="product1cl"  onClick="enlargefu(4)" >
-<input  type="image" id="productid5"  class="product1cl"  onClick="enlargefu(5)" >
-<input  type="image" id="productid6"  class="product1cl"  onClick="enlargefu(6)" >
-<input  type="image" id="productid7"  class="product1cl"  onClick="enlargefu(7)" >
-<input  type="image" id="productid8"  class="product1cl"  onClick="enlargefu(8)" >
-<input  type="image" id="productid9"  class="product1cl"  onClick="enlargefu(9)" >
-<input  type="image" id="productid10" class="product1cl"  onClick="enlargefu(10)" >
-<input  type="image" id="productid11" class="product1cl"  onClick="enlargefu(11)" >
-<input  type="image" id="productid12" class="product1cl"  onClick="enlargefu(12)" >
-<input  type="image" id="productid13" class="product1cl"  onClick="enlargefu(13)" >
-<input  type="image" id="productid14" class="product1cl"  onClick="enlargefu(14)" >
-<input  type="image" id="productid15" class="product1cl"  onClick="enlargefu(15)" >
+<input  type="image" id="productid1"  class="product1cl"  onClick="enlargetpfu(1)" >
+<input  type="image" id="productid2"  class="product1cl"  onClick="enlargetpfu(2)" >
+<input  type="image" id="productid3"  class="product1cl"  onClick="enlargetpfu(3)" >
+<input  type="image" id="productid4"  class="product1cl"  onClick="enlargetpfu(4)" >
+<input  type="image" id="productid5"  class="product1cl"  onClick="enlargetpfu(5)" >
+<input  type="image" id="productid6"  class="product1cl"  onClick="enlargetpfu(6)" >
+<input  type="image" id="productid7"  class="product1cl"  onClick="enlargetpfu(7)" >
+<input  type="image" id="productid8"  class="product1cl"  onClick="enlargetpfu(8)" >
+<input  type="image" id="productid9"  class="product1cl"  onClick="enlargetpfu(9)" >
+<input  type="image" id="productid10" class="product1cl"  onClick="enlargetpfu(10)" >
+<input  type="image" id="productid11" class="product1cl"  onClick="enlargetpfu(11)" >
+<input  type="image" id="productid12" class="product1cl"  onClick="enlargetpfu(12)" >
+<input  type="image" id="productid13" class="product1cl"  onClick="enlargetpfu(13)" >
+<input  type="image" id="productid14" class="product1cl"  onClick="enlargetpfu(14)" >
+<input  type="image" id="productid15" class="product1cl"  onClick="enlargetpfu(15)" >
 
 </div>
 
@@ -386,7 +386,7 @@ localStorage.setItem(22222,rrr2);
 
 
 
-<input type="image" id="enlargeid"  class="enlargecl" style="display:none;" onClick="close()" >
+<input type="image" id="enlargetpid"  class="enlargetpcl" style="display:none;" onClick="close()" >
 
 <div id="enlargetid" class="enlargetcl" style="display:none;"  >
 <div>六捷電子材料行六捷電子材料行六捷電子材料行</div>
