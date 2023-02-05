@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=" UTF-8">
+    
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <title></title>
+    <style>
+ .caa{
+position:fixed;
+  top: 200px;
+  left:0px;
+ font-size:60px;
+ width:350px;
+ color:blue;
+}
+
+    </style>
+</head>
+
+<body>
+     
+    <div id="capture"  class="caa">adhjjjj   jjjj   jjjjjjj  jjjjjj  jj   cdeg</div>
+   
+    <button onclick="block_capture()">Click</button>
+    <script>
+        function block_capture() {
+            html2canvas(document.querySelector("#capture")).then(function (canvas) {
+                a = document.createElement('a');
+                a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+                a.download = 'image.jpg';
+                a.click();
+            });
+        }
+    </script>
+</body>
+
+</html>
