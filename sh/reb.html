@@ -10,8 +10,10 @@ document.getElementById("conid").style.display="none";
 document.getElementById("layer2").style.display="none";
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("add_cartid").style.display="block";
-var  mo=localStorage.getItem(11111);
-var  na=localStorage.getItem(22222);
+
+ mo=localStorage.getItem("in_mobile");
+ na=localStorage.getItem("in_name");
+
 document.getElementById("welcomeid").innerHTML="歡迎"+na+"光臨";
 document.getElementById("loginid").style.display="block";
 document.getElementById("establishid").style.display="block";
@@ -89,14 +91,16 @@ document.getElementById("loginid").style.display="block";
 
 let mobile= document.getElementById("mobile_phoneid").value; 
 let name= document.getElementById("nameid").value; 
-localStorage.setItem(mobile+"-"+1,mobile);
-localStorage.setItem(mobile+"-"+2,name);
-rr1=localStorage.getItem(mobile+"-"+1);
-rr2=localStorage.getItem(mobile+"-"+2);
+localStorage.setItem(mobile,mobile);
+localStorage.setItem(mobile+"name",name);
+localStorage.setItem(mobile+"few_strokes",0);
+
+rrr1=localStorage.getItem(mobile);
+rrr2=localStorage.getItem(mobile+"name");
 document.getElementById("welcomeid").style.display="block";
-document.getElementById("welcomeid").innerHTML="歡迎"+rr2+"光臨"
-localStorage.setItem(11111,rr1);
-localStorage.setItem(22222,rr2);
+document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
+localStorage.setItem(in_mobile,rrr1);
+localStorage.setItem(in_name,rrr2);
 }
 
 
@@ -114,16 +118,21 @@ document.getElementById("establishid").style.display="block";
 let login= document.getElementById("login_read_mobile").value; 
  
 
-rrr1=localStorage.getItem(login+"-"+1);
-rrr2=localStorage.getItem(login+"-"+2);
+rrr1=localStorage.getItem(login);
+rrr2=localStorage.getItem(login+"name");
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
-localStorage.setItem(11111,rrr1);
-localStorage.setItem(22222,rrr2);
+localStorage.setItem(in_mobile,rrr1);
+localStorage.setItem(in_name,rrr2);
 }
 
 function  shopping_cartfu(){
 
+ rfew_strokes=localStorage.getItem(rrr1+"few_strokes");
+ rno1=localStorage.getItem(rrr1+"no1");
+alert(rno1);
+ rnonumer1=localStorage.getItem(rrr1+"nonumer1");
+alert(rnonumer1);
 }
 
 function  reducefu(){
@@ -145,7 +154,14 @@ nume++;
 document.getElementById("quantityid").innerText=nume;
 }
 
-
+function  join_infu(){
+rfew_strokes=localStorage.getItem(rrr1+"few_strokes");
+rfew_strokes++;
+localStorage.setItem(rrr1+"no"+rfew_strokes,sum);
+localStorage.setItem(rrr1+"nonumer"+rfew_strokes,nume);
+localStorage.setItem(rrr1+"few_strokes",rfew_strokes);
+alert("已存入");
+}
 
 
 </script>
@@ -243,7 +259,7 @@ document.getElementById("quantityid").innerText=nume;
 
 
 
-.shoping_cartcl{
+.shopping_cartcl{
  position:fixed;
   top:50px;
   left: 800px;}
@@ -413,8 +429,8 @@ font-size:80px;
 </div>
 
 
-<div id="shoping_cartid">
-<input type="image" src="shopping_cart.jpg" class="shoping_cartcl"  width="200"  height="200"  shopping_cartfu()">
+<div id="shopping_cartid">
+<input type="image" src="shopping_cart.jpg" class="shopping_cartcl"  width="200"  height="200"  onClick="shopping_cartfu()">
 </div>
 
 
