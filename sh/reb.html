@@ -9,6 +9,7 @@ function  enlargetpfu(item){
 document.getElementById("conid").style.display="none";
 document.getElementById("layer2").style.display="none";
 document.getElementById("welcomeid").style.display="block";
+document.getElementById("add_cartid").style.display="block";
 var  mo=localStorage.getItem(11111);
 var  na=localStorage.getItem(22222);
 document.getElementById("welcomeid").innerHTML="歡迎"+na+"光臨";
@@ -120,6 +121,30 @@ localStorage.setItem(11111,rrr1);
 localStorage.setItem(22222,rrr2);
 }
 
+function  shopping_cartfu(){
+
+}
+
+function  reducefu(){
+ nume=document.getElementById("quantityid").innerText;
+
+nume--;
+if (nume<1) {nume=1;}
+
+document.getElementById("quantityid").innerText=nume;
+
+}
+
+
+function  Increasefu(){
+ nume=document.getElementById("quantityid").innerText;
+
+nume++;
+
+document.getElementById("quantityid").innerText=nume;
+}
+
+
 
 
 </script>
@@ -173,9 +198,9 @@ localStorage.setItem(22222,rrr2);
 .closecl{
  touch-action: auto;
  position: relative;
-  top: 10px;
+  top: 550px;
   
-  left: 300px;}
+  left: 20px;}
  
 .account_numbercl{
    font-size: 90px;
@@ -189,40 +214,11 @@ localStorage.setItem(22222,rrr2);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .establishcl{
    font-size:90px;
   position:fixed;
   top:140px;
   left:500px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -246,19 +242,10 @@ localStorage.setItem(22222,rrr2);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.shoping_cartcl{
+ position:fixed;
+  top:50px;
+  left: 800px;}
 
 
 
@@ -268,19 +255,34 @@ localStorage.setItem(22222,rrr2);
 
 
 
+.reducecl{
+ font-size:100px;
+ position:fixed;
+  top:1700px;
+  left: 500px;}
 
 
 
+.quantitycl{
+font-size:90px;
+ position:fixed;
+  top:1700px;
+  left: 650px;}
+
+
+.Increasecl{
+font-size:100px;
+ position:fixed;
+  top:1700px;
+  left: 800px;}
 
 
 
-
-
-
-
-
-
-
+.join_incl{
+font-size:80px;
+ position:fixed;
+  top:1900px;
+  left: 480px;}
 
 
 
@@ -410,14 +412,32 @@ localStorage.setItem(22222,rrr2);
 </div>
 
 
+<div id="shoping_cartid">
+<input type="image" src="shopping_cart.jpg" class="shoping_cartcl"  width="200"  height="200"  shopping_cartfu()">
+</div>
 
 
 
+<div id="add_cartid" style="display:none;">
+
+<div id="Increaseid"   >
+<INPUT TYPE="button" class="Increasecl"  VALUE="+" onClick="Increasefu()">
+</div>
 
 
+<div id="reduceid"   >
+<INPUT TYPE="button" class="reducecl" VALUE="-" onClick="reducefu()">
+</div>
 
 
+<div id="quantityid" class="quantitycl"  >1</div>
 
 
+<div id="join_inid"  >
+<INPUT TYPE="button" class="join_incl" VALUE="加入購物車" onClick="join_infu()">
+</div>
+
+
+</div>
 </body>
 </html>
