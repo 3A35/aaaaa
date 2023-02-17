@@ -9,6 +9,7 @@
 function  enlargetpfu(item){
 document.getElementById("conid").style.display="none";
 document.getElementById("layer2").style.display="none";
+document.getElementById("shopping_cartid").style.display="block";
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("add_cartid").style.display="block";
 
@@ -36,11 +37,11 @@ sum="商品代號"+r1+" "+"名稱:"+r2+" "+"說明:"+r3+" "+"價格:"+r4
 
 
 function  layer1(fff){
-
 uuu=fff;
 document.getElementById("layer1").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer2").style.display="block";
+document.getElementById("shopping_cartid").style.display="none";
 for(i=1;i<16;){
 
  hh="productid"+i
@@ -58,6 +59,7 @@ i++;
 
 
 function  closefu(){
+
 document.getElementById("show_carid").style.display="none";
 document.getElementById("loginid").style.display="none";
 document.getElementById("establishid").style.display="none";
@@ -68,9 +70,12 @@ document.getElementById("closeid").style.display="none"
 document.getElementById("add_cartid").style.display="none"
 document.getElementById("layer2").style.display="block";
 document.getElementById("conid").style.display="block";
+document.getElementById("shopping_cartid").style.display="none";
 }
 
 function  confu(){
+document.getElementById("shopping_cartid").style.display="none";
+document.getElementById("show_carid").style.display="none";
 document.getElementById("conid").style.display="none";
 document.getElementById("layer2").style.display="none";
 document.getElementById("layer1").style.display="block";
@@ -125,6 +130,8 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 }
 
 function  shopping_cartfu(){
+document.getElementById("layer1").style.display="none"
+document.getElementById("layer2").style.display="none"
 document.getElementById("add_cartid").style.display="none";
 document.getElementById("enlargetpid").style.display="none";
 document.getElementById("enlargetid").style.display="none";
@@ -329,7 +336,7 @@ font-size:80px;
   top: 300px;
   left:10px;
   font-size:40px;
-  max-width: 1000px;
+  max-width: 900px;
   color:blue;
 }
 
