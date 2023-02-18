@@ -41,7 +41,7 @@ uuu=fff;
 document.getElementById("layer1").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer2").style.display="block";
-document.getElementById("shopping_cartid").style.display="none";
+
 for(i=1;i<16;){
 
  hh="productid"+i
@@ -74,7 +74,7 @@ document.getElementById("shopping_cartid").style.display="none";
 }
 
 function  confu(){
-document.getElementById("shopping_cartid").style.display="none";
+
 document.getElementById("show_carid").style.display="none";
 document.getElementById("conid").style.display="none";
 document.getElementById("layer2").style.display="none";
@@ -130,8 +130,7 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 }
 
 function  shopping_cartfu(){
-document.getElementById("layer1").style.display="none"
-document.getElementById("layer2").style.display="none"
+
 document.getElementById("add_cartid").style.display="none";
 document.getElementById("enlargetpid").style.display="none";
 document.getElementById("enlargetid").style.display="none";
@@ -140,18 +139,26 @@ document.getElementById("login_read_mobile").style.display="none";
 document.getElementById("establishid").style.display="none";
 document.getElementById("loginid").style.display="none";
 document.getElementById("show_carid").style.display="block";
+document.getElementById("Number_ordersid").style.display="block";
 
 pro="";
 
  rfew_strokes=localStorage.getItem(rrr1+2);
+
+document.getElementById("Number_ordersid").innerHTML="購物車內共有 "+rfew_strokes+" 筆資料";
+
 for (i=0;i<rfew_strokes;i++) {
 no=localStorage.getItem(rrr1+1001+i);
 no_numer=localStorage.getItem(rrr1+2001+i);
 aa=pro;
 g=i+1
-pro=no+"數量"+no_numer;
-pro="--------------------"+pro+" "+aa;
-  
+pro=g+"."+no+"數量"+no_numer+" ";
+len=pro.length ;
+pro=(pro.substr(0, len));
+
+pro=pro+aa;
+ 
+ 
 document.getElementById("show_carid").innerHTML=pro;
 
 }
@@ -219,10 +226,9 @@ alert("已存入");
    font-size: 50px;
  touch-action: auto;
  position: relative;
-  top:50px;
-  
+  top:300px;
   left: 0px;
-  width:1100px;
+  width:1000px;
  
 }
 
@@ -244,7 +250,7 @@ alert("已存入");
 .closecl{
  touch-action: auto;
  position: fixed;
-  top: 1400px;
+  top: 1500px;
   
   left: 20px;}
  
@@ -291,7 +297,7 @@ alert("已存入");
 .shopping_cartcl{
  position:fixed;
   top:50px;
-  left: 800px;}
+  left: 750px;}
 
 
 
@@ -304,7 +310,7 @@ alert("已存入");
 .reducecl{
  font-size:100px;
  position:fixed;
-  top:1450px;
+  top:1550px;
   left: 500px;}
 
 
@@ -312,14 +318,14 @@ alert("已存入");
 .quantitycl{
 font-size:90px;
  position:fixed;
-  top:1450px;
+  top:1550px;
   left: 650px;}
 
 
 .Increasecl{
 font-size:100px;
  position:fixed;
-  top:1450px;
+  top:1550px;
   left: 800px;}
 
 
@@ -327,7 +333,7 @@ font-size:100px;
 .join_incl{
 font-size:80px;
  position:fixed;
-  top:1600px;
+  top:1700px;
   left: 480px;}
 
 
@@ -335,15 +341,36 @@ font-size:80px;
  position:fixed;
   top: 300px;
   left:10px;
-  font-size:40px;
-  max-width: 900px;
+  font-size:46px;
+  max-width: 810px;
   color:blue;
 }
+
+
+
+ #Number_ordersid{
+ position:fixed;
+  top: 200px;
+  left:10px;
+  font-size:65px;
+ 
+  color:green;
+}
+
+
+
+
+
+
+
 
 
 </style>
 </head>
 <body>
+
+
+<div id="Number_ordersid" style="display:none;"></div>
 
 
 <div id="show_carid" style="display:none;"></div>
@@ -464,7 +491,7 @@ font-size:80px;
 </div>
 
 
-<div id="shopping_cartid">
+<div id="shopping_cartid"  style="display:none;">
 <input type="image" src="shopping_cart.jpg" class="shopping_cartcl"  width="200"  height="200"  onClick="shopping_cartfu()">
 </div>
 
