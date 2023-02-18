@@ -59,6 +59,7 @@ i++;
 
 
 function  closefu(){
+document.getElementById("upid").style.display="none";
 document.getElementById("Number_ordersid").style.display="none";
 document.getElementById("show_carid").style.display="none";
 document.getElementById("loginid").style.display="none";
@@ -130,7 +131,8 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 }
 
 function  shopping_cartfu(){
-
+document.getElementById("lname").style.display="none";
+document.getElementById("fname").style.display="none";
 document.getElementById("add_cartid").style.display="none";
 document.getElementById("enlargetpid").style.display="none";
 document.getElementById("enlargetid").style.display="none";
@@ -140,6 +142,7 @@ document.getElementById("establishid").style.display="none";
 document.getElementById("loginid").style.display="none";
 document.getElementById("show_carid").style.display="block";
 document.getElementById("Number_ordersid").style.display="block";
+document.getElementById("upid").style.display="block";
 
 pro="";
 
@@ -198,6 +201,8 @@ rfew_strokes++;
 localStorage.setItem(rrr1+2,rfew_strokes);
 alert("已存入");
 }
+
+ 
 
 
 </script>
@@ -350,7 +355,7 @@ font-size:80px;
 
  #Number_ordersid{
  position:fixed;
-  top: 200px;
+  top: 300px;
   left:10px;
   font-size:65px;
  
@@ -358,7 +363,15 @@ font-size:80px;
 }
 
 
-
+ .upcl{
+ position:fixed;
+  top: 1300px;
+  left:300px;
+  font-size:90px;
+ width:100px;height:100px;
+ background-color:red;
+  color:green;
+}
 
 
 
@@ -368,7 +381,17 @@ font-size:80px;
 </style>
 </head>
 <body>
+  <div id="upid" style="display:none;">
+  <form action="#" method="post" name="google">
+   
+    <input  type="text" id="fname" name="firstname" >
 
+    <input  type="text" id="lname" name="lastname">
+
+<button onclick="upfu( )"><div class="upcl" >送出訂貨單</button>
+    
+  </form>
+</div>
 
 <div id="Number_ordersid" style="display:none;"></div>
 
@@ -521,4 +544,26 @@ font-size:80px;
 
 </div>
 </body>
+
+
+<script type="text/javascript">
+
+  const scriptURL='https://script.google.com/macros/s/AKfycbxxnFsavzyAV73XZAijKgWrSTnzdlbrrQ_VES6UxBwRho9hZIhnj5vQQK2iU-Y2fPc9/exec'
+
+        const form = document.forms['google']
+          
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("成功送出！！！"))
+              .catch(error => console.error('Error!', error.message))
+          })
+function upfu(){
+document.getElementById("fname").value =rrr2;
+document.getElementById("lname").value =pro;
+
+}
+</script>
+
+
 </html>
