@@ -121,10 +121,13 @@ function  login_endfu(){
 document.getElementById("login_readid").style.display="none";
 document.getElementById("establishid").style.display="block";
 let login= document.getElementById("login_read_mobile").value; 
+
  
 
 rrr1=localStorage.getItem(login);
 rrr2=localStorage.getItem(login+1);
+if (rrr2==null){alert("不存在 請建新檔!!");
+rrr2="未建檔";}
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 
@@ -255,7 +258,7 @@ alert("已存入");
 .closecl{
  touch-action: auto;
  position: fixed;
-  top: 1500px;
+  top: 1400px;
   
   left: 20px;}
  
@@ -355,17 +358,16 @@ font-size:80px;
 
  #Number_ordersid{
  position:fixed;
-  top: 150px;
+  top: 100px;
   left:10px;
   font-size:65px;
- 
-  color:green;
+   color:green;
 }
 
 
  .upcl{
  position:fixed;
-  top: 1500px;
+  top: 1400px;
   left:480px;
   background: orangered;
   border: none;
