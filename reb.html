@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<head>
+<title>  </title>
+<meta charset="utf-8">
+
+<script type="text/javascript">
+// mobile+1=名子  mobile+2=幾種  
+// mobile+1001=第一項產品型號  mobile+2001=第一項產品數量 
+function  enlargetpfu(item){
+document.getElementById("conid").style.display="none";
+document.getElementById("layer2").style.display="none";
+document.getElementById("shopping_cartid").style.display="block";
+document.getElementById("welcomeid").style.display="block";
+document.getElementById("add_cartid").style.display="block";
+
+ rrr1=localStorage.getItem(10501050);
+ rrr2=localStorage.getItem(28422842);
+
+document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨";
+document.getElementById("loginid").style.display="block";
+document.getElementById("establishid").style.display="block";
+document.getElementById("closeid").style.display="block"
+document.getElementById("enlargetpid").style.display="block"
+document.getElementById("enlargetid").style.display="block"
+document.getElementById("enlargetpid").src=uuu+' ('+ item + ').jpg';
+
+ddd=uuu+"-"+item+"-";
+r1=localStorage.getItem(ddd+1);
+r2=localStorage.getItem(ddd+2);
+r3=localStorage.getItem(ddd+3);
+r4=localStorage.getItem(ddd+4);
+
+sum="商品代號"+r1+" "+"名稱:"+r2+" "+"說明:"+r3+" "+"價格:"+r4
+
+ document.getElementById("enlargetid").innerHTML=sum;
+}
+
+
+function  layer1(fff){
+uuu=fff;
+document.getElementById("layer1").style.display="none";
+document.getElementById("conid").style.display="block";
+document.getElementById("layer2").style.display="block";
+
+for(i=1;i<16;){
+
+ hh="productid"+i
+hhhh=hh;
+var img = new Image();
+   
+ img.src =document.getElementById(hh).src=fff+' ('+ i + ').jpg';
+ 
+i++;
+
+}
+   
+ 
+}
+
+
+function  closefu(){
+document.getElementById("upid").style.display="none";
+document.getElementById("Number_ordersid").style.display="none";
+document.getElementById("show_carid").style.display="none";
+document.getElementById("loginid").style.display="none";
+document.getElementById("establishid").style.display="none";
+document.getElementById("welcomeid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("closeid").style.display="none"
+document.getElementById("add_cartid").style.display="none"
+document.getElementById("layer2").style.display="block";
+document.getElementById("conid").style.display="block";
+document.getElementById("shopping_cartid").style.display="none";
+}
+
+function  confu(){
+
+document.getElementById("show_carid").style.display="none";
+document.getElementById("conid").style.display="none";
+document.getElementById("layer2").style.display="none";
+document.getElementById("layer1").style.display="block";
+
+}
+
+function  establishfu(){
+document.getElementById("account_numberid").style.display="block";
+document.getElementById("loginid").style.display="none";
+
+}
+
+function  confirmfu(){
+document.getElementById("account_numberid").style.display="none";
+document.getElementById("loginid").style.display="block";
+
+
+let mobile= document.getElementById("mobile_phoneid").value; 
+let name= document.getElementById("nameid").value; 
+localStorage.setItem(mobile,mobile);
+localStorage.setItem(mobile+1,name);
+localStorage.setItem(mobile+2,0);
+
+rrr1=localStorage.getItem(mobile);
+rrr2=localStorage.getItem(mobile+1);
+document.getElementById("welcomeid").style.display="block";
+document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
+localStorage.setItem(10501050,rrr1);
+localStorage.setItem(28422842,rrr2);
+}
+
+
+function  loginfu(){
+document.getElementById("login_readid").style.display="block";
+document.getElementById("establishid").style.display="none";
+
+}
+
+
+function  login_endfu(){
+
+document.getElementById("login_readid").style.display="none";
+document.getElementById("establishid").style.display="block";
+let login= document.getElementById("login_read_mobile").value; 
+ 
+
+rrr1=localStorage.getItem(login);
+rrr2=localStorage.getItem(login+1);
+document.getElementById("welcomeid").style.display="block";
+document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
+
+}
+
+function  shopping_cartfu(){
+document.getElementById("lname").style.display="none";
+document.getElementById("fname").style.display="none";
+document.getElementById("add_cartid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("login_readid").style.display="none";
+document.getElementById("login_read_mobile").style.display="none";
+document.getElementById("establishid").style.display="none";
+document.getElementById("loginid").style.display="none";
+document.getElementById("show_carid").style.display="block";
+document.getElementById("Number_ordersid").style.display="block";
+document.getElementById("upid").style.display="block";
+
+pro="";
+
+ rfew_strokes=localStorage.getItem(rrr1+2);
+
+document.getElementById("Number_ordersid").innerHTML="購物車內共有 "+rfew_strokes+" 筆資料";
+
+for (i=0;i<rfew_strokes;i++) {
+no=localStorage.getItem(rrr1+1001+i);
+no_numer=localStorage.getItem(rrr1+2001+i);
+aa=pro;
+g=i+1
+pro=g+"."+no+"數量"+no_numer+" ";
+len=pro.length ;
+pro=(pro.substr(0, len));
+
+pro=pro+aa;
+ 
+ 
+document.getElementById("show_carid").innerHTML=pro;
+
+}
+
+
+}
+
+function  reducefu(){
+ nume=document.getElementById("quantityid").innerText;
+
+nume--;
+if (nume<1) {nume=1;}
+
+document.getElementById("quantityid").innerText=nume;
+
+}
+
+
+function  Increasefu(){
+ nume=document.getElementById("quantityid").innerText;
+
+nume++;
+
+document.getElementById("quantityid").innerText=nume;
+}
+
+function  join_infu(){
+nume=document.getElementById("quantityid").innerText;
+
+rfew_strokes=localStorage.getItem(rrr1+2);
+
+localStorage.setItem(rrr1+1001+rfew_strokes,sum);
+localStorage.setItem(rrr1+2001+rfew_strokes,nume);
+document.getElementById("quantityid").innerText=1;
+
+rfew_strokes++;
+localStorage.setItem(rrr1+2,rfew_strokes);
+alert("已存入");
+}
+
+ 
+
+
+</script>
+
+<style type="text/css">
+ 
+
+.productcl{
+  touch-action: auto;
+  style=display:none;
+  position: relative;
+  top: 100px;
+  eft: 0px;
+  width:300px;height:400px;}
+
+
+.enlargetpcl{
+ touch-action: auto;
+ position: relative;
+  top:300px;
+  
+  left: 0px;
+  width:700px;height:900px}
+
+.enlargetcl{
+   font-size: 50px;
+ touch-action: auto;
+ position: relative;
+  top:300px;
+  left: 0px;
+  width:1000px;
+ 
+}
+
+
+.layer1cl{
+ touch-action:auto;
+ position: relative;
+  top: 10px;
+  
+  left: 0px;}
+
+.concl{
+ touch-action: auto;
+ position: fixed;
+  top: 1300px;
+  
+  left: 200px;}
+
+.closecl{
+ touch-action: auto;
+ position: fixed;
+  top: 1400px;
+  
+  left: 20px;}
+ 
+.account_numbercl{
+   font-size: 90px;
+ 
+ position: relative;
+  top:250px;
+  
+  left: 0px;
+  }
+
+
+
+
+.establishcl{
+   font-size:90px;
+  position:fixed;
+  top:140px;
+  left:500px;}
+
+
+
+
+
+.welcomecl{
+   font-size: 90px;
+ 
+ position:fixed;
+  top:0px;
+  
+  left: 0px;
+  }
+
+.logincl{font-size:70px;
+ position:fixed;
+  top:140px;
+  left: 50px;}
+
+
+
+
+
+.shopping_cartcl{
+ position:fixed;
+  top:50px;
+  left: 750px;}
+
+
+
+.login_readcl{position:relative;
+  top:250px;
+    left: 0px; }
+
+
+
+.reducecl{
+ font-size:100px;
+ position:fixed;
+  top:1300px;
+  left: 500px;}
+
+
+
+.quantitycl{
+font-size:90px;
+ position:fixed;
+  top:1300px;
+  left: 650px;}
+
+
+.Increasecl{
+font-size:100px;
+ position:fixed;
+  top:1300px;
+  left: 800px;}
+
+
+
+.join_incl{
+font-size:80px;
+ position:fixed;
+  top:1450px;
+  left: 480px;}
+
+
+ #show_carid{
+ position:fixed;
+  top: 300px;
+  left:10px;
+  font-size:46px;
+  max-width: 810px;
+  color:blue;
+}
+
+
+
+ #Number_ordersid{
+ position:fixed;
+  top: 100px;
+  left:10px;
+  font-size:65px;
+   color:green;
+}
+
+
+ .upcl{
+ position:fixed;
+  top: 1400px;
+  left:480px;
+  background: orangered;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 5rem;
+  outline: none;
+  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+ 
+
+
+}
+
+
+
+</style>
+</head>
+<body>
+  <div id="upid" style="display:none;">
+  <form action="#" method="post" name="google">
+   
+    <input  type="text" id="fname" name="firstname" >
+
+    <input  type="text" id="lname" name="lastname">
+
+<button onclick="upfu( )"><div class="upcl" >送出訂貨單</button>
+    
+  </form>
+</div>
+
+<div id="Number_ordersid" style="display:none;"></div>
+
+
+<div id="show_carid" style="display:none;"></div>
+
+
+
+
+<div id="welcomeid" class="welcomecl" style="display:none;" >
+<div>welcome</div>
+</div>
+
+
+<div id="loginid" class="logincl"  style="display:none;" >
+<button onclick="loginfu()"><div  style="font-size:90px;color:blue;"   >登入</button>
+</div>
+
+
+
+<div  id="login_readid" class="login_readcl" style="display:none;"  >
+<div  style="font-size:90px" >請輸入行動號碼</div>
+<input type="text" style="font-size:70px"  maxlength="10"  id="login_read_mobile" />
+<button type="button" style="font-size:90px" onclick="login_endfu()">確 認</button> 
+</div>
+
+
+
+
+<div  id="establishid" class="establishcl" style="display:none;">
+<button onclick="establishfu()"><div  style="font-size:90px;color:blue;"   >建檔</button>
+</div>
+
+
+<div  id="account_numberid" class="account_numbercl"    style="display:none;">
+<div  style="font-size:90px" >請輸入行動號碼</div>
+
+<input type="text" style="font-size:90px"  maxlength="10"  id="mobile_phoneid" />
+<div  style="font-size:90px" >請輸入姓名</div>
+<input type="text" style="font-size:90px"  maxlength="30"  id="nameid" />
+
+
+<button type="button" style="font-size:90px" onclick="confirmfu()">確  認</button> 
+
+</div>
+
+
+
+<div  id="layer2"  style="display:none;">
+<input  type="image" id="productid1"  class="productcl"  onClick="enlargetpfu(1)" >
+<input  type="image" id="productid2"  class="productcl"  onClick="enlargetpfu(2)" >
+<input  type="image" id="productid3"  class="productcl"  onClick="enlargetpfu(3)" >
+<input  type="image" id="productid4"  class="productcl"  onClick="enlargetpfu(4)" >
+<input  type="image" id="productid5"  class="productcl"  onClick="enlargetpfu(5)" >
+<input  type="image" id="productid6"  class="productcl"  onClick="enlargetpfu(6)" >
+<input  type="image" id="productid7"  class="productcl"  onClick="enlargetpfu(7)" >
+<input  type="image" id="productid8"  class="productcl"  onClick="enlargetpfu(8)" >
+<input  type="image" id="productid9"  class="productcl"  onClick="enlargetpfu(9)" >
+<input  type="image" id="productid10" class="productcl"  onClick="enlargetpfu(10)" >
+<input  type="image" id="productid11" class="productcl"  onClick="enlargetpfu(11)" >
+<input  type="image" id="productid12" class="productcl"  onClick="enlargetpfu(12)" >
+<input  type="image" id="productid13" class="productcl"  onClick="enlargetpfu(13)" >
+<input  type="image" id="productid14" class="productcl"  onClick="enlargetpfu(14)" >
+<input  type="image" id="productid15" class="productcl"  onClick="enlargetpfu(15)" >
+
+</div>
+
+
+<div  id="layer1" class="layer1cl"    style="display:block;">
+<button onclick="layer1(1)"><div  style="font-size:80px;color:blue;"   >1. 延長線 </button>
+<br><br>
+<button onclick="layer1(2)"><div  style="font-size:80px;color:blue;"   >2. led燈泡 </button>
+<br><br>
+<button onclick="layer1(3)"><div  style="font-size:80px;color:blue;"   >3. 燈泡 </button>
+<br><br>
+<button onclick="layer1(4)"><div  style="font-size:80px;color:blue;"   >4. 燈管 </button>
+<br><br>
+<button onclick="layer1(5)"><div  style="font-size:80px;color:blue;"   >5. 冷氣遙控器 </button>
+<br><br>
+<button onclick="layer1(6)"><div  style="font-size:80px;color:blue;"   >6. 機上盒遙控器 </button>
+<br><br>
+<button onclick="layer1(7)"><div  style="font-size:80px;color:blue;"   >7. 液晶電視遙控器 </button>
+<br><br>
+<button onclick="layer1(8)"><div  style="font-size:80px;color:blue;"   >8. 洗衣機濾網 </button>
+<br><br>
+<button onclick="layer1(9)"><div  style="font-size:80px;color:blue;"   >9. 電池 </button>
+<br><br>
+<button onclick="layer1(10)"><div  style="font-size:80px;color:blue;"   >10. 手電筒 </button>
+<br><br>
+<button onclick="layer1(11)"><div  style="font-size:80px;color:blue;"   >11.萬國轉換頭 </button>
+<br><br>
+<button onclick="layer1(12)"><div  style="font-size:80px;color:blue;"   >12. 小夜燈 </button>
+<br><br>
+<button onclick="layer1(13)"><div  style="font-size:80px;color:blue;"   >13. 電源座 </button>
+<br><br>
+<button onclick="layer1(14)"><div  style="font-size:80px;color:blue;"   >14.  燈 座 </button>
+<br><br>
+<button onclick="layer1(15)"><div  style="font-size:80px;color:blue;"   >15. av線材 </button>
+</div>
+
+
+
+
+
+<input type="image" id="enlargetpid"  class="enlargetpcl" style="display:none;" onClick="close()" >
+
+<div id="enlargetid" class="enlargetcl" style="display:none;"  >
+<div>放大產品說明</div>
+</div>
+
+<div  id="closeid" class="closecl" style="display:none;">
+<button onclick="closefu()"><div  style="font-size:100px;color:blue;"   >返 回</button>
+</div>
+
+
+<div  id="conid"  class="concl" style="display:none;">
+<a href="https://3a35.github.io/aaaaa/sh/reb">
+<button><div  style="font-size:90px;color:blue;">回主選單</div></button>
+</a> 
+</div>
+
+
+<div id="shopping_cartid"  style="display:none;">
+<input type="image" src="shopping_cart.jpg" class="shopping_cartcl"  width="200"  height="200"  onClick="shopping_cartfu()">
+</div>
+
+
+
+<div id="add_cartid" style="display:none;">
+
+<div id="Increaseid"   >
+<INPUT TYPE="button" class="Increasecl"  VALUE="+" onClick="Increasefu()">
+</div>
+
+
+<div id="reduceid"   >
+<INPUT TYPE="button" class="reducecl" VALUE="-" onClick="reducefu()">
+</div>
+
+
+<div id="quantityid" class="quantitycl"  >1</div>
+
+
+<div id="join_inid"  >
+<INPUT TYPE="button" class="join_incl" VALUE="加入購物車" onClick="join_infu()">
+</div>
+
+
+
+
+</div>
+</body>
+
+
+<script type="text/javascript">
+
+  const scriptURL='https://script.google.com/macros/s/AKfycbxxnFsavzyAV73XZAijKgWrSTnzdlbrrQ_VES6UxBwRho9hZIhnj5vQQK2iU-Y2fPc9/exec'
+
+        const form = document.forms['google']
+          
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("成功送出！！！"))
+              .catch(error => console.error('Error!', error.message))
+          })
+function upfu(){
+document.getElementById("fname").value =rrr2;
+document.getElementById("lname").value =pro;
+
+}
+</script>
+
+
+</html>
