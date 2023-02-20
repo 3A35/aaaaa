@@ -42,7 +42,7 @@ document.getElementById("layer1").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer2").style.display="block";
 
-for(i=1;i<16;){
+for(i=1;i<18;){
 
  hh="productid"+i
 hhhh=hh;
@@ -158,11 +158,11 @@ no=localStorage.getItem(rrr1+1001+i);
 no_numer=localStorage.getItem(rrr1+2001+i);
 aa=pro;
 g=i+1
-pro=g+"."+no+"數量"+no_numer+" ";
+pro="-----"+"["+g+"]"+no+"數量*"+no_numer+"個"+"-----";
 len=pro.length ;
 pro=(pro.substr(0, len));
 
-pro=pro+aa;
+pro=aa+pro;
  
  
 document.getElementById("show_carid").innerHTML=pro;
@@ -219,7 +219,7 @@ alert("已存入");
   position: relative;
   top: 100px;
   eft: 0px;
-  width:300px;height:400px;}
+  width:300px;height:385px;}
 
 
 .enlargetpcl{
@@ -346,11 +346,11 @@ font-size:80px;
 
 
  #show_carid{
- position:fixed;
+ position:relative;
   top: 300px;
   left:10px;
-  font-size:46px;
-  max-width: 810px;
+  font-size:43px;
+  max-width:975px;
   color:blue;
 }
 
@@ -358,9 +358,9 @@ font-size:80px;
 
  #Number_ordersid{
  position:fixed;
-  top: 100px;
+  top: 140px;
   left:10px;
-  font-size:65px;
+  font-size:70px;
    color:green;
 }
 
@@ -495,6 +495,10 @@ font-size:80px;
 <button onclick="layer1(14)"><div  style="font-size:80px;color:blue;"   >14.  燈 座 </button>
 <br><br>
 <button onclick="layer1(15)"><div  style="font-size:80px;color:blue;"   >15. av線材 </button>
+<br><br>
+<button onclick="layer1(16)"><div  style="font-size:80px;color:blue;"   >16. 開  關 </button>
+<br><br>
+<button onclick="layer1(17)"><div  style="font-size:80px;color:blue;"   >17. 充 電 器 </button>
 </div>
 
 
