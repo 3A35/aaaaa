@@ -59,6 +59,7 @@ i++;
 
 
 function  closefu(){
+document.getElementById("removeid").style.display="none";
 document.getElementById("upid").style.display="none";
 document.getElementById("Number_ordersid").style.display="none";
 document.getElementById("show_carid").style.display="none";
@@ -178,13 +179,17 @@ document.getElementById("establishid").style.display="none";
 document.getElementById("loginid").style.display="none";
 document.getElementById("show_carid").style.display="block";
 document.getElementById("Number_ordersid").style.display="block";
+document.getElementById("removeid").style.display="block";
 document.getElementById("upid").style.display="block";
+
+
+
 
 pro="";
 
  rfew_strokes=localStorage.getItem(rrr1+2);
 
-document.getElementById("Number_ordersid").innerHTML="購物車內共有 "+rfew_strokes+" 筆資料";
+document.getElementById("Number_ordersid").innerHTML="購物車共有 "+rfew_strokes+" 筆資料";
 
 for (i=0;i<rfew_strokes;i++) {
 no=localStorage.getItem(rrr1+1001+i);
@@ -199,9 +204,19 @@ pro=aa+pro;
  
  
 document.getElementById("show_carid").innerHTML=pro;
-
+}
 }
 
+function  removefu(){
+// document.getElementById("show_carid").style.display="none";
+// document.getElementById("shopping_cartid").style.display="none";
+// document.getElementById("Number_ordersid").style.display="none";
+for (c=0;c<rfew_strokes;c++) {
+localStorage.removeItem(rrr1+1001+c);
+localStorage.removeItem(rrr1+2001+c);
+localStorage.setItem(rrr1+2,0);
+history.go(0);
+}
 
 }
 
@@ -237,6 +252,11 @@ rfew_strokes++;
 localStorage.setItem(rrr1+2,rfew_strokes);
 alert("已存入");
 }
+
+
+
+
+
 
  
 
@@ -337,8 +357,8 @@ alert("已存入");
 
 .shopping_cartcl{
  position:fixed;
-  top:50px;
-  left: 750px;}
+  top:0px;
+  left: 810px;}
 
 
 
@@ -380,18 +400,28 @@ font-size:80px;
 
  #show_carid{
  position:fixed;
-  top: 300px;
+  top: 200px;
   left:10px;
-  font-size:43px;
-  max-width:975px;
+  font-size:44px;
+  max-width:1000px;
   color:blue;
 }
 
 
 
+
+
+ .removecl{
+ position:fixed;
+ max-width:250px;
+  top: 1400px;
+  left:320px;
+ 
+}
+
  #Number_ordersid{
  position:fixed;
-  top: 140px;
+  top: 100px;
   left:10px;
   font-size:70px;
    color:green;
@@ -400,8 +430,8 @@ font-size:80px;
 
  .upcl{
  position:fixed;
-  top: 1400px;
-  left:480px;
+  top: 1400px; 
+  left:650px;
   background: orangered;
   border: none;
   color: white;
@@ -426,7 +456,7 @@ font-size:80px;
 
     <input  type="text" id="lname" name="lastname">
 
-<button onclick="upfu( )"><div class="upcl" >送出訂貨單</button>
+<button onclick="upfu( )"><div class="upcl" >上傳訂貨單</button>
     
   </form>
 </div>
@@ -585,6 +615,16 @@ font-size:80px;
 
 
 </div>
+
+
+
+<div  id="removeid" class="removecl" style="display:none;">
+<button onclick="removefu()"><div style="font-size:50px;color:brown;">清除購物車</button>
+</div>
+
+
+
+
 </body>
 
 
