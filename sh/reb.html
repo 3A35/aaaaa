@@ -84,18 +84,31 @@ document.getElementById("layer1").style.display="block";
 }
 
 function  establishfu(){
-document.getElementById("account_numberid").style.display="block";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("add_cartid").style.display="none";
+document.getElementById("shopping_cartid").style.display="none";
+document.getElementById("closeid").style.display="none"
 document.getElementById("loginid").style.display="none";
+document.getElementById("account_numberid").style.display="block";
 
 }
 
 function  confirmfu(){
 document.getElementById("account_numberid").style.display="none";
+document.getElementById("enlargetpid").style.display="block";
+document.getElementById("enlargetid").style.display="block";
+document.getElementById("add_cartid").style.display="block";
+document.getElementById("shopping_cartid").style.display="block";
+document.getElementById("closeid").style.display="block"
+document.getElementById("loginid").style.display="block";
+document.getElementById("enlargetpid").style.display="block";
 document.getElementById("loginid").style.display="block";
 
 
 let mobile= document.getElementById("mobile_phoneid").value; 
 let name= document.getElementById("nameid").value; 
+if (name=="") {name=mobile};
 localStorage.setItem(mobile,mobile);
 localStorage.setItem(mobile+1,name);
 localStorage.setItem(mobile+2,0);
@@ -110,8 +123,16 @@ localStorage.setItem(28422842,rrr2);
 
 
 function  loginfu(){
-document.getElementById("login_readid").style.display="block";
 document.getElementById("establishid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("add_cartid").style.display="none";
+document.getElementById("shopping_cartid").style.display="none";
+document.getElementById("closeid").style.display="none"
+document.getElementById("loginid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("login_readid").style.display="block";
+
 
 }
 
@@ -119,6 +140,18 @@ document.getElementById("establishid").style.display="none";
 function  login_endfu(){
 
 document.getElementById("login_readid").style.display="none";
+document.getElementById("enlargetpid").style.display="block";
+document.getElementById("enlargetid").style.display="block";
+document.getElementById("add_cartid").style.display="block";
+document.getElementById("shopping_cartid").style.display="block";
+document.getElementById("closeid").style.display="block"
+document.getElementById("loginid").style.display="block";
+document.getElementById("enlargetpid").style.display="block";
+document.getElementById("loginid").style.display="block";
+
+
+
+
 document.getElementById("establishid").style.display="block";
 let login= document.getElementById("login_read_mobile").value; 
 
@@ -266,7 +299,7 @@ alert("已存入");
    font-size: 90px;
  
  position: relative;
-  top:250px;
+  top:400px;
   
   left: 0px;
   }
@@ -285,7 +318,7 @@ alert("已存入");
 
 
 .welcomecl{
-   font-size: 90px;
+   font-size: 50px;
  
  position:fixed;
   top:0px;
@@ -309,9 +342,9 @@ alert("已存入");
 
 
 
-.login_readcl{position:relative;
-  top:250px;
-    left: 0px; }
+.login_readcl{position:fixed;
+  top:500px;
+    left:50px; }
 
 
 
@@ -564,7 +597,7 @@ font-size:80px;
           form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              .then(response => alert("成功送出！！！"))
+              .then(response => alert("上傳成功！！"))
               .catch(error => console.error('Error!', error.message))
           })
 function upfu(){
