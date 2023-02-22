@@ -215,7 +215,7 @@ for (c=0;c<rfew_strokes;c++) {
 localStorage.removeItem(rrr1+1001+c);
 localStorage.removeItem(rrr1+2001+c);
 localStorage.setItem(rrr1+2,0);
-history.go(0);
+location.reload()
 }
 
 }
@@ -445,6 +445,23 @@ font-size:80px;
 }
 
 
+ 
+   .backgroundcl {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+        .backgroundcl img {
+            min-height: 100%;
+            width: 100%;
+        }
+
+
+
+
 
 </style>
 </head>
@@ -460,6 +477,13 @@ font-size:80px;
     
   </form>
 </div>
+
+
+ <div class="backgroundcl">
+ <img src="background.jpg">
+ </div>
+
+
 
 <div id="Number_ordersid" style="display:none;"></div>
 
