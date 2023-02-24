@@ -62,7 +62,7 @@ function  closefu(){
 document.getElementById("removeid").style.display="none";
 document.getElementById("upid").style.display="none";
 document.getElementById("Number_ordersid").style.display="none";
-document.getElementById("show_carid").style.display="none";
+document.getElementById("show_caridall").style.display="none";
 document.getElementById("loginid").style.display="none";
 document.getElementById("establishid").style.display="none";
 document.getElementById("welcomeid").style.display="none";
@@ -177,7 +177,7 @@ document.getElementById("login_readid").style.display="none";
 document.getElementById("login_read_mobile").style.display="none";
 document.getElementById("establishid").style.display="none";
 document.getElementById("loginid").style.display="none";
-document.getElementById("show_carid").style.display="block";
+document.getElementById("show_caridall").style.display="block";
 document.getElementById("Number_ordersid").style.display="block";
 document.getElementById("removeid").style.display="block";
 document.getElementById("upid").style.display="block";
@@ -185,7 +185,7 @@ document.getElementById("upid").style.display="block";
 
 
 
-pro="";
+proo="";
 
  rfew_strokes=localStorage.getItem(rrr1+2);
 
@@ -194,16 +194,25 @@ document.getElementById("Number_ordersid").innerHTML="購物車共有 "+rfew_str
 for (i=0;i<rfew_strokes;i++) {
 no=localStorage.getItem(rrr1+1001+i);
 no_numer=localStorage.getItem(rrr1+2001+i);
-aa=pro;
-g=i+1
-pro="-----"+"["+g+"]"+no+"數量*"+no_numer+"個"+"-----";
-len=pro.length ;
-pro=(pro.substr(0, len));
+aa=proo;
+jk=i+1;
 
-pro=aa+pro;
+pro="["+jk+"]"+no+"數量*"+no_numer+"個";
+proo=pro;
+
+idid="show_carid"+jk;
+
+xxx=document.getElementById(idid);
+
+//  ii=i*100;
+//  jj=ii+900;
+// xxx.style.top=jj+"px";
+
+proo=aa+proo;
+xxx.innerHTML=pro;
+
  
- 
-document.getElementById("show_carid").innerHTML=pro;
+
 }
 }
 
@@ -398,11 +407,11 @@ font-size:80px;
   left: 480px;}
 
 
- #show_carid{
- position:fixed;
+ #show_caridall{
+ position:relative;
   top: 200px;
   left:10px;
-  font-size:44px;
+  font-size:40px;
   max-width:1000px;
   color:blue;
 }
@@ -487,8 +496,58 @@ font-size:80px;
 
 <div id="Number_ordersid" style="display:none;"></div>
 
-
-<div id="show_carid" style="display:none;"></div>
+<div id="show_caridall" style="display:none;" >
+<div id="show_carid1" ></div>
+<div id="show_carid2" ></div>
+<div id="show_carid3" ></div>
+<div id="show_carid4" ></div>
+<div id="show_carid5" ></div>
+<div id="show_carid6" ></div>
+<div id="show_carid7" ></div>
+<div id="show_carid8" ></div>
+<div id="show_carid9" ></div>
+<div id="show_carid10"></div>
+<div id="show_carid11" ></div>
+<div id="show_carid12" ></div>
+<div id="show_carid13" ></div>
+<div id="show_carid14" ></div>
+<div id="show_carid15" ></div>
+<div id="show_carid16" ></div>
+<div id="show_carid17" ></div>
+<div id="show_carid18" ></div>
+<div id="show_carid19" ></div>
+<div id="show_carid20"></div>
+<div id="show_carid21" ></div>
+<div id="show_carid22" ></div>
+<div id="show_carid23" ></div>
+<div id="show_carid24" ></div>
+<div id="show_carid25" ></div>
+<div id="show_carid26" ></div>
+<div id="show_carid27" ></div>
+<div id="show_carid28" ></div>
+<div id="show_carid29" ></div>
+<div id="show_carid30"></div>
+<div id="show_carid31" ></div>
+<div id="show_carid32" ></div>
+<div id="show_carid33" ></div>
+<div id="show_carid34" ></div>
+<div id="show_carid35" ></div>
+<div id="show_carid36" ></div>
+<div id="show_carid37" ></div>
+<div id="show_carid38" ></div>
+<div id="show_carid39" ></div>
+<div id="show_carid40"></div>
+<div id="show_carid41" ></div>
+<div id="show_carid42" ></div>
+<div id="show_carid43" ></div>
+<div id="show_carid44" ></div>
+<div id="show_carid45" ></div>
+<div id="show_carid46" ></div>
+<div id="show_carid47" ></div>
+<div id="show_carid48" ></div>
+<div id="show_carid49" ></div>
+<div id="show_carid50"></div>
+</div>
 
 
 
@@ -666,7 +725,7 @@ font-size:80px;
           })
 function upfu(){
 document.getElementById("fname").value =rrr2;
-document.getElementById("lname").value =pro;
+document.getElementById("lname").value =proo;
 
 }
 </script>
