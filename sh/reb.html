@@ -133,6 +133,7 @@ document.getElementById("closeid").style.display="none"
 document.getElementById("loginid").style.display="none";
 document.getElementById("enlargetpid").style.display="none";
 document.getElementById("login_readid").style.display="block";
+document.getElementById("login_read_mobile").style.display="block";
 
 
 }
@@ -148,7 +149,7 @@ document.getElementById("shopping_cartid").style.display="block";
 document.getElementById("closeid").style.display="block"
 document.getElementById("loginid").style.display="block";
 document.getElementById("enlargetpid").style.display="block";
-document.getElementById("loginid").style.display="block";
+
 
 
 
@@ -159,13 +160,18 @@ let login= document.getElementById("login_read_mobile").value;
  
 
 rrr1=localStorage.getItem(login);
+
 rrr2=localStorage.getItem(login+1);
 if (rrr2==null){alert("不存在 請建新檔!!");
 rrr2="未建檔";}
+
+localStorage.setItem(10501050,rrr1);
+localStorage.setItem(28422842,rrr2);
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 
 }
+
 
 function  shopping_cartfu(){
 document.getElementById("lname").style.display="none";
@@ -181,10 +187,13 @@ document.getElementById("show_caridall").style.display="block";
 document.getElementById("Number_ordersid").style.display="block";
 document.getElementById("removeid").style.display="block";
 document.getElementById("upid").style.display="block";
+for (iy=1;iy<51;iy++) {
+idid="show_carid"+iy;
 
+xxx=document.getElementById(idid);
+xxx.innerHTML=" ";
 
-
-
+}
 proo="";
 
  rfew_strokes=localStorage.getItem(rrr1+2);
@@ -198,15 +207,14 @@ aa=proo;
 jk=i+1;
 
 pro="["+jk+"]"+no+"數量*"+no_numer+"個";
+
 proo=pro;
 
 idid="show_carid"+jk;
 
 xxx=document.getElementById(idid);
 
-//  ii=i*100;
-//  jj=ii+900;
-// xxx.style.top=jj+"px";
+
 
 proo=aa+proo;
 xxx.innerHTML=pro;
@@ -274,6 +282,18 @@ alert("已存入");
 
 <style type="text/css">
  
+ .upcl{
+ position:fixed;
+  top: 1400px; 
+  left:650px;
+  background: orangered;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 5rem;
+  outline: none;
+  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+ }
 
 .productcl{
   touch-action: auto;
@@ -411,8 +431,9 @@ font-size:80px;
  position:relative;
   top: 200px;
   left:10px;
-  font-size:40px;
+  font-size:50px;
   max-width:1000px;
+
   color:blue;
 }
 
@@ -437,21 +458,7 @@ font-size:80px;
 }
 
 
- .upcl{
- position:fixed;
-  top: 1400px; 
-  left:650px;
-  background: orangered;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  font-size: 5rem;
-  outline: none;
-  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
- 
 
-
-}
 
 
  
@@ -475,17 +482,7 @@ font-size:80px;
 </style>
 </head>
 <body>
-  <div id="upid" style="display:none;">
-  <form action="#" method="post" name="google">
-   
-    <input  type="text" id="fname" name="firstname" >
-
-    <input  type="text" id="lname" name="lastname">
-
-<button onclick="upfu( )"><div class="upcl" >上傳訂貨單</button>
-    
-  </form>
-</div>
+ 
 
 
  <div class="backgroundcl">
@@ -549,7 +546,17 @@ font-size:80px;
 <div id="show_carid50"></div>
 </div>
 
+ <div id="upid" style="display:none;">
+  <form action="#" method="post" name="google">
+   
+    <input  type="text" id="fname" name="shop" >
 
+    <input  type="text" id="lname" name="items1">
+
+<button onclick="upfu( )"><div class="upcl" >上傳訂貨單</button>
+    
+  </form>
+</div>
 
 
 <div id="welcomeid" class="welcomecl" style="display:none;" >
