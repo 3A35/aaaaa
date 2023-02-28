@@ -174,8 +174,10 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 
 
 function  shopping_cartfu(){
-document.getElementById("lname").style.display="none";
-document.getElementById("fname").style.display="none";
+document.getElementById("shopid").style.display="none";
+document.getElementById("itemsid1").style.display="none";
+document.getElementById("itemsid2").style.display="none";
+document.getElementById("itemsid3").style.display="none";
 document.getElementById("add_cartid").style.display="none";
 document.getElementById("enlargetpid").style.display="none";
 document.getElementById("enlargetid").style.display="none";
@@ -186,6 +188,7 @@ document.getElementById("loginid").style.display="none";
 document.getElementById("show_caridall").style.display="block";
 document.getElementById("Number_ordersid").style.display="block";
 document.getElementById("removeid").style.display="block";
+document.getElementById("remove1id").style.display="block";
 document.getElementById("upid").style.display="block";
 for (iy=1;iy<51;iy++) {
 idid="show_carid"+iy;
@@ -202,40 +205,73 @@ document.getElementById("Number_ordersid").innerHTML="購物車共有 "+rfew_str
 
 for (i=0;i<rfew_strokes;i++) {
 no=localStorage.getItem(rrr1+1001+i);
+no1=(no.substr(4,5));
+
 no_numer=localStorage.getItem(rrr1+2001+i);
 aa=proo;
 jk=i+1;
 
 pro="["+jk+"]"+no+"數量*"+no_numer+"個";
 
-proo=pro;
+proo=no1+"*"+no_numer+"/";
 
 idid="show_carid"+jk;
 
 xxx=document.getElementById(idid);
 
 
-
 proo=aa+proo;
 xxx.innerHTML=pro;
 
- 
 
+ 
 }
 }
 
 function  removefu(){
-// document.getElementById("show_carid").style.display="none";
-// document.getElementById("shopping_cartid").style.display="none";
-// document.getElementById("Number_ordersid").style.display="none";
+
 for (c=0;c<rfew_strokes;c++) {
 localStorage.removeItem(rrr1+1001+c);
 localStorage.removeItem(rrr1+2001+c);
+}
 localStorage.setItem(rrr1+2,0);
 location.reload()
 }
 
+function  remove1fu(){
+document.getElementById("remove1id").style.display="none";
+document.getElementById("input_remove1id").style.display="block";
+document.getElementById("input_remove1_endid").style.display="block";
+
 }
+
+
+function  input_remove1_endfu(){
+rfew_strokes=localStorage.getItem(rrr1+2);
+alert(rfew_strokes);
+ddel= document.getElementById("input_remove2id").value; 
+
+vbb=ddel-2;
+rfew_strokes= parseInt(rfew_strokes,10);
+dfg=rfew_strokes+1;
+for(i=0;i<dfg;i++) {
+if (i>vbb) {kd=i+1;} else {kd=i;}
+ re1=localStorage.getItem(rrr1+1001+kd);
+ re2=localStorage.getItem(rrr1+2001+kd);
+ localStorage.setItem(rrr1+1001+i,re1);
+ localStorage.setItem(rrr1+2001+i,re2);
+}
+
+if (ddel<dfg) {
+ rfew_strokes--;
+ localStorage.setItem(rrr1+2,rfew_strokes);
+ } 
+ history.go(0);
+
+}
+
+ 
+
 
 function  reducefu(){
  nume=document.getElementById("quantityid").innerText;
@@ -431,7 +467,7 @@ font-size:80px;
  position:relative;
   top: 200px;
   left:10px;
-  font-size:50px;
+  font-size:40px;
   max-width:1000px;
 
   color:blue;
@@ -443,11 +479,40 @@ font-size:80px;
 
  .removecl{
  position:fixed;
- max-width:250px;
+ max-width:200px;
   top: 1400px;
   left:320px;
- 
-}
+ }
+
+
+ #input_remove2id{
+
+// position:fixed;
+ font-size:60px;
+//  top: 1200px;
+ // left:250px;
+  }
+
+
+
+
+ .remove1cl{
+ position:fixed;
+// max-width:150px;
+  width:250px;
+  top: 1000px;
+  left:320px;
+ }
+
+
+
+ .input_remove1cl{
+ position:fixed;
+  font-size:60px;
+  top: 1200px;
+  left:50px;
+ }
+
 
  #Number_ordersid{
  position:fixed;
@@ -549,9 +614,13 @@ font-size:80px;
  <div id="upid" style="display:none;">
   <form action="#" method="post" name="google">
    
-    <input  type="text" id="fname" name="shop" >
+    <input  type="text" id="shopid" name="shop" >
 
-    <input  type="text" id="lname" name="items1">
+    <input  type="text" id="itemsid1" name="items1">
+
+    <input  type="text" id="itemsid2" name="items2">
+
+    <input  type="text" id="itemsid3" name="items3">
 
 <button onclick="upfu( )"><div class="upcl" >上傳訂貨單</button>
     
@@ -702,6 +771,7 @@ font-size:80px;
 </div>
 
 
+       
 
 
 </div>
@@ -709,11 +779,19 @@ font-size:80px;
 
 
 <div  id="removeid" class="removecl" style="display:none;">
-<button onclick="removefu()"><div style="font-size:50px;color:brown;">清除購物車</button>
+<button onclick="removefu()"><div style="font-size:50px;color:brown;">購物車清空</button>
+</div>
+
+<div  id="remove1id" class="remove1cl" style="display:none;">
+<button onclick="remove1fu()"><div style="font-size:50px;color:brown;">單筆資料刪除</button>
 </div>
 
 
-
+<div  id="input_remove1id" class="input_remove1cl" style="display:none;">
+<label for="te">請輸入:</label>
+<input type="number" name="te"  id="input_remove2id"  />
+<button type="button" style="font-size:70px" onclick="input_remove1_endfu()">確  認</button>
+</div>
 
 </body>
 
@@ -731,8 +809,10 @@ font-size:80px;
               .catch(error => console.error('Error!', error.message))
           })
 function upfu(){
-document.getElementById("fname").value =rrr2;
-document.getElementById("lname").value =proo;
+
+document.getElementById("shopid").value =rrr2;
+document.getElementById("itemsid1").value =proo;
+
 
 }
 </script>
