@@ -6,7 +6,10 @@
 <script type="text/javascript">
 // mobile+1=名子  mobile+2=幾種  
 // mobile+1001=第一項產品型號  mobile+2001=第一項產品數量 
+
 function  enlargetpfu(item){
+
+
 document.getElementById("conid").style.display="none";
 document.getElementById("layer2").style.display="none";
 document.getElementById("shopping_cartid").style.display="block";
@@ -15,6 +18,7 @@ document.getElementById("add_cartid").style.display="block";
 
  rrr1=localStorage.getItem(10501050);
  rrr2=localStorage.getItem(28422842);
+ 
 
 document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨";
 document.getElementById("loginid").style.display="block";
@@ -38,11 +42,13 @@ sum="商品代號"+r1+" "+"名稱:"+r2+" "+"說明:"+r3+" "+"價格:"+r4
 
 function  layer1(fff){
 uuu=fff;
+
+
 document.getElementById("layer1").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer2").style.display="block";
 
-for(i=1;i<16;){
+for(i=1;i<18;){
 
  hh="productid"+i
 hhhh=hh;
@@ -59,9 +65,13 @@ i++;
 
 
 function  closefu(){
+document.getElementById("close_messageid").style.display="none";
+document.getElementById("open_messageid").style.display="none";
+document.getElementById("remove1id").style.display="none";
+document.getElementById("removeid").style.display="none";
 document.getElementById("upid").style.display="none";
 document.getElementById("Number_ordersid").style.display="none";
-document.getElementById("show_carid").style.display="none";
+document.getElementById("show_caridall").style.display="none";
 document.getElementById("loginid").style.display="none";
 document.getElementById("establishid").style.display="none";
 document.getElementById("welcomeid").style.display="none";
@@ -84,18 +94,31 @@ document.getElementById("layer1").style.display="block";
 }
 
 function  establishfu(){
-document.getElementById("account_numberid").style.display="block";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("add_cartid").style.display="none";
+document.getElementById("shopping_cartid").style.display="none";
+document.getElementById("closeid").style.display="none"
 document.getElementById("loginid").style.display="none";
+document.getElementById("account_numberid").style.display="block";
 
 }
 
 function  confirmfu(){
 document.getElementById("account_numberid").style.display="none";
+document.getElementById("enlargetpid").style.display="block";
+document.getElementById("enlargetid").style.display="block";
+document.getElementById("add_cartid").style.display="block";
+document.getElementById("shopping_cartid").style.display="block";
+document.getElementById("closeid").style.display="block"
+document.getElementById("loginid").style.display="block";
+document.getElementById("enlargetpid").style.display="block";
 document.getElementById("loginid").style.display="block";
 
 
 let mobile= document.getElementById("mobile_phoneid").value; 
 let name= document.getElementById("nameid").value; 
+if (name=="") {name=mobile};
 localStorage.setItem(mobile,mobile);
 localStorage.setItem(mobile+1,name);
 localStorage.setItem(mobile+2,0);
@@ -110,8 +133,17 @@ localStorage.setItem(28422842,rrr2);
 
 
 function  loginfu(){
-document.getElementById("login_readid").style.display="block";
 document.getElementById("establishid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("add_cartid").style.display="none";
+document.getElementById("shopping_cartid").style.display="none";
+document.getElementById("closeid").style.display="none"
+document.getElementById("loginid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("login_readid").style.display="block";
+document.getElementById("login_read_mobile").style.display="block";
+
 
 }
 
@@ -119,20 +151,43 @@ document.getElementById("establishid").style.display="none";
 function  login_endfu(){
 
 document.getElementById("login_readid").style.display="none";
+document.getElementById("enlargetpid").style.display="block";
+document.getElementById("enlargetid").style.display="block";
+document.getElementById("add_cartid").style.display="block";
+document.getElementById("shopping_cartid").style.display="block";
+document.getElementById("closeid").style.display="block"
+document.getElementById("loginid").style.display="block";
+document.getElementById("enlargetpid").style.display="block";
+
+
+
+
+
 document.getElementById("establishid").style.display="block";
 let login= document.getElementById("login_read_mobile").value; 
+
  
 
 rrr1=localStorage.getItem(login);
+
 rrr2=localStorage.getItem(login+1);
+if (rrr2==null){alert("不存在 請建新檔!!");
+rrr2="未建檔";}
+
+localStorage.setItem(10501050,rrr1);
+localStorage.setItem(28422842,rrr2);
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 
 }
 
+
 function  shopping_cartfu(){
-document.getElementById("lname").style.display="none";
-document.getElementById("fname").style.display="none";
+
+document.getElementById("shopid").style.display="none";
+document.getElementById("itemsid1").style.display="none";
+document.getElementById("itemsid2").style.display="none";
+document.getElementById("itemsid3").style.display="none";
 document.getElementById("add_cartid").style.display="none";
 document.getElementById("enlargetpid").style.display="none";
 document.getElementById("enlargetid").style.display="none";
@@ -140,34 +195,122 @@ document.getElementById("login_readid").style.display="none";
 document.getElementById("login_read_mobile").style.display="none";
 document.getElementById("establishid").style.display="none";
 document.getElementById("loginid").style.display="none";
-document.getElementById("show_carid").style.display="block";
+document.getElementById("show_caridall").style.display="block";
 document.getElementById("Number_ordersid").style.display="block";
+document.getElementById("removeid").style.display="block";
+document.getElementById("remove1id").style.display="block";
 document.getElementById("upid").style.display="block";
+document.getElementById("open_messageid").style.display="block";
+document.getElementById("clear_messageid").style.display="block";
 
-pro="";
+
+
+
+for (iy=1;iy<51;iy++) {
+idid="show_carid"+iy;
+
+xxx=document.getElementById(idid);
+xxx.innerHTML=" ";
+
+}
+proo="";
 
  rfew_strokes=localStorage.getItem(rrr1+2);
 
-document.getElementById("Number_ordersid").innerHTML="購物車內共有 "+rfew_strokes+" 筆資料";
+document.getElementById("Number_ordersid").innerHTML="購物車共有 "+rfew_strokes+" 筆資料";
 
 for (i=0;i<rfew_strokes;i++) {
 no=localStorage.getItem(rrr1+1001+i);
+no1=(no.substr(4,5));
+
 no_numer=localStorage.getItem(rrr1+2001+i);
-aa=pro;
-g=i+1
-pro=g+"."+no+"數量"+no_numer+" ";
-len=pro.length ;
-pro=(pro.substr(0, len));
+aa=proo;
+jk=i+1;
 
-pro=pro+aa;
+pro="["+jk+"]"+no+"數量*"+no_numer+"個";
+
+proo=no1+"*"+no_numer+"/";
+
+idid="show_carid"+jk;
+
+xxx=document.getElementById(idid);
+
+
+proo=aa+proo;
+xxx.innerHTML=pro;
+
+
  
- 
-document.getElementById("show_carid").innerHTML=pro;
+}
+}
+
+function  removefu(){
+
+for (c=0;c<rfew_strokes;c++) {
+localStorage.removeItem(rrr1+1001+c);
+localStorage.removeItem(rrr1+2001+c);
+}
+localStorage.setItem(rrr1+2,0);
+location.reload()
+}
+
+function  remove1fu(){
+document.getElementById("remove1id").style.display="none";
+document.getElementById("input_remove1id").style.display="block";
+document.getElementById("input_remove1_endid").style.display="block";
 
 }
 
+function  open_messagefu(){
+rrr3=localStorage.getItem(27112711);
+document.getElementById("itemsid2").value=rrr3;
+document.getElementById("open_messageid").style.display="none";
+document.getElementById("close_messageid").style.display="block";
+document.getElementById("itemsid2").style.display="block";
+}
+
+
+function  close_messagefu(){
+document.getElementById("itemsid2").style.display="none";
+document.getElementById("close_messageid").style.display="none";
+document.getElementById("open_messageid").style.display="block";
+rrr3=document.getElementById("itemsid2").value;
+localStorage.setItem(27112711,rrr3);
 
 }
+function  clear_messagefu(){
+rrr3="";
+localStorage.removeItem(27112711);
+document.getElementById("itemsid2").value=rrr3;
+alert("留言以刪除 !!");
+}
+
+
+function  input_remove1_endfu(){
+rfew_strokes=localStorage.getItem(rrr1+2);
+ddel= document.getElementById("input_remove2id").value; 
+
+vbb=ddel-2;
+rfew_strokes= parseInt(rfew_strokes,10);
+dfg=rfew_strokes+1;
+for(i=0;i<dfg;i++) {
+if (i>vbb) {kd=i+1;} else {kd=i;}
+ re1=localStorage.getItem(rrr1+1001+kd);
+ re2=localStorage.getItem(rrr1+2001+kd);
+ localStorage.setItem(rrr1+1001+i,re1);
+ localStorage.setItem(rrr1+2001+i,re2);
+}
+
+if (ddel<dfg) {
+ rfew_strokes--;
+ localStorage.setItem(rrr1+2,rfew_strokes);
+ } 
+ history.go(0);
+
+}
+
+ 
+
 
 function  reducefu(){
  nume=document.getElementById("quantityid").innerText;
@@ -202,6 +345,11 @@ localStorage.setItem(rrr1+2,rfew_strokes);
 alert("已存入");
 }
 
+
+
+
+
+
  
 
 
@@ -209,6 +357,18 @@ alert("已存入");
 
 <style type="text/css">
  
+ .upcl{
+ position:fixed;
+  top: 1420px; 
+  left:580px;
+  background: orangered;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 4rem;
+  outline: none;
+  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+ }
 
 .productcl{
   touch-action: auto;
@@ -216,7 +376,7 @@ alert("已存入");
   position: relative;
   top: 100px;
   eft: 0px;
-  width:300px;height:400px;}
+  width:300px;height:385px;}
 
 
 .enlargetpcl{
@@ -225,7 +385,7 @@ alert("已存入");
   top:300px;
   
   left: 0px;
-  width:700px;height:900px}
+ width:700px;height:900px}
 
 .enlargetcl{
    font-size: 50px;
@@ -263,7 +423,7 @@ alert("已存入");
    font-size: 90px;
  
  position: relative;
-  top:250px;
+  top:400px;
   
   left: 0px;
   }
@@ -282,7 +442,7 @@ alert("已存入");
 
 
 .welcomecl{
-   font-size: 90px;
+   font-size: 50px;
  
  position:fixed;
   top:0px;
@@ -301,14 +461,14 @@ alert("已存入");
 
 .shopping_cartcl{
  position:fixed;
-  top:50px;
-  left: 750px;}
+  top:0px;
+  left: 790px;}
 
 
 
-.login_readcl{position:relative;
-  top:250px;
-    left: 0px; }
+.login_readcl{position:fixed;
+  top:500px;
+    left:50px; }
 
 
 
@@ -342,65 +502,211 @@ font-size:80px;
   left: 480px;}
 
 
- #show_carid{
- position:fixed;
-  top: 300px;
+ #show_caridall{
+ position:relative;
+  top: 200px;
   left:10px;
-  font-size:46px;
-  max-width: 810px;
+  font-size:40px;
+  max-width:1000px;
+
   color:blue;
 }
 
+
+
+
+
+ .removecl{
+ position:fixed;
+ max-width:200px;
+  top: 1400px;
+  left:320px;
+ }
+
+
+ #input_remove2id{
+
+// position:fixed;
+ font-size:60px;
+//  top: 1200px;
+ // left:250px;
+  }
+
+
+
+
+ .remove1cl{
+ position:fixed;
+// max-width:150px;
+  width:250px;
+  top:1200px;
+  left:300px;
+ }
+
+
+
+ .input_remove1cl{
+ position:fixed;
+  font-size:60px;
+  top:800px;
+  left:50px;
+ }
 
 
  #Number_ordersid{
  position:fixed;
   top: 100px;
   left:10px;
-  font-size:65px;
+  font-size:70px;
    color:green;
 }
 
 
- .upcl{
+
+#itemsid2{
  position:fixed;
-  top: 1400px;
-  left:480px;
-  background: orangered;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  font-size: 5rem;
-  outline: none;
-  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
- 
-
-
+  top: 250px;
+  left:20px;
+  font-size:50px;
+   color:green;
 }
+
+
+
+
+   .backgroundcl {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+        .backgroundcl img {
+            min-height: 100%;
+            width: 100%;
+        }
+
+
+
+#open_messageid{
+ position:fixed;
+  top: 1200px;
+  left:600px;
+  width:150px;
+  font-size:60px;
+   color:brown;
+}
+
+
+#close_messageid{
+ position:fixed;
+  top: 1200px;
+  left:560px;
+  width:220px;
+  font-size:50px;
+   color:red;
+}
+
+
+#clear_messageid{
+ position:fixed;
+  top: 1200px;
+  left:790px;
+  width:150px;
+  font-size:60px;
+   color:blue;
+}
+
+
+
+
+
 
 
 
 </style>
 </head>
 <body>
-  <div id="upid" style="display:none;">
-  <form action="#" method="post" name="google">
-   
-    <input  type="text" id="fname" name="firstname" >
+ 
 
-    <input  type="text" id="lname" name="lastname">
 
-<button onclick="upfu( )"><div class="upcl" >送出訂貨單</button>
-    
-  </form>
-</div>
+ <div class="backgroundcl">
+ <img src="background.jpg">
+ </div>
+
+
 
 <div id="Number_ordersid" style="display:none;"></div>
 
+<div id="show_caridall" style="display:none;" >
+<div id="show_carid1" ></div>
+<div id="show_carid2" ></div>
+<div id="show_carid3" ></div>
+<div id="show_carid4" ></div>
+<div id="show_carid5" ></div>
+<div id="show_carid6" ></div>
+<div id="show_carid7" ></div>
+<div id="show_carid8" ></div>
+<div id="show_carid9" ></div>
+<div id="show_carid10"></div>
+<div id="show_carid11" ></div>
+<div id="show_carid12" ></div>
+<div id="show_carid13" ></div>
+<div id="show_carid14" ></div>
+<div id="show_carid15" ></div>
+<div id="show_carid16" ></div>
+<div id="show_carid17" ></div>
+<div id="show_carid18" ></div>
+<div id="show_carid19" ></div>
+<div id="show_carid20"></div>
+<div id="show_carid21" ></div>
+<div id="show_carid22" ></div>
+<div id="show_carid23" ></div>
+<div id="show_carid24" ></div>
+<div id="show_carid25" ></div>
+<div id="show_carid26" ></div>
+<div id="show_carid27" ></div>
+<div id="show_carid28" ></div>
+<div id="show_carid29" ></div>
+<div id="show_carid30"></div>
+<div id="show_carid31" ></div>
+<div id="show_carid32" ></div>
+<div id="show_carid33" ></div>
+<div id="show_carid34" ></div>
+<div id="show_carid35" ></div>
+<div id="show_carid36" ></div>
+<div id="show_carid37" ></div>
+<div id="show_carid38" ></div>
+<div id="show_carid39" ></div>
+<div id="show_carid40"></div>
+<div id="show_carid41" ></div>
+<div id="show_carid42" ></div>
+<div id="show_carid43" ></div>
+<div id="show_carid44" ></div>
+<div id="show_carid45" ></div>
+<div id="show_carid46" ></div>
+<div id="show_carid47" ></div>
+<div id="show_carid48" ></div>
+<div id="show_carid49" ></div>
+<div id="show_carid50"></div>
+</div>
 
-<div id="show_carid" style="display:none;"></div>
+ <div id="upid" style="display:none;">
+  <form action="#" method="post" name="google">
+   
+    <input  type="text" id="shopid" name="shop" >
 
+   <input  type="text" id="itemsid1" name="items1">
 
+   <textarea   id="itemsid2" name="items2"  rows="8" cols="25" placeholder="請輸入留言..."></textarea>
+
+    <input  type="text" id="itemsid3" name="items3">
+
+<button onclick="upfu( )"><div class="upcl" >上傳訂貨單</button>
+    
+  </form>
+</div>
 
 
 <div id="welcomeid" class="welcomecl" style="display:none;" >
@@ -416,7 +722,7 @@ font-size:80px;
 
 <div  id="login_readid" class="login_readcl" style="display:none;"  >
 <div  style="font-size:90px" >請輸入行動號碼</div>
-<input type="text" style="font-size:70px"  maxlength="10"  id="login_read_mobile" />
+<input type="number" style="font-size:70px"  maxlength="10"  id="login_read_mobile" />
 <button type="button" style="font-size:90px" onclick="login_endfu()">確 認</button> 
 </div>
 
@@ -424,14 +730,14 @@ font-size:80px;
 
 
 <div  id="establishid" class="establishcl" style="display:none;">
-<button onclick="establishfu()"><div  style="font-size:90px;color:blue;"   >建檔</button>
+<button onclick="establishfu()"><div  style="font-size:90px;color:blue;" >建檔</button>
 </div>
 
 
 <div  id="account_numberid" class="account_numbercl"    style="display:none;">
 <div  style="font-size:90px" >請輸入行動號碼</div>
 
-<input type="text" style="font-size:90px"  maxlength="10"  id="mobile_phoneid" />
+<input type="number" style="font-size:90px"  maxlength="10"  id="mobile_phoneid" />
 <div  style="font-size:90px" >請輸入姓名</div>
 <input type="text" style="font-size:90px"  maxlength="30"  id="nameid" />
 
@@ -439,6 +745,14 @@ font-size:80px;
 <button type="button" style="font-size:90px" onclick="confirmfu()">確  認</button> 
 
 </div>
+
+
+<button type="button" id="open_messageid" style="display:none;" onclick="open_messagefu()">編輯留言</button> 
+
+<button type="button" id="close_messageid" style="display:none;" onclick="close_messagefu()">儲存關閉留言</button> 
+
+<button type="button" id="clear_messageid" style="display:none;" onclick="clear_messagefu()">留言清除</button> 
+
 
 
 
@@ -492,6 +806,10 @@ font-size:80px;
 <button onclick="layer1(14)"><div  style="font-size:80px;color:blue;"   >14.  燈 座 </button>
 <br><br>
 <button onclick="layer1(15)"><div  style="font-size:80px;color:blue;"   >15. av線材 </button>
+<br><br>
+<button onclick="layer1(16)"><div  style="font-size:80px;color:blue;"   >16. 開  關 </button>
+<br><br>
+<button onclick="layer1(17)"><div  style="font-size:80px;color:blue;"   >17. 充 電 器 </button>
 </div>
 
 
@@ -542,27 +860,53 @@ font-size:80px;
 </div>
 
 
+       
 
 
 </div>
+
+
+
+<div  id="removeid" class="removecl" style="display:none;">
+<button onclick="removefu()"><div style="font-size:50px;color:brown;">購物車清空</button>
+</div>
+
+<div  id="remove1id" class="remove1cl" style="display:none;">
+<button onclick="remove1fu()"><div style="font-size:50px;color:brown;">單筆資料刪除</button>
+</div>
+
+
+<div  id="input_remove1id" class="input_remove1cl" style="display:none;">
+<label for="te">第幾項要刪除請輸入:</label>
+<input type="number" name="te" min="1" max="50"  id="input_remove2id"  />
+<button type="button" style="font-size:70px" onclick="input_remove1_endfu()">確  認</button>
+</div>
+
 </body>
 
 
 <script type="text/javascript">
 
-  const scriptURL='https://script.google.com/macros/s/AKfycbxxnFsavzyAV73XZAijKgWrSTnzdlbrrQ_VES6UxBwRho9hZIhnj5vQQK2iU-Y2fPc9/exec'
+  const scriptURL='https://script.google.com/macros/s/AKfycbygh47F_E9c66nPL4jAfe6o7T6EzJgc-8q_4F7Nn5UsR-3yge65_Q8pzWCLebO4rrAb/exec'
 
         const form = document.forms['google']
           
           form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              .then(response => alert("成功送出！！！"))
+              .then(response => alert("上傳成功！！"))
               .catch(error => console.error('Error!', error.message))
           })
 function upfu(){
-document.getElementById("fname").value =rrr2;
-document.getElementById("lname").value =pro;
+var Today=new Date();
+up_time1=Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日"
+up_time2=Today.getHours()+"點"+Today.getMinutes()+"分"+Today.getSeconds()+"秒";
+up_time=up_time1+up_time2;
+
+document.getElementById("shopid").value =rrr2;
+document.getElementById("itemsid1").value =up_time;
+document.getElementById("itemsid3").value =proo;
+
 
 }
 </script>
