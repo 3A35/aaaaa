@@ -6,6 +6,7 @@
 <script type="text/javascript">
 // mobile+1=名子  mobile+2=幾種  
 // mobile+1001=第一項產品型號  mobile+2001=第一項產品數量 
+
 function  enlargetpfu(item){
 
 
@@ -17,6 +18,7 @@ document.getElementById("add_cartid").style.display="block";
 
  rrr1=localStorage.getItem(10501050);
  rrr2=localStorage.getItem(28422842);
+ 
 
 document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨";
 document.getElementById("loginid").style.display="block";
@@ -63,6 +65,8 @@ i++;
 
 
 function  closefu(){
+document.getElementById("close_messageid").style.display="none";
+document.getElementById("open_messageid").style.display="none";
 document.getElementById("remove1id").style.display="none";
 document.getElementById("removeid").style.display="none";
 document.getElementById("upid").style.display="none";
@@ -197,7 +201,7 @@ document.getElementById("removeid").style.display="block";
 document.getElementById("remove1id").style.display="block";
 document.getElementById("upid").style.display="block";
 document.getElementById("open_messageid").style.display="block";
-
+document.getElementById("clear_messageid").style.display="block";
 
 
 
@@ -258,6 +262,8 @@ document.getElementById("input_remove1_endid").style.display="block";
 }
 
 function  open_messagefu(){
+rrr3=localStorage.getItem(27112711);
+document.getElementById("itemsid2").value=rrr3;
 document.getElementById("open_messageid").style.display="none";
 document.getElementById("close_messageid").style.display="block";
 document.getElementById("itemsid2").style.display="block";
@@ -268,10 +274,16 @@ function  close_messagefu(){
 document.getElementById("itemsid2").style.display="none";
 document.getElementById("close_messageid").style.display="none";
 document.getElementById("open_messageid").style.display="block";
+rrr3=document.getElementById("itemsid2").value;
+localStorage.setItem(27112711,rrr3);
+
 }
-
-
-
+function  clear_messagefu(){
+rrr3="";
+localStorage.removeItem(27112711);
+document.getElementById("itemsid2").value=rrr3;
+alert("留言以刪除 !!");
+}
 
 
 function  input_remove1_endfu(){
@@ -555,7 +567,7 @@ font-size:80px;
  position:fixed;
   top: 250px;
   left:20px;
-  font-size:60px;
+  font-size:50px;
    color:green;
 }
 
@@ -580,7 +592,8 @@ font-size:80px;
 #open_messageid{
  position:fixed;
   top: 1200px;
-  left:700px;
+  left:650px;
+  width:150px;
   font-size:60px;
    color:brown;
 }
@@ -589,10 +602,27 @@ font-size:80px;
 #close_messageid{
  position:fixed;
   top: 1200px;
-  left:700px;
+  left:650px;
+  width:150px;
   font-size:60px;
    color:red;
 }
+
+
+#clear_messageid{
+ position:fixed;
+  top: 1200px;
+  left:900px;
+  width:150px;
+  font-size:60px;
+   color:blue;
+}
+
+
+
+
+
+
 
 
 </style>
@@ -669,7 +699,7 @@ font-size:80px;
 
    <input  type="text" id="itemsid1" name="items1">
 
-   <textarea   id="itemsid2" name="items2"  rows="13" cols="28" placeholder="請輸入留言..."></textarea>
+   <textarea   id="itemsid2" name="items2"  rows="8" cols="25" placeholder="請輸入留言..."></textarea>
 
     <input  type="text" id="itemsid3" name="items3">
 
@@ -717,9 +747,11 @@ font-size:80px;
 </div>
 
 
-<button type="button" id="open_messageid" style="display:none;" onclick="open_messagefu()">開啟留言</button> 
+<button type="button" id="open_messageid" style="display:none;" onclick="open_messagefu()">編輯留言</button> 
 
 <button type="button" id="close_messageid" style="display:none;" onclick="close_messagefu()">關閉留言</button> 
+
+<button type="button" id="clear_messageid" style="display:none;" onclick="clear_messagefu()">留言清除</button> 
 
 
 
@@ -866,8 +898,13 @@ font-size:80px;
               .catch(error => console.error('Error!', error.message))
           })
 function upfu(){
+var Today=new Date();
+up_time1=Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日"
+up_time2=Today.getHours()+"點"+Today.getMinutes()+"分"+Today.getSeconds()+"秒";
+up_time=up_time1+up_time2;
 
 document.getElementById("shopid").value =rrr2;
+document.getElementById("itemsid1").value =up_time;
 document.getElementById("itemsid3").value =proo;
 
 
