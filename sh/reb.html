@@ -7,6 +7,8 @@
 // mobile+1=名子  mobile+2=幾種  
 // mobile+1001=第一項產品型號  mobile+2001=第一項產品數量 
 function  enlargetpfu(item){
+
+
 document.getElementById("conid").style.display="none";
 document.getElementById("layer2").style.display="none";
 document.getElementById("shopping_cartid").style.display="block";
@@ -38,6 +40,8 @@ sum="商品代號"+r1+" "+"名稱:"+r2+" "+"說明:"+r3+" "+"價格:"+r4
 
 function  layer1(fff){
 uuu=fff;
+
+
 document.getElementById("layer1").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer2").style.display="block";
@@ -59,6 +63,7 @@ i++;
 
 
 function  closefu(){
+document.getElementById("remove1id").style.display="none";
 document.getElementById("removeid").style.display="none";
 document.getElementById("upid").style.display="none";
 document.getElementById("Number_ordersid").style.display="none";
@@ -174,6 +179,7 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 
 
 function  shopping_cartfu(){
+
 document.getElementById("shopid").style.display="none";
 document.getElementById("itemsid1").style.display="none";
 document.getElementById("itemsid2").style.display="none";
@@ -190,6 +196,12 @@ document.getElementById("Number_ordersid").style.display="block";
 document.getElementById("removeid").style.display="block";
 document.getElementById("remove1id").style.display="block";
 document.getElementById("upid").style.display="block";
+document.getElementById("open_messageid").style.display="block";
+
+
+
+
+
 for (iy=1;iy<51;iy++) {
 idid="show_carid"+iy;
 
@@ -245,10 +257,25 @@ document.getElementById("input_remove1_endid").style.display="block";
 
 }
 
+function  open_messagefu(){
+document.getElementById("open_messageid").style.display="none";
+document.getElementById("close_messageid").style.display="block";
+document.getElementById("itemsid2").style.display="block";
+}
+
+
+function  close_messagefu(){
+document.getElementById("itemsid2").style.display="none";
+document.getElementById("close_messageid").style.display="none";
+document.getElementById("open_messageid").style.display="block";
+}
+
+
+
+
 
 function  input_remove1_endfu(){
 rfew_strokes=localStorage.getItem(rrr1+2);
-alert(rfew_strokes);
 ddel= document.getElementById("input_remove2id").value; 
 
 vbb=ddel-2;
@@ -481,7 +508,7 @@ font-size:80px;
  position:fixed;
  max-width:200px;
   top: 1400px;
-  left:320px;
+  left:340px;
  }
 
 
@@ -500,7 +527,7 @@ font-size:80px;
  position:fixed;
 // max-width:150px;
   width:250px;
-  top: 1000px;
+  top:1200px;
   left:320px;
  }
 
@@ -509,7 +536,7 @@ font-size:80px;
  .input_remove1cl{
  position:fixed;
   font-size:60px;
-  top: 1200px;
+  top:800px;
   left:50px;
  }
 
@@ -524,9 +551,17 @@ font-size:80px;
 
 
 
+#itemsid2{
+ position:fixed;
+  top: 250px;
+  left:20px;
+  font-size:60px;
+   color:green;
+}
 
 
- 
+
+
    .backgroundcl {
             position: fixed;
             top: 0;
@@ -542,6 +577,22 @@ font-size:80px;
 
 
 
+#open_messageid{
+ position:fixed;
+  top: 1200px;
+  left:700px;
+  font-size:60px;
+   color:brown;
+}
+
+
+#close_messageid{
+ position:fixed;
+  top: 1200px;
+  left:700px;
+  font-size:60px;
+   color:red;
+}
 
 
 </style>
@@ -616,9 +667,9 @@ font-size:80px;
    
     <input  type="text" id="shopid" name="shop" >
 
-    <input  type="text" id="itemsid1" name="items1">
+   <input  type="text" id="itemsid1" name="items1">
 
-    <input  type="text" id="itemsid2" name="items2">
+   <textarea   id="itemsid2" name="items2"  rows="13" cols="28" placeholder="請輸入留言..."></textarea>
 
     <input  type="text" id="itemsid3" name="items3">
 
@@ -664,6 +715,12 @@ font-size:80px;
 <button type="button" style="font-size:90px" onclick="confirmfu()">確  認</button> 
 
 </div>
+
+
+<button type="button" id="open_messageid" style="display:none;" onclick="open_messagefu()">開啟留言</button> 
+
+<button type="button" id="close_messageid" style="display:none;" onclick="close_messagefu()">關閉留言</button> 
+
 
 
 
@@ -788,8 +845,8 @@ font-size:80px;
 
 
 <div  id="input_remove1id" class="input_remove1cl" style="display:none;">
-<label for="te">請輸入:</label>
-<input type="number" name="te"  id="input_remove2id"  />
+<label for="te">第幾項要刪除請輸入:</label>
+<input type="number" name="te" min="1" max="50"  id="input_remove2id"  />
 <button type="button" style="font-size:70px" onclick="input_remove1_endfu()">確  認</button>
 </div>
 
@@ -811,7 +868,7 @@ font-size:80px;
 function upfu(){
 
 document.getElementById("shopid").value =rrr2;
-document.getElementById("itemsid1").value =proo;
+document.getElementById("itemsid3").value =proo;
 
 
 }
