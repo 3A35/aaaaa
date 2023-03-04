@@ -361,13 +361,14 @@ alert("已存入");
  
  .upcl{
  position:fixed;
-  top: 1420px; 
-  left:580px;
+  top: 1400px; 
+  left:750px;
+  width:200px;
   background: orangered;
   border: none;
   color: white;
   padding: 5px 10px;
-  font-size: 5rem;
+  font-size: 4rem;
   outline: none;
   box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
  }
@@ -417,7 +418,7 @@ alert("已存入");
 .closecl{
  touch-action: auto;
  position: fixed;
-  top: 1400px;
+  top: 1450px;
   
   left: 20px;}
  
@@ -463,8 +464,8 @@ alert("已存入");
 
 .shopping_cartcl{
  position:fixed;
-  top:0px;
-  left: 770px;}
+  top:10px;
+  left: 750px;}
 
 
 
@@ -507,11 +508,11 @@ font-size:80px;
  #show_caridall{
  position:relative;
   top: 200px;
-  left:10px;
+  left:5px;
   font-size:40px;
-  max-width:1000px;
+  max-width:700px;
 
-  color:blue;
+  color:black;
 }
 
 
@@ -521,8 +522,8 @@ font-size:80px;
  .removecl{
  position:fixed;
  max-width:200px;
-  top: 1400px;
-  left:320px;
+  top: 1200px;
+  left:750px;
  }
 
 
@@ -541,8 +542,8 @@ font-size:80px;
  position:fixed;
 // max-width:150px;
   width:250px;
-  top:1200px;
-  left:300px;
+  top:1000px;
+  left:750px;
  }
 
 
@@ -568,8 +569,8 @@ font-size:80px;
 #itemsid2{
  position:fixed;
   top: 250px;
-  left:20px;
-  font-size:50px;
+  left:10px;
+  font-size:40px;
    color:green;
 }
 
@@ -593,8 +594,8 @@ font-size:80px;
 
 #open_messageid{
  position:fixed;
-  top: 1200px;
-  left:600px;
+  top: 500px;
+  left:750px;
   width:150px;
   font-size:60px;
    color:brown;
@@ -603,8 +604,8 @@ font-size:80px;
 
 #close_messageid{
  position:fixed;
-  top: 1200px;
-  left:560px;
+  top: 500px;
+  left:750px;
   width:220px;
   font-size:50px;
    color:red;
@@ -613,8 +614,8 @@ font-size:80px;
 
 #clear_messageid{
  position:fixed;
-  top: 1200px;
-  left:790px;
+  top: 700px;
+  left:750px;
   width:150px;
   font-size:60px;
    color:blue;
@@ -697,15 +698,15 @@ font-size:80px;
  <div id="upid" style="display:none;">
   <form action="#" method="post" name="google">
    
-    <input  type="text" id="shopid" name="shop" >
+    <input  type="text" id="shopid" name="shop" style="display:none;">
 
-   <input  type="text" id="itemsid1" name="items1">
+   <input  type="text" id="itemsid1" name="items1" style="display:none;">
 
-   <textarea   id="itemsid2" name="items2"  rows="8" cols="25" placeholder="請輸入留言..."></textarea>
+   <textarea   id="itemsid2" name="items2"  rows="10" cols="20" style="display:none;" placeholder="請輸入留言..."></textarea>
 
-    <input  type="text" id="itemsid3" name="items3">
+    <input  type="text" id="itemsid3" name="items3" style="display:none;">
 
-<button onclick="upfu( )"><div class="upcl" >上傳訂貨單</button>
+<button onclick="upfu( )"><div class="upcl" >上傳 訂貨單</button>
     
   </form>
 </div>
@@ -825,7 +826,7 @@ font-size:80px;
 </div>
 
 <div  id="closeid" class="closecl" style="display:none;">
-<button onclick="closefu()"><div  style="font-size:100px;color:blue;"   >返 回</button>
+<button onclick="closefu()"><div  style="font-size:70px;color:blue;"   >返 回</button>
 </div>
 
 
@@ -837,7 +838,7 @@ font-size:80px;
 
 
 <div id="shopping_cartid"  style="display:none;">
-<input type="image" src="shopping_cart.jpg" class="shopping_cartcl"  width="200"  height="200"  onClick="shopping_cartfu()">
+<input type="image" src="shopping_cart.jpg" class="shopping_cartcl"  width="180"  height="180"  onClick="shopping_cartfu()">
 </div>
 
 
