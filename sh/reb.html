@@ -185,7 +185,8 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 
 
 function  shopping_cartfu(){
-
+document.getElementById("welcomeid").style.display="none";
+document.getElementById("shopping_cartid").style.display="none";
 document.getElementById("shopid").style.display="none";
 document.getElementById("itemsid1").style.display="none";
 document.getElementById("itemsid2").style.display="none";
@@ -219,7 +220,7 @@ proo="";
 
  rfew_strokes=localStorage.getItem(rrr1+2);
 
-document.getElementById("Number_ordersid").innerHTML="購物車共有 "+rfew_strokes+" 筆資料";
+document.getElementById("Number_ordersid").innerHTML="購物車共有 "+rfew_strokes+"筆資料";
 
 for (i=0;i<rfew_strokes;i++) {
 no=localStorage.getItem(rrr1+1001+i);
@@ -231,7 +232,7 @@ jk=i+1;
 
 pro="["+jk+"]"+no+"數量*"+no_numer+"個";
 
-proo=no1+"*"+no_numer+"/";
+proo="["+jk+"]"+no+"數量*"+no_numer+"個"+"\n";
 
 idid="show_carid"+jk;
 
@@ -507,12 +508,12 @@ font-size:80px;
 
  #show_caridall{
  position:relative;
-  top: 200px;
+  top: 20px;
   left:5px;
   font-size:40px;
   max-width:700px;
 
-  color:black;
+  color:blue;
 }
 
 
@@ -523,7 +524,7 @@ font-size:80px;
  position:fixed;
  max-width:200px;
   top: 1175px;
-  left:750px;
+  left:730px;
  }
 
 
@@ -542,7 +543,7 @@ font-size:80px;
  position:fixed;
   width:250px;
   top:1000px;
-  left:750px;
+  left:730px;
  }
 
 
@@ -558,10 +559,12 @@ font-size:80px;
 
  #Number_ordersid{
  position:fixed;
-  top: 100px;
-  left:10px;
-  font-size:70px;
-   color:green;
+  width:250px;
+  top: 150px;
+  left:730px;
+  font-size:48px;
+   color:black;
+  background-color:yellow;
 }
 
 
@@ -595,7 +598,7 @@ font-size:80px;
 #open_messageid{
  position:fixed;
   top: 500px;
-  left:750px;
+  left:730px;
   width:150px;
   font-size:60px;
    color:brown;
@@ -605,7 +608,7 @@ font-size:80px;
 #close_messageid{
  position:fixed;
   top: 500px;
-  left:750px;
+  left:730px;
   width:220px;
   font-size:50px;
    color:red;
@@ -615,7 +618,7 @@ font-size:80px;
 #clear_messageid{
  position:fixed;
   top: 700px;
-  left:750px;
+  left:730px;
   width:150px;
   font-size:60px;
    color:blue;
@@ -700,11 +703,11 @@ font-size:80px;
    
     <input  type="text" id="shopid" name="shop" style="display:none;">
 
-   <input  type="text" id="itemsid1" name="items1" style="display:none;">
+    <textarea type="text" id="itemsid1"  name="items1" style="display:none;"></textarea>
 
    <textarea   id="itemsid2" name="items2"  rows="10" cols="20" style="display:none;" placeholder="請輸入留言..."></textarea>
 
-    <input  type="text" id="itemsid3" name="items3" style="display:none;">
+   <textarea  type="text" id="itemsid3" name="items3" style="display:none;"></textarea>
 
 <button onclick="upfu( )"><div class="upcl" >上傳 訂貨單</button>
     
@@ -904,10 +907,10 @@ function upfu(){
 var Today=new Date();
 up_time1=Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日"
 up_time2=Today.getHours()+"點"+Today.getMinutes()+"分"+Today.getSeconds()+"秒";
-up_time=up_time1+up_time2;
+
 
 document.getElementById("shopid").value =rrr2;
-document.getElementById("itemsid1").value =up_time;
+document.getElementById("itemsid1").value =up_time1+"\n"+up_time2;
 document.getElementById("itemsid3").value =proo;
 
 
