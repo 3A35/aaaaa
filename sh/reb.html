@@ -402,7 +402,7 @@ alert("已存入");
   top:300px;
   left: 0px;
   width:1000px;
- 
+ color:blue;
 }
 
 
@@ -410,9 +410,6 @@ alert("已存入");
  touch-action:auto;
  position: relative;
   top: 10px;
-  border:none;
-  font-size:50px;
-  color:green;
   border-radius:10px;
   left: 0px;
 }
@@ -422,10 +419,10 @@ alert("已存入");
  position: fixed;
   top: 1300px;  
   left: 200px;
-  background-color:pink;
+  background-color:green;
   border:none;
-  font-size:60px;
-  color:green;
+  font-size:80px;
+  color:yellow;
   border-radius:10px;
 }
 
@@ -433,13 +430,17 @@ alert("已存入");
  touch-action: auto;
  position: fixed;
   top: 1500px;
-  
-  left: 20px;}
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:70px;
+  color:yellow;
+  border-radius:10px;
+}
  
 .account_numbercl{
    font-size: 90px;
- 
- position: relative;
+  position: relative;
   top:400px;
   
   left: 0px;
@@ -449,17 +450,22 @@ alert("已存入");
 
 
 .establishcl{
-   font-size:90px;
+   font-size:70px;
   position:fixed;
   top:140px;
-  left:500px;}
+  left:500px;
+ background-color:green;
+  border:none;
+  color:white;
+  border-radius:10px;
+}
 
 
 
 
 
 .welcomecl{
-   font-size: 50px;
+   font-size: 60px;
  
  position:fixed;
   top:0px;
@@ -467,10 +473,16 @@ alert("已存入");
   left: 0px;
   }
 
-.logincl{font-size:70px;
+.logincl{
+font-size:70px;
  position:fixed;
   top:140px;
-  left: 50px;}
+  left: 50px;
+  background-color:green;
+  border:none;
+  color:white;
+  border-radius:10px;
+}
 
 
 
@@ -492,34 +504,46 @@ alert("已存入");
 .reducecl{
  font-size:100px;
  position:fixed;
-  top:1300px;
-  left: 500px;}
+  top:1350px;
+  left: 500px;
+   color:brown;
+  border:none;
+  border-radius:15px;
+}
 
 
 
 .quantitycl{
 font-size:90px;
  position:fixed;
-  top:1300px;
-  left: 650px;}
+  top:1350px;
+  left: 650px;
+  color:black;
+ 
+}
 
 
 .Increasecl{
 font-size:100px;
  position:fixed;
-  top:1300px;
-  left: 800px;}
+  top:1350px;
+  left: 800px;
+  color:brown;
+  border:none;
+  border-radius:15px;
+}
 
 
 
 .join_incl{
 font-size:80px;
  position:fixed;
-  top:1450px;
+  top:1500px;
   left: 480px;
- background-color:pink;
+ background-color:brown;
+  color:white;
   border:none;
-  border-radius:20px;
+  border-radius:15px;
 
 }
 
@@ -543,10 +567,10 @@ font-size:80px;
  max-width:200px;
   top: 1175px;
   left:730px;
-  background-color:pink;
+  background-color:green;
   border:none;
   font-size:50px;
-  color:green;
+  color:white;
   border-radius:10px;
  }
 
@@ -628,10 +652,10 @@ font-size:80px;
   left:730px;
   width:150px;
   font-size:60px;
-   color:brown;
+   color:white;
    border:none;
    border-radius:10px;
-   background-color:silver;
+   background-color:brown;
 }
 
 
@@ -641,10 +665,10 @@ font-size:80px;
   left:730px;
   width:220px;
   font-size:50px;
-   color:red;
+   color:white;
   border:none;
   border-radius:10px;
-  background-color:silver;
+  background-color:blue;
 }
 
 
@@ -654,10 +678,10 @@ font-size:80px;
   left:730px;
   width:150px;
   font-size:60px;
-   color:blue;
+   color:pink;
   border:none;
   border-radius:10px;
-  background-color:silver;
+  background-color:blue;
 }
 
 
@@ -756,8 +780,8 @@ font-size:80px;
 </div>
 
 
-<div id="loginid" class="logincl"  style="display:none;" >
-<button onclick="loginfu()"><div  style="font-size:90px;color:blue;"   >登入</button>
+<div id="loginid"  style="display:none;" >
+<button onclick="loginfu()"><div  class="logincl">登入</button>
 </div>
 
 
@@ -771,8 +795,8 @@ font-size:80px;
 
 
 
-<div  id="establishid" class="establishcl" style="display:none;">
-<button onclick="establishfu()"><div  style="font-size:90px;color:blue;" >建檔</button>
+<div  id="establishid" style="display:none;">
+<button onclick="establishfu()"><div class="establishcl"  >建檔</button>
 </div>
 
 
@@ -864,8 +888,8 @@ font-size:80px;
 <div>放大產品說明</div>
 </div>
 
-<div  id="closeid" class="closecl" style="display:none;">
-<button onclick="closefu()"><div  style="font-size:70px;color:blue;"   >返 回</button>
+<div  id="closeid"  style="display:none;">
+<button onclick="closefu()"><div class="closecl" >返 回</button>
 </div>
 
 
