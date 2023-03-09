@@ -258,7 +258,9 @@ localStorage.removeItem(rrr1+1001+c);
 localStorage.removeItem(rrr1+2001+c);
 }
 localStorage.setItem(rrr1+2,0);
-location.reload()
+//  location.reload();
+
+setTimeout(shopping_cartfu,10);
 }
 
 function  remove1fu(){
@@ -312,7 +314,9 @@ if (ddel<dfg) {
  rfew_strokes--;
  localStorage.setItem(rrr1+2,rfew_strokes);
  } 
- history.go(0);
+//  history.go(0);
+document.getElementById("input_remove1id").style.display="none";
+setTimeout(shopping_cartfu,10);
 
 }
 
