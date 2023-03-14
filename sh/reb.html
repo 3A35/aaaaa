@@ -53,8 +53,10 @@ document.getElementById("layer1").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer2").style.display="block";
 
-for(i=1;i<200;){
 
+var i=1;
+setTimeout(get,1);
+function  get(){
  hh="productid"+i
 hhhh=hh;
 var img = new Image();
@@ -62,14 +64,16 @@ var img = new Image();
  
 //  img.style.width="100px";  
  img.src =document.getElementById(hh).src="catalog/"+fff+"/"+fff+' ('+ i + ').jpg';
- 
- 
+ img.onload = function(){  }
+ img.onerror =function(){ document.getElementById(hh).style.display="none";}
 i++;
+if (i>200) {setTimeout(noget,1);} else {setTimeout(get,20);} 
+ 
+}
 
 }
    
- 
-}
+
 
 
 function  closefu(){
