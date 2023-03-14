@@ -67,8 +67,8 @@ var img = new Image();
  img.onload = function(){  }
  img.onerror =function(){ document.getElementById(hh).style.display="none";}
 i++;
-if (i>200) {setTimeout(noget,1);} else {setTimeout(get,20);} 
- 
+if (i>200) {setTimeout(noget,1);} else {setTimeout(get,100);} 
+function  noget(fff){} 
 }
 
 }
@@ -197,6 +197,7 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 
 
 function  shopping_cartfu(){
+
 document.getElementById("welcomeid").style.display="none";
 document.getElementById("shopping_cartid").style.display="none";
 document.getElementById("shopid").style.display="none";
@@ -1023,7 +1024,6 @@ font-size:80px;
 <div id="join_inid"  >
 <INPUT TYPE="button" class="join_incl" VALUE="加入購物車" onClick="join_infu()">
 </div>
-
 
        
 
