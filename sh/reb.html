@@ -53,10 +53,8 @@ document.getElementById("layer1").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer2").style.display="block";
 
+for(i=1;i<200;){
 
-var i=1;
-setTimeout(get,1);
-function  get(){
  hh="productid"+i
 hhhh=hh;
 var img = new Image();
@@ -64,16 +62,14 @@ var img = new Image();
  
 //  img.style.width="100px";  
  img.src =document.getElementById(hh).src="catalog/"+fff+"/"+fff+' ('+ i + ').jpg';
- img.onload = function(){  }
- img.onerror =function(){ document.getElementById(hh).style.display="none";}
+ 
+ 
 i++;
-if (i>200) {setTimeout(noget,1);} else {setTimeout(get,100);} 
-function  noget(fff){} 
-}
 
 }
    
-
+ 
+}
 
 
 function  closefu(){
@@ -197,7 +193,6 @@ document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
 
 
 function  shopping_cartfu(){
-
 document.getElementById("welcomeid").style.display="none";
 document.getElementById("shopping_cartid").style.display="none";
 document.getElementById("shopid").style.display="none";
@@ -976,6 +971,10 @@ font-size:80px;
 <button onclick="layer1(30)"><div id=id30 class="layer1cl"   >30. 水銀電池</button>
 <br><br>
 <button onclick="layer1(31)"><div id=id31 class="layer1cl"   >31. 電源線</button>
+<br><br>
+<button onclick="layer1(32)"><div id=id30 class="layer1cl"   >32. 計算機</button>
+<br><br>
+<button onclick="layer1(33)"><div id=id31 class="layer1cl"   >33. 訊號轉換器</button>
 </div>
 
 
@@ -1024,6 +1023,7 @@ font-size:80px;
 <div id="join_inid"  >
 <INPUT TYPE="button" class="join_incl" VALUE="加入購物車" onClick="join_infu()">
 </div>
+
 
        
 
