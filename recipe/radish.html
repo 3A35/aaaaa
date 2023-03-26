@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+
+<div  style="font-size:110px" >蘿蔔糕的作法</div>
+<title> </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+function get()
+{
+let radish = document.getElementById("radishid").value; 
+
+   let  pink=radish/4  ;
+
+   let  water=radish*0.29 ;
+
+
+
+
+var  recipe1="蘿蔔"+radish+"克 "+"在來米粉"+pink+"克"+" 冷水"+water+"克" ;
+var  recipe2=" 需先伴勻 鹽少許 蘿蔔絲炒至透明  鍋底抹油  方便冷卻脫模 ";
+
+document.write("<span style='font-size:70px'>"+"食材比例為"+"</span><br>" );
+
+document.write("<span style='font-size:60px'>"+recipe1+"</span><br>" );
+document.write("<span style='font-size:60px'>"+recipe2+"</span>" );
+
+}
+
+</script>
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div  style="font-size:90px" >請輸入蘿蔔的重量</div>
+
+<input type="text" style="font-size:70px"  maxlength="4"  id="radishid" />
+
+
+<button type="button" style="font-size:80px" onclick="get()">食材比例查詢</button> 
+
+</body>
+</html>

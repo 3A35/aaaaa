@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+
+<div  style="font-size:110px" >麻糬的作法</div>
+<title> </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+function get()
+{
+let eg = document.getElementById("egg").value; 
+
+   let  water=eg*1.25  ;
+
+   let  sugar=eg*0.15  ;
+
+   let  tablespoon=eg/200;
+ 
+   let   corn=eg*0.05  ;
+
+
+
+var  recipe1="糯米粉"+eg+"克 "+"60度熱水"+water+"克"+" 油"+tablespoon+"匙" ;
+var  recipe2="糖"+sugar+"克 "+" 玉米粉"+corn+"克";
+
+document.write("<span style='font-size:70px'>"+"食材比例為"+"</span><br>" );
+
+document.write("<span style='font-size:60px'>"+recipe1+"</span><br>" );
+document.write("<span style='font-size:60px'>"+recipe2+"</span>" );
+
+}
+
+</script>
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div  style="font-size:90px" >請輸入糯米粉的重量</div>
+
+<input type="text" style="font-size:70px"  maxlength="4"  id="egg" />
+
+
+<button type="button" style="font-size:80px" onclick="get()">食材比例查詢</button> 
+
+</body>
+</html>

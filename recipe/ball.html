@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+
+<div  style="font-size:110px" >地瓜球 的作法</div>
+<title> </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+function get()
+{
+let ball = document.getElementById("ballid").value; 
+
+   let  pink=ball/2  ;
+
+   let  sugar=ball/6 ;
+
+  
+
+
+
+var  recipe1="地瓜"+ball+"克 " ;
+var  recipe2="木薯粉 "+pink+"克"+" 糖"+Math.round(sugar)+"克";
+
+document.write("<span style='font-size:70px'>"+"食材比例為"+"</span><br>" );
+
+document.write("<span style='font-size:60px'>"+recipe1+"</span><br>" );
+document.write("<span style='font-size:60px'>"+recipe2+"</span>" );
+
+}
+
+</script>
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div  style="font-size:90px" >請輸入 地瓜 的重量</div>
+
+<input type="text" style="font-size:70px"  maxlength="4"  id="ballid" />
+
+
+<button type="button" style="font-size:80px" onclick="get()">食材比例查詢</button> 
+
+</body>
+</html>
