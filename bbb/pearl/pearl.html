@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<head>
+<title>元旦快樂  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function sho(){
+document.getElementById("bg").style.display="block";
+document.getElementById("in").style.display="none";
+document.getElementById("tid").style.display="block";
+
+ b1=document.getElementById("b1");
+ 
+ b1.play();
+
+var fff;
+var si;
+var bg;
+bg=document.getElementById("bg"); 
+fff=document.getElementById("tid"); 
+si1=document.getElementById("ph1"); 
+si2=document.getElementById("ph2"); 
+si3=document.getElementById("ph3"); 
+var  clo1=setInterval(ep1, 1);
+
+
+
+
+ var yyy=1800;
+ var kkk=85;
+
+ function ep1(){
+  
+  yyy--;
+  
+
+ if (yyy<140) { 
+kkk++;
+}
+
+
+ if (yyy==10) { 
+clearInterval(clo1);
+}
+ else { 
+ fff.style.top=yyy+"px";
+ fff.style.left="80px";
+si1.style.fontSize=kkk+ "px";
+si2.style.fontSize=kkk+ "px";
+si3.style.fontSize=kkk+ "px";
+}
+
+
+}
+
+ var  clo2=setInterval(ep2, 500);
+var ii=1
+ function ep2() {
+ if(ii==1){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="yellow"; 
+  document.getElementById("ph3").style.color="green";
+   bg.style.opacity="0.8"; 
+ }
+ if(ii==2){
+  document.getElementById("ph1").style.color="yellow";
+  document.getElementById("ph2").style.color="red"; 
+ document.getElementById("ph3").style.color="yellow";
+ bg.style.opacity="0.6"; 
+}  
+
+ if(ii==3){
+  document.getElementById("ph1").style.color="Purple";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="green";
+ bg.style.opacity="0.4"; 
+}   
+     
+
+ if(ii==4){
+  document.getElementById("ph1").style.color="orange";
+  document.getElementById("ph2").style.color="red"; 
+ document.getElementById("ph3").style.color="yellow";
+ bg.style.opacity="0.2"; 
+}   
+
+ if(ii==5){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="brown";
+ bg.style.opacity="0"; 
+}  
+
+ if(ii==6){
+  document.getElementById("ph1").style.color="Pink";
+  document.getElementById("ph2").style.color="brown"; 
+ document.getElementById("ph3").style.color="yellow";
+ bg.style.opacity="0.2"; 
+}   
+     
+
+ if(ii==7){
+  document.getElementById("ph1").style.color="green";
+  document.getElementById("ph2").style.color="Pink"; 
+ document.getElementById("ph3").style.color="red";
+ bg.style.opacity="0.4"; 
+}   
+
+ if(ii==8){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="green"; 
+ document.getElementById("ph3").style.color="red";
+ bg.style.opacity="0.6"; 
+}   
+
+
+ if(ii==9){
+  document.getElementById("ph1").style.color="orange";
+  document.getElementById("ph2").style.color="red"; 
+ document.getElementById("ph3").style.color="yellow";
+ bg.style.opacity="0.8"; 
+}   
+
+ if(ii==10){
+  document.getElementById("ph1").style.color="Purple";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="green";
+ bg.style.opacity="1"; 
+}   
+     
+
+
+
+ ii++;
+if(ii==11) {ii=1;}
+
+}
+
+
+
+
+
+
+
+}
+</script>
+
+<style type="text/css">
+
+ .ttt{
+position: fixed;
+  top: 1600px;
+  left: 280px;
+}
+
+.bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+ .bbbg img {
+            min-height: 100%;
+            width: 100%;
+
+        }
+
+
+
+
+
+</style>
+</head>
+<body>
+<div  class="ttt"  id="tid" style="display:none;">
+
+<div id="ph1" style="color:red;font-weight:bold;" >阿琪純手工</div>
+<br> <br> <br>  <br> <br>
+<div id="ph2" style="color:red;font-weight:bold;"> 黑 糖 珍 珠</div>
+<br> <br> <br>  <br> <br>
+<div  id="ph3" style="color:red;font-weight:bold;">超好喝歐!</div>
+               
+
+</div>
+
+<div id="in"    >
+<input type="image" src="in.jpg"  width="1200"  height="2000"  onClick="sho()">
+</div>
+
+<div id="bg"   style="display:none;" >
+<input type="image" src="rabbit.jpg" width="1200"  height="2000"  >
+</div>
+
+<audio id="b1" src="new.mp4" loop controls="controls" hidden="true"></audio>
+</body>
+</html>
