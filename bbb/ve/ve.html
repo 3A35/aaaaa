@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+<title>五一勞動節</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+function sho(){
+ document.getElementById("in").style.display="none" ;
+document.getElementById("tid").style.display="block";  
+document.getElementById("v4id").style.display="none" ;
+document.getElementById("vid").style.display="block" ;
+ 
+sid=document.getElementById("sid");
+
+sid.play();
+
+
+
+setTimeout(get2,6000)
+}
+
+function get2(){
+document.getElementById("vid").style.display="none" ;
+document.getElementById("v2id").style.display="block" ;
+setTimeout(get3,6000)
+
+}
+
+
+function get3(){
+document.getElementById("v2id").style.display="none" ;
+document.getElementById("v3id").style.display="block" ;
+setTimeout(get4,6000)
+
+}
+
+
+
+
+
+function get4(){
+document.getElementById("v3id").style.display="none" ;
+document.getElementById("v4id").style.display="block" ;
+
+
+setTimeout(sho,6000)
+
+}
+
+
+
+</script>
+
+<style type="text/css">
+.video-back{
+position:fixed;
+top:0;
+left:0;
+min-width:100%;
+min-height:100%;
+}
+
+
+ .tcl{
+position: fixed;
+  top: 50px;
+  left:60px;
+
+
+text-shadow: black 0.1em 0.1em 0.2em
+
+ 
+ 
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div  id="vid" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v.mp4">
+</video>
+</div>
+
+
+<div  id="v2id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v2.mp4">
+</video>
+</div>
+
+<div  id="v3id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v3.mp4">
+</video>
+</div>
+
+
+<div  id="v4id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v4.mp4">
+</video>
+</div>
+
+
+
+
+<audio id="sid" src="s.mp4"  autoplay loop controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="christmasp.jpg" width="1200"  height="1600"  onClick="sho()">
+</div>
+
+
+
+
+<div id = "tid" class = "tcl" style="display:none;" >
+
+<div  style="font-size:400px;color:pink;font-weight: bold;">週 末 愉 快</div>
+
+</div>
+
+                
+
+
+
+</body>
+</html>
