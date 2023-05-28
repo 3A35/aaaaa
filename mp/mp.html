@@ -13,7 +13,7 @@ document.getElementById("imgId").style.display="block" ;
  
  b1=document.getElementById("b1");
  
-  b1.play();
+ b1.play();
  setInterval(step, 1300);
 
  var um = 1;
@@ -58,11 +58,23 @@ position: fixed;
 }
 
 
+.tcl{
+position:fixed;
+top: 20px;
+left:20px;
+}
+
 </style>
 </head>
 <body>
+<dvi  class="tcl" id="tid"   >
 
-<audio id="b1" src="b1.mp3" loop controls="controls" hidden="true"></audio>
+<div style="font-size:70px;color:yellow;font-weight:bold;">Always 直到永遠</div>
+<div style="font-size:110px;color:orange;font-weight:bold;">miki</div>
+</dvi>
+
+
+<audio id="b1" src="always.mp3" loop controls="controls" hidden="true"></audio>
 
 <img src="photo/"+"1 (1).jpg" width="1350"  id="imgId" style="display:none"/>  
 
