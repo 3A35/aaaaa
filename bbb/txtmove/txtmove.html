@@ -17,10 +17,10 @@ document.getElementById("trid").style.display="block" ;
  mov=document.getElementById("tid");
  movr=document.getElementById("trid");
 
- mov.style.top="0px";
+
  mov.style.left="0px";
- movr.style.top="0px";
- movr.style.left="1200px";
+
+ movr.style.left="1000px";
 
  b1=document.getElementById("b1");
  
@@ -28,15 +28,16 @@ document.getElementById("trid").style.display="block" ;
 
  var um = 1;
   mxr=1000;
-  myr=0;
+  myr=1000;
   mx=0;
-  my=0;
- 
+  my=1000;
+mov.style.top="1000px"; 
+movr.style.top="1000px"; 
 var ig = new Image(); 
 
 
- setInterval(step, 1300);
- setInterval(move, 10);
+ s1=setInterval(step, 1300);
+ m1=setInterval(move, 10);
 
 
 
@@ -68,25 +69,39 @@ else {mov.style.left=mx+"px";
 
 
 
-if (mxr<620) {
+if (mxr<630) {
+movr.style.top=myr+"px";
+mov.style.top=my+"px";
 
-movr.style.left="620px";
+movr.style.left="630px";
+myr=myr-2;
+my=my-2;
 
 }  
-else {movr.style.left=mxr+"px";
+else {
+movr.style.left=mxr+"px";}
 
-}
+ 
+
 
 mxr=mxr-1;
 
 mx=mx+1;
 
+if (my<-4000) {
+clearInterval(m1);
+clearInterval(s1);
+setTimeout(get,1);
+
+}
+
+
+}
+
 }
 
 
 
-
-}
 
 </script>
 
