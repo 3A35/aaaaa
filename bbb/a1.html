@@ -1,0 +1,27 @@
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<SCRIPT Language="JavaScript">
+function  ge() {
+alert("aaaaaaaaaaa");
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/aaaaa/bbb/c.txt");
+req.onload=function(){
+
+var  data=document.getElementById("dataid");
+data.innerHTML=this.responseText;
+
+}
+
+req.send();
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+
+<INPUT TYPE="button" VALUE="小雯" onClick="ge()">
+<div id="dataid"> </div>
+
+</BODY>
+</HTML>
