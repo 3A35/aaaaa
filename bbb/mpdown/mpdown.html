@@ -14,7 +14,7 @@ document.getElementById("imgId").style.display="block" ;
  b1=document.getElementById("b1");
  
  b1.play();
- setInterval(step, 2000);
+ setInterval(step, 3000);
 
  var um = 1;
   topp=-1000;
@@ -29,11 +29,11 @@ var ig = new Image();
 ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
 
 
-clo1=setInterval(down, 1);
+clo1=setInterval(down, 5);
 
 function down() {
 imgcl.style.top = topp+"px";
-topp=topp+15;
+topp=topp+5;
 if  (topp>300) {
 topp=-1000;
 clearInterval(clo1);
@@ -80,7 +80,7 @@ left:20px;
 
 <audio id="b1" src="Remember.mp3" loop controls="controls" hidden="true"></audio>
 
-<img src="photo/"+"1 (1).jpg" width="1350"  id="imgId" class="imgcl" style="display:none"/>  
+<img src="photo/"+"1 (1).jpg" width="1200"  id="imgId" class="imgcl" style="display:none"/>  
 
 
 
