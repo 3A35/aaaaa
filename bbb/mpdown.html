@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<title>Do You Remember 你還記得嗎?</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+ 
+document.getElementById("in").style.display="none" ;
+
+document.getElementById("imgId").style.display="block" ;
+ 
+ b1=document.getElementById("b1");
+ 
+ b1.play();
+ setInterval(step, 4000);
+
+ var um = 1;
+  
+var ig = new Image(); 
+
+ var imgcl = document.querySelector('.imgcl');
+ 
+ function step() {
+  um++; 
+ topp=-1200;
+
+ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+
+
+clo1=setInterval(down, 1);
+
+function down() {
+imgcl.style.top = topp+"px";
+topp=topp+2;
+if  (topp>300) {
+clearInterval(clo1);
+
+} 
+} 
+ig.onload = function(){  }
+ig.onerror =function(){
+um--;
+document.getElementById("imgId").src="photo/"+'1 (1).jpg';
+um=1;
+}
+ document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+}
+}
+
+
+
+</script>
+
+<style type="text/css">
+
+.imgcl{
+position:fixed;
+left:0px;
+}
+
+
+
+.tcl{
+position:fixed;
+top: 20px;
+left:20px;
+}
+
+</style>
+</head>
+<body>
+<dvi  class="tcl" id="tid"   >
+
+<div style="font-size:90px;color:silver;font-weight:bold;">阿琪</div>
+<div style="font-size:130px;color:red;font-weight:bold;">miki</div>
+</dvi>
+
+
+<audio id="b1" src="Remember.mp3" loop controls="controls" hidden="true"></audio>
+
+<img src="photo/"+"1 (1).jpg" width="1000"  id="imgId" class="imgcl" style="display:none"/>  
+
+
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+</body>
+</html>
