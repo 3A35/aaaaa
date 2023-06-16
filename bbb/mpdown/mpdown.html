@@ -14,7 +14,7 @@ document.getElementById("imgId").style.display="block" ;
  b1=document.getElementById("b1");
  
  b1.play();
- setInterval(step, 3000);
+ setInterval(step, 3500);
 
  var um = 1;
   topp=-1000;
@@ -33,7 +33,7 @@ clo1=setInterval(down, 5);
 
 function down() {
 imgcl.style.top = topp+"px";
-topp=topp+5;
+topp=topp+3;
 if  (topp>300) {
 topp=-1000;
 clearInterval(clo1);
