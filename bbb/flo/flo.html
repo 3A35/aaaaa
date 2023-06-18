@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<title>花花世界</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+ 
+document.getElementById("in").style.display="none" ;
+
+document.getElementById("imgId").style.display="block" ;
+ 
+ b1=document.getElementById("b1");
+ 
+ b1.play();
+
+var ig = document.getElementById("imgId");
+
+ setInterval(step, 5000);
+
+ var um = 1;
+ 
+
+
+ var imgcl = document.querySelector('.imgcl');
+ 
+ function step() {
+  um++; 
+ topp=-1000;
+ topp2=0;
+ wi=1000;
+
+
+
+ig.src ="photo/"+'1 ('+ um + ').jpg';
+
+
+clo1=setInterval(down, 4);
+
+function down() {
+imgcl.style.top = topp+"px";
+topp=topp+3;
+
+if  (topp>300) {
+topp=topp-3;
+topp2=topp2+5;}
+
+if  (wi<1) {
+
+imgcl.style.top = "-3000px";
+imgcl.style.width="1000px";
+ topp=-1000;
+clearInterval(clo1);
+
+}
+
+if  (topp2>1100) {
+wi=wi-5;
+imgcl.style.width=wi+"px"
+}
+
+} 
+
+ig.onload = function(){  }
+ig.onerror =function(){
+um--;
+document.getElementById("imgId").src="photo/"+'1 (1).jpg';
+um=1;
+}
+ document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+}
+
+
+}
+
+</script>
+
+<style type="text/css">
+
+.imgcl{
+position:fixed;
+left:0px;
+}
+
+
+
+.tcl{
+position:fixed;
+top: 20px;
+left:20px;
+}
+
+</style>
+</head>
+<body>
+<dvi  class="tcl" id="tid"   >
+
+<div style="font-size:90px;color:silver;font-weight:bold;"></div>
+<div style="font-size:130px;color:red;font-weight:bold;">週末愉快</div>
+</dvi>
+
+
+<audio id="b1" src="little idea.mp3" loop controls="controls" hidden="true"></audio>
+
+<img src="photo/"+"1 (1).jpg" width="1000"  id="imgId" class="imgcl" style="display:none"/>  
+
+
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+</body>
+</html>
