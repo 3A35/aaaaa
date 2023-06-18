@@ -10,6 +10,7 @@
 document.getElementById("in").style.display="none" ;
 
 document.getElementById("imgId").style.display="block" ;
+document.getElementById("firstid").style.display="block" ;
  
  b1=document.getElementById("b1");
  
@@ -26,30 +27,31 @@ var ig = document.getElementById("imgId");
  var imgcl = document.querySelector('.imgcl');
  
  function step() {
+document.getElementById("firstid").style.display="none" ;
   um++; 
  topp=-1000;
  topp2=0;
- wi=1000;
+ wi=1300;
 
 
 
 ig.src ="photo/"+'1 ('+ um + ').jpg';
 
 
-clo1=setInterval(down, 4);
+clo1=setInterval(down, 10);
 
 function down() {
 imgcl.style.top = topp+"px";
 topp=topp+3;
 
-if  (topp>300) {
+if  (topp>140) {
 topp=topp-3;
 topp2=topp2+5;}
 
 if  (wi<1) {
 
 imgcl.style.top = "-3000px";
-imgcl.style.width="1000px";
+imgcl.style.width="1300px";
  topp=-1000;
 clearInterval(clo1);
 
@@ -87,8 +89,8 @@ left:0px;
 
 .tcl{
 position:fixed;
-top: 20px;
-left:20px;
+top: 0px;
+left:0px;
 }
 
 </style>
@@ -96,16 +98,16 @@ left:20px;
 <body>
 <dvi  class="tcl" id="tid"   >
 
-<div style="font-size:90px;color:silver;font-weight:bold;"></div>
-<div style="font-size:130px;color:red;font-weight:bold;">週末愉快</div>
+<div style="font-size:100px;color:red;font-weight:bold;">週末愉快</div>
 </dvi>
 
 
 <audio id="b1" src="little idea.mp3" loop controls="controls" hidden="true"></audio>
 
-<img src="photo/"+"1 (1).jpg" width="1000"  id="imgId" class="imgcl" style="display:none"/>  
+<img src="photo/"+"1 (1).jpg" width="1300"  id="imgId" class="imgcl" style="display:none"/>  
 
 
+<img src="first.jpg" width="1300" height="1800" id="firstid" class="firstcl" style="display:none"/>  
 
 
 <div id="in"  >
