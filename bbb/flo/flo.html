@@ -18,7 +18,7 @@ document.getElementById("firstid").style.display="block" ;
 
 var ig = document.getElementById("imgId");
 
- setInterval(step, 5000);
+ setInterval(step, 8000);
 
  var um = 1;
  
@@ -29,7 +29,7 @@ var ig = document.getElementById("imgId");
  function step() {
 document.getElementById("firstid").style.display="none" ;
   um++; 
- topp=-1000;
+ topp=-1500;
  topp2=0;
  wi=1300;
 
@@ -52,13 +52,13 @@ if  (wi<1) {
 
 imgcl.style.top = "-3000px";
 imgcl.style.width="1300px";
- topp=-1000;
+ topp=-1500;
 clearInterval(clo1);
 
 }
 
 if  (topp2>1100) {
-wi=wi-5;
+wi=wi-3;
 imgcl.style.width=wi+"px"
 }
 
