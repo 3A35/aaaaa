@@ -15,18 +15,19 @@ bl=document.getElementById("s2id");
  
 bl.play();
 
- setInterval(step, 6000);
-
+ setInterval(step, 8000)
+ i=0;
  var um = 1;
 
-
-var ig = new Image(); 
-
+ig = document.getElementById("imgId")
 
 
  function step() {
-  um++; 
+  um++;
+ i=0;
+ j=1;
 ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+ 
 ig.onload = function(){  }
 ig.onerror =function(){
 um--;
@@ -35,6 +36,22 @@ um=1;
 }
  document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
 }
+
+ cl=setInterval(opac,900);
+
+function opac() {
+i=i+0.1;
+
+ig.style.opacity=i;
+if (i>0.5)  {i=0;
+
+}
+
+
+
+}
+
+
 }
 
 
@@ -67,7 +84,7 @@ left:20px;
 
 .imgcl{
 position:fixed;
-top: 500px;
+top: 900px;
 left:100px;
 }
 
@@ -80,7 +97,7 @@ left:100px;
 
 <div  id="v2id" style="display:none;">
 <video class="back" autoplay loop muted>
-<source src="v2.mp4">
+<source src="always.mp4">
 </video>
 </div>
 
@@ -95,9 +112,9 @@ left:100px;
 
 
 
-<img src="photo/"+"1 (1).jpg" width="500"  id="imgId" class="imgcl" style="display:none"/>  
+<img src="photo/"+"1 (1).jpg" width="400"  id="imgId" class="imgcl" style="display:none"/>  
 
-<audio id="s2id" src="v2.mp4" loop controls="controls" hidden="true"></audio>
+<audio id="s2id" src="always.mp4" loop controls="controls" hidden="true"></audio>
 
 
 <div id="in"  >
