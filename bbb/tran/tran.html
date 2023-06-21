@@ -25,8 +25,8 @@ ig = document.getElementById("imgId")
 
 
  function step() {
-if (co>1000) {co=0;}
- co=co+300;
+if (co>11) {co=0;}
+ co=co+1;
   um++;
  i=0;
  j=1;
@@ -47,8 +47,90 @@ um=1;
 function opac() {
 document.getElementById("imgId").style.display="block" ;
 i=i+0.1;
-ig.style.top=co+"px";
+
+if (co==1) {
+ig.style.top="0px";
+ig.style.left="0px";
 ig.style.opacity=i;
+}
+
+if (co==2) {
+ig.style.top="1200px";
+ig.style.left="0px";
+ig.style.opacity=0;
+}
+
+
+
+
+if (co==3) {
+ig.style.top="0px";
+ig.style.left="700px";
+ig.style.opacity=i;
+}
+
+if (co==4) {
+ig.style.top="1200px";
+ig.style.left="0px";
+ig.style.opacity=0;
+}
+
+if (co==5) {
+ig.style.top="1100px";
+ig.style.left="0px";
+ig.style.opacity=i;
+}
+
+if (co==6) {
+ig.style.top="1200px";
+ig.style.left="0px";
+ig.style.opacity=0;
+}
+
+
+if (co==7) {
+ig.style.top="1100px";
+ig.style.left="700px";
+ig.style.opacity=i;
+}
+
+if (co==8) {
+ig.style.top="1200px";
+ig.style.left="0px";
+ig.style.opacity=0;
+}
+
+if (co==9) {
+ig.style.top="500px";
+ig.style.left="0px";
+ig.style.opacity=i;
+}
+
+if (co==10) {
+ig.style.top="1200px";
+ig.style.left="0px";
+ig.style.opacity=0;
+}
+
+
+
+
+if (co==11) {
+ig.style.top="500px";
+ig.style.left="700px";
+ig.style.opacity=i;
+}
+
+
+if (co==12) {
+ig.style.top="1200px";
+ig.style.left="0px";
+ig.style.opacity=0;
+}
+
+
+
+
 if (i>0.9)  {i=0;
 
 }
@@ -121,7 +203,7 @@ left:100px;
 
 
 
-<img src="photo/"+"1 (1).jpg" width="700"  id="imgId" class="imgcl" style="display:none"/>  
+<img src="photo/"+"1 (1).jpg" height="600"  id="imgId" class="imgcl" style="display:none"/>  
 
 <audio id="s2id" src="always.mp4" loop controls="controls" hidden="true"></audio>
 
