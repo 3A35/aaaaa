@@ -10,13 +10,44 @@ document.getElementById("v2id").style.display="block" ;
  
 document.getElementById("in").style.display="none" ;
 
-
+vv=document.getElementById("v2id");
  
 bl=document.getElementById("s2id");
  
-
+var ba= document.querySelector('.back');
 
 bl.play();
+le=1;
+aaa=-1700;
+bbb=-500;
+
+setInterval(step, 2);
+
+function step(){
+
+if (le==1) {
+
+aaa=aaa+2;
+
+ba.style.left=aaa+"px";
+}
+
+ if (aaa>-500) {
+ le=2;
+ bbb=bbb-2;
+
+ ba.style.left=bbb+"px";
+ }
+
+ if (bbb<-1700) {
+ le=1;
+ bbb=-500;
+ aaa=-1700;
+ 
+ }
+
+}
+
 
 }
 
@@ -28,7 +59,7 @@ bl.play();
 .back{
 position:fixed;
 top:0;
-left:-1200px;
+// left:-1200px;
 
 min-height: 1800px;
 
