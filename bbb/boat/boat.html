@@ -7,7 +7,7 @@
  
 function get(){
 document.getElementById("v2id").style.display="block" ;
- 
+document.getElementById("tid").style.display="block" ; 
 document.getElementById("in").style.display="none" ;
 
 vv=document.getElementById("v2id");
@@ -69,14 +69,17 @@ min-height: 1800px;
 
 .tcl{
 position:fixed;
-top: 40px;
-left:20px;
+top: 50px;
+left:10px;
+
+animation:blink 1s infinite;
 }
 
-
-
-
-
+@keyframes blink {
+ 0%{opacity:0}
+ 50%{opacity:1}
+ 100%{opacity:0}
+}
 </style>
 </head>
 <body>
@@ -91,8 +94,9 @@ left:20px;
 
 
 
-<dvi  class="tcl" id="tid"   >
-<div style="font-size:120px;color:red;font-weight:bold;">端午節快樂</div>
+<dvi  class="tcl" id="tid" style="display:none;"  >
+<span style="font-size:130px;color:red;font-weight:bold;">端午節</span>
+<span style="font-size:130px;color:silver;font-weight:bold;">  快樂</span>
 </dvi>
 
 
