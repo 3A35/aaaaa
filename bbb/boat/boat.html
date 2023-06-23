@@ -18,31 +18,31 @@ var ba= document.querySelector('.back');
 
 bl.play();
 le=1;
-aaa=-1700;
-bbb=-500;
+aaa=-1400;
+bbb=-900;
 
-setInterval(step, 2);
+setInterval(step, 10);
 
 function step(){
 
 if (le==1) {
 
-aaa=aaa+2;
+aaa=aaa+1;
 
 ba.style.left=aaa+"px";
 }
 
- if (aaa>-500) {
+ if (aaa>-900) {
  le=2;
- bbb=bbb-2;
+ bbb=bbb-1;
 
  ba.style.left=bbb+"px";
  }
 
- if (bbb<-1700) {
+ if (bbb<-1400) {
  le=1;
- bbb=-500;
- aaa=-1700;
+ bbb=-900;
+ aaa=-1400;
  
  }
 
