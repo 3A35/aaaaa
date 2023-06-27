@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+<title>Always 直到永遠</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ 
+function get(){
+document.getElementById("v2id").style.display="block" ;
+document.getElementById("tid").style.display="block" ; 
+document.getElementById("in").style.display="none" ;
+
+vv=document.getElementById("v2id");
+ 
+bl=document.getElementById("s2id");
+ 
+var ba= document.querySelector('.back');
+
+bl.play();
+le=1;
+aaa=-1600;
+bbb=-1100;
+
+setInterval(step, 30);
+
+function step(){
+
+if (le==1) {
+
+aaa=aaa+1;
+
+ba.style.left=aaa+"px";
+}
+
+ if (aaa>-1100) {
+ le=2;
+ bbb=bbb-1;
+
+ ba.style.left=bbb+"px";
+ }
+
+ if (bbb<-1600) {
+ le=1;
+ bbb=-1100;
+ aaa=-1600;
+ 
+ }
+
+}
+
+
+}
+
+
+
+</script>
+
+<style type="text/css">
+.back{
+position:fixed;
+top:0;
+// left:-1200px;
+
+min-height: 1800px;
+
+}
+
+
+
+.tcl{
+position:fixed;
+top: 20px;
+left:10px;
+
+animation:blink 10s infinite;
+animation-delay: 2s  ;
+}
+
+@keyframes blink {
+ 0%{opacity:0;left:10px;}
+ 50%{opacity:1; left:50px;background-color:green;}
+ 100%{opacity:0;left:150px;}
+}
+</style>
+</head>
+<body>
+
+<div  id="v2id" style="display:none;">
+<video class="back" autoplay loop muted>
+<source src="bb.mp4">
+</video>
+</div>
+
+
+
+
+
+<dvi  class="tcl" id="tid" style="display:none;"  >
+<span style="font-size:70px;color:red;font-weight:bold;">Always</span>
+<span style="font-size:70px;color:silver;font-weight:bold;">直到永遠</span>
+</dvi>
+
+
+
+
+
+<audio id="s2id" src="bb.mp4" loop controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+
+</body>
+</html>
