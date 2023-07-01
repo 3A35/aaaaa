@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+<title>Every Breath You Take</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+ 
+document.getElementById("in").style.display="none" ;
+
+document.getElementById("imgId").style.display="block" ;
+document.getElementById("firstid").style.display="block" ;
+document.getElementById("backId").style.display="block" ; 
+ b1=document.getElementById("b1");
+ 
+ b1.play();
+
+var ig = document.getElementById("imgId");
+
+ setInterval(step, 10000);
+
+ var um = 1;
+ 
+
+
+ var imgcl = document.querySelector('.imgcl');
+ 
+ function step() {
+document.getElementById("firstid").style.display="none" ;
+  um++; 
+ topp=-2200;
+ topp2=0;
+ wi=1300;
+
+if  (um>3) {document.getElementById("backId").style.display="none" ; 
+document.getElementById("backId2").style.display="block" ; 
+}
+ig.src ="photo/"+'1 ('+ um + ').jpg';
+
+
+clo1=setInterval(down, 10);
+
+function down() {
+imgcl.style.top = topp+"px";
+topp=topp+3;
+
+if  (topp>140) {
+topp=topp-3;
+topp2=topp2+5;}
+
+if  (wi<1) {
+
+imgcl.style.top = "-3000px";
+imgcl.style.width="1300px";
+ topp=-2200;
+clearInterval(clo1);
+
+}
+
+if  (topp2>1100) {
+wi=wi-3;
+imgcl.style.width=wi+"px"
+}
+
+} 
+
+ig.onload = function(){  }
+ig.onerror =function(){
+um--;
+document.getElementById("imgId").src="photo/"+'1 (1).jpg';
+um=1;
+}
+ document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+}
+
+
+}
+
+</script>
+
+<style type="text/css">
+
+.back{
+position:fixed;
+top:0;
+left:-300px;
+
+min-height: 1800px;
+
+}
+
+
+.back2{
+position:fixed;
+top:0;
+left:-800px;
+
+min-height: 1800px;
+
+}
+
+
+.imgcl{
+position:fixed;
+left:0px;
+}
+
+
+
+.tcl{
+position:fixed;
+top: 0px;
+left:0px;
+}
+
+</style>
+</head>
+<body>
+
+<div  id="backId" style="display:none;">
+<video class="back" autoplay loop muted>
+<source src="soap.mp4">
+</video>
+</div>
+
+<div  id="backId2" style="display:none;">
+<video class="back2" autoplay loop muted>
+<source src="sea.mp4">
+</video>
+</div>
+
+
+
+<dvi  class="tcl" id="tid"   >
+
+<div style="font-size:100px;color:red;font-weight:bold;">Every Breath You Take</div>
+</dvi>
+
+
+<audio id="b1" src="Breath.mp3" loop controls="controls" hidden="true"></audio>
+
+<img src="photo/"+"1 (1).jpg" width="1300"  id="imgId" class="imgcl" style="display:none"/>  
+
+
+<img src="first.jpg" width="1300" height="1800" id="firstid" class="firstcl" style="display:none"/>  
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+</body>
+</html>
