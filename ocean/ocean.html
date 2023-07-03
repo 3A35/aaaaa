@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+document.getElementById("tid").style.display="block" ;
+document.getElementById("v1id").style.display="block" ;
+
+document.getElementById("in").style.display="none" ;
+
+ 
+bl=document.getElementById("s2id");
+ 
+bl.play();
+  ccc=0;
+ setInterval(step, 6000)
+
+ function step() {
+ ccc=ccc+1;
+ if (ccc==1) {
+document.getElementById("v8id").style.display="none" ; 
+document.getElementById("v1id").style.display="block" ;
+}
+
+ if (ccc==2) { 
+document.getElementById("v1id").style.display="none" ;
+document.getElementById("v2id").style.display="block" ;
+}
+
+
+ if (ccc==3) { 
+document.getElementById("v2id").style.display="none" ;
+document.getElementById("v3id").style.display="block" ;
+}
+
+
+ if (ccc==4) { 
+document.getElementById("v3id").style.display="none" ;
+document.getElementById("v4id").style.display="block" ;
+}
+
+
+ if (ccc==5) { 
+document.getElementById("v4id").style.display="none" ;
+document.getElementById("v5id").style.display="block" ;
+}
+
+ if (ccc==6) { 
+document.getElementById("v5id").style.display="none" ;
+document.getElementById("v6id").style.display="block" ;
+}
+
+
+ if (ccc==7) { 
+document.getElementById("v6id").style.display="none" ;
+document.getElementById("v7id").style.display="block" ;
+}
+
+
+ if (ccc==8) { 
+document.getElementById("v7id").style.display="none" ;
+document.getElementById("v8id").style.display="block" ;
+}
+
+
+if (ccc==8) {ccc=0;}
+
+
+}
+
+
+}
+
+
+
+</script>
+
+<style type="text/css">
+
+.back1{
+position:fixed;
+top:0;
+left:-1200px;
+min-height: 1800px;
+}
+
+
+.back2{
+position:fixed;
+top:0;
+left:-1200px;
+min-height: 1800px;
+}
+
+.back3{
+position:fixed;
+top:0;
+left:-1800px;
+min-height: 1800px;
+}
+
+.back4{
+position:fixed;
+top:0;
+left:-1400px;
+min-height: 1800px;
+}
+
+
+.back5{
+position:fixed;
+top:0;
+left:-1900px;
+min-height: 1800px;
+}
+
+
+.back6{
+position:fixed;
+top:0;
+left:-700px;
+min-height: 1800px;
+}
+
+.back7{
+position:fixed;
+top:0;
+left:-600px;
+min-height: 1800px;
+}
+
+.back8{
+position:fixed;
+top:0;
+left:-1100px;
+min-height: 1800px;
+}
+
+
+
+.tcl{
+position:fixed;
+top: 0px;
+left:0px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div  id="v1id" style="display:none;">
+<video class="back1" autoplay loop muted>
+<source src="fish1.mp4">
+</video>
+</div>
+
+
+
+<div  id="v2id" style="display:none;">
+<video class="back2" autoplay loop muted>
+<source src="fish2.mp4">
+</video>
+</div>
+
+<div  id="v3id" style="display:none;">
+<video class="back3" autoplay loop muted>
+<source src="fish3.mp4">
+</video>
+</div>
+
+
+<div  id="v4id" style="display:none;">
+<video class="back4" autoplay loop muted>
+<source src="fish4.mp4">
+</video>
+</div>
+
+
+<div  id="v5id" style="display:none;">
+<video class="back5" autoplay loop muted>
+<source src="fish5.mp4">
+</video>
+</div>
+
+
+
+<div  id="v6id" style="display:none;">
+<video class="back6" autoplay loop muted>
+<source src="fish6.mp4">
+</video>
+</div>
+
+<div  id="v7id" style="display:none;">
+<video class="back7" autoplay loop muted>
+<source src="fish7.mp4">
+</video>
+</div>
+
+
+<div  id="v8id" style="display:none;">
+<video class="back8" autoplay loop muted>
+<source src="fish8.mp4">
+</video>
+</div>
+
+
+
+<dvi  class="tcl" id="tid"  style="display:none;" >
+<div style="font-size:130px;color:red;font-weight:bold;">我是<span style=color:yellow;>一隻魚</span></div>
+</dvi>
+
+
+<audio id="s2id" src="iam.mp3" loop controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+
+</body>
+</html>
