@@ -5,11 +5,11 @@
 <script type="text/javascript">
 
  function get(){
-
+document.getElementById("in").style.display="none" ;
 document.getElementById("tid").style.display="block" ;
 document.getElementById("v1id").style.display="block" ;
 
-document.getElementById("in").style.display="none" ;
+
 
  
 bl=document.getElementById("s2id");
@@ -19,6 +19,7 @@ bl.play();
  setInterval(step, 6000)
 
  function step() {
+
  ccc=ccc+1;
  if (ccc==1) {
 document.getElementById("v8id").style.display="none" ; 
