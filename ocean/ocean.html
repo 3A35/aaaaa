@@ -10,64 +10,28 @@ document.getElementById("tid").style.display="block" ;
 document.getElementById("v1id").style.display="block" ;
 
 
-
- 
 bl=document.getElementById("s2id");
  
 bl.play();
-  ccc=0;
- setInterval(step, 6000)
+ ccc=0;
+ setInterval(step,6000)
 
  function step() {
-
+if (ccc==16) {ccc=0;}
  ccc=ccc+1;
- if (ccc==1) {
-document.getElementById("v8id").style.display="none" ; 
-document.getElementById("v1id").style.display="block" ;
-}
 
- if (ccc==2) { 
-document.getElementById("v1id").style.display="none" ;
-document.getElementById("v2id").style.display="block" ;
-}
+aaa="v"+ccc+"id";
+cc=ccc-1;
+
+if (cc==0) {cc=16;}
+bbb="v"+cc+"id";
 
 
- if (ccc==3) { 
-document.getElementById("v2id").style.display="none" ;
-document.getElementById("v3id").style.display="block" ;
-}
+document.getElementById(bbb).style.display="none" ; 
+document.getElementById(aaa).style.display="block" ;
 
 
- if (ccc==4) { 
-document.getElementById("v3id").style.display="none" ;
-document.getElementById("v4id").style.display="block" ;
-}
 
-
- if (ccc==5) { 
-document.getElementById("v4id").style.display="none" ;
-document.getElementById("v5id").style.display="block" ;
-}
-
- if (ccc==6) { 
-document.getElementById("v5id").style.display="none" ;
-document.getElementById("v6id").style.display="block" ;
-}
-
-
- if (ccc==7) { 
-document.getElementById("v6id").style.display="none" ;
-document.getElementById("v7id").style.display="block" ;
-}
-
-
- if (ccc==8) { 
-document.getElementById("v7id").style.display="none" ;
-document.getElementById("v8id").style.display="block" ;
-}
-
-
-if (ccc==8) {ccc=0;}
 
 
 }
@@ -84,7 +48,7 @@ if (ccc==8) {ccc=0;}
 .back1{
 position:fixed;
 top:0;
-left:-1200px;
+left:-700px;
 min-height: 1800px;
 }
 
@@ -106,7 +70,7 @@ min-height: 1800px;
 .back4{
 position:fixed;
 top:0;
-left:-1400px;
+left:-800px;
 min-height: 1800px;
 }
 
@@ -114,7 +78,7 @@ min-height: 1800px;
 .back5{
 position:fixed;
 top:0;
-left:-1900px;
+left:-1500px;
 min-height: 1800px;
 }
 
@@ -134,6 +98,66 @@ min-height: 1800px;
 }
 
 .back8{
+position:fixed;
+top:0;
+left:-1100px;
+min-height: 1800px;
+}
+
+
+.back9{
+position:fixed;
+top:0;
+left:-1200px;
+min-height: 1800px;
+}
+
+
+.back10{
+position:fixed;
+top:0;
+left:-1200px;
+min-height: 1800px;
+}
+
+.back11{
+position:fixed;
+top:0;
+left:-1800px;
+min-height: 1800px;
+}
+
+.back12{
+position:fixed;
+top:0;
+left:-800px;
+min-height: 1800px;
+}
+
+
+.back13{
+position:fixed;
+top:0;
+left:-1900px;
+min-height: 1800px;
+}
+
+
+.back14{
+position:fixed;
+top:0;
+left:-700px;
+min-height: 1800px;
+}
+
+.back15{
+position:fixed;
+top:0;
+left:-600px;
+min-height: 1800px;
+}
+
+.back16{
 position:fixed;
 top:0;
 left:-1100px;
@@ -210,13 +234,68 @@ left:0px;
 </div>
 
 
+<div  id="v9id" style="display:none;">
+<video class="back9" autoplay loop muted>
+<source src="fish9.mp4">
+</video>
+</div>
 
-<dvi  class="tcl" id="tid"  style="display:none;" >
-<div style="font-size:130px;color:red;font-weight:bold;">我是<span style=color:yellow;>一隻魚</span></div>
+
+
+<div  id="v10id" style="display:none;">
+<video class="back10" autoplay loop muted>
+<source src="fish10.mp4">
+</video>
+</div>
+
+<div  id="v11id" style="display:none;">
+<video class="back11" autoplay loop muted>
+<source src="fish11.mp4">
+</video>
+</div>
+
+
+<div  id="v12id" style="display:none;">
+<video class="back12" autoplay loop muted>
+<source src="fish12.mp4">
+</video>
+</div>
+
+
+<div  id="v13id" style="display:none;">
+<video class="back13" autoplay loop muted>
+<source src="fish13.mp4">
+</video>
+</div>
+
+
+
+<div  id="v14id" style="display:none;">
+<video class="back14" autoplay loop muted>
+<source src="fish14.mp4">
+</video>
+</div>
+
+<div  id="v15id" style="display:none;">
+<video class="back15" autoplay loop muted>
+<source src="fish15.mp4">
+</video>
+</div>
+
+
+<div  id="v16id" style="display:none;">
+<video class="back16" autoplay loop muted>
+<source src="fish16.mp4">
+</video>
+</div>
+
+
+<dvi id="tid"   class="tcl"  style="display:none;" >
+<div style="font-size:130px;color:red;font-weight:bold;">Do You Remember</div>
 </dvi>
 
 
-<audio id="s2id" src="iam.mp3" loop controls="controls" hidden="true"></audio>
+<audio id="s2id" src="Remember.mp3" loop controls="controls" hidden="true"></audio>
 
 
 <div id="in"  >
