@@ -17,13 +17,13 @@ bl.play();
  setInterval(step,6000)
 
  function step() {
-if (ccc==22) {ccc=0;}
+if (ccc==24) {ccc=0;}
  ccc=ccc+1;
 
 aaa="v"+ccc+"id";
 cc=ccc-1;
 
-if (cc==0) {cc=22;}
+if (cc==0) {cc=24;}
 bbb="v"+cc+"id";
 
 
@@ -57,7 +57,7 @@ height: 1800px;
 .back2{
 position:fixed;
 top:0;
-left:-1000px;
+left:-800px;
 
 height: 1800px;
 }
@@ -169,7 +169,7 @@ min-height: 1800px;
 .back17{
 position:fixed;
 top:0;
-left:-1600px;
+left:-700px;
 min-height: 1800px;
 }
 
@@ -210,6 +210,19 @@ left:-1100px;
 min-height: 1800px;
 }
 
+.back23{
+position:fixed;
+top:0;
+left:-600px;
+min-height: 1800px;
+}
+
+.back24{
+position:fixed;
+top:0;
+left:-1100px;
+min-height: 1800px;
+}
 
 .tcl{
 position:fixed;
@@ -376,12 +389,26 @@ left:0px;
 </video>
 </div>
 
+<div  id="v23id" style="display:none;">
+<video class="back23" autoplay loop muted>
+<source src="fish23.mp4">
+</video>
+</div>
+
+
+<div  id="v24id" style="display:none;">
+<video class="back24" autoplay loop muted>
+<source src="fish24.mp4">
+</video>
+</div>
+
+
 <dvi id="tid"   class="tcl"  style="display:none;" >
-<div style="font-size:90px;color:red;font-weight:bold;"><span style=font-size:130px;color:yellow; >Do You </span> Remember</div>
+<div style="font-size:90px;color:red;font-weight:bold;"><span style=font-size:130px;color:yellow; >愛情海</span>的選手</div>
 </dvi>
 
 
-<audio id="s2id" src="Remember.mp3" loop controls="controls" hidden="true"></audio>
+<audio id="s2id" src="wa.mp4" loop controls="controls" hidden="true"></audio>
 
 
 <div id="in"  >
