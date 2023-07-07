@@ -6,6 +6,21 @@
 
  function get(){
 document.getElementById("in").style.display="none" ;
+document.getElementById("jawsid").style.display="block"
+
+jw=document.getElementById("jawssid");
+
+jw.play();
+
+setTimeout(get2,12000);
+
+}
+
+
+
+function get2(){
+jw.pause();
+document.getElementById("jawsid").style.display="none"
 document.getElementById("tid").style.display="block" ;
 document.getElementById("v1id").style.display="block" ;
 
@@ -42,7 +57,7 @@ document.getElementById(aaa).style.display="block" ;
 .back1{
 position:fixed;
 top:0;
-left:-1100px;
+left:-700px;
 height: 1800px;
 }
 
@@ -57,7 +72,7 @@ height: 1800px;
 .back3{
 position:fixed;
 top:0;
-left:-900px;
+left:-800px;
 height: 1800px;
 }
 
@@ -396,15 +411,23 @@ left:0px;
 
 
 <dvi id="tid"   class="tcl"  style="display:none;" >
-<div style="font-size:90px;color:red;font-weight:bold;"><span style=font-size:130px;color:yellow; >沒有你</span>傷心</div>
+<div style="font-size:120px;color:red;font-weight:bold;"><span style=font-size:150px;color:yellow; >我是</span>一隻魚</div>
 </dvi>
 
 
-<audio id="s2id" src="sad.mp4" loop controls="controls" hidden="true"></audio>
+<audio id="s2id" src="iam.mp3" loop controls="controls" hidden="true"></audio>
+
+<audio id="jawssid" src="jawss.mp4" loop controls="controls" hidden="true"></audio>
 
 
 <div id="in"  >
-<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+<input type="image" src="miki.jpg" height="1800"  onClick="get()">
+</div>
+
+
+
+<div id="jawsid" style="display:none;" >
+<input type="image" src="jaws.jpg" height="1800" >
 </div>
 
 
