@@ -8,19 +8,45 @@
 
  document.getElementById("in").style.display="none" ;
 document.getElementById("tid").style.display="block" ;
+document.getElementById("soapid").style.display="block" ;
 b3=document.getElementById("s3id");
 b3.play();
+co=0;
 
-document.getElementById("imgId").style.display="block" ;
  setInterval(step, 5000)
-document.getElementById("imgId").style.display="none" ;
+ 
  i=0;
  var um = 1;
-
+ 
 ig = document.getElementById("imgId")
 
-document.getElementById("soapid").style.display="block" ;
+
+
+
+
  function step() {
+ co=co+1;
+if (co==1) {document.getElementById("soapid").style.display="none" ;
+document.getElementById("did").style.display="none" ;
+document.getElementById("aid").style.display="block" ;
+}
+
+if (co==2) {document.getElementById("aid").style.display="none" ;
+document.getElementById("bid").style.display="block" ;
+}
+
+if (co==3) {document.getElementById("bid").style.display="none" ;
+document.getElementById("cid").style.display="block" ;
+
+}
+
+if (co==4) {document.getElementById("cid").style.display="none" ;
+document.getElementById("did").style.display="block" ;
+co=0;
+}
+
+
+
   um++;
  i=0;
  j=1;
@@ -66,13 +92,45 @@ height: 1800px;
 }
 
 
-.back2{
+.soapcl{
 position:fixed;
 top:0;
 left:-550px;
 
 height: 1800px;
 
+}
+
+
+
+.acl{
+position:fixed;
+top:0;
+left:0px;
+height: 1800px;
+}
+
+
+.bcl{
+position:fixed;
+top:0;
+left:0px;
+height: 1800px;
+}
+
+
+.ccl{
+position:fixed;
+top:0;
+left:0px;
+height: 1800px;
+}
+
+.dcl{
+position:fixed;
+top:0;
+left:0px;
+height: 1800px;
 }
 
 
@@ -106,18 +164,38 @@ left:-100px;
 </head>
 <body>
 
->
-
-
 <div  id="soapid" style="display:none;">
-<video class="back2" autoplay loop muted>
+<video class="soapcl" autoplay loop muted>
 <source src="soap.mp4">
 </video>
 </div>
 
 
+<div  id="aid" style="display:none;">
+<video class="acl" autoplay loop muted>
+<source src="a.mp4">
+</video>
+</div>
 
 
+<div  id="bid" style="display:none;">
+<video class="bcl" autoplay loop muted>
+<source src="b.mp4">
+</video>
+</div>
+
+
+<div  id="cid" style="display:none;">
+<video class="ccl" autoplay loop muted>
+<source src="c.mp4">
+</video>
+</div>
+
+<div  id="did" style="display:none;">
+<video class="dcl" autoplay loop muted>
+<source src="d.mp4">
+</video>
+</div>
 
 
 
