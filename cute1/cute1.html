@@ -28,7 +28,7 @@ ig = document.getElementById("imgId")
 document.getElementById("tid").style.display="block" ;
  co=co+1;
 if (co==1) {document.getElementById("soapid").style.display="none" ;
-document.getElementById("fid").style.display="none" ;
+document.getElementById("did").style.display="none" ;
 document.getElementById("aid").style.display="block" ;
 }
 
@@ -43,18 +43,10 @@ document.getElementById("cid").style.display="block" ;
 
 if (co==4) {document.getElementById("cid").style.display="none" ;
 document.getElementById("did").style.display="block" ;
-
-}
-
-if (co==5) {
-document.getElementById("did").style.display="none" ;
-document.getElementById("eid").style.display="block" ;
-}
-
-if (co==6) {document.getElementById("eid").style.display="none" ;
-document.getElementById("fid").style.display="block" ;
 co=0;
 }
+
+
 
 
   um++;
@@ -106,17 +98,40 @@ height: 1800px;
 position:fixed;
 top:0;
 left:-550px;
-
 height: 1800px;
-
 }
+
+
+
+
 
 
 
 .acl{
 position:fixed;
 top:0;
+left:-100px;
+height: 1800px;
+}
+
+.bcl{
+position:fixed;
+top:0;
 left:-800px;
+height: 1800px;
+}
+
+.ccl{
+position:fixed;
+top:0;
+left:-800px;
+height: 1800px;
+}
+
+.dcl{
+position:fixed;
+top:0;
+left:-100px;
 height: 1800px;
 }
 
@@ -170,37 +185,25 @@ left:-100px;
 
 
 <div  id="bid" style="display:none;">
-<video class="acl" autoplay loop muted>
+<video class="bcl" autoplay loop muted>
 <source src="b.mp4">
 </video>
 </div>
 
 
 <div  id="cid" style="display:none;">
-<video class="acl" autoplay loop muted>
+<video class="ccl" autoplay loop muted>
 <source src="c.mp4">
 </video>
 </div>
 
 <div  id="did" style="display:none;">
-<video class="acl" autoplay loop muted>
+<video class="dcl" autoplay loop muted>
 <source src="d.mp4">
 </video>
 </div>
 
 
-<div  id="eid" style="display:none;">
-<video class="acl" autoplay loop muted>
-<source src="e.mp4">
-</video>
-</div>
-
-
-<div  id="fid" style="display:none;">
-<video class="acl" autoplay loop muted>
-<source src="f.mp4">
-</video>
-</div>
 
 
 
@@ -208,7 +211,7 @@ left:-100px;
 
 
 
-<img src="photo/"+"1 (1).jpg" width="1200"  id="imgId" class="imgcl" style="display:none"/>  
+<img src="photo/"+"1 (1).jpg" height="1800"  id="imgId" class="imgcl" style="display:none"/>  
 
 
 <audio id="s3id" src="cutes.mp4" loop controls="controls" hidden="true"></audio>
