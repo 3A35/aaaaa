@@ -6,15 +6,15 @@
 
  function get(){
 
- document.getElementById("in").style.display="none" ;
+document.getElementById("in").style.display="none" ;
 
 document.getElementById("soapid").style.display="block" ;
-b2=document.getElementById("s2id");
+document.getElementById("t2id").style.display="block" ;
 b3=document.getElementById("s3id");
-b2.play();
+b3.play();
 co=0;
 
- setTimeout(get2,12000)
+ setTimeout(get2,8000)
 
 }
  function get2(){
@@ -26,14 +26,8 @@ co=0;
  
 ig = document.getElementById("imgId")
 
-
-
-
  function step() {
-b2.pause();
-b3.play();
-
-
+document.getElementById("t2id").style.display="none" ;
 document.getElementById("tid").style.display="block" ;
  co=co+1;
 if (co==1) {document.getElementById("soapid").style.display="none" ;
@@ -204,6 +198,15 @@ position: fixed;
 }
 
 
+.t2cl{
+position:fixed;
+top:600px;
+left:100px;
+}
+
+
+
+
 .tcl{
 position:fixed;
 top: 5px;
@@ -289,16 +292,25 @@ left:-100px;
 
 <img src="photo/"+"1 (1).jpg" width="1200"  id="imgId" class="imgcl" style="display:none"/>  
 
-<audio id="s2id" src="seas.mp4" loop controls="controls" hidden="true"></audio>
+
 <audio id="s3id" src="cutes.mp4" loop controls="controls" hidden="true"></audio>
 
 <div id="in"  >
 <input type="image" src="miki.jpg" width="1200"  onClick="get()">
 </div>
 
+
+<dvi  class="t2cl" id="t2id" style="display:none;"  >
+<div style="font-size:200px;color:yellow;font-weight:bold;"><span style="color:orange";>可愛</span>女人</div>
+</dvi>
+
+
 <dvi  class="tcl" id="tid" style="display:none;"  >
 <div style="font-size:130px;color:yellow;font-weight:bold;"><span style="color:red";>可愛</span>女人</div>
-</dvi
+</dvi>
+
+
+
 
 
 </body>
