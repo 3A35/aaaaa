@@ -27,7 +27,7 @@ ig = document.getElementById("imgId")
  function step() {
  co=co+1;
 if (co==1) {document.getElementById("soapid").style.display="none" ;
-document.getElementById("did").style.display="none" ;
+document.getElementById("hid").style.display="none" ;
 document.getElementById("aid").style.display="block" ;
 }
 
@@ -42,10 +42,27 @@ document.getElementById("cid").style.display="block" ;
 
 if (co==4) {document.getElementById("cid").style.display="none" ;
 document.getElementById("did").style.display="block" ;
-co=0;
+
 }
 
+if (co==5) {
+document.getElementById("did").style.display="none" ;
+document.getElementById("eid").style.display="block" ;
+}
 
+if (co==6) {document.getElementById("eid").style.display="none" ;
+document.getElementById("fid").style.display="block" ;
+}
+
+if (co==7) {document.getElementById("fid").style.display="none" ;
+document.getElementById("gid").style.display="block" ;
+
+}
+
+if (co==8) {document.getElementById("gid").style.display="none" ;
+document.getElementById("hid").style.display="block" ;
+co=0;
+}
 
   um++;
  i=0;
@@ -134,6 +151,38 @@ height: 1800px;
 }
 
 
+.ecl{
+position:fixed;
+top:0;
+left:0px;
+height: 1800px;
+}
+
+
+.fcl{
+position:fixed;
+top:0;
+left:0px;
+height: 1800px;
+}
+
+
+.gcl{
+position:fixed;
+top:0;
+left:0px;
+height: 1800px;
+}
+
+.hcl{
+position:fixed;
+top:0;
+left:0px;
+height: 1800px;
+}
+
+
+
 
 
 .butt{
@@ -166,7 +215,7 @@ left:-100px;
 
 <div  id="soapid" style="display:none;">
 <video class="soapcl" autoplay loop muted>
-<source src="soap.mp4">
+<source src="sea.mp4">
 </video>
 </div>
 
@@ -196,6 +245,35 @@ left:-100px;
 <source src="d.mp4">
 </video>
 </div>
+
+
+<div  id="eid" style="display:none;">
+<video class="ecl" autoplay loop muted>
+<source src="e.mp4">
+</video>
+</div>
+
+
+<div  id="fid" style="display:none;">
+<video class="fcl" autoplay loop muted>
+<source src="f.mp4">
+</video>
+</div>
+
+
+<div  id="gid" style="display:none;">
+<video class="gcl" autoplay loop muted>
+<source src="g.mp4">
+</video>
+</div>
+
+<div  id="hid" style="display:none;">
+<video class="hcl" autoplay loop muted>
+<source src="h.mp4">
+</video>
+</div>
+
+
 
 
 
