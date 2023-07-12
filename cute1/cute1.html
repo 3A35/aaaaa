@@ -28,7 +28,7 @@ ig = document.getElementById("imgId")
 document.getElementById("tid").style.display="block" ;
  co=co+1;
 if (co==1) {document.getElementById("soapid").style.display="none" ;
-document.getElementById("did").style.display="none" ;
+document.getElementById("eid").style.display="none" ;
 document.getElementById("aid").style.display="block" ;
 }
 
@@ -43,9 +43,13 @@ document.getElementById("cid").style.display="block" ;
 
 if (co==4) {document.getElementById("cid").style.display="none" ;
 document.getElementById("did").style.display="block" ;
-co=0;
+
 }
 
+if (co==5) {document.getElementById("did").style.display="none" ;
+document.getElementById("eid").style.display="block" ;
+co=0;
+}
 
 
 
@@ -124,7 +128,7 @@ height: 1800px;
 .ccl{
 position:fixed;
 top:0;
-left:-800px;
+left:-700px;
 height: 1800px;
 }
 
@@ -136,7 +140,12 @@ height: 1800px;
 }
 
 
-
+.ecl{
+position:fixed;
+top:0;
+left:-1800px;
+height: 1800px;
+}
 
 .butt{
 position: fixed;
@@ -205,6 +214,11 @@ left:-100px;
 
 
 
+<div  id="eid" style="display:none;">
+<video class="ecl" autoplay loop muted>
+<source src="e.mp4">
+</video>
+</div>
 
 
 
