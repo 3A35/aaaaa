@@ -16,7 +16,7 @@ co=0;
 
 
 
- setInterval(step, 4800)
+ setInterval(step, 5000)
  
  i=0;
  var um = 1;
@@ -29,7 +29,7 @@ document.getElementById("tid").style.display="block" ;
  co=co+1;
 if (co==1) {document.getElementById("soapid").style.display="none" ;
 document.getElementById("aid").style.display="block" ;
-document.getElementById("eid").style.display="none" ;
+document.getElementById("did").style.display="none" ;
 }
 
 if (co==2) {
@@ -45,18 +45,14 @@ document.getElementById("bid").style.display="none" ;
 if (co==4) {
 document.getElementById("did").style.display="block" ;
 document.getElementById("cid").style.display="none" ;
-}
-
-if (co==5) {
-document.getElementById("eid").style.display="block" ;
-document.getElementById("did").style.display="none" ;
 co=0;
 }
 
 
 
+
   um++;
- i=-0.2;
+ i=0;
  j=1;
 document.getElementById("imgId").style.display="none" ;
 ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
@@ -130,7 +126,7 @@ height: 1800px;
 .ccl{
 position:fixed;
 top:0;
-left:-700px;
+left:-2000px;
 height: 1800px;
 }
 
@@ -142,20 +138,8 @@ height: 1800px;
 }
 
 
-.ecl{
-position:fixed;
-top:0;
-left:-2000px;
-height: 1800px;
-}
 
-.butt{
-position: fixed;
-  top: 20px;
-  right: 50px;
-  width: 150px;
-  line-height: 20px;
-}
+
 
 
 
@@ -216,11 +200,7 @@ left:-100px;
 
 
 
-<div  id="eid" style="display:none;">
-<video class="ecl" autoplay loop muted>
-<source src="e.mp4">
-</video>
-</div>
+
 
 
 
