@@ -18,10 +18,10 @@ var ba= document.querySelector('.back');
 
 bl.play();
 le=1;
-aaa=-1600;
-bbb=-1100;
+aaa=-2300;
+bbb=-700;
 
-setInterval(step, 30);
+setInterval(step, 1);
 
 function step(){
 
@@ -32,17 +32,17 @@ aaa=aaa+1;
 ba.style.left=aaa+"px";
 }
 
- if (aaa>-1100) {
+ if (aaa>-700) {
  le=2;
  bbb=bbb-1;
 
  ba.style.left=bbb+"px";
  }
 
- if (bbb<-1600) {
+ if (bbb<-2300) {
  le=1;
- bbb=-1100;
- aaa=-1600;
+ bbb=-700;
+ aaa=-2300;
  
  }
 
