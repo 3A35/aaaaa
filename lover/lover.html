@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+<title>photo frame</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+document.getElementById("in").style.display="none" ;
+document.getElementById("t1id").style.display="block";
+document.getElementById("t2id").style.display="block" 
+document.getElementById("soapid").style.display="block" ;
+ttt=document.getElementById("tid");
+ttt.style.display="block" ;
+b3=document.getElementById("s3id");
+b3.play();
+co=0;
+ccc=0;
+
+
+ setInterval(step, 5000);
+ 
+ i=0;
+ var um = 1;
+ 
+ig = document.getElementById("imgId");
+
+ function step() {
+ document.getElementById("t1id").style.display="none";
+ document.getElementById("t2id").style.display="none";
+ ccc=ccc+1;
+ if (ccc==2) {ttt.innerHTML="小情人我的愛收不回來 讓我帶著你走遍海角和天涯";}
+ if (ccc==5) {ttt.innerHTML="長髮迎風搖擺最嚮往的姿態 讓人愉快像陽光一樣燦爛";}
+ if (ccc==9) {ttt.innerHTML="你總是像個小孩忍不住想疼愛 小心翼翼不讓你受到傷害";}
+ if (ccc==12) {ttt.innerHTML="";}
+ co=co+1;
+if (co==1) {document.getElementById("soapid").style.display="none" ;
+document.getElementById("aid").style.display="block" ;
+document.getElementById("did").style.display="none" ; 
+}
+
+if (co==2) {
+document.getElementById("bid").style.display="block" ;
+ document.getElementById("aid").style.display="none" ;
+}
+
+if (co==3) {
+document.getElementById("cid").style.display="block" ;
+ document.getElementById("bid").style.display="none" ;
+}
+
+if (co==4) {
+document.getElementById("did").style.display="block" ;
+ document.getElementById("cid").style.display="none" ;
+co=0;
+}
+
+
+
+
+  um++;
+ i=0;
+ j=1;
+document.getElementById("imgId").style.display="none" ;
+ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+ 
+ig.onload = function(){  }
+ig.onerror =function(){
+um--;
+document.getElementById("imgId").src="photo/"+'1 (1).jpg';
+um=1;
+}
+ document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+}
+
+ cl=setInterval(opac,400);
+
+function opac() {
+document.getElementById("imgId").style.display="block" ;
+i=i+0.1;
+
+ig.style.opacity=i;
+if (i>0.9)  {i=1;
+
+}
+
+
+}
+
+
+}
+
+</script>
+
+<style type="text/css">
+.back{
+position:fixed;
+top:0;
+left:-1350px;
+
+height: 1800px;
+
+}
+
+
+.soapcl{
+position:fixed;
+top:0;
+left:-550px;
+height: 1800px;
+}
+
+
+
+
+
+
+
+.acl{
+position:fixed;
+top:0;
+left:-100px;
+height: 1800px;
+}
+
+.bcl{
+position:fixed;
+top:0;
+left:-1800px;
+height: 1800px;
+}
+
+.ccl{
+position:fixed;
+top:0;
+left:-2000px;
+height: 1800px;
+}
+
+.dcl{
+position:fixed;
+top:0;
+left:-100px;
+height: 1800px;
+}
+
+
+
+
+
+
+
+
+
+
+.tcl{
+position:fixed;
+top: 1200px;
+left:5px;
+font-size:105px;
+color:red;
+width:1100px;
+font-weight:bold;
+}
+
+
+.t1cl{
+position:fixed;
+top: 180px;
+left:200px;
+font-size:180px;
+color:yellow;
+background-color:red;
+font-weight:bold;
+}
+
+
+.t2cl{
+position:fixed;
+top: 400px;
+left:300px;
+font-size:130px;
+color:silver;
+font-weight:bold;
+}
+
+
+
+.imgcl{
+position:fixed;
+top: 0px;
+left:-100px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<div  id="soapid" style="display:none;">
+<video class="soapcl" autoplay loop muted>
+<source src="sea.mp4">
+</video>
+</div>
+
+
+<div  id="aid" style="display:none;">
+<video class="acl" autoplay loop muted>
+<source src="a.mp4">
+</video>
+</div>
+
+
+<div  id="bid" style="display:none;">
+<video class="bcl" autoplay loop muted>
+<source src="b.mp4">
+</video>
+</div>
+
+
+<div  id="cid" style="display:none;">
+<video class="ccl" autoplay loop muted>
+<source src="c.mp4">
+</video>
+</div>
+
+<div  id="did" style="display:none;">
+<video class="dcl" autoplay loop muted>
+<source src="d.mp4">
+</video>
+</div>
+
+
+
+
+
+
+
+
+
+
+<img src="photo/"+"1 (1).jpg" height="1800"  id="imgId" class="imgcl" style="display:none"/>  
+
+
+<audio id="s3id" src="lovers.mp4" loop controls="controls" hidden="true"></audio>
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+
+
+<dvi  class="tcl" id="tid" style="display:none;"  >
+<div>小情人讓我輕擁你入懷,像一朵花兒慢慢慢盛開</div>
+</dvi>
+
+<dvi  class="t1cl" id="t1id" style="display:none;"  >
+<div>小 情 人</div>
+</dvi>
+
+<dvi  class="t2cl" id="t2id" style="display:none;"  >
+<div>劉德華</div>
+</dvi>
+
+</body>
+</html>
