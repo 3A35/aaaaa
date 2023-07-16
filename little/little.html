@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<head>
+<title>photo frame</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+document.getElementById("in").style.display="none" ;
+ 
+document.getElementById("soapid").style.display="block" ;
+document.getElementById("tfid").style.display="block" ;
+ document.getElementById("t1id").style.display="block";
+ document.getElementById("t2id").style.display="block"
+ttt=document.getElementById("tid");
+ta=document.getElementById("taid");
+
+b3=document.getElementById("s3id");
+b3.play();
+co=0;
+ccc=0;
+
+
+ setInterval(step, 5000);
+
+ i=0;
+
+
+ function step() {
+document.getElementById("tfid").style.display="none";
+document.getElementById("t1id").style.display="none";
+document.getElementById("t2id").style.display="none";
+
+ta.style.display="block" ;
+
+ ccc=ccc+1;
+if (ccc==2) {ttt.style.display="block" ;
+ttt.innerHTML="小情人 我的愛收不回來";
+ta.innerHTML="讓我帶著你 走遍海角和天涯";
+}
+if (ccc==5) {ttt.innerHTML="長髮迎風搖擺 最嚮往的姿態";
+ta.innerHTML="讓人愉快 像陽光一樣燦爛";
+
+}
+if (ccc==9) {ttt.innerHTML="你總是像個小孩 忍不住想疼愛";
+ta.innerHTML="小心翼翼 不讓你受到傷害";
+}
+if (ccc==12) {ttt.innerHTML="給我全部的依賴";
+ta.innerHTML="守著你我絕不離開";  
+
+}
+if (ccc==13) {ttt.innerHTML="就是這樣的自然";
+ta.innerHTML="不要因為我愛更改";
+}
+if (ccc==16) {ttt.innerHTML="我就是喜歡 喔";
+ta.innerHTML="";
+}
+
+if (ccc==17) {ttt.innerHTML="小情人讓我輕擁你入懷";
+ta.innerHTML="像一朵花兒  慢慢慢盛開";
+}
+
+
+
+if (ccc==19) {ttt.innerHTML="小情人 我的愛收不回來";
+ta.innerHTML="讓我帶著你 走遍海角和天涯";
+}
+
+
+if (ccc==25) {ttt.innerHTML="忍不住想疼愛";
+ta.innerHTML="小心翼翼 不讓你受到傷害";
+}
+
+if (ccc==28) {ttt.innerHTML="給我全部的依賴";
+ta.innerHTML="守著你我絕不離開";
+}
+
+if (ccc==30) {ttt.innerHTML="就是這樣的自然";
+ta.innerHTML="不要因為我愛更改";
+}
+
+if (ccc==32) {ttt.innerHTML="我就是喜歡 喔";
+ta.innerHTML="";
+}
+
+if (ccc==33) {ttt.innerHTML="小情人讓我 輕擁你入懷";
+ta.innerHTML="像一朵花兒  慢慢慢盛開";
+}
+
+if (ccc==36) {ttt.innerHTML="小情人 我的愛收不回來";
+ta.innerHTML="讓我帶著你 走遍海角和天涯";
+}
+
+if (ccc==38) {ttt.innerHTML="小情人讓我 輕擁你入懷";
+ta.innerHTML="像一朵花兒  慢慢慢盛開";
+}
+
+if (ccc==40) {ttt.innerHTML="小情人 我的愛收不回來";
+ta.innerHTML="讓我帶著你 走遍海角和天涯";
+}
+
+
+
+if (ccc==43+1) {
+ history.go(0);
+}
+
+
+
+}
+
+}
+
+</script>
+
+<style type="text/css">
+.back{
+position:fixed;
+top:0;
+left:-1350px;
+
+height: 1800px;
+
+}
+
+
+.soapcl{
+position:fixed;
+top:0;
+left:-550px;
+height: 1800px;
+}
+
+
+
+
+.tfcl{
+position:fixed;
+top: 1200px;
+left:20px;
+font-size:120px;
+color:yellow;
+width:1000px;
+font-weight:bold;
+}
+
+
+
+
+
+
+.tcl{
+position:fixed;
+top: 800px;
+left:20px;
+font-size:120px;
+color:yellow;
+width:1000px;
+font-weight:bold;
+}
+
+
+.tacl{
+position:fixed;
+top: 1200px;
+left:20px;
+font-size:120px;
+color:yellow;
+width:1000px;
+font-weight:bold;
+}
+
+
+
+
+.t1cl{
+position:fixed;
+top: 580px;
+left:200px;
+font-size:220px;
+color:red;
+background-color:green;
+font-weight:bold;
+}
+
+
+.t2cl{
+position:fixed;
+top: 900px;
+left:300px;
+font-size:150px;
+color:orange;
+font-weight:bold;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div  id="soapid" style="display:none;">
+<video class="soapcl" autoplay loop muted>
+<source src="sea.mp4">
+</video>
+</div>
+
+
+<audio id="s3id" src="lovers.mp4" loop controls="controls" hidden="true"></audio>
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+<div id="tfid" class="tfcl" style="display:none;">小情人讓我輕擁你入懷</div>
+
+<div id="tid" class="tcl" style="display:none;">小情人讓我輕擁你入懷</div>
+<div id="taid" class="tacl" style="display:none;">像一朵花兒慢慢慢盛開</div>
+
+
+
+
+
+
+
+
+<dvi  class="t1cl" id="t1id" style="display:none;"  >
+<div>小 情 人</div>
+</dvi>
+
+<dvi  class="t2cl" id="t2id" style="display:none;"  >
+<div>劉德華</div>
+</dvi>
+
+</body>
+</html>
