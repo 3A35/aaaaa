@@ -7,11 +7,13 @@
  function get(){
 
 document.getElementById("in").style.display="none" ;
-document.getElementById("t1id").style.display="block";
-document.getElementById("t2id").style.display="block" 
+ 
 document.getElementById("soapid").style.display="block" ;
+ document.getElementById("t1id").style.display="block";
+ document.getElementById("t2id").style.display="block"
 ttt=document.getElementById("tid");
-ttt.style.display="block" ;
+ta=document.getElementById("taid");
+
 b3=document.getElementById("s3id");
 b3.play();
 co=0;
@@ -19,20 +21,55 @@ ccc=0;
 
 
  setInterval(step, 5000);
- 
+
  i=0;
  var um = 1;
  
 ig = document.getElementById("imgId");
 
  function step() {
- document.getElementById("t1id").style.display="none";
- document.getElementById("t2id").style.display="none";
+document.getElementById("t1id").style.display="none";
+document.getElementById("t2id").style.display="none";
+ttt.style.display="block" ;
+ta.style.display="block" ;
+
  ccc=ccc+1;
- if (ccc==2) {ttt.innerHTML="小情人我的愛收不回來 讓我帶著你走遍海角和天涯";}
- if (ccc==5) {ttt.innerHTML="長髮迎風搖擺最嚮往的姿態 讓人愉快像陽光一樣燦爛";}
- if (ccc==9) {ttt.innerHTML="你總是像個小孩忍不住想疼愛 小心翼翼不讓你受到傷害";}
- if (ccc==12) {ttt.innerHTML="";}
+if (ccc==2) {
+ttt.innerHTML="小情人 我的愛收不回來";
+ta.innerHTML="讓我帶著你 走遍海角和天涯";
+}
+if (ccc==5) {ttt.innerHTML="長髮迎風搖擺 最嚮往的姿態";
+ta.innerHTML="讓人愉快 像陽光一樣燦爛";
+}
+if (ccc==9) {ttt.innerHTML="你總是像個小孩 忍不住想疼愛";
+ta.innerHTML="小心翼翼 不讓你受到傷害";
+}
+if (ccc==12) {ttt.innerHTML="給我全部的依賴";
+ta.innerHTML="守著你我卻不離開";
+}
+if (ccc==13) {ttt.innerHTML="就是這樣的自然";
+ta.innerHTML="不要因為我而更改";
+}
+if (ccc==16) {ttt.innerHTML="我就是喜歡 喔";
+ta.innerHTML="";
+}
+if (ccc==17) {ttt.innerHTML="小情人讓我 輕擁你入懷";
+ta.innerHTML="像一朵花兒 慢慢慢盛開";
+}
+if (ccc==19) {ttt.innerHTML="小情人 我的愛收不回來";
+ta.innerHTML="讓我帶著你 走遍海角和天涯";
+}
+
+
+if (ccc==23) {ttt.innerHTML="忍不住想疼愛";
+ta.innerHTML="小心翼翼 不讓你受到傷害";
+}
+
+if (ccc==25) {ttt.innerHTML="給我全部的依賴";
+ta.innerHTML="守著你我卻不離開";
+}
+
+
  co=co+1;
 if (co==1) {document.getElementById("soapid").style.display="none" ;
 document.getElementById("aid").style.display="block" ;
@@ -155,18 +192,31 @@ height: 1800px;
 
 .tcl{
 position:fixed;
-top: 1200px;
-left:5px;
+top: 800px;
+left:20px;
 font-size:105px;
 color:red;
-width:1100px;
+width:900px;
 font-weight:bold;
 }
 
 
+.tacl{
+position:fixed;
+top: 1200px;
+left:20px;
+font-size:105px;
+color:blue;
+width:900px;
+font-weight:bold;
+}
+
+
+
+
 .t1cl{
 position:fixed;
-top: 180px;
+top: 680px;
 left:200px;
 font-size:180px;
 color:yellow;
@@ -177,10 +227,10 @@ font-weight:bold;
 
 .t2cl{
 position:fixed;
-top: 400px;
+top: 900px;
 left:300px;
 font-size:130px;
-color:silver;
+color:orange;
 font-weight:bold;
 }
 
@@ -254,9 +304,15 @@ left:-100px;
 
 
 
-<dvi  class="tcl" id="tid" style="display:none;"  >
-<div>小情人讓我輕擁你入懷,像一朵花兒慢慢慢盛開</div>
-</dvi>
+<div id="tid" class="tcl" style="display:none;">小情人讓我輕擁你入懷</div>
+<div id="taid" class="tacl" style="display:none;">像一朵花兒慢慢慢盛開</div>
+
+
+
+
+
+
+
 
 <dvi  class="t1cl" id="t1id" style="display:none;"  >
 <div>小 情 人</div>
