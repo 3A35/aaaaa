@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<head>
+<title>淚海</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+document.getElementById("in").style.display="none" ;
+ 
+document.getElementById("soapid").style.display="block" ;
+
+
+ttt=document.getElementById("tid");
+ttt2=document.getElementById("t2id");
+ttt.style.display="block" ;
+ttt2.style.display="block" ;
+b3=document.getElementById("s3id");
+b3.currentTime = 0;
+b3.play();
+
+ccc=0;
+
+
+ setInterval(step, 480);
+
+ttt.innerHTML="你怎麼捨得";
+ttt2.innerHTML="讓我的淚 流向海";
+ function step() {
+
+ ccc=ccc+1;
+if (ccc==18) {
+ttt.innerHTML="付出的感情";
+ttt2.innerHTML="永遠找不回來";
+}
+
+
+if (ccc==36) {
+ttt.innerHTML="你怎麼捨得";
+ttt2.innerHTML="讓我的愛 流向海";
+}
+
+if (ccc==51) {
+ttt.innerHTML="傷心的往事";
+ttt2.innerHTML="一幕幕就像潮水  將我掩埋";
+}
+
+
+
+
+
+
+
+if (ccc==100) {
+ttt.innerHTML="愛以不能動";
+ttt2.innerHTML="還有什麼值得我心痛";
+}
+
+
+
+
+
+
+
+if (ccc==131) {
+ttt.innerHTML="想你的天空";
+ttt2.innerHTML="下起雨來";
+}
+
+
+
+
+
+
+if (ccc==147) {
+ttt.innerHTML="沒人心疼的黑夜";
+ttt2.innerHTML="眼角兩行 鹹鹹的淚水";
+}
+
+
+
+if (ccc==166) {ttt.innerHTML="是你歐是你";
+ttt2.innerHTML="讓我望穿淚水 肝腸寸斷";
+}
+
+if (ccc==185) {
+ttt.innerHTML="你怎麼捨得";
+ttt2.innerHTML="讓我的淚 流向海";
+}
+
+
+
+if (ccc==201) {ttt.innerHTML="付出的感情";
+ttt2.innerHTML="永遠找不回來";
+}
+
+if (ccc==220) {ttt.innerHTML="你怎麼捨得";
+ttt2.innerHTML="讓我的愛 流向海";
+}
+
+if (ccc==235) {ttt.innerHTML="傷心的往事";
+ttt2.innerHTML="一幕幕就像潮水 將我掩埋";
+}
+
+if (ccc==267) {
+ history.go(0);
+}
+
+
+
+}
+
+}
+
+</script>
+
+<style type="text/css">
+.back{
+position:fixed;
+top:0;
+left:-1350px;
+
+height: 1800px;
+
+}
+
+
+.soapcl{
+position:fixed;
+
+ left:-900px;
+ height: 1800px;
+}
+
+
+
+
+
+
+
+.tcl{
+position:fixed;
+top: 850px;
+left:20px;
+font-size:110px;
+color:yellow;
+width:900px;
+font-weight:bold;
+}
+
+
+.t2cl{
+position:fixed;
+top: 1000px;
+left:20px;
+font-size:110px;
+color:yellow;
+width:900px;
+font-weight:bold;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div  id="soapid" style="display:none;">
+<video class="soapcl" autoplay loop muted>
+<source src="tears.mp4">
+</video>
+</div>
+
+
+<audio id="s3id" src="tearss.mp4" loop controls="controls" hidden="true"></audio>
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+<div id="tid" class="tcl" style="display:none;"></div>
+<div id="t2id" class="t2cl" style="display:none;"></div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
