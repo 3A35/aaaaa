@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<head>
+<title>昨夜星辰</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+document.getElementById("in").style.display="none" ;
+ 
+document.getElementById("soapid").style.display="block" ;
+// document.getElementById("t3id").style.display="block" ;
+
+ttt=document.getElementById("tid");
+ttt2=document.getElementById("t2id");
+ttt.style.display="block" ;
+ttt2.style.display="block" ;
+b3=document.getElementById("s3id");
+b3.currentTime = 0;
+b3.play();
+
+ccc=0;
+
+
+ setInterval(step, 480);
+
+ttt.innerHTML="昨夜的";
+ttt2.innerHTML="昨夜的星辰 已墬落";
+ function step() {
+
+ ccc=ccc+1;
+if (ccc==24) {
+ttt.innerHTML="消失在";
+ttt2.innerHTML="遙遠的銀河";
+}
+
+
+
+
+if (ccc==47) {
+ttt.innerHTML="想記起";
+ttt2.innerHTML="偏又已忘記";
+}
+
+
+
+
+
+
+
+if (ccc==63) {
+ttt.innerHTML="那份愛";
+ttt2.innerHTML="換來的是寂寞";
+}
+
+
+
+
+
+
+
+if (ccc==82) {
+ttt.innerHTML="愛是不變的星辰";
+ttt2.innerHTML="愛是永恆的星辰";
+}
+
+
+
+
+
+
+if (ccc==100) {
+ttt.innerHTML="絕不會";
+ttt2.innerHTML="在銀河中墬落";
+}
+
+
+
+if (ccc==119) {ttt.innerHTML="長憶著 那份情 ";
+ttt2.innerHTML="那份愛";
+}
+
+if (ccc==135) {
+ttt.innerHTML="今夜星辰";
+ttt2.innerHTML="今夜星辰 依然閃爍";
+}
+
+
+if (ccc==165) {
+ history.go(0);
+}
+
+
+
+
+
+}
+
+}
+
+</script>
+
+<style type="text/css">
+.back{
+position:fixed;
+top:0;
+left:-1350px;
+
+height: 1800px;
+
+}
+
+
+.soapcl{
+position:fixed;
+
+ left:-1300px;
+ height: 1800px;
+}
+
+
+
+
+
+
+
+.tcl{
+position:fixed;
+top:700px;
+left:20px;
+font-size:110px;
+color:yellow;
+width:900px;
+font-weight:bold;
+}
+
+
+.t2cl{
+position:fixed;
+top: 850px;
+left:20px;
+font-size:110px;
+color:yellow;
+width:900px;
+font-weight:bold;
+}
+
+
+
+.t3cl{
+position:fixed;
+top: 1200px;
+left:120px;
+font-size:250px;
+color:yellow;
+
+font-weight:bold;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div  id="soapid" style="display:none;">
+<video class="soapcl" autoplay loop muted>
+<source src="star.mp4">
+</video>
+</div>
+
+
+<audio id="s3id" src="stars.mp4" loop controls="controls" hidden="true"></audio>
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+<div id="tid" class="tcl" style="display:none;"></div>
+<div id="t2id" class="t2cl" style="display:none;"></div>
+
+<div id="t3id" class="t3cl" style="display:none;"></div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
