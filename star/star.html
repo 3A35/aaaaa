@@ -4,10 +4,14 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 
+
+ function ba(){
+open(' http://3a35.github.io/aaaaa/choose/choose ');
+}
  function get(){
 
 document.getElementById("in").style.display="none" ;
- 
+document.getElementById("baid").style.display="block" ; 
 document.getElementById("soapid").style.display="block" ;
 document.getElementById("t3id").style.display="block" ;
 
@@ -120,9 +124,15 @@ position:fixed;
 
 
 
-
-
-
+.bacl{
+position:fixed;
+top:1600px;
+left:350px;
+font-size:70px;
+color:green;
+background-color:orange;
+font-weight:bold;
+}
 
 .tcl{
 position:fixed;
@@ -180,6 +190,7 @@ font-weight:bold;
 <input type="image" src="miki.jpg" width="1200"  onClick="get()">
 </div>
 
+<INPUT TYPE="button" VALUE="回主選單" id="baid" class="bacl" style="display:none;" onClick="ba()">
 
 
 <div id="tid" class="tcl" style="display:none;"></div>
