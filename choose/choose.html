@@ -4,13 +4,23 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 function get(){
-document.getElementById("allid").style.display="block" ;
+document.getElementById("vid").style.display="block" ;
 
 b3=document.getElementById("s3id");
 b3.play();
 
+ setTimeout(get0,28000);
 
 }
+
+function get0(){
+document.getElementById("in").style.display="none" ;
+document.getElementById("vid").style.display="none" ;
+document.getElementById("allid").style.display="block" ;
+
+
+}
+
 
  function get1(){
 b3.pause();
@@ -36,13 +46,11 @@ open(' http://3a35.github.io/aaaaa/cute1/cute1 ');
 </script>
 
 <style type="text/css">
-#back{
+.vcl{
 position:fixed;
-top:0;
-left:0;
-width:1200px;
+top:0px;
+left:-1400px;
 height: 1800px;
-
 }
 
 
@@ -65,6 +73,7 @@ top:700px;
 left:20px;
 font-size:110px;
 color:yellow;
+
 width:900px;
 font-weight:bold;
 }
@@ -73,7 +82,7 @@ font-weight:bold;
 #id1{
 position:fixed;
 top: 300px;
-left:150px;
+left:250px;
 font-size:80px;
 color:red;
 background-color:purple;
@@ -96,7 +105,7 @@ transition:width 1s;
 #id2{
 position:fixed;
 top:450px;
-left:150px;
+left:250px;
 font-size:80px;
 color:orange;
 background-color:blue;
@@ -116,7 +125,7 @@ transition:width 1s;
 #id3{
 position:fixed;
 top:600px;
-left:150px;
+left:250px;
 font-size:80px;
 color:orange;
 background-color:green;
@@ -132,7 +141,7 @@ transition:width 1s;
 #id4{
 position:fixed;
 top:750px;
-left:150px;
+left:250px;
 font-size:80px;
 color:green;
 background-color:red;
@@ -147,12 +156,22 @@ transition:width 1s;
 </style>
 </head>
 <body>
+
+<div  id="vid" style="display:none;">
+<video class="vcl" autoplay loop muted>
+<source src="always.mp4">
+</video>
+</div>
+
+
+
+
 <div id="in"  >
 <input type="image" src="york.jpg" height="1800"  onClick="get()">
 </div>
 
 <div  id="allid" style="display:none;">
-<img id="back" src="choose.jpg"  />
+<img id="back" height="1800" src="cccc.jpg"  />
 <INPUT TYPE="button" VALUE="小 情 人" id="id1" onClick="get1()">
 <INPUT TYPE="button" VALUE="昨 夜 星 辰" id="id2" onClick="get2()">
 <INPUT TYPE="button" VALUE="淚 海" id="id3" onClick="get3()">
@@ -161,7 +180,8 @@ transition:width 1s;
 
 <div id="t3id" class="t3cl" style="display:none;">東京 夜景</div>
 
-<audio id="s3id" src="summer.mp4" loop controls="controls" hidden="true"></audio>
+<audio id="s3id" src="always.mp4" loop controls="controls" hidden="true"></audio>
+
 
 
 </body>
