@@ -8,12 +8,16 @@ document.getElementById("vid").style.display="block" ;
 
 b3=document.getElementById("s3id");
 b3.play();
+b4=document.getElementById("s4id");
+
 
  setTimeout(get0,28000);
 
 }
 
 function get0(){
+b3.pause();
+b4.play();
 document.getElementById("in").style.display="none" ;
 document.getElementById("vid").style.display="none" ;
 document.getElementById("allid").style.display="block" ;
@@ -23,23 +27,23 @@ document.getElementById("allid").style.display="block" ;
 
 
  function get1(){
-b3.pause();
+b4.pause();
 open(' http://3a35.github.io/aaaaa/little/little ');
 }
 
 
  function get2() {
-b3.pause();
+b4.pause();
 open(' http://3a35.github.io/aaaaa/star/star ');
 }
 
  function get3() {
-b3.pause();
+b4.pause();
 open(' http://3a35.github.io/aaaaa/tears/tears ');
 }
 
  function get4() {
-b3.pause();
+b4.pause();
 open(' http://3a35.github.io/aaaaa/cute1/cute1 ');
 }
 
@@ -182,7 +186,7 @@ transition:width 1s;
 
 <audio id="s3id" src="always.mp4" loop controls="controls" hidden="true"></audio>
 
-
+<audio id="s4id" src="summer.mp4" loop controls="controls" hidden="true"></audio>
 
 </body>
 </html>
