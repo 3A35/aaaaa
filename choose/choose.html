@@ -8,16 +8,18 @@ document.getElementById("vid").style.display="block" ;
 
 b3=document.getElementById("s3id");
 b3.play();
-b4=document.getElementById("s4id");
 
 
- setTimeout(get0,28000);
+
+ setTimeout(get0,4000);
 
 }
 
 function get0(){
-b3.pause();
+b4=document.getElementById("s4id");
 b4.play();
+b3.pause();
+
 document.getElementById("in").style.display="none" ;
 document.getElementById("vid").style.display="none" ;
 document.getElementById("allid").style.display="block" ;
