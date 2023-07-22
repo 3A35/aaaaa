@@ -4,24 +4,14 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 function get(){
-document.getElementById("vid").style.display="block" ;
+
 
 b3=document.getElementById("s3id");
 b3.play();
 
 
-
- setTimeout(get0,6000);
-
-}
-
-function get0(){
-b4=document.getElementById("s4id");
-b4.play();
-b3.pause();
-
 document.getElementById("in").style.display="none" ;
-document.getElementById("vid").style.display="none" ;
+
 document.getElementById("allid").style.display="block" ;
 
 
@@ -29,29 +19,29 @@ document.getElementById("allid").style.display="block" ;
 
 
  function get1(){
-b4.pause();
+b3.pause();
 open(' http://3a35.github.io/aaaaa/little/little ');
 }
 
 
  function get2() {
-b4.pause();
+b3.pause();
 open(' http://3a35.github.io/aaaaa/star/star ');
 }
 
  function get3() {
-b4.pause();
+b3.pause();
 open(' http://3a35.github.io/aaaaa/tears/tears ');
 }
 
  function get4() {
-b4.pause();
+b3.pause();
 open(' http://3a35.github.io/aaaaa/cute1/cute1 ');
 }
 
 
  function get5() {
-b4.pause();
+b3.pause();
 open(' http://3a35.github.io/aaaaa/trans/trans ');
 }
 </script>
@@ -174,15 +164,15 @@ position:fixed;
 top:900px;
 left:250px;
 font-size:80px;
-color:grey;
-background-color:red;
+color:pink;
+background-color:green;
 font-weight:bold;
 border-radius:20px;
 padding: 10px 20px;
 transition:width 1s;
 }
 #id5:hover{  
-   color:pink;
+   color:yellow;
  }
 
 
@@ -192,11 +182,6 @@ transition:width 1s;
 </head>
 <body>
 
-<div  id="vid" style="display:none;">
-<video class="vcl" autoplay loop muted>
-<source src="always.mp4">
-</video>
-</div>
 
 
 
@@ -216,9 +201,8 @@ transition:width 1s;
 
 <div id="t3id" class="t3cl" style="display:none;">東京 夜景</div>
 
-<audio id="s3id" src="stars.mp4" loop controls="controls" hidden="true"></audio>
+<audio id="s3id" src="summer.mp4" loop controls="controls" hidden="true"></audio>
 
-<audio id="s4id" src="summer.mp4" loop controls="controls" hidden="true"></audio>
 
 </body>
 </html>
