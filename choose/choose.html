@@ -11,7 +11,7 @@ b3.play();
 
 
 
- setTimeout(get0,9000);
+ setTimeout(get0,6000);
 
 }
 
@@ -49,6 +49,11 @@ b4.pause();
 open(' http://3a35.github.io/aaaaa/cute1/cute1 ');
 }
 
+
+ function get5() {
+b4.pause();
+open(' http://3a35.github.io/aaaaa/trans/trans ');
+}
 </script>
 
 <style type="text/css">
@@ -162,6 +167,27 @@ transition:width 1s;
 #id4:hover{  
    color:yellow;
  }
+
+
+#id5{
+position:fixed;
+top:900px;
+left:250px;
+font-size:80px;
+color:grey;
+background-color:red;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#id5:hover{  
+   color:pink;
+ }
+
+
+
+
 </style>
 </head>
 <body>
@@ -185,11 +211,12 @@ transition:width 1s;
 <INPUT TYPE="button" VALUE="昨 夜 星 辰" id="id2" onClick="get2()">
 <INPUT TYPE="button" VALUE="淚 海" id="id3" onClick="get3()">
 <INPUT TYPE="button" VALUE="可 愛 女 人" id="id4" onClick="get4()">
+<INPUT TYPE="button" VALUE="心 太 軟" id="id5" onClick="get5()">
 </div>
 
 <div id="t3id" class="t3cl" style="display:none;">東京 夜景</div>
 
-<audio id="s3id" src="always.mp4" loop controls="controls" hidden="true"></audio>
+<audio id="s3id" src="stars.mp4" loop controls="controls" hidden="true"></audio>
 
 <audio id="s4id" src="summer.mp4" loop controls="controls" hidden="true"></audio>
 
