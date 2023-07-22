@@ -11,7 +11,7 @@ b3.play();
 
 
 document.getElementById("in").style.display="none" ;
-
+document.getElementById("vid").style.display="block" ;
 document.getElementById("allid").style.display="block" ;
 
 
@@ -50,7 +50,7 @@ open(' http://3a35.github.io/aaaaa/trans/trans ');
 .vcl{
 position:fixed;
 top:0px;
-left:-1400px;
+left:-1500px;
 height: 1800px;
 }
 
@@ -82,7 +82,7 @@ font-weight:bold;
 
 #id1{
 position:fixed;
-top: 300px;
+top: 200px;
 left:250px;
 font-size:80px;
 color:red;
@@ -105,7 +105,7 @@ transition:width 1s;
 
 #id2{
 position:fixed;
-top:450px;
+top:400px;
 left:250px;
 font-size:80px;
 color:orange;
@@ -120,10 +120,7 @@ transition:width 1s;
    color:yellow;
  }
 
-#back{
-position:fixed;
-height:1800px;
-}
+
 
 
 #id3{
@@ -144,7 +141,7 @@ transition:width 1s;
 
 #id4{
 position:fixed;
-top:750px;
+top:800px;
 left:250px;
 font-size:80px;
 color:green;
@@ -161,7 +158,7 @@ transition:width 1s;
 
 #id5{
 position:fixed;
-top:900px;
+top:1000px;
 left:250px;
 font-size:80px;
 color:pink;
@@ -182,7 +179,11 @@ transition:width 1s;
 </head>
 <body>
 
-
+<div  id="vid" style="display:none;">
+<video class="vcl" autoplay loop muted>
+<source src="fish8.mp4">
+</video>
+</div>
 
 
 
@@ -191,7 +192,6 @@ transition:width 1s;
 </div>
 
 <div  id="allid" style="display:none;">
-<img id="back"  src="cccc.jpg"  />
 <INPUT TYPE="button" VALUE="小 情 人" id="id1" onClick="get1()">
 <INPUT TYPE="button" VALUE="昨 夜 星 辰" id="id2" onClick="get2()">
 <INPUT TYPE="button" VALUE="淚 海" id="id3" onClick="get3()">
