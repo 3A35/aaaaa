@@ -16,7 +16,7 @@ bl=document.getElementById("s2id");
  
 bl.play();
   ccc=0;
- setInterval(step, 15000)
+ setInterval(step, 4000)
 
 
 
@@ -24,7 +24,7 @@ bl.play();
  function step() {
  ccc=ccc+1;
  if (ccc==1) {
-document.getElementById("v8id").style.display="none" ; 
+document.getElementById("v7id").style.display="none" ; 
 document.getElementById("v1id").style.display="block" ;
 }
 
@@ -63,13 +63,9 @@ document.getElementById("v7id").style.display="block" ;
 }
 
 
- if (ccc==15) { 
-document.getElementById("v7id").style.display="none" ;
-document.getElementById("v8id").style.display="block" ;
-}
 
 
-if (ccc==17) {ccc=0;}
+if (ccc==15) {ccc=0;}
 
 
 
