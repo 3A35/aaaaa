@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+<title>把心留住</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+ function get(){
+
+document.getElementById("in").style.display="none" ;
+ 
+document.getElementById("soapid").style.display="block" ;
+// document.getElementById("t3id").style.display="block" ;
+
+ttt=document.getElementById("tid");
+ttt2=document.getElementById("t2id");
+ttt.style.display="block" ;
+ttt2.style.display="block" ;
+b3=document.getElementById("s3id");
+b3.currentTime = 26;
+b3.play();
+
+ccc=0;
+
+
+ setInterval(step, 480);
+
+ttt.innerHTML="為什麼你要離開我";
+ttt2.innerHTML="";
+ function step() {
+
+ ccc=ccc+1;
+if (ccc==14) {
+ttt.innerHTML="";
+ttt2.innerHTML="為什麼你要放棄我";
+}
+
+
+if (ccc==25) {
+ttt.innerHTML="是誰拭去了 你的諾言";
+ttt2.innerHTML="";
+}
+
+if (ccc==37) {
+ttt.innerHTML="";
+ttt2.innerHTML="是誰想要 把你的心帶走";
+}
+
+
+
+if (ccc==50) {
+ttt.innerHTML="改變了 我的生活";
+ttt2.innerHTML="";
+}
+
+
+
+if (ccc==62) {
+ttt.innerHTML="";
+ttt2.innerHTML="喔........";
+}
+
+
+
+
+
+
+if (ccc==73) {
+ttt.innerHTML="為什麼你要離開我";
+ttt2.innerHTML="";
+}
+
+
+
+if (ccc==83) {ttt.innerHTML="";
+ttt2.innerHTML="為什麼你要放棄我";
+}
+
+if (ccc==99) {
+ttt.innerHTML="是誰拭去了 你的諾言";
+ttt2.innerHTML="";
+}
+
+
+
+if (ccc==112) {ttt.innerHTML="";
+ttt2.innerHTML="是誰想要 把你的心帶走";
+}
+
+if (ccc==125) {ttt.innerHTML="改變了 我的生活";
+ttt2.innerHTML="";
+}
+
+if (ccc==138) {ttt.innerHTML="";
+ttt2.innerHTML="喔........";
+}
+
+
+if (ccc==148) {ttt.innerHTML="也許你 需要獨立的生活";
+ttt2.innerHTML="";
+}
+
+
+if (ccc==158) {ttt.innerHTML="";
+ttt2.innerHTML="你需愛 溫柔的方式";
+}
+
+if (ccc==172) {ttt.innerHTML="但是請 別把心帶走";
+ttt2.innerHTML="";
+}
+
+
+if (ccc==182) {ttt.innerHTML="";
+ttt2.innerHTML="因為我 已經付出 所有的我";
+}
+
+
+
+if (ccc==220) {
+ history.go(0);
+}
+
+
+
+}
+
+}
+
+</script>
+
+<style type="text/css">
+.back{
+position:fixed;
+top:0;
+left:-1350px;
+
+height: 1800px;
+
+}
+
+
+.soapcl{
+position:fixed;
+
+ left:-1100px;
+ height: 1800px;
+}
+
+
+
+
+
+
+
+.tcl{
+position:fixed;
+top:350px;
+left:20px;
+font-size:110px;
+color:blue;
+width:900px;
+font-weight:bold;
+}
+
+
+.t2cl{
+position:fixed;
+top: 600px;
+left:20px;
+font-size:110px;
+color:blue;
+width:900px;
+font-weight:bold;
+}
+
+
+
+.t3cl{
+position:fixed;
+top: 1200px;
+left:120px;
+font-size:250px;
+color:yellow;
+
+font-weight:bold;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div  id="soapid" style="display:none;">
+<video class="soapcl" autoplay loop muted>
+<source src="keep.mp4">
+</video>
+</div>
+
+
+<audio id="s3id" src="keeps.mp4" loop controls="controls" hidden="true"></audio>
+
+<div id="in" >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+<div id="tid" class="tcl" style="display:none;"></div>
+<div id="t2id" class="t2cl" style="display:none;"></div>
+
+<div id="t3id" class="t3cl" style="display:none;"></div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
