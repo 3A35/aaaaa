@@ -4,14 +4,23 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 
+ function t1(){
+document.getElementById("allid").style.display="none" ;
+clearTimeout(www);
+ setTimeout(get,1);
+ }
 
- function get(){
+function t2(){
+ b3.pause();
+open(' http://3a35.github.io/aaaaa/choose/choose ');
+ }
+
+function get(){
 
 document.getElementById("in").style.display="none" ;
 
 vv=document.getElementById("soapid");
-// vv.currentTime = 6;
-// vv.play();
+
 vv.style.display="block" ;
 document.getElementById("t3id").style.display="block" ;
 
@@ -27,7 +36,7 @@ b3.play();
 ccc=0;
 
 
- setInterval(step, 480);
+ www=setInterval(step, 480);
 
 ttt.innerHTML="為什麼你要離開我";
 ttt2.innerHTML="";
@@ -76,7 +85,7 @@ ttt2.innerHTML="";
 
 
 
-if (ccc==83) {ttt.innerHTML="";
+if (ccc==84) {ttt.innerHTML="";
 ttt2.innerHTML="為什麼你要放棄我";
 }
 
@@ -109,26 +118,89 @@ if (ccc==158) {ttt.innerHTML="";
 ttt2.innerHTML="你需要 溫柔的方式";
 }
 
-if (ccc==172) {ttt.innerHTML="但是請 別把心帶走";
+if (ccc==172) {ttt.innerHTML="但是請 別 把心帶走";
 ttt2.innerHTML="";
 }
 
 
-if (ccc==182) {ttt.innerHTML="";
+if (ccc==184) {ttt.innerHTML="";
 ttt2.innerHTML="因為我 已經付出 所有的我";
 }
 
 
+if (ccc==202) {ttt.innerHTML="";
+ttt2.innerHTML="";
+ttt.style.color="yellow";
+}
 
-if (ccc==220) {
- history.go(0);
+
+if (ccc==248) {ttt.innerHTML="為什麼你要離開我";
+ttt2.innerHTML="";
+}
+
+
+if (ccc==263) {ttt.innerHTML="";
+ttt2.innerHTML="為什麼你要放棄我";
+}
+
+
+if (ccc==277) {ttt.innerHTML="是誰拭去了 你的諾言";
+ttt2.innerHTML="";
 }
 
 
 
+if (ccc==290) {ttt.innerHTML="";
+ttt2.innerHTML="是誰想要 把你的心帶走";
+}
+
+
+if (ccc==301) {ttt.innerHTML="改變了 我的生活";
+ttt2.innerHTML="";
+}
+
+
+if (ccc==313) {ttt.innerHTML="";
+ttt2.innerHTML="喔........";
+}
+
+
+
+if (ccc==325) {ttt.innerHTML="也許你 需要獨立的生活";
+ttt2.innerHTML="";
+}
+
+
+
+if (ccc==336) {ttt.innerHTML="";
+ttt2.innerHTML="你需要 溫柔的方式";
+}
+
+if (ccc==348) {ttt.innerHTML="但是請 別 把心帶走";
+ttt2.innerHTML="";
+}
+
+if (ccc==363) {ttt.innerHTML="";
+ttt2.innerHTML="因為我 已經付出 所有的我";
+}
+
+if (ccc==385) {ttt.innerHTML="";
+ttt2.innerHTML="";
+}
+
+
+
+if (ccc==475) {
+vv.style.display="none" ;
+b3.pause();
+document.getElementById("allid").style.display="block" ;
+
 }
 
 }
+
+}
+
 
 </script>
 
@@ -164,7 +236,6 @@ font-size:110px;
 color:white;
 width:900px;
 font-weight:bold;
-font-family: 思源黑體 , 微軟正黑體 , 蘋方黑體 , 華康麗黑體 , Helvetica , Arial , sans-serif , serif;
 text-shadow: 0.1em 0.1em 0.2em blue;
 }
 
@@ -192,6 +263,39 @@ background-color:orange;
 font-weight:bold;
 }
 
+.cl1{
+position:fixed;
+top: 900px;
+left:50px;
+font-size:120px;
+color:silver;
+background-color:green;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+.cl1:hover{  
+   color:yellow;
+ }
+
+
+
+
+.cl2{
+position:fixed;
+top:900px;
+left:500px;
+font-size:120px;
+color:orange;
+background-color:green;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+.cl2:hover{  
+   color:yellow;
+ }
+
 
 
 
@@ -201,6 +305,11 @@ font-weight:bold;
 </style>
 </head>
 <body>
+
+
+
+
+
 
 <div  id="soapid" style="display:none;">
 <video class="soapcl" autoplay loop muted>
@@ -220,14 +329,15 @@ font-weight:bold;
 <div id="tid" class="tcl" style="display:none;"></div>
 <div id="t2id" class="t2cl" style="display:none;"></div>
 
-<div id="t3id" class="t3cl" style="display:none;"><span style=color:blue;font-size:80px;background-color:pink;>不夜城 </span> 紐 約</div>
+<div id="t3id" class="t3cl" style="display:none;"><span style=color:blue;>不夜城 </span> 紐 約</div>
 
 
 
 
-
-
-
+<div id="allid"  style="display:none;">
+<INPUT TYPE="button"  VALUE="重 播" id="id1" class="cl1" onClick="t1()">
+<INPUT TYPE="button"  VALUE="離 開" id="id2" class="cl2" onClick="t2()">
+</div>
 
 
 
