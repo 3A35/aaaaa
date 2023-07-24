@@ -8,9 +8,13 @@
  function get(){
 
 document.getElementById("in").style.display="none" ;
- 
-document.getElementById("soapid").style.display="block" ;
-// document.getElementById("t3id").style.display="block" ;
+
+vv=document.getElementById("soapid");
+// vv.currentTime = 6;
+// vv.play();
+vv.style.display="block" ;
+document.getElementById("t3id").style.display="block" ;
+
 
 ttt=document.getElementById("tid");
 ttt2=document.getElementById("t2id");
@@ -102,7 +106,7 @@ ttt2.innerHTML="";
 
 
 if (ccc==158) {ttt.innerHTML="";
-ttt2.innerHTML="你需愛 溫柔的方式";
+ttt2.innerHTML="你需要 溫柔的方式";
 }
 
 if (ccc==172) {ttt.innerHTML="但是請 別把心帶走";
@@ -142,7 +146,7 @@ height: 1800px;
 .soapcl{
 position:fixed;
 
- left:-1100px;
+ left:-1600px;
  height: 1800px;
 }
 
@@ -154,10 +158,10 @@ position:fixed;
 
 .tcl{
 position:fixed;
-top:350px;
+top:850px;
 left:20px;
 font-size:110px;
-color:blue;
+color:yellow;
 width:900px;
 font-weight:bold;
 }
@@ -165,10 +169,10 @@ font-weight:bold;
 
 .t2cl{
 position:fixed;
-top: 600px;
+top: 1050px;
 left:20px;
 font-size:110px;
-color:blue;
+color:yellow;
 width:900px;
 font-weight:bold;
 }
@@ -177,11 +181,11 @@ font-weight:bold;
 
 .t3cl{
 position:fixed;
-top: 1200px;
-left:120px;
-font-size:250px;
-color:yellow;
-
+top: 10px;
+left:0px;
+font-size:90px;
+color:green;
+background-color:orange;
 font-weight:bold;
 }
 
@@ -213,7 +217,7 @@ font-weight:bold;
 <div id="tid" class="tcl" style="display:none;"></div>
 <div id="t2id" class="t2cl" style="display:none;"></div>
 
-<div id="t3id" class="t3cl" style="display:none;"></div>
+<div id="t3id" class="t3cl" style="display:none;"><span style=color:blue;font-size:80px;background-color:pink;>不夜城 </span> 紐 約</div>
 
 
 
