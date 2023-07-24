@@ -6,6 +6,7 @@
 
  function t1(){
 document.getElementById("allid").style.display="none" ;
+document.getElementById("appleid").style.display="none" ;
 clearTimeout(www);
  setTimeout(get,1);
  }
@@ -190,11 +191,12 @@ ttt2.innerHTML="";
 
 
 
-if (ccc==475) {
+if (ccc==470) {
+document.getElementById("t3id").style.display="none" ;
 vv.style.display="none" ;
-b3.pause();
+document.getElementById("appleid").style.display="block" ;
 document.getElementById("allid").style.display="block" ;
-
+b3.pause();
 }
 
 }
@@ -213,6 +215,14 @@ left:-1350px;
 height: 1800px;
 
 }
+
+
+#appleid{
+position:fixed;
+top:0;
+}
+
+
 
 
 .soapcl{
@@ -308,7 +318,7 @@ transition:width 1s;
 
 
 
-
+<img id="appleid" src="apple.jpg"   height="1800"  style="display:none;" />
 
 
 <div  id="soapid" style="display:none;">
