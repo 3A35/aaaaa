@@ -21,7 +21,7 @@ function get(){
 document.getElementById("in").style.display="none" ;
 
 vv=document.getElementById("soapid");
-
+vvcl= document.querySelector('.soapcl');
 vv.style.display="block" ;
 document.getElementById("t3id").style.display="block" ;
 
@@ -47,12 +47,14 @@ ttt2.innerHTML="";
 if (ccc==14) {
 ttt.innerHTML="";
 ttt2.innerHTML="為什麼你要放棄我";
+
 }
 
 
 if (ccc==25) {
 ttt.innerHTML="是誰拭去了 你的諾言";
 ttt2.innerHTML="";
+vvcl.style.left="-1600px";
 }
 
 if (ccc==37) {
@@ -65,6 +67,7 @@ ttt2.innerHTML="是誰想要 把你的心帶走";
 if (ccc==50) {
 ttt.innerHTML="改變了 我的生活";
 ttt2.innerHTML="";
+vvcl.style.left="-500px";
 }
 
 
@@ -82,6 +85,7 @@ ttt2.innerHTML="喔........";
 if (ccc==73) {
 ttt.innerHTML="為什麼你要離開我";
 ttt2.innerHTML="";
+vvcl.style.left="-1700px";
 }
 
 
@@ -99,10 +103,12 @@ ttt2.innerHTML="";
 
 if (ccc==112) {ttt.innerHTML="";
 ttt2.innerHTML="是誰想要 把你的心帶走";
+vvcl.style.left="-500px";
 }
 
 if (ccc==125) {ttt.innerHTML="改變了 我的生活";
 ttt2.innerHTML="";
+
 }
 
 if (ccc==138) {ttt.innerHTML="";
@@ -112,6 +118,7 @@ ttt2.innerHTML="喔........";
 
 if (ccc==148) {ttt.innerHTML="也許你 需要獨立的生活";
 ttt2.innerHTML="";
+vvcl.style.left="-1500px";
 }
 
 
@@ -121,6 +128,7 @@ ttt2.innerHTML="你需要 溫柔的方式";
 
 if (ccc==172) {ttt.innerHTML="但是請 別 把心帶走";
 ttt2.innerHTML="";
+vvcl.style.left="-900px";
 }
 
 
@@ -131,6 +139,7 @@ ttt2.innerHTML="因為我 已經付出 所有的我";
 
 if (ccc==202) {ttt.innerHTML="";
 ttt2.innerHTML="";
+vvcl.style.left="-1400px";
 }
 
 
@@ -146,6 +155,7 @@ ttt2.innerHTML="為什麼你要放棄我";
 
 if (ccc==277) {ttt.innerHTML="是誰拭去了 你的諾言";
 ttt2.innerHTML="";
+vvcl.style.left="-400px";
 }
 
 
@@ -157,11 +167,13 @@ ttt2.innerHTML="是誰想要 把你的心帶走";
 
 if (ccc==301) {ttt.innerHTML="改變了 我的生活";
 ttt2.innerHTML="";
+
 }
 
 
 if (ccc==313) {ttt.innerHTML="";
 ttt2.innerHTML="喔........";
+vvcl.style.left="-1700px";
 }
 
 
@@ -174,6 +186,7 @@ ttt2.innerHTML="";
 
 if (ccc==336) {ttt.innerHTML="";
 ttt2.innerHTML="你需要 溫柔的方式";
+vvcl.style.left="-800px";
 }
 
 if (ccc==348) {ttt.innerHTML="但是請 別 把心帶走";
@@ -182,6 +195,7 @@ ttt2.innerHTML="";
 
 if (ccc==363) {ttt.innerHTML="";
 ttt2.innerHTML="因為我 已經付出 所有的我";
+vvcl.style.left="-1800px";
 }
 
 if (ccc==385) {ttt.innerHTML="";
@@ -236,16 +250,16 @@ position:fixed;
 
 
 
-
 .tcl{
 position:fixed;
 top:850px;
 left:20px;
 font-size:110px;
-color:yellow;
+color: white; 
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 width:900px;
-font-weight:bold;
-text-shadow: 0.1em 0.1em 0.2em purple;
+ font-weight:bold;
+
 }
 
 
@@ -254,10 +268,10 @@ position:fixed;
 top: 1050px;
 left:20px;
 font-size:110px;
-color:yellow;
+color:white;
 width:900px;
 font-weight:bold;
-text-shadow: 0.1em 0.1em 0.2em purple;
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 }
 
 
