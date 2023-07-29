@@ -11,27 +11,63 @@ document.getElementById("in").style.display="none" ;
 document.getElementById("t1id").style.display="block" ;
 
 document.getElementById("birpid").style.display="block" ;
+id11=document.getElementById("id1");
+id22=document.getElementById("id2");
+id33=document.getElementById("id3");
 
 b3=document.getElementById("birsid");
-b3.currentTime = 0;
+b3.currentTime = 5;
 b3.play();
 
+setInterval(ep1, 500);
+ccc=1;
+ function ep1(){
+ if (ccc==1){
+id22.style.fontSize="80px";
+id22.style.color="orange";
+id33.style.background="yellow";
+}
+ if (ccc==2){
+id22.style.fontSize="90px";
+id22.style.color="green";
+id33.style.background="green";
+}
+ if (ccc==3){id22.style.color="purple";
+id33.style.background="silver";
+}
+ccc=ccc+1;
+if (ccc==4){ccc=1;}
+}
 }
 </script>
 
 <style type="text/css">
 
-.t1cl{
+#id1{
 position:fixed;
 top: 100px;
 left:100px;
-text-shadow: white 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+
 font-weight:bold;
-width:1100px;
 }
 
+#id2{
+position:fixed;
+top: 1100px;
+left:10px;
+border-radius:20px;
+padding: 10px 20px;
+font-weight:bold;
+}
 
-
+#id3{
+position:fixed;
+top: 300px;
+left:100px;
+border-radius:50px;
+padding: 10px 50px;
+font-weight:bold;
+}
 
 
 </style>
@@ -39,11 +75,14 @@ width:1100px;
 <body>
 
 
-<dvi  class="t1cl" id="t1id" style="display:none;"   >
-<div style="font-size:90px;color:orange;font-weight:bold;"><span style="color:brown";>祝傅董</span>
-<span style="font-size:130px;color:purple;font-weight:bold;background-color:orange;">生日快樂</span> __happy
-<span style="font-size:130px;color:purple;font-weight:bold;background-color:orange;">Birthday</span></div>
+<dvi   id="t1id" style="display:none;"   >
+<dvi id="id1" style="font-size:110px;color:brown";>祝 傅董</dvi>
+</br>
+<dvi id="id2" style="font-size:70px;color:red;font-weight:bold;background-color:silver;">生日快樂</dvi>
+</br>
+<dvi id="id3" style="font-size:130px;color:purple;font-weight:bold;background-color:orange;">happy Birthday</dvi>
 </dvi>
+
 
 <div id="in"  >
 <input type="image" src="apple.jpg" height="1800"  onClick="get()">
