@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head>
+<title>  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+document.getElementById("in").style.display="none" ;
+document.getElementById("aid").style.display="block" ;
+document.getElementById("bid").style.display="block" ;
+document.getElementById("t1id").style.display="block" ;
+document.getElementById("t2id").style.display="block" ;
+
+document.getElementById("birpid").style.display="block" ;
+// birpp=document.getElementById("aid");
+id11=document.getElementById("id1");
+id22=document.getElementById("id2");
+id33=document.getElementById("id3");
+id44=document.getElementById("id4");
+id55=document.getElementById("id5");
+id66=document.getElementById("id6");
+
+b3=document.getElementById("bir1sid");
+b3.currentTime = 5;
+
+
+b3.play();
+
+setInterval(ep1, 500);
+setInterval(ep2, 300);
+i=-0.3;
+function ep2(){
+
+// birpp.style.opacity=i;
+// i=i+0.1;
+// if (i==0.5) {i=-0.3;}
+}
+ccc=1;
+ function ep1(){
+re=(b3.ended);
+if (re==true){history.go(0);}
+ if (ccc==1){
+
+id33.style.color="yellow";
+id66.style.color="red";
+id22.style.background="yellow";
+}
+ if (ccc==2){
+id44.style.color="yellow";
+id33.style.color="red";
+id22.style.background="green";
+}
+
+ if (ccc==3){
+id22.style.background="silver";
+id55.style.color="yellow";
+id44.style.color="red";
+}
+
+if (ccc==4){ccc=0;
+id66.style.color="yellow";
+id55.style.color="red";
+}
+ccc=ccc+1;
+
+}
+}
+</script>
+
+<style type="text/css">
+
+#id1{
+position:fixed;
+top: 220px;
+left:340px;
+
+
+font-weight:bold;
+
+}
+
+
+
+#id2{
+position:fixed;
+top: 950px;
+left:100px;
+border-radius:50px;
+padding: 10px 50px;
+font-weight:bold;
+}
+
+
+#t2id{
+position:fixed;
+top: 490px;
+left:280px;
+border-radius:50px;
+padding: 10px 50px;
+font-weight:bold;
+}
+
+.acl{
+position:fixed;
+top:0;
+left:-500px;
+height: 1800px;
+}
+
+.bcl{
+position:fixed;
+top:1300px;
+left:200px;
+height: 450px;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<div  id="aid" style="display:none;">
+<video class="acl" autoplay loop muted>
+<source src="a.mp4">
+</video>
+</div>
+
+
+<div  id="bid" style="display:none;">
+<video class="bcl" autoplay loop muted>
+<source src="b.mp4">
+</video>
+</div>
+
+
+
+<dvi   id="t1id" style="display:none;"   >
+<dvi id="id1" style="font-size:130px;color:pink";>祝 傅董</dvi>
+</br>
+<dvi id="id2" style="font-size:130px;color:purple;font-weight:bold;background-color:orange;">happy Birthday</dvi>
+</dvi>
+
+
+<dvi   id="t2id" style="display:none;"   >
+<dvi id="id3" style="font-size:120px;color:pink;font-weight:bold;background-color:silver;">生</dvi>
+<dvi id="id4" style="font-size:120px;color:pink;font-weight:bold;background-color:silver;">日</dvi>
+<dvi id="id5" style="font-size:120px;color:pink;font-weight:bold;background-color:silver;">快</dvi>
+<dvi id="id6" style="font-size:120px;color:pink;font-weight:bold;background-color:silver;">樂</dvi>
+</dvi>
+
+
+
+<div id="in"  >
+<input type="image" src="apple.jpg" height="1800"  onClick="get()">
+</div>
+
+<div id="birpid" style="display:none;" >
+<img src="bir.jpg" height="1800" >
+</div>
+
+<audio id="bir1sid" src="bir1s.mp4" controls="controls" hidden="true"></audio>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
