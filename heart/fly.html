@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<head>
+<title>**love every day**</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+document.getElementById("in").style.display="none" ;
+
+document.getElementById("soapid").style.display="block" ;
+ly1=document.getElementById("lyrics1id");
+ly2=document.getElementById("lyrics2id");
+ly1.style.display="block"; 
+ly2.style.display="block"; 
+ttt1=document.getElementById("t1id");
+b3=document.getElementById("s3id");
+b3.currentTime = 3;
+b3.play();
+co=0;
+
+ var um = 0;
+
+ setInterval(step, 5000);
+i=0;
+ig = document.getElementById("imgId");
+
+setInterval(step1, 1000);
+ function step1() {
+ti=Math.round(b3.currentTime);
+if (ti>102) {ti=ti-85;}
+if (ti==18) {
+ly1.innerHTML="多美麗的海鷗 牠在遨遊";
+ly2.innerHTML="";
+}
+
+if (ti==25) {
+ly1.innerHTML="";
+ly2.innerHTML="嗚嗚嗚";
+}
+
+
+
+if (ti==27) {
+ly1.innerHTML="那雪白的翅膀 鼓動韻律節奏";
+ly2.innerHTML="";
+}
+
+if (ti==32) {
+ly1.innerHTML="";
+ly2.innerHTML="嗚嗚嗚";
+}
+
+
+
+if (ti==34) {
+ly1.innerHTML="飛呀 牠不停留 飛向你 飛向我";
+ly2.innerHTML="";
+}
+
+if (ti==40) {
+ly1.innerHTML="";
+ly2.innerHTML="陽光多溫柔 向大海微笑";
+}
+
+
+
+if (ti==48) {
+ly1.innerHTML="多奇妙的朋友 ";
+ly2.innerHTML="";
+}
+
+if (ti==49) {
+ly1.innerHTML="";
+ly2.innerHTML="快樂忙碌 撮和 我們邂逅";
+}
+
+
+if (ti==54) {
+ly1.innerHTML="好像是在叫我 別害羞";
+ly2.innerHTML="";
+}
+
+if (ti==57) {
+ly1.innerHTML="";
+ly2.innerHTML="看著你深沉多情的雙眸";
+}
+
+
+
+if (ti==60) {
+ly1.innerHTML="叫我抬起頭";
+ly2.innerHTML="";
+}
+
+if (ti==62) {
+ly1.innerHTML="";
+ly2.innerHTML="讓你握著手";
+}
+
+
+
+if (ti==64) {
+ly1.innerHTML="兩顆心顫抖";
+ly2.innerHTML="";
+}
+
+if (ti==67) {
+ly1.innerHTML="";
+ly2.innerHTML="飛向你";
+}
+
+
+if (ti==71) {
+ly1.innerHTML="飛向我";
+ly2.innerHTML="";
+}
+
+if (ti==73) {
+ly1.innerHTML="海鷗 海鷗 ";
+ly2.innerHTML="";
+}
+
+if (ti==76) {
+ly1.innerHTML="";
+ly2.innerHTML="海天深處 樂悠悠";
+}
+
+
+if (ti==79) {
+ly1.innerHTML="";
+ly2.innerHTML="";
+}
+
+
+
+}
+
+ function step() {
+
+ti=b3.currentTime;
+
+re=(b3.ended);
+if (re==true){history.go(0);}
+document.getElementById("tid").style.display="block" ;
+document.getElementById("t1id").style.display="block" ;
+document.getElementById("t2id").style.display="block" ;
+ co=co+1;
+if (co==1) {document.getElementById("soapid").style.display="none" ;
+document.getElementById("aid").style.display="block" ;
+document.getElementById("did").style.display="none" ; 
+}
+
+if (co==2) {
+document.getElementById("bid").style.display="block" ;
+ document.getElementById("aid").style.display="none" ;
+}
+
+if (co==3) {
+document.getElementById("cid").style.display="block" ;
+ document.getElementById("bid").style.display="none" ;
+}
+
+if (co==4) {
+document.getElementById("did").style.display="block" ;
+ document.getElementById("cid").style.display="none" ;
+co=0;
+}
+
+
+
+
+  um++;
+ i=0;
+ j=1;
+document.getElementById("imgId").style.display="none" ;
+ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+ 
+ig.onload = function(){  }
+ig.onerror =function(){
+um--;
+document.getElementById("imgId").src="photo/"+'1 (1).jpg';
+um=1;
+}
+ document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+}
+
+ cl=setInterval(opac,400);
+
+function opac() {
+document.getElementById("imgId").style.display="block" ;
+i=i+0.1;
+
+ig.style.opacity=i;
+if (i>0.9)  {i=1;
+
+}
+
+
+}
+
+
+}
+
+</script>
+
+<style type="text/css">
+.back{
+position:fixed;
+top:0;
+left:-1350px;
+
+height: 1800px;
+
+}
+
+
+.soapcl{
+position:fixed;
+top:0;
+left:-550px;
+height: 1800px;
+}
+
+
+
+
+
+
+
+.acl{
+position:fixed;
+top:0;
+left:-100px;
+height: 1800px;
+}
+
+.bcl{
+position:fixed;
+top:0;
+left:-1800px;
+height: 1800px;
+}
+
+.ccl{
+position:fixed;
+top:0;
+left:-2000px;
+height: 1800px;
+}
+
+.dcl{
+position:fixed;
+top:0;
+left:-100px;
+height: 1800px;
+}
+
+
+
+
+
+
+
+
+
+
+.tcl{
+position:fixed;
+top: 0px;
+left:0px;
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+font-weight:bold;
+}
+
+
+.t1cl{
+position:fixed;
+top: 1400px;
+left:100px;
+text-shadow: white 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+font-weight:bold;
+}
+
+.t2cl{
+position:fixed;
+top: 120px;
+left:0px;
+text-shadow: purple 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+font-weight:bold;
+}
+
+.imgcl{
+position:fixed;
+top: 0px;
+left:-100px;
+}
+
+.lyrics1cl{
+position:fixed;
+top:850px;
+left:50px;
+font-size:90px;
+color: white; 
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+width:900px;
+ font-weight:bold;
+
+}
+
+
+.lyrics2cl{
+position:fixed;
+top: 1100px;
+left:50px;
+font-size:90px;
+color:white;
+width:900px;
+font-weight:bold;
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+}
+
+
+</style>
+</head>
+<body>
+
+<div  id="soapid" style="display:none;">
+<video class="soapcl" autoplay loop muted>
+<source src="sea.mp4">
+</video>
+</div>
+
+
+<div  id="aid" style="display:none;">
+<video class="acl" autoplay loop muted>
+<source src="a.mp4">
+</video>
+</div>
+
+
+<div  id="bid" style="display:none;">
+<video class="bcl" autoplay loop muted>
+<source src="b.mp4">
+</video>
+</div>
+
+
+<div  id="cid" style="display:none;">
+<video class="ccl" autoplay loop muted>
+<source src="c.mp4">
+</video>
+</div>
+
+<div  id="did" style="display:none;">
+<video class="dcl" autoplay loop muted>
+<source src="d.mp4">
+</video>
+</div>
+
+
+
+
+
+
+
+
+
+
+<img src="photo/"+"1 (1).jpg" height="1800"  id="imgId" class="imgcl" style="display:none"/>  
+
+
+<audio id="s3id" src="flys.mp4" controls="controls" hidden="true"></audio>
+
+<div id="in"  >
+<input type="image" src="apple.jpg" height="1800"  onClick="get()">
+</div>
+
+
+
+
+
+<dvi  class="tcl" id="tid" style="display:none;"  >
+<div style="font-size:100px;color:yellow;font-weight:bold;"><span style="color:red";>金</span>瑞瑤</div>
+</dvi>
+
+<dvi  class="t1cl" id="t1id" style="display:none;"  >
+<div style="font-size:90px;color:orange;font-weight:bold;"><span style="color:brown";>飛向</span>
+<span style="font-size:130px;color:purple;font-weight:bold;background-color:orange;">你</span> __ 飛向
+<span style="font-size:130px;color:purple;font-weight:bold;background-color:orange;">我</span></div>
+</dvi>
+
+<dvi  class="t2cl" id="t2id" style="display:none;"  >
+<div style="font-size:80px;color:pink;font-weight:bold;">歲月的眼睛</div>
+</dvi>
+
+<div id="lyrics1id" class="lyrics1cl" style="display:none;"></div>
+<div id="lyrics2id" class="lyrics2cl" style="display:none;"></div>
+
+
+
+</body>
+</html>
