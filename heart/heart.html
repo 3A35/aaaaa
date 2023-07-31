@@ -10,6 +10,7 @@
  function get(){
 
 document.getElementById("in").style.display="none" ;
+document.getElementById("snowid").style.display="block" 
 document.getElementById("t1id").style.display="block" ;
 document.getElementById("t2id").style.display="block" ;
 document.getElementById("waiceng").style.display="block" ;
@@ -58,7 +59,7 @@ font-weight:bold;
 
 
 .play{
-    animation: leftMove  8s  ease-out infinite; /*無限迴圈這個過程*/
+    animation: leftMove  16s  ease-out infinite; /*無限迴圈這個過程*/
 }
 
 @keyframes leftMove{
@@ -78,6 +79,32 @@ text-shadow: brown 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 font-weight:bold;
 }
 
+
+
+.snowcl{
+position:fixed;
+top: 0px;
+left:0px;
+height:1800px;
+animation:snowclk 5s infinite;
+animation-delay: 0s  ;
+}
+
+
+@keyframes snowclk {
+ 0%{opacity:0;}
+ 
+10%{opacity:0;}
+20%{opacity:0.1;}
+30%{opacity:0.2;}
+35%{opacity:0.4;}
+40%{opacity:0.6;}
+50%{opacity:0.4;}
+70%{opacity:0.2;}
+80%{opacity:0.1;}
+90%{opacity:0;}
+100%{opacity:0;}
+}
 
 </style>
 
@@ -116,6 +143,13 @@ font-weight:bold;
 <dvi  class="t2cl" id="t2id" style="display:none;"  >
 <div style="font-size:140px;color:yellow;font-weight:bold;">沈 雁</div>
 </dvi>
+
+<div  id="snowid" style="display:none;">
+<video class="snowcl" autoplay loop muted>
+<source src="d.mp4">
+</video>
+</div>
+
 
     </body>
 </html>
