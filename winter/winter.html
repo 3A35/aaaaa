@@ -15,7 +15,7 @@ document.getElementById("t2id").style.display="block" ;
 document.getElementById("snowid").style.display="block" ;
 document.getElementById("waiceng").style.display="block" ;
 b3=document.getElementById("heartsid");
-b3.currentTime =48;
+b3.currentTime =0;
 b3.play();
  setInterval(step, 500);
 function step(){
@@ -43,16 +43,17 @@ font-weight:bold;
     height:1800px;
     position: absolute;
     border-radius: 5px;
-    overflow: hidden;  //使div框中只能顯示一張圖片，其餘的將被隱藏。
+   overflow: hidden;  //使div框中只能顯示一張圖片，其餘的將被隱藏。
 }
 
 #photos img{
     width: 1200px;
     height:1800px;
-    float: left;     //使圖片向左浮動，又由於是定位是absolute,所以就浮到上一行去了;
+    float:left;     //使圖片向左浮動，又由於是定位是absolute,所以就浮到上一行去了;
 }
 
 #photos{
+    left:-12000px;
     position: absolute;
     width: calc(1200px * 11);  //使盒子能夠容納圖片的寬度，以至於不被撐破。
 }
@@ -64,16 +65,16 @@ font-weight:bold;
 
 @keyframes leftMove{
     0%{margin-left: 0px;}
-    10%{margin-left: -1200px;}
-    20%{margin-left: -2400px;}
-    30%{margin-left: -3600px;}
-    40%{margin-left: -4800px;}
-    50%{margin-left: -6000px;}
-    60%{margin-left: -7200px;}
-    70%{margin-left: -8400px;}
-    80%{margin-left: -9600px;}
-    90%{margin-left: -10800px;}
-    100%{margin-left:-12000px;}
+    10%{margin-left: 1200px;}
+    20%{margin-left: 2400px;}
+    30%{margin-left: 3600px;}
+    40%{margin-left: 4800px;}
+    50%{margin-left: 6000px;}
+    60%{margin-left: 7200px;}
+    70%{margin-left: 8400px;}
+    80%{margin-left: 9600px;}
+    90%{margin-left: 10800px;}
+    100%{margin-left:12000px;}
 }
 
 
