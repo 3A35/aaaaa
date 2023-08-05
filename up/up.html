@@ -47,15 +47,15 @@ font-weight:bold;
 }
 
 #photos img{
-    top:-9000px;
+    top:-10500px;
     width: 1200px;
-    height:1800px;
+    height:2100px;
     float: bottom;     //使圖片向左浮動，又由於是定位是absolute,所以就浮到上一行去了;
 }
 
 #photos{
     position: absolute;
-    height: calc(1800px * 6);  //使盒子能夠容納圖片的寬度，以至於不被撐破。
+    height: calc(2100px * 6);  //使盒子能夠容納圖片的寬度，以至於不被撐破。
 }
 
 
@@ -65,11 +65,11 @@ font-weight:bold;
 
 @keyframes downMove{
     0%{margin-top: 0px;}
-    20%{margin-top: -1800px;}
-    40%{margin-top: -3600px;}
-    60%{margin-top: -5400px;}
-    80%{margin-top: -7200px;}
-    100%{margin-top: -9000px;}
+    20%{margin-top: -2100px;}
+    40%{margin-top: -4200px;}
+    60%{margin-top: -6300px;}
+    80%{margin-top: -8400px;}
+    100%{margin-top: -10500px;}
 }
 
 .t2cl{
@@ -86,7 +86,7 @@ font-weight:bold;
 position:fixed;
 top: 0px;
 left:-500px;
-height:1800px;
+height:2200px;
 animation:snowclk 6s infinite;
 animation-delay: 0s  ;
 
@@ -113,7 +113,7 @@ animation-delay: 0s  ;
 
 
 <div id="in"  >
-<input type="image" src="apple.jpg" height="1800"  onClick="get()">
+<input type="image" src="apple.jpg" height="2100" width="1200" onClick="get()">
 </div>
 
 
