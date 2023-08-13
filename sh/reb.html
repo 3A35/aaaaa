@@ -33,34 +33,33 @@ document.getElementById("enlargetpid").style.display="block"
 document.getElementById("enlargetid").style.display="block"
 
 document.getElementById("enlargetpid").src="catalog/"+uuu+"/"+uuu+' ('+ item + ').jpg';
-// la1=document.getElementById("id"+uuu).innerHTML;
-// lalong=la1.length;
-// la11=la1.indexOf("."); 
-// lanu=lalong-la11;
-// laaaa=(la1.substr(la11+1,lanu));
-// ddd=uuu+"-"+item+"-";
-// r1=localStorage.getItem(ddd+1);
-// r2=localStorage.getItem(ddd+2);
-// r3=localStorage.getItem(ddd+3);
-// r4=localStorage.getItem(ddd+4);
-
-// sum="商品代號"+r1+" "+laaaa;
-
- document.getElementById("enlargetid").innerHTML="aaaaaa";
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/aaaaa/sh/d.md");
+req.onload=function(){
+wrrrr=this.responseText;
+sss=uuu+'-'+item;
+locnf=wrrrr.indexOf(sss+"nf");
+locnl=wrrrr.indexOf(sss+"nl");
+len=sss.length;
+xn=locnl-locnf;
+pron=(wrrrr.substr(locnf+len+3,xn-7));
+locpf=wrrrr.indexOf(sss+"pf");
+locpl=wrrrr.indexOf(sss+"pl");
+lenp=sss.length;
+xp=locpl-locpf;
+prop=(wrrrr.substr(locpf+lenp+3,xp-7));
+sum="商品代號 "+sss+" 名稱: "+pron+"價格: "+prop;
+document.getElementById("enlargetid").innerHTML=sum;
 }
-
+req.send();
+}
 
 function  layer1(fff){
 uuu=fff;
-var a1="11";
-var a2="22";
-
 
 document.getElementById("layer1").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer2").style.display="block";
-
-
 
 
 for(i=1;i<200;){
@@ -68,13 +67,12 @@ lay2value=fff+"-"+i;
 lay2t="layer2tid"+i;
 document.getElementById(lay2t).textContent = lay2value;
 
- hh="productid"+i
+hh="productid"+i
 hhhh=hh;
 var img = new Image();
   
- 
-//  img.style.width="100px";  
- img.src =document.getElementById(hh).src="catalog/"+fff+"/"+fff+' ('+ i + ').jpg';
+   
+img.src =document.getElementById(hh).src="catalog/"+fff+"/"+fff+' ('+ i + ').jpg';
  
  
 i++;
@@ -183,13 +181,9 @@ document.getElementById("loginid").style.display="block";
 document.getElementById("enlargetpid").style.display="block";
 
 
-
-
-
 document.getElementById("establishid").style.display="block";
 let login= document.getElementById("login_read_mobile").value; 
 
- 
 
 rrr1=localStorage.getItem(login);
 
@@ -331,7 +325,7 @@ if (ddel<dfg) {
  rfew_strokes--;
  localStorage.setItem(rrr1+2,rfew_strokes);
  } 
-//  history.go(0);
+
 document.getElementById("input_remove1id").style.display="none";
 setTimeout(shopping_cartfu,10);
 
@@ -374,13 +368,6 @@ alert("已存入");
 }
 
 
-
-
-
-
- 
-
-
 </script>
 
 <style type="text/css">
@@ -418,13 +405,13 @@ alert("已存入");
   height:1000px;}
 
 .enlargetcl{
-   font-size: 50px;
+   font-size: 60px;
  touch-action: auto;
  position: relative;
-  top:230px;
+  top:220px;
   left: 0px;
   width:1000px;
- color:blue;
+ color:black;
 }
 
 
@@ -455,7 +442,7 @@ alert("已存入");
 .closecl{
  touch-action: auto;
  position: fixed;
-  top: 1500px;
+  top: 1700px;
   left: 20px;
   background-color:green;
   border:none;
@@ -530,7 +517,7 @@ font-size:70px;
 .reducecl{
  font-size:100px;
  position:fixed;
-  top:1350px;
+  top:1550px;
   left: 500px;
    color:brown;
   border:none;
@@ -542,7 +529,7 @@ font-size:70px;
 .quantitycl{
 font-size:90px;
  position:fixed;
-  top:1350px;
+  top:1550px;
   left: 650px;
   color:black;
  
@@ -552,7 +539,7 @@ font-size:90px;
 .Increasecl{
 font-size:100px;
  position:fixed;
-  top:1350px;
+  top:1550px;
   left: 800px;
   color:brown;
   border:none;
@@ -564,7 +551,7 @@ font-size:100px;
 .join_incl{
 font-size:80px;
  position:fixed;
-  top:1500px;
+  top:1700px;
   left: 480px;
  background-color:brown;
   color:white;
@@ -849,19 +836,20 @@ font-size:80px;
 
 
 <div  id="layer2"  style="display:none;">
-<span id=layer2tid1  style="font-size:100px" >1</span>
+<br>
+<span id=layer2tid1  style="font-size:100px" ></span>
 <input  type="image" id="productid1"  class="productcl"  onClick="enlargetpfu(1)" >
 <br>
-<span id=layer2tid2 style="font-size:100px"  >2</span>
+<span id=layer2tid2 style="font-size:100px"  ></span>
 <input  type="image" id="productid2"  class="productcl"  onClick="enlargetpfu(2)" >
 <br>
-<span  id=layer2tid3  style="font-size:100px">3</span>
+<span  id=layer2tid3  style="font-size:100px"></span>
 <input  type="image" id="productid3"  class="productcl"  onClick="enlargetpfu(3)" >
 <br>
-<span  id=layer2tid4  style="font-size:100px">4</span>
+<span  id=layer2tid4  style="font-size:100px"></span>
 <input  type="image" id="productid4"  class="productcl"  onClick="enlargetpfu(4)" >
 <br>
-<span  id=layer2tid5  style="font-size:100px">5</span>
+<span  id=layer2tid5  style="font-size:100px"></span>
 <input  type="image" id="productid5"  class="productcl"  onClick="enlargetpfu(5)" >
 <br>
 <span  id=layer2tid6  style="font-size:100px">6</span>
@@ -1029,7 +1017,7 @@ font-size:80px;
 <input type="image" id="enlargetpid"  class="enlargetpcl" style="display:none;" onClick="close()" >
 
 <div id="enlargetid" class="enlargetcl" style="display:none;"  >
-<div>放大產品說明</div>
+<div></div>
 </div>
 
 <div  id="closeid"  style="display:none;">
