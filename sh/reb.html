@@ -390,10 +390,10 @@ alert("已存入");
   touch-action: auto;
   style=display:none;
   position: relative;
-  top: 250px;
-  left: 150px;
+  top: 200px;
+  left: 250px;
  
-  height:400px;
+  width:600px;
 //  white-space: nowrap; 
   overflow: hidden;
 //  text-overflow: ellipsis;
@@ -786,6 +786,8 @@ font-size:80px;
 
    <textarea  type="text" id="itemsid3" name="items3" style="display:none;"></textarea>
 
+   <textarea  type="text" id="itemsid4" name="items4" style="display:none;"></textarea>
+
 <button onclick="upfu( )"><div class="upcl" >上傳 訂貨單</button>
     
   </form>
@@ -1107,8 +1109,8 @@ up_time2=Today.getHours()+"點"+Today.getMinutes()+"分"+Today.getSeconds()+"秒
 
 document.getElementById("shopid").value =rrr2;
 document.getElementById("itemsid1").value =up_time1+"\n"+up_time2;
-document.getElementById("itemsid3").value =proo;
-
+document.getElementById("itemsid3").value ="客編"+rrr1+"名稱"+rrr2;
+document.getElementById("itemsid4").value =proo;
 
 }
 </script>
