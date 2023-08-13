@@ -8,13 +8,17 @@
 // mobile+1001=第一項產品型號  mobile+2001=第一項產品數量 
 
 function  enlargetpfu(item){
-
+// enlargetp 放大
 
 document.getElementById("conid").style.display="none";
+// connect  連接
 document.getElementById("layer2").style.display="none";
+// layer 層
 document.getElementById("shopping_cartid").style.display="block";
+// shopping_cart 購物車
 document.getElementById("welcomeid").style.display="block";
 document.getElementById("add_cartid").style.display="block";
+// cart 手拉車
 
  rrr1=localStorage.getItem(10501050);
  rrr2=localStorage.getItem(28422842);
@@ -23,6 +27,7 @@ document.getElementById("add_cartid").style.display="block";
 document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨";
 document.getElementById("loginid").style.display="block";
 document.getElementById("establishid").style.display="block";
+// establish 建立
 document.getElementById("closeid").style.display="block"
 document.getElementById("enlargetpid").style.display="block"
 document.getElementById("enlargetid").style.display="block"
@@ -47,13 +52,21 @@ sum="商品代號"+r1+" "+laaaa;
 
 function  layer1(fff){
 uuu=fff;
+var a1="11";
+var a2="22";
 
 
 document.getElementById("layer1").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer2").style.display="block";
 
+
+
+
 for(i=1;i<200;){
+lay2value=fff+"-"+i;
+lay2t="layer2tid"+i;
+document.getElementById(lay2t).textContent = lay2value;
 
  hh="productid"+i
 hhhh=hh;
@@ -836,25 +849,45 @@ font-size:80px;
 
 
 <div  id="layer2"  style="display:none;">
+<span id=layer2tid1  style="font-size:100px" >1</span>
 <input  type="image" id="productid1"  class="productcl"  onClick="enlargetpfu(1)" >
+<span id=layer2tid2 style="font-size:100px"  >2</span>
 <input  type="image" id="productid2"  class="productcl"  onClick="enlargetpfu(2)" >
+<span  id=layer2tid3  style="font-size:100px">3</span>
 <input  type="image" id="productid3"  class="productcl"  onClick="enlargetpfu(3)" >
+<span  id=layer2tid4  style="font-size:100px">4</span>
 <input  type="image" id="productid4"  class="productcl"  onClick="enlargetpfu(4)" >
+<span  id=layer2tid5  style="font-size:100px">5</span>
 <input  type="image" id="productid5"  class="productcl"  onClick="enlargetpfu(5)" >
+<span  id=layer2tid6  style="font-size:100px">6</span>
 <input  type="image" id="productid6"  class="productcl"  onClick="enlargetpfu(6)" >
+<span  id=layer2tid7  style="font-size:100px">7</span>
 <input  type="image" id="productid7"  class="productcl"  onClick="enlargetpfu(7)" >
+<span  id=layer2tid8  style="font-size:100px">8</span>
 <input  type="image" id="productid8"  class="productcl"  onClick="enlargetpfu(8)" >
+<span  id=layer2tid9  style="font-size:100px">9</span>
 <input  type="image" id="productid9"  class="productcl"  onClick="enlargetpfu(9)" >
+<span  id=layer2tid10 style="font-size:100px">10</span>
 <input  type="image" id="productid10" class="productcl"  onClick="enlargetpfu(10)" >
+<span  id=layer2tid11 style="font-size:100px">11</span>
 <input  type="image" id="productid11" class="productcl"  onClick="enlargetpfu(11)" >
+<span  id=layer2tid12 style="font-size:100px">12</span>
 <input  type="image" id="productid12" class="productcl"  onClick="enlargetpfu(12)" >
+<span  id=layer2tid13 style="font-size:100px">13</span>
 <input  type="image" id="productid13" class="productcl"  onClick="enlargetpfu(13)" >
+<span  id=layer2tid14 style="font-size:100px">14</span>
 <input  type="image" id="productid14" class="productcl"  onClick="enlargetpfu(14)" >
+<span  id=layer2tid15 style="font-size:100px">15</span>
 <input  type="image" id="productid15" class="productcl"  onClick="enlargetpfu(15)" >
+<span  id=layer2tid16 style="font-size:100px">16</span>
 <input  type="image" id="productid16" class="productcl"  onClick="enlargetpfu(16)" >
+<span  id=layer2tid17 style="font-size:100px">17</span>
 <input  type="image" id="productid17" class="productcl"  onClick="enlargetpfu(17)" >
+<span  id=layer2tid18 style="font-size:100px">18</span>
 <input  type="image" id="productid18" class="productcl"  onClick="enlargetpfu(18)" >
+<span  id=layer2tid19 style="font-size:100px">19</span>
 <input  type="image" id="productid19" class="productcl"  onClick="enlargetpfu(19)" >
+<span  id=layer2tid20 style="font-size:100px">20</span>
 <input  type="image" id="productid20" class="productcl"  onClick="enlargetpfu(20)" >
 <input  type="image" id="productid21" class="productcl"  onClick="enlargetpfu(21)" >
 <input  type="image" id="productid22" class="productcl"  onClick="enlargetpfu(22)" >
