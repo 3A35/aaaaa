@@ -24,7 +24,7 @@ document.getElementById("add_cartid").style.display="block";
  rrr2=localStorage.getItem(28422842);
  
 
-document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨";
+document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+" 光臨";
 document.getElementById("loginid").style.display="block";
 document.getElementById("establishid").style.display="block";
 // establish 建立
@@ -83,7 +83,7 @@ locpl=wrrrr.indexOf(sss+"pl");
 lenp=sss.length;
 xp=locpl-locpf;
 prop=(wrrrr.substr(locpf+lenp+3,xp-7));
-sum=sss+" 名稱: "+pron+"價格: "+prop;
+sum=sss+" 名稱: "+pron+" 價格: "+prop;
 document.getElementById(lay2t).textContent = sum;
 
 hh="productid"+i
@@ -164,7 +164,7 @@ localStorage.setItem(mobile+2,0);
 rrr1=localStorage.getItem(mobile);
 rrr2=localStorage.getItem(mobile+1);
 document.getElementById("welcomeid").style.display="block";
-document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
+document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+"光臨"
 localStorage.setItem(10501050,rrr1);
 localStorage.setItem(28422842,rrr2);
 }
@@ -211,7 +211,7 @@ rrr2="未建檔";}
 localStorage.setItem(10501050,rrr1);
 localStorage.setItem(28422842,rrr2);
 document.getElementById("welcomeid").style.display="block";
-document.getElementById("welcomeid").innerHTML="歡迎"+rrr2+"光臨"
+document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+"光臨"
 
 }
 
@@ -253,7 +253,7 @@ proo="";
  rfew_strokes=localStorage.getItem(rrr1+2);
 
 document.getElementById("Number_ordersid").innerHTML=" 購物車有"+rfew_strokes+" 筆資料";
-
+// Number orders  訂單數量     few strokes  幾筆 
 for (i=0;i<rfew_strokes;i++) {
 no=localStorage.getItem(rrr1+1001+i);
 no1=(no.substr(4,5));
@@ -408,7 +408,7 @@ alert("已存入");
   style=display:none;
   position: relative;
   top: 200px;
-  left: 10px;
+  left: 100px;
  
   height:400px;
 //  white-space: nowrap; 
@@ -500,7 +500,7 @@ alert("已存入");
 
 .welcomecl{
    font-size: 60px;
- 
+ width:600px;
  position:fixed;
   top:0px;
   
@@ -586,7 +586,7 @@ font-size:80px;
  position:relative;
   top: 20px;
   left:5px;
-  font-size:70px;
+  font-size:55px;
   max-width:700px;
 
   color:blue;
@@ -647,7 +647,7 @@ font-size:80px;
   width:220px;
   top: 20px;
   left:730px;
-  font-size:70px;
+  font-size:60px;
   color:black;
  
 }
@@ -723,8 +723,8 @@ font-size:80px;
  position:relative;
   top: 200px;
  font-size:60px;
- width:1000px;
-left:10px;
+ width:950px;
+left:20px;
 }
 
 
@@ -811,7 +811,7 @@ left:10px;
 
 <button onclick="upfu( )"><div class="upcl" >上傳 訂貨單</button>
     
-  </form>
+</form>
 </div>
 
 
@@ -828,7 +828,7 @@ left:10px;
 
 <div  id="login_readid" class="login_readcl" style="display:none;"  >
 <div  style="font-size:90px" >請輸入行動號碼</div>
-<input type="number" style="font-size:70px"  maxlength="10"  id="login_read_mobile" />
+<input type="text" style="font-size:70px"  maxlength="10"  id="login_read_mobile" />
 <button type="button" style="font-size:90px" onclick="login_endfu()">確 認</button> 
 </div>
 
@@ -843,7 +843,7 @@ left:10px;
 <div  id="account_numberid" class="account_numbercl"    style="display:none;">
 <div  style="font-size:90px" >請輸入行動號碼</div>
 
-<input type="number" style="font-size:90px"  maxlength="10"  id="mobile_phoneid" />
+<input type="text" style="font-size:90px"  maxlength="20"  id="mobile_phoneid" />
 <div  style="font-size:90px" >請輸入姓名</div>
 <input type="text" style="font-size:90px"  maxlength="30"  id="nameid" />
 
@@ -944,55 +944,155 @@ left:10px;
 <div  id=layer2tid20  class="layer2tcl">20</div>
 <br>
 <input  type="image" id="productid21" class="productcl"  onClick="enlargetpfu(21)" >
+<div  id=layer2tid21  class="layer2tcl">21</div>
+<br>
 <input  type="image" id="productid22" class="productcl"  onClick="enlargetpfu(22)" >
+<div  id=layer2tid22  class="layer2tcl">22</div>
+<br>
 <input  type="image" id="productid23" class="productcl"  onClick="enlargetpfu(23)" >
+<div  id=layer2tid23  class="layer2tcl">23</div>
+<br>
 <input  type="image" id="productid24" class="productcl"  onClick="enlargetpfu(24)" >
+<div  id=layer2tid24  class="layer2tcl">24</div>
+<br>
 <input  type="image" id="productid25" class="productcl"  onClick="enlargetpfu(25)" >
+<div  id=layer2tid25  class="layer2tcl">25</div>
+<br>
 <input  type="image" id="productid26" class="productcl"  onClick="enlargetpfu(26)" >
+<div  id=layer2tid26  class="layer2tcl">26</div>
+<br>
 <input  type="image" id="productid27" class="productcl"  onClick="enlargetpfu(27)" >
+<div  id=layer2tid27  class="layer2tcl">27</div>
+<br>
 <input  type="image" id="productid28" class="productcl"  onClick="enlargetpfu(28)" >
+<div  id=layer2tid28  class="layer2tcl">28</div>
+<br>
 <input  type="image" id="productid29" class="productcl"  onClick="enlargetpfu(29)" >
+<div  id=layer2tid29 class="layer2tcl">29</div>
+<br>
 <input  type="image" id="productid30" class="productcl"  onClick="enlargetpfu(30)" >
+<div  id=layer2tid30  class="layer2tcl">30</div>
+<br>
 <input  type="image" id="productid31"  class="productcl"  onClick="enlargetpfu(31)" >
+<div  id=layer2tid31  class="layer2tcl">31</div>
+<br>
 <input  type="image" id="productid32"  class="productcl"  onClick="enlargetpfu(32)" >
+<div  id=layer2tid32  class="layer2tcl">32</div>
+<br>
 <input  type="image" id="productid33"  class="productcl"  onClick="enlargetpfu(33)" >
+<div  id=layer2tid33  class="layer2tcl">33</div>
+<br>
 <input  type="image" id="productid34"  class="productcl"  onClick="enlargetpfu(34)" >
+<div  id=layer2tid34  class="layer2tcl">34</div>
+<br>
 <input  type="image" id="productid35"  class="productcl"  onClick="enlargetpfu(35)" >
+<div  id=layer2tid35  class="layer2tcl">35</div>
+<br>
 <input  type="image" id="productid36"  class="productcl"  onClick="enlargetpfu(36)" >
+<div  id=layer2tid36  class="layer2tcl">36</div>
+<br>
 <input  type="image" id="productid37"  class="productcl"  onClick="enlargetpfu(37)" >
+<div  id=layer2tid37  class="layer2tcl">37</div>
+<br>
 <input  type="image" id="productid38"  class="productcl"  onClick="enlargetpfu(38)" >
+<div  id=layer2tid38  class="layer2tcl">38</div>
+<br>
 <input  type="image" id="productid39"  class="productcl"  onClick="enlargetpfu(39)" >
+<div  id=layer2tid39  class="layer2tcl">39</div>
+<br>
 <input  type="image" id="productid40" class="productcl"  onClick="enlargetpfu(40)" >
+<div  id=layer2tid40  class="layer2tcl">40</div>
+<br>
 <input  type="image" id="productid41" class="productcl"  onClick="enlargetpfu(41)" >
+<div  id=layer2tid41  class="layer2tcl">41</div>
+<br>
 <input  type="image" id="productid42" class="productcl"  onClick="enlargetpfu(42)" >
+<div  id=layer2tid42  class="layer2tcl">42</div>
+<br>
 <input  type="image" id="productid43" class="productcl"  onClick="enlargetpfu(43)" >
+<div  id=layer2tid43  class="layer2tcl">43</div>
+<br>
 <input  type="image" id="productid44" class="productcl"  onClick="enlargetpfu(44)" >
+<div  id=layer2tid44  class="layer2tcl">44</div>
+<br>
 <input  type="image" id="productid45" class="productcl"  onClick="enlargetpfu(45)" >
+<div  id=layer2tid45  class="layer2tcl">45</div>
+<br>
 <input  type="image" id="productid46" class="productcl"  onClick="enlargetpfu(46)" >
+<div  id=layer2tid46  class="layer2tcl">46</div>
+<br>
 <input  type="image" id="productid47" class="productcl"  onClick="enlargetpfu(47)" >
+<div  id=layer2tid47  class="layer2tcl">47</div>
+<br>
 <input  type="image" id="productid48" class="productcl"  onClick="enlargetpfu(48)" >
+<div  id=layer2tid48  class="layer2tcl">48</div>
+<br>
 <input  type="image" id="productid49" class="productcl"  onClick="enlargetpfu(49)" >
+<div  id=layer2tid49  class="layer2tcl">49</div>
+<br>
 <input  type="image" id="productid50" class="productcl"  onClick="enlargetpfu(50)" >
+<div  id=layer2tid50  class="layer2tcl">50</div>
+<br>
 <input  type="image" id="productid51" class="productcl"  onClick="enlargetpfu(51)" >
+<div  id=layer2tid51  class="layer2tcl">51</div>
+<br>
 <input  type="image" id="productid52" class="productcl"  onClick="enlargetpfu(52)" >
+<div  id=layer2tid52  class="layer2tcl">52</div>
+<br>
 <input  type="image" id="productid53" class="productcl"  onClick="enlargetpfu(53)" >
+<div  id=layer2tid53  class="layer2tcl">53</div>
+<br>
 <input  type="image" id="productid54" class="productcl"  onClick="enlargetpfu(54)" >
+<div  id=layer2tid54  class="layer2tcl">54</div>
+<br>
 <input  type="image" id="productid55" class="productcl"  onClick="enlargetpfu(55)" >
+<div  id=layer2tid55  class="layer2tcl">55</div>
+<br>
 <input  type="image" id="productid56" class="productcl"  onClick="enlargetpfu(56)" >
+<div  id=layer2tid56  class="layer2tcl">56</div>
+<br>
 <input  type="image" id="productid57" class="productcl"  onClick="enlargetpfu(57)" >
+<div  id=layer2tid57  class="layer2tcl">57</div>
+<br>
 <input  type="image" id="productid58" class="productcl"  onClick="enlargetpfu(58)" >
+<div  id=layer2tid58  class="layer2tcl">58</div>
+<br>
 <input  type="image" id="productid59" class="productcl"  onClick="enlargetpfu(59)" >
+<div  id=layer2tid59  class="layer2tcl">59</div>
+<br>
 <input  type="image" id="productid60" class="productcl"  onClick="enlargetpfu(60)" >
+<div  id=layer2tid60  class="layer2tcl">60</div>
+<br>
 <input  type="image" id="productid61" class="productcl"  onClick="enlargetpfu(61)" >
+<div  id=layer2tid61  class="layer2tcl">61</div>
+<br>
 <input  type="image" id="productid62" class="productcl"  onClick="enlargetpfu(62)" >
+<div  id=layer2tid62  class="layer2tcl">62</div>
+<br>
 <input  type="image" id="productid63" class="productcl"  onClick="enlargetpfu(63)" >
+<div  id=layer2tid63  class="layer2tcl">63</div>
+<br>
 <input  type="image" id="productid64" class="productcl"  onClick="enlargetpfu(64)" >
+<div  id=layer2tid64  class="layer2tcl">64</div>
+<br>
 <input  type="image" id="productid65" class="productcl"  onClick="enlargetpfu(65)" >
+<div  id=layer2tid65  class="layer2tcl">65</div>
+<br>
 <input  type="image" id="productid66" class="productcl"  onClick="enlargetpfu(66)" >
+<div  id=layer2tid66  class="layer2tcl">66</div>
+<br>
 <input  type="image" id="productid67" class="productcl"  onClick="enlargetpfu(67)" >
+<div  id=layer2tid67  class="layer2tcl">67</div>
+<br>
 <input  type="image" id="productid68" class="productcl"  onClick="enlargetpfu(68)" >
+<div  id=layer2tid68  class="layer2tcl">68</div>
+<br>
 <input  type="image" id="productid69" class="productcl"  onClick="enlargetpfu(69)" >
+<div  id=layer2tid69  class="layer2tcl">69</div>
+<br>
 <input  type="image" id="productid70" class="productcl"  onClick="enlargetpfu(70)" >
+<div  id=layer2tid70  class="layer2tcl">70</div>
+<br>
 </div>
 
 
@@ -1159,7 +1259,7 @@ up_time2=Today.getHours()+"點"+Today.getMinutes()+"分"+Today.getSeconds()+"秒
 
 document.getElementById("shopid").value =rrr2;
 document.getElementById("itemsid1").value =up_time1+"\n"+up_time2;
-document.getElementById("itemsid3").value ="客編"+rrr1+"名稱"+rrr2;
+document.getElementById("itemsid3").value ="客編 "+rrr1+"名稱"+rrr2;
 document.getElementById("itemsid4").value =proo;
 
 }
