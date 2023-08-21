@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
 <title>  </title>
@@ -28,11 +29,11 @@ document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+" 光臨";
 document.getElementById("loginid").style.display="block";
 document.getElementById("establishid").style.display="block";
 // establish 建立
-document.getElementById("closeid").style.display="block"
+document.getElementById("up3id").style.display="block"
 document.getElementById("enlargetpid").style.display="block"
 document.getElementById("enlargetid").style.display="block"
 
-document.getElementById("enlargetpid").src="catalog/"+uuu+"/"+uuu+' ('+ item + ').jpg';
+document.getElementById("enlargetpid").src="catalog/"+uuu+"/"+ggg+' ('+ item + ').jpg';
 var req=new XMLHttpRequest();
 req.open("get","https://3a35.github.io/aaaaa/elec/elec.md");
 req.onload=function(){
@@ -55,8 +56,10 @@ req.send();
 }
 
 function  layer1(fff){
+ggg=fff;
 uuu=fff;
 document.getElementById("layer1").style.display="none";
+document.getElementById("conid").style.display="block";
 document.getElementById("choose"+fff).style.display="block";
 }
 
@@ -64,10 +67,13 @@ document.getElementById("choose"+fff).style.display="block";
 
 
 function  layer1a(cho) {
-fff=uuu;
-document.getElementById("choose"+fff).style.display="none";
 
-document.getElementById("conid").style.display="block";
+fff=uuu;
+
+uuu=ggg+cho
+document.getElementById("up2id").style.display="block";
+document.getElementById("conid").style.display="none";
+document.getElementById("choose"+ggg).style.display="none";
 document.getElementById("layer2").style.display="block";
 
 
@@ -81,7 +87,7 @@ for(i=1;i<200;){
 lay2t="layer2tid"+i;
 
 wrrrr=this.responseText;
-sss=fff+cho+'-'+i;
+sss=uuu+'-'+i;
 locnf=wrrrr.indexOf(sss+"nf");
 locnl=wrrrr.indexOf(sss+"nl");
 len=sss.length;
@@ -98,7 +104,7 @@ document.getElementById(lay2t).textContent = sum;
 hh="productid"+i
 hhhh=hh;
 var img = new Image();
-img.src =document.getElementById(hh).src="catalog/"+fff+cho+"/"+fff+' ('+ i + ').jpg';
+img.src =document.getElementById(hh).src="catalog/"+uuu+"/"+ggg+' ('+ i + ').jpg';
 i++;
 }
  
@@ -126,16 +132,62 @@ document.getElementById("enlargetid").style.display="none";
 document.getElementById("closeid").style.display="none"
 document.getElementById("add_cartid").style.display="none"
 document.getElementById("layer2").style.display="block";
-document.getElementById("conid").style.display="block";
+document.getElementById("up2id").style.display="block"
 document.getElementById("shopping_cartid").style.display="none";
-
 }
 
-function  confu(){
+function  up2fu(){
+document.getElementById("up2id").style.display="none";
+document.getElementById("layer2").style.display="none";
+document.getElementById("conid").style.display="block";
+document.getElementById("choose"+ggg).style.display="block";
+// setTimeout(layer1a,1);
+}
 
+
+function  up3fu(){
+document.getElementById("up3id").style.display="none";
+document.getElementById("layer2").style.display="block";
+document.getElementById("up2id").style.display="block";
+document.getElementById("loginid").style.display="none";
+document.getElementById("establishid").style.display="none";
+document.getElementById("welcomeid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("add_cartid").style.display="none"
+document.getElementById("layer2").style.display="block";
+document.getElementById("up2id").style.display="block"
+document.getElementById("shopping_cartid").style.display="none";
+}
+
+
+function  up4fu(){
+document.getElementById("up4id").style.display="none";
+document.getElementById("show_caridall").style.display="none";
+document.getElementById("Number_ordersid").style.display="none";
+document.getElementById("removeid").style.display="none";
+document.getElementById("remove1id").style.display="none";
+document.getElementById("upid").style.display="none";
+document.getElementById("open_messageid").style.display="none";
+document.getElementById("clear_messageid").style.display="none";
+document.getElementById("layer2").style.display="block";
+document.getElementById("up2id").style.display="block";
+}
+
+
+
+
+function  fu(){
+document.getElementById("layer2").style.display="block";
+document.getElementById("conid").style.display="none";
+document.getElementById("up2id").style.display="block";
+}
+
+
+function  confu(){
 document.getElementById("show_carid").style.display="none";
 document.getElementById("conid").style.display="none";
-document.getElementById("layer2").style.display="none";
+document.getElementById("choose"+ggg).style.display="none";
 document.getElementById("layer1").style.display="block";
 
 }
@@ -239,6 +291,9 @@ document.getElementById("login_readid").style.display="none";
 document.getElementById("login_read_mobile").style.display="none";
 document.getElementById("establishid").style.display="none";
 document.getElementById("loginid").style.display="none";
+document.getElementById("up3id").style.display="none";
+document.getElementById("up2id").style.display="none";
+document.getElementById("up4id").style.display="block";
 document.getElementById("show_caridall").style.display="block";
 document.getElementById("Number_ordersid").style.display="block";
 document.getElementById("removeid").style.display="block";
@@ -481,6 +536,47 @@ alert("已存入");
   border-radius:10px;
 }
  
+
+.up2cl{
+ touch-action: auto;
+ position: fixed;
+  top: 1550px;
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:80px;
+  color:yellow;
+  border-radius:10px;
+}
+
+
+.up3cl{
+ touch-action: auto;
+ position: fixed;
+  top: 1550px;
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:80px;
+  color:yellow;
+  border-radius:10px;
+}
+
+.up4cl{
+ touch-action: auto;
+ position: fixed;
+  top: 1550px;
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:80px;
+  color:yellow;
+  border-radius:10px;
+}
+
+
+
+
 .account_numbercl{
    font-size: 90px;
   position: relative;
@@ -1203,6 +1299,22 @@ left:100px;
 <div  id="closeid"  style="display:none;">
 <button onclick="closefu()"><div class="closecl" >返 回</button>
 </div>
+
+
+<div  id="up2id"  style="display:none;">
+<button onclick="up2fu()"><div class="up2cl" >回第2層</button>
+</div>
+
+
+<div  id="up3id"  style="display:none;">
+<button onclick="up3fu()"><div class="up3cl" >回第3層</button>
+</div>
+
+<div  id="up4id"  style="display:none;">
+<button onclick="up4fu()"><div class="up4cl" >5跳至第3層</button>
+</div>
+
+
 
 
 <div  id="conid"   style="display:none;">
