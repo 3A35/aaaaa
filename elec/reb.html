@@ -8,6 +8,20 @@
 // mobile+1=名子  mobile+2=幾種  
 // mobile+1001=第一項產品型號  mobile+2001=第一項產品數量 
 
+
+function get1(){
+document.getElementById("in").style.display="none";
+document.getElementById("allid").style.display="none";
+document.getElementById("t1id").style.display="none";
+// document.getElementById("backid").style.display="block";
+document.getElementById("layer1").style.display="block";
+}
+
+
+
+
+
+
 function  enlargetpfu(item){
 // enlargetp 放大
 
@@ -516,13 +530,14 @@ alert("已存入");
 .concl{
  touch-action: auto;
  position: fixed;
-  top: 1300px;  
-  left: 200px;
+  top: 1200px;  
+  left: 500px;
   background-color:green;
   border:none;
-  font-size:80px;
+  font-size:70px;
   color:yellow;
-  border-radius:10px;
+  border-radius:15px;
+  padding: 10px 20px;
 }
 
 .closecl{
@@ -844,10 +859,165 @@ left:100px;
 
 
 
+   .backcl {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+        .backcl img {
+            min-height: 100%;
+            width: 100%;
+        }
+
+#id11{
+position:fixed;
+top: 400px;
+left:250px;
+font-size:80px;
+color:brown;
+background-color:silver;
+font-weight:bold;
+border:none;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+
+
+#id11:hover{  
+   color:yellow;
+ }
+
+
+
+
+
+#id22{
+position:fixed;
+top:600px;
+left:250px;
+font-size:80px;
+color:orange;
+background-color:blue;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+
+#id22:hover{  
+   color:yellow;
+ }
+
+
+
+
+#id33{
+position:fixed;
+top:800px;
+left:250px;
+font-size:80px;
+color:orange;
+background-color:green;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#id33:hover{  
+   color:yellow;
+ }
+
+#id44{
+position:fixed;
+top:1000px;
+left:250px;
+font-size:80px;
+color:green;
+background-color:red;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#id44:hover{  
+   color:yellow;
+ }
+
+
+#id55{
+position:fixed;
+top:1200px;
+left:250px;
+font-size:80px;
+color:blue;
+background-color:orange;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#id55:hover{  
+   color:yellow;
+ }
+
+#id66{
+position:fixed;
+top:1400px;
+left:250px;
+font-size:80px;
+color:silver;
+background-color:brown;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#id66:hover{  
+   color:yellow;
+ }
+
+#id77{
+position:fixed;
+top:1600px;
+left:250px;
+font-size:80px;
+color:blue;
+background-color:orange;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#id77:hover{  
+   color:yellow;
+ }
+
+
+.t1cl{
+position:fixed;
+top: 150px;
+left:150px;
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+font-weight:bold;
+
+}
+
 
 </style>
 </head>
 <body>
+<div id="in"  >
+<input type="image" src="in.jpg" height="2100" width="1200">
+</div>
+
+<img src="back.jpg" width="1200" height="2100" id="backid" class="backcl" />  
+
+
+
 
 <lu id="choose1" class="choosecl" style="display:none;" >
 <li onclick="layer1a('a');">arduino  控制器</li>
@@ -891,9 +1061,6 @@ left:100px;
 
 
 
- <div class="backgroundcl">
- <img src="background.jpg">
- </div>
 
 
 
@@ -1253,7 +1420,7 @@ left:100px;
 </div>
 
 
-<div  id="layer1"     style="display:block;">
+<div  id="layer1"     style="display:none;">
 <button onclick="layer1(1)"><div id=id1  class="layer1cl"   >1. 模組 </button>
 <br><br>
 <button onclick="layer1(2)"><div id=id2 class="layer1cl"  >2. 線 材 </button>
@@ -1359,6 +1526,25 @@ left:100px;
 <input type="number" name="te" min="1" max="50"  id="input_remove2id"  />
 <button type="button" style="font-size:70px" onclick="input_remove1_endfu()">確  認</button>
 </div>
+
+
+
+<div  id="allid" >
+<INPUT TYPE="button" VALUE="電子材料 網購" id="id11" onClick="get1()">
+<INPUT TYPE="button" VALUE="限時 特價拍賣" id="id22" onClick="get2()">
+<INPUT TYPE="button" VALUE="下架出清產品" id="id33" onClick="get3()">
+<INPUT TYPE="button" VALUE="百貨用品 出清 " id="id44" onClick="get4()">
+<INPUT TYPE="button" VALUE="二手商品 出清" id="id55" onClick="get5()">
+<INPUT TYPE="button" VALUE="關 於 本 店" id="id66" onClick="get6()">
+<INPUT TYPE="button" VALUE="與 我 聯 絡" id="id77" onClick="get7()">
+</div>
+
+
+<dvi  class="t1cl" id="t1id"   >
+<span style="font-size:120px;color:white;font-weight:bold;">六捷 </span>
+<span style="font-size:150px;color:purple;font-weight:bold;background-color:orange;"> 電子材料</span>
+</dvi>
+
 
 </body>
 
