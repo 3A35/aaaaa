@@ -43,12 +43,12 @@ locnf=wrrrr.indexOf(sss+"nf");
 locnl=wrrrr.indexOf(sss+"nl");
 len=sss.length;
 xn=locnl-locnf;
-pron=(wrrrr.substr(locnf+len+3,xn-7));
+pron=(wrrrr.substr(locnf+len+3,xn-8));
 locpf=wrrrr.indexOf(sss+"pf");
 locpl=wrrrr.indexOf(sss+"pl");
 lenp=sss.length;
 xp=locpl-locpf;
-prop=(wrrrr.substr(locpf+lenp+3,xp-7));
+prop=(wrrrr.substr(locpf+lenp+3,xp-8));
 sum="商品代號 "+sss+" 名稱: "+pron+"價格: "+prop;
 document.getElementById("enlargetid").innerHTML=sum;
 }
@@ -92,12 +92,12 @@ locnf=wrrrr.indexOf(sss+"nf");
 locnl=wrrrr.indexOf(sss+"nl");
 len=sss.length;
 xn=locnl-locnf;
-pron=(wrrrr.substr(locnf+len+3,xn-7));
+pron=(wrrrr.substr(locnf+len+3,xn-8));
 locpf=wrrrr.indexOf(sss+"pf");
 locpl=wrrrr.indexOf(sss+"pl");
 lenp=sss.length;
 xp=locpl-locpf;
-prop=(wrrrr.substr(locpf+lenp+3,xp-7));
+prop=(wrrrr.substr(locpf+lenp+3,xp-8));
 sum=sss+" 名稱: "+pron+" 價格: "+prop;
 document.getElementById(lay2t).textContent = sum;
 
@@ -162,6 +162,7 @@ document.getElementById("shopping_cartid").style.display="none";
 
 
 function  up4fu(){
+document.getElementById("enlargetpid").style.display="none";
 document.getElementById("up4id").style.display="none";
 document.getElementById("show_caridall").style.display="none";
 document.getElementById("Number_ordersid").style.display="none";
