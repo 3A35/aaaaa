@@ -8,7 +8,16 @@
 1g-1nf*輸出 3.3v  5v 麵包板專用  電源模塊 ,*1g-1nl    1g-1pf*50  *1g-1pl
 1h-1nf*esp8266  wifi 模塊 ch340 ,*1h-1nl    1h-1pf*150  *1h-1pl
 
-
+2a-1nf*1公2母 av線 長度 1米*2a-1nl    2a-1pf*50*2a-1pl
+2a-2nf*3公3母 av延長線 長度 1米*2a-2nl    2a-2pf*60*2a-2pl
+2a-3nf*2對2  av線 長度 1米*2a-3nl    2a-3pf*50*2a-3pl
+2a-4nf*2公2母 av延長線 長度 1米*2a-4nl    2a-4pf*50*2a-4pl
+2b-1nf*mini 5pin usb線 長度1米*2b-1nl    2b-1pf*40*2b-1pl
+2b-2nf*usb  公母 延長線 長度1米*2b-2nl    2b-2pf*50*2b-2pl
+2b-3nf*usb 線  公對公 長度1米*2b-3nl    2b-3pf*50*2b-3pl
+2c-1nf*hdmi 線 長度3米*2c-1nl    2c-1pf*120*2c-1pl
+2c-2nf*hdmi 線 長度 1.5米*2c-2nl    2c-2pf*90*2c-2pl
+2d-1nf*網路線 長度 1米*2d-1nl    2d-1pf*40*2d-1pl
 
 
 9a-1nf*10uf 250v 電解電容*9a-1nl    9a-1pf*15*9a-1pl
