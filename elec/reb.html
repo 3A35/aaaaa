@@ -13,7 +13,7 @@ function get1(){
 document.getElementById("in").style.display="none";
 document.getElementById("allid").style.display="none";
 document.getElementById("t1id").style.display="none";
-// document.getElementById("backid").style.display="block";
+document.getElementById("conid").style.display="block";
 document.getElementById("layer1").style.display="block";
 }
 
@@ -73,8 +73,10 @@ function  layer1(fff){
 ggg=fff;
 uuu=fff;
 document.getElementById("layer1").style.display="none";
-document.getElementById("conid").style.display="block";
+document.getElementById("conid").style.display="none";
 document.getElementById("choose"+fff).style.display="block";
+document.getElementById("up1id").style.display="block";
+
 }
 
 
@@ -150,10 +152,20 @@ document.getElementById("up2id").style.display="block"
 document.getElementById("shopping_cartid").style.display="none";
 }
 
+
+function  up1fu(){
+document.getElementById("layer2").style.display="none";
+document.getElementById("up1id").style.display="none";
+document.getElementById("choose"+ggg).style.display="none";
+document.getElementById("layer1").style.display="block";
+document.getElementById("conid").style.display="block";
+}
+
+
 function  up2fu(){
 document.getElementById("up2id").style.display="none";
 document.getElementById("layer2").style.display="none";
-document.getElementById("conid").style.display="block";
+document.getElementById("up1id").style.display="block";
 document.getElementById("choose"+ggg).style.display="block";
 // setTimeout(layer1a,1);
 }
@@ -551,6 +563,18 @@ alert("已存入");
   color:yellow;
   border-radius:10px;
 }
+
+.up1cl{
+ touch-action: auto;
+ position: fixed;
+  top: 1550px;
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:80px;
+  color:yellow;
+  border-radius:10px;
+}
  
 
 .up2cl{
@@ -877,8 +901,8 @@ position:fixed;
 top: 400px;
 left:250px;
 font-size:80px;
-color:brown;
-background-color:silver;
+color:green;
+background-color:red;
 font-weight:bold;
 border:none;
 border-radius:20px;
@@ -999,7 +1023,7 @@ transition:width 1s;
 
 .t1cl{
 position:fixed;
-top: 150px;
+top: 60px;
 left:150px;
 text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 font-weight:bold;
@@ -1453,6 +1477,10 @@ font-weight:bold;
 
 <div  id="closeid"  style="display:none;">
 <button onclick="closefu()"><div class="closecl" >返 回</button>
+</div>
+
+<div  id="up1id"  style="display:none;">
+<button onclick="up1fu()"><div class="up1cl" >回上層</button>
 </div>
 
 
