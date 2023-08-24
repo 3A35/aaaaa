@@ -875,10 +875,10 @@ left:20px;
 
 .choosecl{
   position:relative;
-  top:195px;
+  top:50px;
  font-size:70px;
 text-decoration: underline;
-left:100px;
+left:200px;
 }
 
 
@@ -899,10 +899,10 @@ left:100px;
 #id11{
 position:fixed;
 top: 400px;
-left:250px;
-font-size:80px;
-color:green;
-background-color:red;
+left:150px;
+font-size:100px;
+color:blue;
+background-color:orange;
 font-weight:bold;
 border:none;
 border-radius:20px;
@@ -1069,6 +1069,8 @@ font-weight:bold;
 <li onclick="layer1a('c');">hdmi 線</li>
 <br>
 <li onclick="layer1a('d');">網 路 線</li>
+<br>
+<li onclick="layer1a('e');">杜 邦 線</li>
 </lu>
 
 
@@ -1180,7 +1182,7 @@ font-weight:bold;
 
 
 <lu id="choose9" class="choosecl" style="display:none;" >
-<li onclick="layer1a('a');">電解電容</li>
+<li onclick="layer1a('a');">0.1uf-100uf 電解電容</li>
 <br>
 <li onclick="layer1a('b');">起動電容</li>
 <br>
@@ -1188,6 +1190,47 @@ font-weight:bold;
 </lu>
 
 
+<lu id="choose10" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">0.1R-100R 4分之1瓦 電阻</li>
+<br>
+<li onclick="layer1a('b');">101R-500R 4分之1瓦 電阻</li>
+<br>
+<li onclick="layer1a('c');">501R-1K  4分之1瓦 電阻</li>
+<br>
+<li onclick="layer1a('d');">1.1K-500K  4分之1瓦 電阻</li>
+<br>
+<li onclick="layer1a('e');">501K  以上  4分之1瓦 電阻</li>
+<br>
+<li onclick=layer1a('f');>0.5瓦  色碼電阻</li>
+<br>
+<li onclick=layer1a('g');>1瓦  色碼電阻</li>
+<br>
+<li onclick=layer1a('h');>2瓦  色碼電阻</li>
+<br>
+<li onclick=layer1a('i');>5瓦  色碼電阻</li>
+<br>
+<li onclick=layer1a('j');>3腳 可變電阻</li>
+<br>
+<li onclick=layer1a('k');>4腳 可變電阻</li>
+<br>
+<li onclick=layer1a('l');>5腳 可變電阻</li>
+<br>
+<li onclick=layer1a('m');>6腳 可變電阻</li>
+<br>
+<li onclick=layer1a('n');>3腳  藍白可調電阻  立式</li>
+<br>
+<li onclick=layer1a('o');>3腳  藍白可調電阻  臥式</li>
+<br>
+<li onclick=layer1a('p');>0.1R-20R 水泥電阻</li>
+<br>
+<li onclick=layer1a('q');>21R 以上水泥電阻</li>
+<br>
+<li onclick=layer1a('r');>50瓦   車用黃金電阻</li>
+<br>
+<li onclick=layer1a('s');>0603   SMD 貼片電阻</li>
+<br>
+<li onclick=layer1a('t');>0805    SMD 貼片電阻</li>
+</lu>
 
 
 
@@ -1567,6 +1610,8 @@ font-weight:bold;
 <button onclick="layer1(8)"><div id=id8 class="layer1cl"   >8. 熱縮管 </button>
 <br><br>
 <button onclick="layer1(9)"><div  id=id9 class="layer1cl"    >9. 電容 </button>
+<br><br>
+<button onclick="layer1(10)"><div  id=id10 class="layer1cl"    >10. 電 阻 </button>
 
 </div>
 
@@ -1663,7 +1708,7 @@ font-weight:bold;
 
 
 <div  id="allid" >
-<INPUT TYPE="button" VALUE="電子材料 網購" id="id11" onClick="get1()">
+<INPUT TYPE="button" VALUE="電子材料 網路購物" id="id11" onClick="get1()">
 <INPUT TYPE="button" VALUE="限時 特價拍賣" id="id22" onClick="get2()">
 <INPUT TYPE="button" VALUE="下架出清產品" id="id33" onClick="get3()">
 <INPUT TYPE="button" VALUE="百貨用品 出清 " id="id44" onClick="get4()">
