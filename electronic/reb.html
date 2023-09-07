@@ -14,15 +14,15 @@ document.getElementById("in").style.display="none";
 document.getElementById("allid").style.display="none";
 document.getElementById("t1id").style.display="none";
 document.getElementById("conid").style.display="block";
-document.getElementById("layer1").style.display="block";
+document.getElementById("layer1id").style.display="block";
 }
 
 
 
-function  layer1(fff){
+function  layer1fu(fff){
 fff1=fff;
 
-document.getElementById("layer1").style.display="none";
+document.getElementById("layer1id").style.display="none";
 document.getElementById("conid").style.display="none";
 document.getElementById("choose"+fff).style.display="block";
 document.getElementById("up1id").style.display="block";
@@ -154,7 +154,7 @@ function  up1fu(){
 document.getElementById("layer2").style.display="none";
 document.getElementById("up1id").style.display="none";
 document.getElementById("choose"+fff1).style.display="none";
-document.getElementById("layer1").style.display="block";
+document.getElementById("layer1id").style.display="block";
 document.getElementById("conid").style.display="block";
 }
 
@@ -212,7 +212,7 @@ function  confu(){
 document.getElementById("show_carid").style.display="none";
 document.getElementById("conid").style.display="none";
 document.getElementById("choose"+fff1).style.display="none";
-document.getElementById("layer1").style.display="block";
+document.getElementById("layer1id").style.display="block";
 
 }
 
@@ -1138,6 +1138,20 @@ font-weight:bold;
 <li onclick="layer1a('e');">歌林 冷氣遙控器</li>
 <br>
 <li onclick="layer1a('f');">三洋 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('g');>東芝 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('h');>大金 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('i');>LG 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('j');>普騰 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('k');>富士通 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('l');>三菱 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('m');>萬士益 冷氣遙控器</li>
 </lu>
 
 
@@ -1954,6 +1968,14 @@ font-weight:bold;
 <li onclick=layer1a('ZA27');>鹵素燈管</li>
 <br>
 <li onclick=layer1a('ZA28');>220V 螺旋</li>
+<br>
+<li onclick=layer1a('ZA29');>紅色燈泡</li>
+<br>
+<li onclick=layer1a('ZA30');>黃色燈泡</li>
+<br>
+<li onclick=layer1a('ZA31');>藍色燈泡</li>
+<br>
+<li onclick=layer1a('ZA32');>綠色燈泡</li>
 </lu>
 
 
@@ -2020,6 +2042,27 @@ font-weight:bold;
 <li onclick=layer1a('j');>自行車  鈴鐺</li>
 </lu>
 
+<lu id="choose43" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>2芯扁形 電話線</li>
+<br>
+<li onclick=layer1a('b');>4芯扁形 電話線</li>
+<br>
+<li onclick=layer1a('c');>2芯圓形灰色 電話線</li>
+<br>
+<li onclick=layer1a('d');>4芯圓形灰色 電話線</li>
+<br>
+<li onclick=layer1a('e');>2芯電話接線盒</li>
+<br>
+<li onclick=layer1a('f');>4芯電話接線盒</li>
+<br>
+<li onclick=layer1a('g');>電話轉接頭</li>
+<br>
+<li onclick=layer1a('h');>電話擴大鈴</li>
+<br>
+<li onclick=layer1a('i');>有線電話</li>
+<br>
+<li onclick=layer1a('j');>無線電話</li>
+</lu>
 
 <div id="Number_ordersid" style="display:none;"></div>
 
@@ -2377,90 +2420,92 @@ font-weight:bold;
 </div>
 
 
-<div  id="layer1"     style="display:none;">
-<button onclick="layer1(1)"><div id=id1  class="layer1cl"   >1. 模組 </button>
+<div  id="layer1id"     style="display:none;">
+<button onclick="layer1fu(1)"><div id=id1  class="layer1cl"   >1. 模組 </button>
 <br><br><br>
-<button onclick="layer1(2)"><div id=id2 class="layer1cl"  >2. 線 材 </button>
+<button onclick="layer1fu(2)"><div id=id2 class="layer1cl"  >2. 線 材 </button>
 <br><br><br>
-<button onclick="layer1(3)"><div id=id3 class="layer1cl"  >3. 開 關 </button>
+<button onclick="layer1fu(3)"><div id=id3 class="layer1cl"  >3. 開 關 </button>
 <br><br><br>
-<button onclick="layer1(4)"><div id=id4 class="layer1cl"   >4.電 器 材 料 </button>
+<button onclick="layer1fu(4)"><div id=id4 class="layer1cl"   >4.電 器 材 料 </button>
 <br><br><br>
-<button onclick="layer1(5)"><div id=id5 class="layer1cl"  >5.冷氣 遙控器 </button>
+<button onclick="layer1fu(5)"><div id=id5 class="layer1cl"  >5.冷氣 遙控器 </button>
 <br><br><br>
-<button onclick="layer1(6)"><div id=id6 class="layer1cl"   >6. IC ,電晶體</button>
+<button onclick="layer1fu(6)"><div id=id6 class="layer1cl"   >6. IC ,電晶體</button>
 <br><br><br>
-<button onclick="layer1(7)"><div id=id7 class="layer1cl"   >7. 電路板 </button>
+<button onclick="layer1fu(7)"><div id=id7 class="layer1cl"   >7. 電路板 </button>
 <br><br><br>
-<button onclick="layer1(8)"><div id=id8 class="layer1cl"   >8. 熱縮管 </button>
+<button onclick="layer1fu(8)"><div id=id8 class="layer1cl"   >8. 熱縮管 </button>
 <br><br><br>
-<button onclick="layer1(9)"><div  id=id9 class="layer1cl"    >9. 電容 </button>
+<button onclick="layer1fu(9)"><div  id=id9 class="layer1cl"    >9. 電容 </button>
 <br><br><br>
-<button onclick="layer1(10)"><div  id=id10 class="layer1cl"    >10. 電 阻 </button>
+<button onclick="layer1fu(10)"><div  id=id10 class="layer1cl"    >10. 電 阻 </button>
 <br><br><br>
-<button onclick="layer1(11)"><div  id=id11 class="layer1cl"    >11. 工 具 </button>
+<button onclick="layer1fu(11)"><div  id=id11 class="layer1cl"    >11. 工 具 </button>
 <br><br><br>
-<button onclick="layer1(12)"><div  id=id12 class="layer1cl"    >12. 保險絲 </button>
+<button onclick="layer1fu(12)"><div  id=id12 class="layer1cl"    >12. 保險絲 </button>
 <br><br><br>
-<button onclick="layer1(13)"><div  id=id13 class="layer1cl"    >13. 變壓器 </button>
+<button onclick="layer1fu(13)"><div  id=id13 class="layer1cl"    >13. 變壓器 </button>
 <br><br><br>
-<button onclick="layer1(14)"><div  id=id14 class="layer1cl"    >14. 散熱風扇 </button>
+<button onclick="layer1fu(14)"><div  id=id14 class="layer1cl"    >14. 散熱風扇 </button>
 <br><br><br>
-<button onclick="layer1(15)"><div  id=id15 class="layer1cl"    >15. 電池,充電器 </button>
+<button onclick="layer1fu(15)"><div  id=id15 class="layer1cl"    >15. 電池,充電器 </button>
 <br><br><br>
-<button onclick="layer1(16)"><div  id=id16 class="layer1cl"    >16. 液晶電視 遙控器 </button>
+<button onclick="layer1fu(16)"><div  id=id16 class="layer1cl"    >16. 液晶電視 遙控器 </button>
 <br><br><br>
-<button onclick="layer1(17)"><div  id=id17 class="layer1cl"    >17. 端子 配線材料 </button>
+<button onclick="layer1fu(17)"><div  id=id17 class="layer1cl"    >17. 端子 配線材料 </button>
 <br><br><br>
-<button onclick="layer1(18)"><div  id=id18 class="layer1cl"    >18. 無熔絲開關 </button>
+<button onclick="layer1fu(18)"><div  id=id18 class="layer1cl"    >18. 無熔絲開關 </button>
 <br><br><br>
-<button onclick="layer1(19)"><div  id=id19 class="layer1cl"    >19. 各式接頭 </button>
+<button onclick="layer1fu(19)"><div  id=id19 class="layer1cl"    >19. 各式接頭 </button>
 <br><br><br>
-<button onclick="layer1(20)"><div  id=id20 class="layer1cl"    >20. 電腦 3C配件 </button>
+<button onclick="layer1fu(20)"><div  id=id20 class="layer1cl"    >20. 電腦 3C配件 </button>
 <br><br><br>
-<button onclick="layer1(21)"><div  id=id21 class="layer1cl"    >21. 排 針 </button>
+<button onclick="layer1fu(21)"><div  id=id21 class="layer1cl"    >21. 排 針 </button>
 <br><br><br>
-<button onclick="layer1(22)"><div  id=id22 class="layer1cl"    >22. 手機配件 </button>
+<button onclick="layer1fu(22)"><div  id=id22 class="layer1cl"    >22. 手機配件 </button>
 <br><br><br>
-<button onclick="layer1(23)"><div  id=id23 class="layer1cl"    >23. 小燈泡 ,燈座 ,發光二極體 </button>
+<button onclick="layer1fu(23)"><div  id=id23 class="layer1cl"    >23. 小燈泡 ,燈座 ,發光二極體 </button>
 <br><br><br>
-<button onclick="layer1(24)"><div  id=id24 class="layer1cl"    >24. 電池盒,保存盒 </button>
+<button onclick="layer1fu(24)"><div  id=id24 class="layer1cl"    >24. 電池盒,保存盒 </button>
 <br><br><br>
-<button onclick="layer1(25)"><div  id=id25 class="layer1cl"    >25. 喇叭 ,蜂鳴器 ,警鈴 </button>
+<button onclick="layer1fu(25)"><div  id=id25 class="layer1cl"    >25. 喇叭 ,蜂鳴器 ,警鈴 </button>
 <br><br><br>
-<button onclick="layer1(26)"><div  id=id26 class="layer1cl"    >26. 散熱片,散熱膏 </button>
+<button onclick="layer1fu(26)"><div  id=id26 class="layer1cl"    >26. 散熱片,散熱膏 </button>
 <br><br><br>
-<button onclick="layer1(27)"><div  id=id27 class="layer1cl"    >27.音響配件 </button>
+<button onclick="layer1fu(27)"><div  id=id27 class="layer1cl"    >27.音響配件 </button>
 <br><br><br>
-<button onclick="layer1(28)"><div  id=id28 class="layer1cl"    >28. 銅柱,螺絲 </button>
+<button onclick="layer1fu(28)"><div  id=id28 class="layer1cl"    >28. 銅柱,螺絲 </button>
 <br><br><br>
-<button onclick="layer1(29)"><div  id=id29 class="layer1cl"    >29. 繼電器,繼電器座 </button>
+<button onclick="layer1fu(29)"><div  id=id29 class="layer1cl"    >29. 繼電器,繼電器座 </button>
 <br><br><br>
-<button onclick="layer1(30)"><div  id=id30 class="layer1cl"    >30. 門鈴,來客報知,防盜器 </button>
+<button onclick="layer1fu(30)"><div  id=id30 class="layer1cl"    >30. 門鈴,來客報知,防盜器 </button>
 <br><br><br>
-<button onclick="layer1(31)"><div  id=id31 class="layer1cl"    >31. 點矩陣,7段顯示器 </button>
+<button onclick="layer1fu(31)"><div  id=id31 class="layer1cl"    >31. 點矩陣,7段顯示器 </button>
 <br><br><br>
-<button onclick="layer1(32)"><div  id=id32 class="layer1cl"    >32. 延長線,電源線,輪座 </button>
+<button onclick="layer1fu(32)"><div  id=id32 class="layer1cl"    >32. 延長線,電源線,輪座 </button>
 <br><br><br>
-<button onclick="layer1(33)"><div  id=id33 class="layer1cl"    >33. 自動控制系列 </button>
+<button onclick="layer1fu(33)"><div  id=id33 class="layer1cl"    >33. 自動控制系列 </button>
 <br><br><br>
-<button onclick="layer1(34)"><div  id=id34 class="layer1cl"    >34. 零件盒,萬用盒,防水盒 </button>
+<button onclick="layer1fu(34)"><div  id=id34 class="layer1cl"    >34. 零件盒,萬用盒,防水盒 </button>
 <br><br><br>
-<button onclick="layer1(35)"><div  id=id35 class="layer1cl"    >35. 電源母座 </button>
+<button onclick="layer1fu(35)"><div  id=id35 class="layer1cl"    >35. 電源母座 </button>
 <br><br><br>
-<button onclick="layer1(36)"><div  id=id36 class="layer1cl"    >36. 出國,國內 萬國轉換頭 </button>
+<button onclick="layer1fu(36)"><div  id=id36 class="layer1cl"    >36. 出國,國內 萬國轉換頭 </button>
 <br><br><br>
-<button onclick="layer1(37)"><div  id=id37 class="layer1cl"    >37. 電工材料 </button>
+<button onclick="layer1fu(37)"><div  id=id37 class="layer1cl"    >37. 電工材料 </button>
 <br><br><br>
-<button onclick="layer1(38)"><div  id=id38 class="layer1cl"    >38. 燈管,燈泡,燈座 </button>
+<button onclick="layer1fu(38)"><div  id=id38 class="layer1cl"    >38. 燈管,燈泡,燈座 </button>
 <br><br><br>
-<button onclick="layer1(39)"><div  id=id39 class="layer1cl"    >39. 計時器,計步器,定時器 </button>
+<button onclick="layer1fu(39)"><div  id=id39 class="layer1cl"    >39. 計時器,計步器,定時器 </button>
 <br><br><br>
-<button onclick="layer1(40)"><div  id=id40 class="layer1cl"    >40. 計算機 </button>
+<button onclick="layer1fu(40)"><div  id=id40 class="layer1cl"    >40. 計算機 </button>
 <br><br><br>
-<button onclick="layer1(41)"><div  id=id41 class="layer1cl"    >41. 汽車 燈泡,電料</button>
+<button onclick="layer1fu(41)"><div  id=id41 class="layer1cl"    >41. 汽車 燈泡,電料</button>
 <br><br><br>
-<button onclick="layer1(42)"><div  id=id42 class="layer1cl"    >42.手電筒,頭燈,自行車燈</button>
+<button onclick="layer1fu(42)"><div  id=id42 class="layer1cl"    >42.手電筒,頭燈,自行車燈</button>
+<br><br><br>
+<button onclick="layer1fu(43)"><div  id=id43 class="layer1cl"    >43.電話機,配件,線材</button>
 </div>
 
 
