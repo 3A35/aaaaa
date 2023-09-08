@@ -11,7 +11,7 @@ document.getElementById("in").style.display="none" ;
 document.getElementById("soapid").style.display="block" ;
 
 b3=document.getElementById("s3id");
-b3.currentTime = 3;
+b3.currentTime = 1;
 b3.play();
 co=0;
 
@@ -26,7 +26,7 @@ ig = document.getElementById("imgId")
 
  function step() {
 re=(b3.ended);
-if (re==true){history.go(0);}
+// if (re==true){history.go(0);}
 document.getElementById("tid").style.display="block" ;
 document.getElementById("t1id").style.display="block" ;
 document.getElementById("t2id").style.display="block" ;
@@ -233,7 +233,7 @@ left:-100px;
 <img src="photo/"+"1 (1).jpg" height="1800"  id="imgId" class="imgcl" style="display:none"/>  
 
 
-<audio id="s3id" src="whites.mp4" controls="controls" hidden="true"></audio>
+<audio id="s3id" src="whites.mp4" controls="controls" hidden="true"  autoplay loop ></audio>
 
 <div id="in"  >
 <input type="image" src="apple.jpg" height="1800"  onClick="get()">
@@ -244,12 +244,12 @@ left:-100px;
 
 
 <dvi  class="tcl" id="tid" style="display:none;"  >
-<div style="font-size:100px;color:yellow;font-weight:bold;"><span style="color:red";>i.o</span> i.o</div>
+<div style="font-size:100px;color:yellow;font-weight:bold;"><span style="color:red";>i love</span> you</div>
 </dvi>
 
 <dvi  class="t1cl" id="t1id" style="display:none;"  >
 <div style="font-size:90px;color:orange;font-weight:bold;"><span style="color:brown";></span>
-<span style="font-size:130px;color:purple;font-weight:bold;background-color:orange;">西洋 </span> 舞曲
+<span style="font-size:130px;color:purple;font-weight:bold;background-color:orange;">西洋 </span> 
 <span style="font-size:110px;color:red;font-weight:bold;"></span></div>
 </dvi>
 
