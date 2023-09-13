@@ -36,7 +36,7 @@ fff2=fff1+cho
 document.getElementById("up2id").style.display="block";
 document.getElementById("conid").style.display="none";
 document.getElementById("choose"+fff1).style.display="none";
-document.getElementById("layer2").style.display="block";
+
 document.scrollingElement.scrollTop = 1;
 
 var req=new XMLHttpRequest();
@@ -65,6 +65,7 @@ hh="productid"+i
 hhhh=hh;
 var img = new Image();
 img.src =document.getElementById(hh).src="catalog/"+fff1+"/"+fff2+"/"+fff1+' ('+ i + ').jpg';
+if (i==2) {document.getElementById("layer2").style.display="block";}
 i++;
 }
  
