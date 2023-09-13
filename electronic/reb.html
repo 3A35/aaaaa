@@ -37,9 +37,7 @@ document.getElementById("up2id").style.display="block";
 document.getElementById("conid").style.display="none";
 document.getElementById("choose"+fff1).style.display="none";
 document.getElementById("layer2").style.display="block";
-
-
-
+document.scrollingElement.scrollTop = 1;
 
 var req=new XMLHttpRequest();
 req.open("get","https://3a35.github.io/aaaaa/electronic/elec.md");
@@ -66,9 +64,7 @@ document.getElementById(lay2t).textContent = sum;
 hh="productid"+i
 hhhh=hh;
 var img = new Image();
-img.style.opacity="0.2"; 
 img.src =document.getElementById(hh).src="catalog/"+fff1+"/"+fff2+"/"+fff1+' ('+ i + ').jpg';
-img.style.opacity="0.2"; 
 i++;
 }
  
