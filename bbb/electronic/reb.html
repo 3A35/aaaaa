@@ -1,0 +1,2697 @@
+
+<!DOCTYPE html>
+<head>
+<title>  </title>
+<meta charset="utf-8">
+
+<script type="text/javascript">
+// mobile+1=名子  mobile+2=幾種  
+// mobile+1001=第一項產品型號  mobile+2001=第一項產品數量 
+
+
+function get1(){
+document.getElementById("in").style.display="none";
+document.getElementById("allid").style.display="none";
+document.getElementById("t1id").style.display="none";
+document.getElementById("conid").style.display="block";
+document.getElementById("layer1id").style.display="block";
+}
+
+
+
+function  layer1fu(fff){
+fff1=fff;
+
+document.getElementById("layer1id").style.display="none";
+document.getElementById("conid").style.display="none";
+document.getElementById("choose"+fff).style.display="block";
+document.getElementById("up1id").style.display="block";
+
+}
+
+
+function  layer1a(cho) {
+
+fff2=fff1+cho
+document.getElementById("up2id").style.display="block";
+document.getElementById("conid").style.display="none";
+document.getElementById("choose"+fff1).style.display="none";
+document.getElementById("layer2").style.display="block";
+document.scrollingElement.scrollTop = 1;
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/aaaaa/electronic/elec.md");
+req.onload=function(){
+for(i=1;i<200;){
+
+lay2t="layer2tid"+i;
+
+wrrrr=this.responseText;
+sss=fff2+'-'+i;
+locnf=wrrrr.indexOf(sss+"nf");
+locnl=wrrrr.indexOf(sss+"nl");
+len=sss.length;
+xn=locnl-locnf;
+pron=(wrrrr.substr(locnf+len+3,xn-8));
+locpf=wrrrr.indexOf(sss+"pf");
+locpl=wrrrr.indexOf(sss+"pl");
+lenp=sss.length;
+xp=locpl-locpf;
+prop=(wrrrr.substr(locpf+lenp+3,xp-8));
+sum=sss+" 名稱: "+pron+" 價格: "+prop;
+document.getElementById(lay2t).textContent = sum;
+
+hh="productid"+i
+hhhh=hh;
+var img = new Image();
+img.src =document.getElementById(hh).src="catalog/"+fff1+"/"+fff2+"/"+fff1+' ('+ i + ').jpg';
+i++;
+}
+ 
+}
+req.send();
+
+ 
+}
+
+
+function  enlargetpfu(item){
+// enlargetp 放大
+
+document.getElementById("conid").style.display="none";
+// connect  連接
+document.getElementById("layer2").style.display="none";
+// layer 層
+document.getElementById("shopping_cartid").style.display="block";
+// shopping_cart 購物車
+document.getElementById("welcomeid").style.display="block";
+document.getElementById("add_cartid").style.display="block";
+// cart 手拉車
+
+ rrr1=localStorage.getItem(10501050);
+ rrr2=localStorage.getItem(28422842);
+ 
+
+document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+" 光臨";
+document.getElementById("loginid").style.display="block";
+document.getElementById("establishid").style.display="block";
+// establish 建立
+document.getElementById("up3id").style.display="block"
+document.getElementById("enlargetpid").style.display="block"
+document.getElementById("enlargetid").style.display="block"
+
+document.getElementById("enlargetpid").src="catalog/"+fff1+"/"+fff2+"/"+fff1+' ('+ item + ').jpg';
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/aaaaa/electronic/elec.md");
+req.onload=function(){
+wrrrr=this.responseText;
+sss=fff2+'-'+item;
+locnf=wrrrr.indexOf(sss+"nf");
+locnl=wrrrr.indexOf(sss+"nl");
+len=sss.length;
+xn=locnl-locnf;
+pron=(wrrrr.substr(locnf+len+3,xn-8));
+locpf=wrrrr.indexOf(sss+"pf");
+locpl=wrrrr.indexOf(sss+"pl");
+lenp=sss.length;
+xp=locpl-locpf;
+prop=(wrrrr.substr(locpf+lenp+3,xp-8));
+sum="商品代號 "+sss+" 名稱: "+pron+"價格: "+prop;
+document.getElementById("enlargetid").innerHTML=sum;
+}
+req.send();
+}
+
+
+
+function  closefu(){
+document.getElementById("clear_messageid").style.display="none";
+document.getElementById("close_messageid").style.display="none";
+document.getElementById("open_messageid").style.display="none";
+document.getElementById("remove1id").style.display="none";
+document.getElementById("removeid").style.display="none";
+document.getElementById("upid").style.display="none";
+document.getElementById("Number_ordersid").style.display="none";
+document.getElementById("show_caridall").style.display="none";
+document.getElementById("loginid").style.display="none";
+document.getElementById("establishid").style.display="none";
+document.getElementById("welcomeid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("closeid").style.display="none"
+document.getElementById("add_cartid").style.display="none"
+document.getElementById("layer2").style.display="block";
+document.getElementById("up2id").style.display="block"
+document.getElementById("shopping_cartid").style.display="none";
+}
+
+
+function  up1fu(){
+document.getElementById("layer2").style.display="none";
+document.getElementById("up1id").style.display="none";
+document.getElementById("choose"+fff1).style.display="none";
+document.getElementById("layer1id").style.display="block";
+document.getElementById("conid").style.display="block";
+}
+
+
+function  up2fu(){
+document.getElementById("up2id").style.display="none";
+document.getElementById("layer2").style.display="none";
+document.getElementById("up1id").style.display="block";
+document.getElementById("choose"+fff1).style.display="block";
+// setTimeout(layer1a,1);
+}
+
+
+function  up3fu(){
+document.getElementById("up3id").style.display="none";
+document.getElementById("layer2").style.display="block";
+document.getElementById("up2id").style.display="block";
+document.getElementById("loginid").style.display="none";
+document.getElementById("establishid").style.display="none";
+document.getElementById("welcomeid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("add_cartid").style.display="none"
+document.getElementById("layer2").style.display="block";
+document.getElementById("up2id").style.display="block"
+document.getElementById("shopping_cartid").style.display="none";
+}
+
+
+function  up4fu(){
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("up4id").style.display="none";
+document.getElementById("show_caridall").style.display="none";
+document.getElementById("Number_ordersid").style.display="none";
+document.getElementById("removeid").style.display="none";
+document.getElementById("remove1id").style.display="none";
+document.getElementById("upid").style.display="none";
+document.getElementById("open_messageid").style.display="none";
+document.getElementById("clear_messageid").style.display="none";
+document.getElementById("layer2").style.display="block";
+document.getElementById("up2id").style.display="block";
+}
+
+
+
+
+function  fu(){
+document.getElementById("layer2").style.display="block";
+document.getElementById("conid").style.display="none";
+document.getElementById("up2id").style.display="block";
+}
+
+
+function  confu(){
+document.getElementById("show_carid").style.display="none";
+document.getElementById("conid").style.display="none";
+document.getElementById("choose"+fff1).style.display="none";
+document.getElementById("layer1id").style.display="block";
+
+}
+
+function  establishfu(){
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("add_cartid").style.display="none";
+document.getElementById("shopping_cartid").style.display="none";
+document.getElementById("closeid").style.display="none"
+document.getElementById("loginid").style.display="none";
+document.getElementById("account_numberid").style.display="block";
+
+}
+
+function  confirmfu(){
+document.getElementById("account_numberid").style.display="none";
+document.getElementById("enlargetpid").style.display="block";
+document.getElementById("enlargetid").style.display="block";
+document.getElementById("add_cartid").style.display="block";
+document.getElementById("shopping_cartid").style.display="block";
+document.getElementById("closeid").style.display="block"
+document.getElementById("loginid").style.display="block";
+document.getElementById("enlargetpid").style.display="block";
+document.getElementById("loginid").style.display="block";
+
+
+let mobile= document.getElementById("mobile_phoneid").value; 
+let name= document.getElementById("nameid").value; 
+if (name=="") {name=mobile};
+localStorage.setItem(mobile,mobile);
+localStorage.setItem(mobile+1,name);
+localStorage.setItem(mobile+2,0);
+
+rrr1=localStorage.getItem(mobile);
+rrr2=localStorage.getItem(mobile+1);
+document.getElementById("welcomeid").style.display="block";
+document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+"光臨"
+localStorage.setItem(10501050,rrr1);
+localStorage.setItem(28422842,rrr2);
+}
+
+
+function  loginfu(){
+document.getElementById("establishid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("add_cartid").style.display="none";
+document.getElementById("shopping_cartid").style.display="none";
+document.getElementById("closeid").style.display="none"
+document.getElementById("loginid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("login_readid").style.display="block";
+document.getElementById("login_read_mobile").style.display="block";
+
+
+}
+
+
+function  login_endfu(){
+
+document.getElementById("login_readid").style.display="none";
+document.getElementById("enlargetpid").style.display="block";
+document.getElementById("enlargetid").style.display="block";
+document.getElementById("add_cartid").style.display="block";
+document.getElementById("shopping_cartid").style.display="block";
+document.getElementById("closeid").style.display="block"
+document.getElementById("loginid").style.display="block";
+document.getElementById("enlargetpid").style.display="block";
+
+
+document.getElementById("establishid").style.display="block";
+let login= document.getElementById("login_read_mobile").value; 
+
+
+rrr1=localStorage.getItem(login);
+
+rrr2=localStorage.getItem(login+1);
+if (rrr2==null){alert("不存在 請建新檔!!");
+rrr2="未建檔";}
+
+localStorage.setItem(10501050,rrr1);
+localStorage.setItem(28422842,rrr2);
+document.getElementById("welcomeid").style.display="block";
+document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+"光臨"
+
+}
+
+
+function  shopping_cartfu(){
+document.getElementById("welcomeid").style.display="none";
+document.getElementById("shopping_cartid").style.display="none";
+document.getElementById("shopid").style.display="none";
+document.getElementById("itemsid1").style.display="none";
+document.getElementById("itemsid2").style.display="none";
+document.getElementById("itemsid3").style.display="none";
+document.getElementById("add_cartid").style.display="none";
+document.getElementById("enlargetpid").style.display="none";
+document.getElementById("enlargetid").style.display="none";
+document.getElementById("login_readid").style.display="none";
+document.getElementById("login_read_mobile").style.display="none";
+document.getElementById("establishid").style.display="none";
+document.getElementById("loginid").style.display="none";
+document.getElementById("up3id").style.display="none";
+document.getElementById("up2id").style.display="none";
+document.getElementById("up4id").style.display="block";
+document.getElementById("show_caridall").style.display="block";
+document.getElementById("Number_ordersid").style.display="block";
+document.getElementById("removeid").style.display="block";
+document.getElementById("remove1id").style.display="block";
+document.getElementById("upid").style.display="block";
+document.getElementById("open_messageid").style.display="block";
+document.getElementById("clear_messageid").style.display="block";
+
+
+
+
+for (iy=1;iy<51;iy++) {
+idid="show_carid"+iy;
+
+xxx=document.getElementById(idid);
+xxx.innerHTML=" ";
+
+}
+proo="";
+
+ rfew_strokes=localStorage.getItem(rrr1+2);
+
+document.getElementById("Number_ordersid").innerHTML=" 購物車有"+rfew_strokes+" 筆資料";
+// Number orders  訂單數量     few strokes  幾筆 
+for (i=0;i<rfew_strokes;i++) {
+no=localStorage.getItem(rrr1+1001+i);
+no1=(no.substr(4,5));
+
+no_numer=localStorage.getItem(rrr1+2001+i);
+aa=proo;
+jk=i+1;
+
+pro="["+jk+"]"+no+"數量*"+no_numer+"個";
+
+proo="["+jk+"]"+no+"數量*"+no_numer+"個"+"\n";
+
+idid="show_carid"+jk;
+
+xxx=document.getElementById(idid);
+
+
+proo=aa+proo;
+xxx.innerHTML=pro;
+
+
+ 
+}
+}
+
+function  removefu(){
+
+for (c=0;c<rfew_strokes;c++) {
+localStorage.removeItem(rrr1+1001+c);
+localStorage.removeItem(rrr1+2001+c);
+}
+localStorage.setItem(rrr1+2,0);
+//  location.reload();
+
+setTimeout(shopping_cartfu,10);
+}
+
+function  remove1fu(){
+document.getElementById("remove1id").style.display="none";
+document.getElementById("input_remove1id").style.display="block";
+document.getElementById("input_remove1_endid").style.display="block";
+
+}
+
+function  open_messagefu(){
+rrr3=localStorage.getItem(27112711);
+document.getElementById("itemsid2").value=rrr3;
+document.getElementById("open_messageid").style.display="none";
+document.getElementById("close_messageid").style.display="block";
+document.getElementById("itemsid2").style.display="block";
+}
+
+
+function  close_messagefu(){
+document.getElementById("itemsid2").style.display="none";
+document.getElementById("close_messageid").style.display="none";
+document.getElementById("open_messageid").style.display="block";
+rrr3=document.getElementById("itemsid2").value;
+localStorage.setItem(27112711,rrr3);
+
+}
+function  clear_messagefu(){
+rrr3="";
+localStorage.removeItem(27112711);
+document.getElementById("itemsid2").value=rrr3;
+alert("留言以刪除 !!");
+}
+
+
+function  input_remove1_endfu(){
+rfew_strokes=localStorage.getItem(rrr1+2);
+ddel= document.getElementById("input_remove2id").value; 
+
+vbb=ddel-2;
+rfew_strokes= parseInt(rfew_strokes,10);
+dfg=rfew_strokes+1;
+for(i=0;i<dfg;i++) {
+if (i>vbb) {kd=i+1;} else {kd=i;}
+ re1=localStorage.getItem(rrr1+1001+kd);
+ re2=localStorage.getItem(rrr1+2001+kd);
+ localStorage.setItem(rrr1+1001+i,re1);
+ localStorage.setItem(rrr1+2001+i,re2);
+}
+
+if (ddel<dfg) {
+ rfew_strokes--;
+ localStorage.setItem(rrr1+2,rfew_strokes);
+ } 
+
+document.getElementById("input_remove1id").style.display="none";
+setTimeout(shopping_cartfu,10);
+
+}
+
+ 
+
+
+function  reducefu(){
+ nume=document.getElementById("quantityid").innerText;
+
+nume--;
+if (nume<1) {nume=1;}
+
+document.getElementById("quantityid").innerText=nume;
+
+}
+
+
+function  Increasefu(){
+ nume=document.getElementById("quantityid").innerText;
+
+nume++;
+
+document.getElementById("quantityid").innerText=nume;
+}
+
+function  join_infu(){
+nume=document.getElementById("quantityid").innerText;
+
+rfew_strokes=localStorage.getItem(rrr1+2);
+
+localStorage.setItem(rrr1+1001+rfew_strokes,sum);
+localStorage.setItem(rrr1+2001+rfew_strokes,nume);
+document.getElementById("quantityid").innerText=1;
+
+rfew_strokes++;
+localStorage.setItem(rrr1+2,rfew_strokes);
+alert("已存入");
+}
+
+
+</script>
+
+<style type="text/css">
+ 
+ .upcl{
+ position:fixed;
+  top: 1400px; 
+  left:750px;
+  width:200px;
+  background: orangered;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 4rem;
+  outline: none;
+  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+ }
+
+.productcl{
+  touch-action: auto;
+  style=display:none;
+  position: relative;
+  top: 200px;
+  left: 100px;
+ 
+  height:400px;
+//  white-space: nowrap; 
+  overflow: hidden;
+//  text-overflow: ellipsis;
+  }
+
+
+.enlargetpcl{
+ touch-action: auto;
+ position: relative;
+  top:210px;
+  
+  left: 10px;
+  height:850px;}
+
+.enlargetcl{
+   font-size: 70px;
+ touch-action: auto;
+ position: relative;
+  top:220px;
+  left: 0px;
+  width:1000px;
+ color:black;
+}
+
+
+.layer1cl{
+ touch-action:auto;
+ position: relative;
+  top: 5px; 
+  left: 5px;
+  border:none;
+  font-size:70px;
+  color:yellow;
+  border-radius:20px;
+  background-color:green;
+   padding: 10px 40px;
+  box-shadow: 25px 12px 15px black;
+   margin-up:50px;
+}
+
+.concl{
+ touch-action: auto;
+ position: fixed;
+  top: 1200px;  
+  left: 700px;
+  background-color:red;
+  border:none;
+  font-weight:bold;
+  font-size:70px;
+  color:black;
+  border-radius:30px;
+  padding: 10px 20px;
+}
+
+.closecl{
+ touch-action: auto;
+ position: fixed;
+  top: 1450px;
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:80px;
+  color:yellow;
+  border-radius:10px;
+}
+
+.up1cl{
+ touch-action: auto;
+ position: fixed;
+  top: 1450px;
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:80px;
+  color:yellow;
+  border-radius:10px;
+}
+ 
+
+.up2cl{
+ touch-action: auto;
+ position: fixed;
+  top: 1450px;
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:80px;
+  color:yellow;
+  border-radius:10px;
+}
+
+
+.up3cl{
+ touch-action: auto;
+ position: fixed;
+  top: 1450px;
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:80px;
+  color:yellow;
+  border-radius:10px;
+}
+
+.up4cl{
+ touch-action: auto;
+ position: fixed;
+  top: 1450px;
+  left: 20px;
+  background-color:green;
+  border:none;
+  font-size:80px;
+  color:yellow;
+  border-radius:10px;
+}
+
+
+
+
+.account_numbercl{
+   font-size: 90px;
+  position: relative;
+  top:400px;
+  
+  left: 0px;
+  }
+
+
+
+
+.establishcl{
+   font-size:70px;
+  position:fixed;
+  top:140px;
+  left:500px;
+ background-color:green;
+  border:none;
+  color:white;
+  border-radius:10px;
+}
+
+
+
+
+
+.welcomecl{
+   font-size: 60px;
+ width:850px;
+ position:fixed;
+  top:0px;
+  
+  left: 0px;
+  }
+
+.logincl{
+font-size:70px;
+ position:fixed;
+  top:140px;
+  left: 50px;
+  background-color:green;
+  border:none;
+  color:white;
+  border-radius:10px;
+}
+
+
+
+
+
+.shopping_cartcl{
+ position:fixed;
+  top:10px;
+  left: 750px;}
+
+
+
+.login_readcl{position:fixed;
+  top:500px;
+    left:50px; }
+
+
+
+.reducecl{
+ font-size:100px;
+ position:fixed;
+  top:1350px;
+  left: 500px;
+   color:brown;
+  border:none;
+  border-radius:15px;
+}
+
+
+
+.quantitycl{
+font-size:90px;
+ position:fixed;
+  top:1350px;
+  left: 650px;
+  color:black;
+ 
+}
+
+
+.Increasecl{
+font-size:100px;
+ position:fixed;
+  top:1350px;
+  left: 800px;
+  color:brown;
+  border:none;
+  border-radius:15px;
+}
+
+
+
+.join_incl{
+font-size:80px;
+ position:fixed;
+  top:1500px;
+  left: 480px;
+ background-color:brown;
+  color:white;
+  border:none;
+  border-radius:15px;
+
+}
+
+
+ .show_carclall{
+ position:relative;
+  top: 20px;
+  left:5px;
+  font-size:55px;
+  max-width:700px;
+
+  color:blue;
+}
+
+
+
+
+
+ .removecl{
+ position:fixed;
+ max-width:200px;
+  top: 1175px;
+  left:730px;
+  background-color:green;
+  border:none;
+  font-size:50px;
+  color:white;
+  border-radius:10px;
+ }
+
+
+ #input_remove2id{
+
+
+ font-size:60px;
+
+  }
+
+
+
+
+ .remove1cl{
+ position:fixed;
+  width:230px;
+  top:1000px;
+  left:730px;
+ color:yellow;
+ background-color:green;
+  border:none;
+  border-radius:10px;
+  font-size:50px;
+  }
+
+
+
+ .input_remove1cl{
+ position:fixed;
+  font-size:60px;
+  background-color:silver;
+  top:600px;
+  left:50px;
+ }
+
+
+ #Number_ordersid{
+ position:fixed;
+  width:220px;
+  top: 20px;
+  left:730px;
+  font-size:60px;
+  color:black;
+ 
+}
+
+
+
+#itemsid2{
+ position:fixed;
+  top: 250px;
+  left:10px;
+  font-size:40px;
+   color:green;
+}
+
+
+
+
+   .backgroundcl {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+        .backgroundcl img {
+            min-height: 100%;
+            width: 100%;
+        }
+
+
+
+#open_messageid{
+ position:fixed;
+  top: 500px;
+  left:730px;
+  width:150px;
+  font-size:60px;
+   color:white;
+   border:none;
+   border-radius:10px;
+   background-color:brown;
+}
+
+
+#close_messageid{
+ position:fixed;
+  top: 500px;
+  left:730px;
+  width:220px;
+  font-size:50px;
+   color:white;
+  border:none;
+  border-radius:10px;
+  background-color:blue;
+}
+
+
+#clear_messageid{
+ position:fixed;
+  top: 700px;
+  left:730px;
+  width:150px;
+  font-size:60px;
+   color:pink;
+  border:none;
+  border-radius:10px;
+  background-color:blue;
+}
+
+
+.layer2tcl{
+ position:relative;
+  top:195px;
+ font-size:55px;
+ width:900px;
+left:20px;
+}
+
+
+.choosecl{
+  position:relative;
+  top:50px;
+ font-size:65px;
+ width:750px;
+text-decoration: underline;
+left:200px;
+}
+
+
+
+   .backcl {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -999;
+        }
+        .backcl img {
+            min-height: 100%;
+            width: 100%;
+        }
+
+#menuid11{
+position:fixed;
+top: 400px;
+left:200px;
+font-size:80px;
+color:white;
+background-color:blue;
+font-weight:bold;
+border:none;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+
+
+#menuid11:hover{  
+   color:yellow;
+ }
+
+
+
+
+
+#menuid22{
+position:fixed;
+top:600px;
+left:250px;
+font-size:80px;
+color:pink;
+background-color:black;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+
+#menuid22:hover{  
+   color:yellow;
+ }
+
+
+
+
+#menuid33{
+position:fixed;
+top:800px;
+left:250px;
+font-size:80px;
+color:orange;
+background-color:green;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#menuid33:hover{  
+   color:yellow;
+ }
+
+#menuid44{
+position:fixed;
+top:1000px;
+left:250px;
+font-size:80px;
+color:green;
+background-color:red;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#menuid44:hover{  
+   color:yellow;
+ }
+
+
+#menuid55{
+position:fixed;
+top:1200px;
+left:250px;
+font-size:80px;
+color:blue;
+background-color:orange;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#menuid55:hover{  
+   color:yellow;
+ }
+
+#menuid66{
+position:fixed;
+top:1400px;
+left:250px;
+font-size:80px;
+color:silver;
+background-color:brown;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#menuid66:hover{  
+   color:yellow;
+ }
+
+#menuid77{
+position:fixed;
+top:1600px;
+left:250px;
+font-size:80px;
+color:blue;
+background-color:orange;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+transition:width 1s;
+}
+#menuid77:hover{  
+   color:yellow;
+ }
+
+
+.t1cl{
+position:fixed;
+top: 60px;
+left:150px;
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+font-weight:bold;
+
+}
+
+
+</style>
+</head>
+<body>
+<div id="in"  >
+<input type="image" src="in.jpg" height="2100" width="1200">
+</div>
+
+<img src="back.jpg" width="1200" height="2100" id="backid" class="backcl" />  
+
+
+
+
+<lu id="choose1" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">arduino  控制器</li>
+<br>
+<li onclick="layer1a('b');">升壓模塊</li>
+<br>
+<li onclick="layer1a('c');">紅外線模塊</li>
+<br>
+<li onclick="layer1a('d');">音頻放大模塊</li>
+<br>
+<li onclick="layer1a('e');">人體感應模塊</li>
+<br>
+<li onclick="layer1a('f');">開關模塊</li>
+<br>
+<li onclick="layer1a('g');">電源模塊</li>
+<br>
+<li onclick="layer1a('h');">wifi 模塊</li>
+</lu>
+
+<lu id="choose2" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">av 線</li>
+<br>
+<li onclick="layer1a('b');">usb 線</li>
+<br>
+<li onclick="layer1a('c');">hdmi 線</li>
+<br>
+<li onclick="layer1a('d');">網 路 線</li>
+<br>
+<li onclick="layer1a('e');">杜 邦 線</li>
+<br>
+<li onclick=layer1a('f');>硬碟  SATA 線</li>
+<br>
+<li onclick=layer1a('g');>大4P 線</li>
+<br>
+<li onclick=layer1a('h');>變壓器 DC線</li>
+</lu>
+
+
+<lu id="choose3" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">船 型 開 關</li>
+<br>
+<li onclick="layer1a('b');">搖 頭 開 關</li>
+<br>
+<li onclick="layer1a('c');">微 動 開 關</li>
+<br>
+<li onclick="layer1a('d');">6*6 輕觸開關</li>
+<br>
+<li onclick="layer1a('e');">12*12 輕觸開關</li>
+<br>
+<li onclick="layer1a('f');">磁 簧 開 關</li>
+<br>
+<li onclick="layer1a('g');">水 銀 開 關</li>
+<br>
+<li onclick="layer1a('h');">震 動 開 關</li>
+<br>
+<li onclick="layer1a('i');">水 銀 開 關</li>
+<br>
+<li onclick="layer1a('j');">吹風機 開關</li>
+<br>
+<li onclick="layer1a('k');">鑰 匙 開 關</li>
+<br>
+<li onclick="layer1a('l');">小洛克 開關</li>
+<br>
+<li onclick="layer1a('m');">圓 型 開 關</li>
+<br>
+<li onclick="layer1a('n');">其 他 開關</li>
+<br>
+<li onclick="layer1a('o');">電源遙控 開關</li>
+<br>
+<li onclick="layer1a('p');">人體感應 開關</li>
+</lu>
+
+
+<lu id="choose4" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">電 鍋 零 件</li>
+<br>
+<li onclick="layer1a('b');">冰 箱 材 料</li>
+<br>
+<li onclick="layer1a('c');">冷 氣 材 料</li>
+<br>
+<li onclick="layer1a('d');">烤 箱 零 件</li>
+<br>
+<li onclick="layer1a('e');">洗衣機 材 料</li>
+<br>
+<li onclick="layer1a('f');">電視配件,材料</li>
+</lu>
+
+
+<lu id="choose5" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">國際牌 冷氣遙控器</li>
+<br>
+<li onclick="layer1a('b');">聲寶 冷氣遙控器</li>
+<br>
+<li onclick="layer1a('c');">東元  冷氣遙控器</li>
+<br>
+<li onclick="layer1a('d');">日立 冷氣遙控器</li>
+<br>
+<li onclick="layer1a('e');">歌林 冷氣遙控器</li>
+<br>
+<li onclick="layer1a('f');">三洋 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('g');>東芝 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('h');>大金 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('i');>LG 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('j');>普騰 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('k');>富士通 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('l');>三菱 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('m');>萬士益 冷氣遙控器</li>
+<br>
+<li onclick=layer1a('n');>萬用型 冷氣遙氣</li>
+</lu>
+
+
+<lu id="choose6" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">電源,穩壓 ic</li>
+<br>
+<li onclick="layer1a('b');">記 億 ic</li>
+<br>
+<li onclick="layer1a('c');">單晶片 ic</li>
+<br>
+<li onclick="layer1a('d');">光偶合 ic</li>
+<br>
+<li onclick="layer1a('e');">放 大 ic</li>
+<br>
+<li onclick="layer1a('f');">震盪器,計時 ic</li>
+<br>
+<li onclick="layer1a('g');">場效電晶體 3極管</li>
+<br>
+<li onclick="layer1a('h');">音樂 ic</li>
+<br>
+<li onclick="layer1a('i');">鋰離子電池充電 ic</li>
+<br>
+<li onclick="layer1a('j');">npn 電晶體</li>
+<br>
+<li onclick="layer1a('k');">pnp 電晶體</li>
+</lu>
+
+
+
+<lu id="choose7" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">麵 包 板</li>
+<br>
+<li onclick="layer1a('b');">洞 洞 板</li>
+<br>
+<li onclick="layer1a('c');">感光電路板</li>
+</lu>
+
+
+<lu id="choose8" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">黑色 熱縮管</li>
+<br>
+<li onclick="layer1a('b');">透明 熱縮管</li>
+<br>
+<li onclick="layer1a('c');">含膠防水 熱縮管</li>
+<br>
+<li onclick="layer1a('d');">矽膠套管 耐熱管</li>
+</lu>
+
+
+
+
+<lu id="choose9" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">0.1uf-100uf 電解電容</li>
+<br>
+<li onclick="layer1a('b');">起動電容</li>
+<br>
+<li onclick="layer1a('c');">風扇電容</li>
+</lu>
+
+
+<lu id="choose10" class="choosecl" style="display:none;" >
+<li onclick="layer1a('a');">0.1R-100R 4分之1瓦 電阻</li>
+<br>
+<li onclick="layer1a('b');">101R-500R 4分之1瓦 電阻</li>
+<br>
+<li onclick="layer1a('c');">501R-1K  4分之1瓦 電阻</li>
+<br>
+<li onclick="layer1a('d');">1.1K-500K  4分之1瓦 電阻</li>
+<br>
+<li onclick="layer1a('e');">501K  以上  4分之1瓦 電阻</li>
+<br>
+<li onclick=layer1a('f');>0.5瓦  色碼電阻</li>
+<br>
+<li onclick=layer1a('g');>1瓦  色碼電阻</li>
+<br>
+<li onclick=layer1a('h');>2瓦  色碼電阻</li>
+<br>
+<li onclick=layer1a('i');>5瓦  色碼電阻</li>
+<br>
+<li onclick=layer1a('j');>3腳 可變電阻</li>
+<br>
+<li onclick=layer1a('k');>4腳 可變電阻</li>
+<br>
+<li onclick=layer1a('l');>5腳 可變電阻</li>
+<br>
+<li onclick=layer1a('m');>6腳 可變電阻</li>
+<br>
+<li onclick=layer1a('n');>3腳  藍白可調電阻  立式</li>
+<br>
+<li onclick=layer1a('o');>3腳  藍白可調電阻  臥式</li>
+<br>
+<li onclick=layer1a('p');>0.1R-20R 水泥電阻</li>
+<br>
+<li onclick=layer1a('q');>21R 以上水泥電阻</li>
+<br>
+<li onclick=layer1a('r');>50瓦   車用黃金電阻</li>
+<br>
+<li onclick=layer1a('s');>0603   SMD 貼片電阻</li>
+<br>
+<li onclick=layer1a('t');>0805    SMD 貼片電阻</li>
+<br>
+<li onclick=layer1a('u');>電 阻 板</li>
+</lu>
+
+
+
+
+
+<lu id="choose11" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>三用電表</li>
+<br>
+<li onclick=layer1a('b');>電池測試器</li>
+<br>
+<li onclick=layer1a('c');>起子</li>
+<br>
+<li onclick=layer1a('d');>電烙鐵</li>
+<br>
+<li onclick=layer1a('e');>烙鐵架</li>
+<br>
+<li onclick=layer1a('f');>剝線鉗</li>
+<br>
+<li onclick=layer1a('g');>網路線工具</li>
+<br>
+<li onclick=layer1a('h');>錫絲 錫條</li>
+<br>
+<li onclick=layer1a('i');>吸錫器</li>
+<br>
+<li onclick=layer1a('j');>除錫線</li>
+<br>
+<li onclick=layer1a('k');>尖嘴鉗</li>
+<br>
+<li onclick=layer1a('l');>斜口鉗</li>
+<br>
+<li onclick=layer1a('m');>鑷子</li>
+<br>
+<li onclick=layer1a('n');>錫油 助焊劑</li>
+<br>
+<li onclick=layer1a('o');>散熱膏</li>
+</lu>
+
+<lu id="choose12" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>20mm 玻璃管 保險絲</li>
+<br>
+<li onclick=layer1a('b');>30mm 玻璃管 保險絲</li>
+<br>
+<li onclick=layer1a('c');>保險絲座</li>
+<br>
+<li onclick=layer1a('d');>20mm 慢溶 陶瓷保險絲</li>
+<br>
+<li onclick=layer1a('e');>20mm 快溶 陶瓷保險絲</li>
+<br>
+<li onclick=layer1a('f');>30mm 慢溶 陶瓷保險絲</li>
+<br>
+<li onclick=layer1a('g');>30mm 快溶 陶瓷保險絲</li>
+<br>
+<li onclick=layer1a('h');>帶鐵線 20mm 玻璃管 保險絲</li>
+<br>
+<li onclick=layer1a('i');>帶鐵線 30mm 玻璃管 保險絲</li>
+<br>
+<li onclick=layer1a('j');>微波爐專用  玻璃管 保險絲</li>
+<br>
+<li onclick=layer1a('k');>汽車專用  保險絲(迷你小)</li>
+<br>
+<li onclick=layer1a('l');>汽車專用  保險絲(小)</li>
+<br>
+<li onclick=layer1a('m');>汽車專用  保險絲(中)</li>
+<br>
+<li onclick=layer1a('n');>汽車專用  保險絲(大)</li>
+<br>
+<li onclick=layer1a('o');>栓型陶瓷保險絲</li>
+
+</lu>
+
+
+<lu id="choose13" class="choosecl" style="display:none;" >
+
+<li onclick=layer1a('a');>DC直流  1A 變壓器</li>
+<br>
+<li onclick=layer1a('b');>DC直流  2A 變壓器</li>
+<br>
+<li onclick=layer1a('c');>DC直流  3A 變壓器</li>
+<br>
+<li onclick=layer1a('d');>DC直流  4A 變壓器</li>
+<br>
+<li onclick=layer1a('e');>DC直流  5A 變壓器</li>
+<br>
+<li onclick=layer1a('f');>DC直流  6A 以上變壓器</li>
+<br>
+<li onclick=layer1a('g');>DC直流   鐵盒鎖線式 變壓器</li>
+<br>
+<li onclick=layer1a('h');>電壓可調  變壓器</li>
+<br>
+<li onclick=layer1a('i');>交流變壓器</li>
+<br>
+<li onclick=layer1a('j');>裸式 線繞式變壓器</li>
+<br>
+<li onclick=layer1a('k');>輸入 110V  輸出 220V  變壓器</li>
+<br>
+<li onclick=layer1a('l');>輸入 220V  輸出 110V  變壓器</li>
+<br>
+<li onclick=layer1a('m');>變壓器  接頭 , 轉換頭</li>
+</lu>
+
+
+<lu id="choose14" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>5V DC直流 USB 散熱風扇</li>
+<br>
+<li onclick=layer1a('b');>12V DC直流  散熱風扇</li>
+<br>
+<li onclick=layer1a('c');>24V DC直流  散熱風扇</li>
+<br>
+<li onclick=layer1a('d');>110V  交流  散熱風扇</li>
+<br>
+<li onclick=layer1a('e');>220V  交流  散熱風扇</li>
+</lu>
+
+
+<lu id="choose15" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>碳性電池</li>
+<br>
+<li onclick=layer1a('b');>鹼性電池</li>
+<br>
+<li onclick=layer1a('c');>汽車 捲門 遙控器電池</li>
+<br>
+<li onclick=layer1a('d');>鋰電池</li>
+<br>
+<li onclick=layer1a('e');>電池 點焊機  鎳片</li>
+<br>
+<li onclick=layer1a('f');>1.5V  水銀電池</li>
+<br>
+<li onclick=layer1a('g');> 手錶  SR 水銀電池</li>
+<br>
+<li onclick=layer1a('h');>3V  水銀電池</li>
+<br>
+<li onclick=layer1a('i');>鎳氫充電電池</li>
+<br>
+<li onclick=layer1a('j');>無限電話   電池</li>
+<br>
+<li onclick=layer1a('k');>其他電池</li>
+<br>
+<li onclick=layer1a('l');>鋰電池充 電器</li>
+<br>
+<li onclick=layer1a('m');>鎳氫電池 充電器</li>
+</lu>
+
+
+<lu id="choose16" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>國際牌  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('b');>新力  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('c');>聲寶  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('d');>東元  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('e');>東芝  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('f');>奇美  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('g');>三洋  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('h');>歌林  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('i');>禾聯  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('j');>明基 BENQ  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('k');>LG 三星  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('l');>畫佳 HI-PLUS  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('m');>優派  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('n');>普騰  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('o');>大同  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('p');>亨輯  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('q');> 液晶電視  萬用型遙控器</li>
+<br>
+<li onclick=layer1a('r');>飛利浦 JVC 日立  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('s');>三星  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('t');>夏普 SHARP  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('u');>兆赫 首華 吉普生 瑞軒  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('v');>億碩 兆赫 翰斯 寶麗  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('w');>鈦田 宏碁 藍天 液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('x');>VITO 景新 液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('y');>鴻海  液晶電視遙控器</li>
+<br>
+<li onclick=layer1a('z');>西屋  液晶電視遙控器</li>
+</lu>
+
+
+<lu id="choose17" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>扁型  公母插</li>
+<br>
+<li onclick=layer1a('b');>扁型  公母插 全包</li>
+<br>
+<li onclick=layer1a('c');>子彈型 公母插</li>
+<br>
+<li onclick=layer1a('d');>閉端子 </li>
+<br>
+<li onclick=layer1a('e');>帶彈簧  螺式接頭</li>
+<br>
+<li onclick=layer1a('f');>丸型端子</li>
+<br>
+<li onclick=layer1a('g');>Y型端子</li>
+<br>
+<li onclick=layer1a('h');>110型 電源公母插</li>
+<br>
+<li onclick=layer1a('i');>250型 電源公母插</li>
+<br>
+<li onclick=layer1a('j');>歐式端子</li>
+<br>
+<li onclick=layer1a('k');>烏龜夾</li>
+<br>
+<li onclick=layer1a('l');>夾線釘</li>
+<br>
+<li onclick=layer1a('m');>中間端子</li>
+<br>
+<li onclick=layer1a('n');>絕緣護套</li>
+<br>
+<li onclick=layer1a('o');>護線圈</li>
+<br>
+<li onclick=layer1a('p');>束線固定座</li>
+<br>
+<li onclick=layer1a('q');>束線帶</li>
+<br>
+<li onclick=layer1a('r');>壓條</li>
+<br>
+<li onclick=layer1a('s');>續接端子</li>
+<br>
+<li onclick=layer1a('t');>電線固定紐</li>
+<br>
+<li onclick=layer1a('y');>電火布,膠帶</li>
+<br>
+<li onclick=layer1a('z');>捲式結束帶 蛇管 透明</li>
+<br>
+<li onclick=layer1a('ZA27');>捲式結束帶 蛇管 黑色</li>
+</lu>
+
+
+<lu id="choose18" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>小型  無熔絲開關</li>
+<br>
+<li onclick=layer1a('b');> 無熔絲開關</li>
+<br>
+<li onclick=layer1a('c');>漏電斷路器</li>
+<br>
+<li onclick=layer1a('d');>閘刀開關</li>
+<br>
+<li onclick=layer1a('e');>閘刀開關  保險絲</li>
+</lu>
+
+<lu id="choose19" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>RCA接頭</li>
+<br>
+<li onclick=layer1a('b');>3.5MM接頭</li>
+<br>
+<li onclick=layer1a('c');>6.3MM接頭</li>
+<br>
+<li onclick=layer1a('d');>BNC接頭</li>
+<br>
+<li onclick=layer1a('e');>RF接頭</li>
+<br>
+<li onclick=layer1a('f');>香蕉接頭</li>
+<br>
+<li onclick=layer1a('g');>金屬接頭</li>
+<br>
+<li onclick=layer1a('h');>VGA接頭</li>
+<br>
+<li onclick=layer1a('i');>HDMI接頭</li>
+<br>
+<li onclick=layer1a('j');> 歐規接頭</li>
+<br>
+<li onclick=layer1a('k');>MINI 5PIN  接頭</li>
+<br>
+<li onclick=layer1a('l');>USB 3.0 接頭</li>
+<br>
+<li onclick=layer1a('m');>TYPE-C  接頭</li>
+<br>
+<li onclick=layer1a('n');>USB 接頭</li>
+<br>
+<li onclick=layer1a('o');>PS2 接頭</li>
+<br>
+<li onclick=layer1a('p');>S端子 接頭</li>
+<br>
+<li onclick=layer1a('q');>壓頭</li>
+<br>
+<li onclick=layer1a('r');>DC 接頭</li>
+<br>
+<li onclick=layer1a('s');>8c 網路接頭</li>
+</lu>
+
+
+<lu id="choose20" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>滑鼠</li>
+<br>
+<li onclick=layer1a('b');>鍵盤</li>
+<br>
+<li onclick=layer1a('c');>電腦音箱</li>
+<br>
+<li onclick=layer1a('d');>POWER</li>
+<br>
+<li onclick=layer1a('e');>記憶體  隨身碟</li>
+<br>
+<li onclick=layer1a('f');>電腦機殼</li>
+<br>
+<li onclick=layer1a('g');>滑鼠墊</li>
+<br>
+<li onclick=layer1a('h');>USB 音效卡</li>
+<br>
+<li onclick=layer1a('i');>USB 網路卡</li>
+<br>
+<li onclick=layer1a('j');>網路 HUB  </li>
+<br>
+<li onclick=layer1a('k');>筆電專用 散熱風扇</li>
+<br>
+<li onclick=layer1a('l');>主機板</li>
+<br>
+<li onclick=layer1a('m');>顯示卡</li>
+<br>
+<li onclick=layer1a('n');>電腦螢幕</li>
+<br>
+<li onclick=layer1a('o');>USB HUB </li>
+<br>
+<li onclick=layer1a('p');>藍芽接收器</li>
+<br>
+<li onclick=layer1a('q');>WIFI  接收器</li>
+<br>
+<li onclick=layer1a('r');>ATM  網路讀卡機</li>
+</lu>
+
+<lu id="choose21" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>2.54MM 單排排針</li>
+<br>
+<li onclick=layer1a('b');>2.54MM 雙排排針</li>
+<br>
+<li onclick=layer1a('c');>2.54MM  90度 單排排針</li>
+<br>
+<li onclick=layer1a('d');>2.54MM  90度 雙排排針</li>
+<br>
+<li onclick=layer1a('e');>2.54MM 單排排針母座</li>
+<br>
+<li onclick=layer1a('f');>2.54MM 雙排排針母座</li>
+</lu>
+
+<lu id="choose22" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');> 手機線</li>
+<br>
+<li onclick=layer1a('b');>otg轉接頭</li>
+<br>
+<li onclick=layer1a('c');>轉換頭</li>
+<br>
+<li onclick=layer1a('d');>手機充電器</li>
+<br>
+<li onclick=layer1a('e');>手機架</li>
+<br>
+<li onclick=layer1a('f');>手機風扇</li>
+<br>
+<li onclick=layer1a('g');>手機指環</li>
+</lu>
+
+
+
+<lu id="choose23" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>3MM 發光二極體</li>
+<br>
+<li onclick=layer1a('b');>5MM 發光二極體</li>
+<br>
+<li onclick=layer1a('c');>10MM 發光二極體</li>
+<br>
+<li onclick=layer1a('d');>豆子燈</li>
+<br>
+<li onclick=layer1a('e');>紅外線 發射</li>
+<br>
+<li onclick=layer1a('f');>紅外線 接收</li>
+<br>
+<li onclick=layer1a('g');>E10頭  手電筒燈泡</li>
+<br>
+<li onclick=layer1a('h');>E12頭  燈泡</li>
+<br>
+<li onclick=layer1a('i');>110V 氖燈</li>
+<br>
+<li onclick=layer1a('j');>毛泡</li>
+<br>
+<li onclick=layer1a('k');>豆子燈 G9插頭</li>
+<br>
+<li onclick=layer1a('l');>燈座</li>
+<br>
+<li onclick=layer1a('m');>T5  燈泡</li>
+<br>
+<li onclick=layer1a('n');>T10 燈泡</li>
+</lu>
+
+
+<lu id="choose24" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>18650  電池盒</li>
+<br>
+<li onclick=layer1a('b');>3號電池盒</li>
+<br>
+<li onclick=layer1a('c');>4號電池盒</li>
+<br>
+<li onclick=layer1a('d');>23A電池盒</li>
+<br>
+<li onclick=layer1a('e');>9V 電池盒</li>
+<br>
+<li onclick=layer1a('f');>23A 電池盒</li>
+<br>
+<li onclick=layer1a('g');>1號 電池盒</li>
+<br>
+<li onclick=layer1a('h');>2號 電池盒</li>
+<br>
+<li onclick=layer1a('i');>插針式 電池座</li>
+<br>
+<li onclick=layer1a('j');>鈕扣電池  電池盒</li>
+<br>
+<li onclick=layer1a('k');>電池 轉換盒</li>
+<br>
+<li onclick=layer1a('l');>18650  電池盒 並聯</li>
+</lu>
+
+<lu id="choose25" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>直流  1.5V 蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('b');>直流  3V 蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('c');>直流  5V 蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('d');>直流  6V 蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('e');>直流  9V 蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('f');>直流  12V 蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('g');>直流  24V 蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('h');>直流 3V- 24V 蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('i');>直流  無源 蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('j');>交流  蜂鳴器(喇叭)</li>
+<br>
+<li onclick=layer1a('k');>交流  警鈴 , 蜂鳴器</li>
+<br>
+<li onclick=layer1a('l');>單體喇叭</li>
+</lu>
+
+<lu id="choose26" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>散熱片</li>
+<br>
+<li onclick=layer1a('b');>散熱膏</li>
+<br>
+<li onclick=layer1a('c');>散熱針</li>
+</lu>
+
+
+<lu id="choose27" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>戰車型端子台</li>
+<br>
+<li onclick=layer1a('b');>博士端子台</li>
+<br>
+<li onclick=layer1a('c');>PU座</li>
+</lu>
+
+<lu id="choose28" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>六角銅柱 M4  細牙</li>
+<br>
+<li onclick=layer1a('b');>六角銅柱 M4  粗牙</li>
+<br>
+<li onclick=layer1a('c');>雙母 六角銅柱 M4  細牙</li>
+<br>
+<li onclick=layer1a('d');>雙母 六角銅柱 M4  粗牙</li>
+<br>
+<li onclick=layer1a('e');>六角銅柱 螺絲 細牙</li>
+<br>
+<li onclick=layer1a('f');>六角銅柱 螺絲 粗牙</li>
+<br>
+<li onclick=layer1a('g');>六角銅柱 螺母 </li>
+</lu>
+
+
+<lu id="choose29" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>直流DC 3V 繼電器 </li>
+<br>
+<li onclick=layer1a('b');>直流DC 5V 繼電器 </li>
+<br>
+<li onclick=layer1a('c');>直流DC 6V 繼電器 </li>
+<br>
+<li onclick=layer1a('d');>直流DC 12V 繼電器 </li>
+<br>
+<li onclick=layer1a('e');>直流DC 24V 繼電器 </li>
+<br>
+<li onclick=layer1a('f');>AC交流 110V 繼電器 </li>
+<br>
+<li onclick=layer1a('g');>AC交流  220V 繼電器 </li>
+<br>
+<li onclick=layer1a('h');>繼電器座 </li>
+<br>
+<li onclick=layer1a('i');>IC型  繼電器 </li>
+</lu>
+
+
+<lu id="choose30" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>有線門鈴</li>
+<br>
+<li onclick=layer1a('b');>無限門鈴</li>
+<br>
+<li onclick=layer1a('c');>電源遙控開關</li>
+<br>
+<li onclick=layer1a('d');>來客報知器</li>
+<br>
+<li onclick=layer1a('e');>防盜器</li>
+</lu>
+
+<lu id="choose31" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>LED 點矩陣 共陽</li>
+<br>
+<li onclick=layer1a('b');>LED 點矩陣 共陰</li>
+<br>
+<li onclick=layer1a('c');>7段 點矩陣 共陽</li>
+<br>
+<li onclick=layer1a('d');>7段 點矩陣 共陰</li>
+<br>
+<li onclick=layer1a('e');>液晶  點矩陣 共陽</li>
+<br>
+<li onclick=layer1a('f');>液晶  點矩陣 共陰</li>
+</lu>
+
+
+<lu id="choose32" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>6開6插延長線</li>
+<br>
+<li onclick=layer1a('b');>4開4插延長線</li>
+<br>
+<li onclick=layer1a('c');>3開3插延長線</li>
+<br>
+<li onclick=layer1a('d');>1開2插延長線</li>
+<br>
+<li onclick=layer1a('e');>1開1插延長線</li>
+<br>
+<li onclick=layer1a('f');>中繼  延長線</li>
+<br>
+<li onclick=layer1a('g');>延長線+USB</li>
+<br>
+<li onclick=layer1a('h');>輪座</li>
+<br>
+<li onclick=layer1a('i');>110V  電源線</li>
+<br>
+<li onclick=layer1a('j');>1開6插延長線</li>
+<br>
+<li onclick=layer1a('k');>1開3插延長線</li>
+<br>
+<li onclick=layer1a('l');>7開6插延長線</li>
+<br>
+<li onclick=layer1a('m');>1開2插 , 3插電源線組</li>
+<br>
+<li onclick=layer1a('n');>電源插座</li>
+<br>
+<li onclick=layer1a('o');>三面插</li>
+<br>
+<li onclick=layer1a('p');>插頭</li>
+<br>
+<li onclick=layer1a('q');>插座防護套</li>
+</lu>
+
+<lu id="choose33" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>110V 電磁開關</li>
+<br>
+<li onclick=layer1a('b');>220V 電磁開關</li>
+<br>
+<li onclick=layer1a('c');>端子台</li>
+<br>
+<li onclick=layer1a('d');>近接開關</li>
+<br>
+<li onclick=layer1a('e');>限時繼電器</li>
+<br>
+<li onclick=layer1a('f');>指示燈</li>
+<br>
+<li onclick=layer1a('g');>22φ平頭圓形指示燈</li>
+<br>
+<li onclick=layer1a('h');>定時器</li>
+<br>
+<li onclick=layer1a('i');>溫度開關</li>
+<br>
+<li onclick=layer1a('j');>線號 數字套管</li>
+<br>
+<li onclick=layer1a('k');>緊急停止開關</li>
+<br>
+<li onclick=layer1a('l');>計時器座</li>
+<br>
+<li onclick=layer1a('m');>短路片</li>
+<br>
+<li onclick=layer1a('n');>按鈕開關 22Φ</li>
+<br>
+<li onclick=layer1a('o');>選擇開關</li>
+</lu>
+
+<lu id="choose34" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>零件盒</li>
+<br>
+<li onclick=layer1a('b');>萬用盒</li>
+<br>
+<li onclick=layer1a('c');>防水盒</li>
+</lu>
+
+
+<lu id="choose35" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>3P 電源座</li>
+<br>
+<li onclick=layer1a('b');>3P 電源座+保險絲座</li>
+<br>
+<li onclick=layer1a('c');>2P 電源座</li>
+</lu>
+
+
+<lu id="choose36" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>國內使用  轉換頭</li>
+<br>
+<li onclick=layer1a('b');>國外使用  轉換頭</li>
+<br>
+<li onclick=layer1a('c');>轉換頭   整組</li>
+<br>
+<li onclick=layer1a('d');>變形金剛   轉換頭</li>
+<br>
+<li onclick=layer1a('e');>國內使用  變壓器</li>
+<br>
+<li onclick=layer1a('f');>國外使用  變壓器</li>
+</lu>
+
+
+<lu id="choose37" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>開關</li>
+<br>
+<li onclick=layer1a('b');>蓋板</li>
+<br>
+<li onclick=layer1a('c');>大面板 開關</li>
+<br>
+<li onclick=layer1a('d');>插座</li>
+<br>
+<li onclick=layer1a('e');>燈頭</li>
+<br>
+<li onclick=layer1a('f');>燈座</li>
+<br>
+<li onclick=layer1a('g');>工作燈</li>
+<br>
+<li onclick=layer1a('h');>電木插座</li>
+<br>
+<li onclick=layer1a('i');>燈座</li>
+<br>
+<li onclick=layer1a('j');>冷氣插頭</li>
+<br>
+<li onclick=layer1a('k');>插座連蓋板</li>
+<br>
+<li onclick=layer1a('l');>大面板 插座</li>
+<br>
+<li onclick=layer1a('m');>公插頭</li>
+<br>
+<li onclick=layer1a('n');>母插頭</li>
+<br>
+<li onclick=layer1a('o');>BOX 盒子</li>
+<br>
+<li onclick=layer1a('p');>插頭 3孔轉2孔</li>
+<br>
+<li onclick=layer1a('q');>燈球網</li>
+<br>
+<li onclick=layer1a('r');>電視插座</li>
+<br>
+<li onclick=layer1a('s');>電話插座</li>
+<br>
+<li onclick=layer1a('t');>電鈴開關</li>
+</lu>
+
+<lu id="choose38" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>led 燈泡 白光</li>
+<br>
+<li onclick=layer1a('b');>led 燈泡 黃光</li>
+<br>
+<li onclick=layer1a('c');>烏絲燈泡</li>
+<br>
+<li onclick=layer1a('d');>人體感應燈炮,感應燈座</li>
+<br>
+<li onclick=layer1a('e');>PL 檯燈燈管</li>
+<br>
+<li onclick=layer1a('f');>T5燈管白光</li>
+<br>
+<li onclick=layer1a('g');>T5燈管黃光</li>
+<br>
+<li onclick=layer1a('h');>T8燈管白光</li>
+<br>
+<li onclick=layer1a('i');>T8燈管黃光</li>
+<br>
+<li onclick=layer1a('j');>燈座</li>
+<br>
+<li onclick=layer1a('k');>燈頭轉換頭</li>
+<br>
+<li onclick=layer1a('l');>燈飾材料</li>
+<br>
+<li onclick=layer1a('m');>驅動電源, 變壓器</li>
+<br>
+<li onclick=layer1a('n');>杯燈系列</li>
+<br>
+<li onclick=layer1a('o');>捕蚊燈管</li>
+<br>
+<li onclick=layer1a('p');>直流 5V LED燈泡</li>
+<br>
+<li onclick=layer1a('q');>直流 12V LED燈泡</li>
+<br>
+<li onclick=layer1a('r');>直流 12V LED 燈管+燈具</li>
+<br>
+<li onclick=layer1a('s');>紅色燈管</li>
+<br>
+<li onclick=layer1a('t');>T5 燈座</li>
+<br>
+<li onclick=layer1a('u');>T8 燈座</li>
+<br>
+<li onclick=layer1a('v');>螺旋燈泡</li>
+<br>
+<li onclick=layer1a('w');>E14 頭  螺旋燈泡</li>
+<br>
+<li onclick=layer1a('x');>E14 頭  LED燈泡</li>
+<br>
+<li onclick=layer1a('y');>E12 頭  LED燈泡</li>
+<br>
+<li onclick=layer1a('z');>E17 頭  LED燈泡</li>
+<br>
+<li onclick=layer1a('ZA27');>鹵素燈管</li>
+<br>
+<li onclick=layer1a('ZA28');>220V 螺旋</li>
+<br>
+<li onclick=layer1a('ZA29');>紅色燈泡</li>
+<br>
+<li onclick=layer1a('ZA30');>黃色燈泡</li>
+<br>
+<li onclick=layer1a('ZA31');>藍色燈泡</li>
+<br>
+<li onclick=layer1a('ZA32');>綠色燈泡</li>
+</lu>
+
+
+<lu id="choose39" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>計時器</li>
+<br>
+<li onclick=layer1a('b');>計步器</li>
+<br>
+<li onclick=layer1a('c');>定時器</li>
+<br>
+<li onclick=layer1a('d');>計數器</li>
+</lu>
+ 
+
+<lu id="choose40" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>小型計算機</li>
+<br>
+<li onclick=layer1a('b');>中小型計算機</li>
+<br>
+<li onclick=layer1a('c');>中型計算機</li>
+<br>
+<li onclick=layer1a('d');>中大型計算機</li>
+<br>
+<li onclick=layer1a('e');>大型計算機</li>
+<br>
+<li onclick=layer1a('f');>工程用計算機</li>
+<br>
+<li onclick=layer1a('g');>語音計算機</li>
+</lu>
+
+<lu id="choose41" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>汽車 線材</li>
+<br>
+<li onclick=layer1a('b');>汽車 燈座</li>
+<br>
+<li onclick=layer1a('c');>汽車 燈泡</li>
+<br>
+<li onclick=layer1a('d');>汽車 電料</li>
+<br>
+<li onclick=layer1a('e');>救車線</li>
+<br>
+<li onclick=layer1a('f');>救車  鋰電池組</li>
+</lu>
+
+<lu id="choose42" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>一般電池手電筒</li>
+<br>
+<li onclick=layer1a('b');>鋰電池 手電筒</li>
+<br>
+<li onclick=layer1a('c');>一般電池 頭燈</li>
+<br>
+<li onclick=layer1a('d');>鋰電池 頭燈</li>
+<br>
+<li onclick=layer1a('e');>露營燈</li>
+<br>
+<li onclick=layer1a('f');>緊急照明燈</li>
+<br>
+<li onclick=layer1a('g');>自行車  頭燈</li>
+<br>
+<li onclick=layer1a('h');>自行車  尾燈</li>
+<br>
+<li onclick=layer1a('i');>自行車  燈組</li>
+<br>
+<li onclick=layer1a('j');>自行車  鈴鐺</li>
+</lu>
+
+<lu id="choose43" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>2芯扁形 電話線</li>
+<br>
+<li onclick=layer1a('b');>4芯扁形 電話線</li>
+<br>
+<li onclick=layer1a('c');>2芯圓形灰色 電話線</li>
+<br>
+<li onclick=layer1a('d');>4芯圓形灰色 電話線</li>
+<br>
+<li onclick=layer1a('e');>2芯電話接線盒</li>
+<br>
+<li onclick=layer1a('f');>4芯電話接線盒</li>
+<br>
+<li onclick=layer1a('g');>電話轉接頭</li>
+<br>
+<li onclick=layer1a('h');>電話擴大鈴</li>
+<br>
+<li onclick=layer1a('i');>有線電話</li>
+<br>
+<li onclick=layer1a('j');>無線電話</li>
+</lu>
+
+<lu id="choose44" class="choosecl" style="display:none;" >
+<li onclick=layer1a('a');>第4台 機上盒遙控</li>
+<br>
+<li onclick=layer1a('b');>DVD 點歌機遙控器</li>
+<br>
+<li onclick=layer1a('c');>點歌機  遙控器</li>
+<br>
+<li onclick=layer1a('d');>電風扇  遙控器</li>
+</lu>
+
+<lu id="choose45" class="choosecl" style="display:none;" >
+<br>
+<li onclick=layer1a('a');>手動小夜燈</li>
+<br>
+<li onclick=layer1a('b');>自動感光小夜燈</li>
+</lu>
+
+<div id="Number_ordersid" style="display:none;"></div>
+
+<div id="show_caridall" class="show_carclall" style="display:none;" >
+<div id="show_carid1" ></div>
+<div id="show_carid2" ></div>
+<div id="show_carid3" ></div>
+<div id="show_carid4" ></div>
+<div id="show_carid5" ></div>
+<div id="show_carid6" ></div>
+<div id="show_carid7" ></div>
+<div id="show_carid8" ></div>
+<div id="show_carid9" ></div>
+<div id="show_carid10"></div>
+<div id="show_carid11" ></div>
+<div id="show_carid12" ></div>
+<div id="show_carid13" ></div>
+<div id="show_carid14" ></div>
+<div id="show_carid15" ></div>
+<div id="show_carid16" ></div>
+<div id="show_carid17" ></div>
+<div id="show_carid18" ></div>
+<div id="show_carid19" ></div>
+<div id="show_carid20"></div>
+<div id="show_carid21" ></div>
+<div id="show_carid22" ></div>
+<div id="show_carid23" ></div>
+<div id="show_carid24" ></div>
+<div id="show_carid25" ></div>
+<div id="show_carid26" ></div>
+<div id="show_carid27" ></div>
+<div id="show_carid28" ></div>
+<div id="show_carid29" ></div>
+<div id="show_carid30"></div>
+<div id="show_carid31" ></div>
+<div id="show_carid32" ></div>
+<div id="show_carid33" ></div>
+<div id="show_carid34" ></div>
+<div id="show_carid35" ></div>
+<div id="show_carid36" ></div>
+<div id="show_carid37" ></div>
+<div id="show_carid38" ></div>
+<div id="show_carid39" ></div>
+<div id="show_carid40"></div>
+<div id="show_carid41" ></div>
+<div id="show_carid42" ></div>
+<div id="show_carid43" ></div>
+<div id="show_carid44" ></div>
+<div id="show_carid45" ></div>
+<div id="show_carid46" ></div>
+<div id="show_carid47" ></div>
+<div id="show_carid48" ></div>
+<div id="show_carid49" ></div>
+<div id="show_carid50"></div>
+</div>
+
+ <div id="upid" style="display:none;">
+  <form action="#" method="post" name="google">
+   
+    <input  type="text" id="shopid" name="shop" style="display:none;">
+
+    <textarea type="text" id="itemsid1"  name="items1" style="display:none;"></textarea>
+
+   <textarea   id="itemsid2" name="items2"  rows="10" cols="20" style="display:none;" placeholder="請輸入留言..."></textarea>
+
+   <textarea  type="text" id="itemsid3" name="items3" style="display:none;"></textarea>
+
+   <textarea  type="text" id="itemsid4" name="items4" style="display:none;"></textarea>
+
+<button onclick="upfu( )"><div class="upcl" >上傳 訂貨單</button>
+    
+</form>
+</div>
+
+
+<div id="welcomeid" class="welcomecl" style="display:none;" >
+<div>welcome</div>
+</div>
+
+
+<div id="loginid"  style="display:none;" >
+<button onclick="loginfu()"><div  class="logincl">登入</button>
+</div>
+
+
+
+<div  id="login_readid" class="login_readcl" style="display:none;"  >
+<div  style="font-size:90px" >請輸入行動號碼</div>
+<input type="text" style="font-size:70px"  maxlength="10"  id="login_read_mobile" />
+<button type="button" style="font-size:90px" onclick="login_endfu()">確 認</button> 
+</div>
+
+
+
+
+<div  id="establishid" style="display:none;">
+<button onclick="establishfu()"><div class="establishcl"  >建檔</button>
+</div>
+
+
+<div  id="account_numberid" class="account_numbercl"    style="display:none;">
+<div  style="font-size:90px" >請輸入行動號碼</div>
+
+<input type="text" style="font-size:90px"  maxlength="20"  id="mobile_phoneid" />
+<div  style="font-size:90px" >請輸入姓名</div>
+<input type="text" style="font-size:90px"  maxlength="30"  id="nameid" />
+
+
+<button type="button" style="font-size:90px" onclick="confirmfu()">確  認</button> 
+
+</div>
+
+
+<button type="button" id="open_messageid" style="display:none;" onclick="open_messagefu()">編輯留言</button> 
+
+<button type="button" id="close_messageid" style="display:none;" onclick="close_messagefu()">儲存關閉留言</button> 
+
+<button type="button" id="clear_messageid" style="display:none;" onclick="clear_messagefu()">留言刪除</button> 
+
+
+
+
+<div  id="layer2"  style="display:none;">
+
+
+<input  type="image" id="productid1"  class="productcl"  onClick="enlargetpfu(1)" >
+<div id=layer2tid1  class="layer2tcl" >1</div>
+<br><br>
+
+<input  type="image" id="productid2"  class="productcl"  onClick="enlargetpfu(2)" >
+<div id=layer2tid2  class="layer2tcl"  >2</div>
+<br><br>
+
+<input  type="image" id="productid3"  class="productcl"  onClick="enlargetpfu(3)" >
+<div  id=layer2tid3  class="layer2tcl">3</div>
+<br><br>
+
+<input  type="image" id="productid4"  class="productcl"  onClick="enlargetpfu(4)" >
+<div  id=layer2tid4  class="layer2tcl">4</div>
+<br><br>
+
+<input  type="image" id="productid5"  class="productcl"  onClick="enlargetpfu(5)" >
+<div  id=layer2tid5  class="layer2tcl">5</div>
+<br><br>
+
+<input  type="image" id="productid6"  class="productcl"  onClick="enlargetpfu(6)" >
+<div  id=layer2tid6  class="layer2tcl">6</div>
+<br><br>
+
+<input  type="image" id="productid7"  class="productcl"  onClick="enlargetpfu(7)" >
+<div  id=layer2tid7  class="layer2tcl">7</div>
+<br><br>
+
+<input  type="image" id="productid8"  class="productcl"  onClick="enlargetpfu(8)" >
+<div  id=layer2tid8  class="layer2tcl">8</div>
+<br><br>
+
+<input  type="image" id="productid9"  class="productcl"  onClick="enlargetpfu(9)" >
+<div  id=layer2tid9  class="layer2tcl">9</div>
+<br><br>
+
+<input  type="image" id="productid10" class="productcl"  onClick="enlargetpfu(10)" >
+<div  id=layer2tid10  class="layer2tcl">10</div>
+<br><br>
+
+<input  type="image" id="productid11" class="productcl"  onClick="enlargetpfu(11)" >
+<div  id=layer2tid11  class="layer2tcl">11</div>
+<br>
+
+<input  type="image" id="productid12" class="productcl"  onClick="enlargetpfu(12)" >
+<div  id=layer2tid12  class="layer2tcl">12</div>
+<br>
+
+<input  type="image" id="productid13" class="productcl"  onClick="enlargetpfu(13)" >
+<div  id=layer2tid13  class="layer2tcl">13</div>
+<br>
+
+<input  type="image" id="productid14" class="productcl"  onClick="enlargetpfu(14)" >
+<div  id=layer2tid14  class="layer2tcl">14</div>
+<br>
+
+<input  type="image" id="productid15" class="productcl"  onClick="enlargetpfu(15)" >
+<div  id=layer2tid15  class="layer2tcl">15</div>
+<br>
+
+<input  type="image" id="productid16" class="productcl"  onClick="enlargetpfu(16)" >
+<div  id=layer2tid16  class="layer2tcl">16</div>
+<br>
+
+<input  type="image" id="productid17" class="productcl"  onClick="enlargetpfu(17)" >
+<div  id=layer2tid17  class="layer2tcl">17</div>
+<br>
+
+<input  type="image" id="productid18" class="productcl"  onClick="enlargetpfu(18)" >
+<div  id=layer2tid18  class="layer2tcl">18</div>
+<br>
+
+<input  type="image" id="productid19" class="productcl"  onClick="enlargetpfu(19)" >
+<div  id=layer2tid19 class="layer2tcl">19</div>
+<br>
+
+<input  type="image" id="productid20" class="productcl"  onClick="enlargetpfu(20)" >
+<div  id=layer2tid20  class="layer2tcl">20</div>
+<br>
+<input  type="image" id="productid21" class="productcl"  onClick="enlargetpfu(21)" >
+<div  id=layer2tid21  class="layer2tcl">21</div>
+<br>
+<input  type="image" id="productid22" class="productcl"  onClick="enlargetpfu(22)" >
+<div  id=layer2tid22  class="layer2tcl">22</div>
+<br>
+<input  type="image" id="productid23" class="productcl"  onClick="enlargetpfu(23)" >
+<div  id=layer2tid23  class="layer2tcl">23</div>
+<br>
+<input  type="image" id="productid24" class="productcl"  onClick="enlargetpfu(24)" >
+<div  id=layer2tid24  class="layer2tcl">24</div>
+<br>
+<input  type="image" id="productid25" class="productcl"  onClick="enlargetpfu(25)" >
+<div  id=layer2tid25  class="layer2tcl">25</div>
+<br>
+<input  type="image" id="productid26" class="productcl"  onClick="enlargetpfu(26)" >
+<div  id=layer2tid26  class="layer2tcl">26</div>
+<br>
+<input  type="image" id="productid27" class="productcl"  onClick="enlargetpfu(27)" >
+<div  id=layer2tid27  class="layer2tcl">27</div>
+<br>
+<input  type="image" id="productid28" class="productcl"  onClick="enlargetpfu(28)" >
+<div  id=layer2tid28  class="layer2tcl">28</div>
+<br>
+<input  type="image" id="productid29" class="productcl"  onClick="enlargetpfu(29)" >
+<div  id=layer2tid29 class="layer2tcl">29</div>
+<br>
+<input  type="image" id="productid30" class="productcl"  onClick="enlargetpfu(30)" >
+<div  id=layer2tid30  class="layer2tcl">30</div>
+<br>
+<input  type="image" id="productid31"  class="productcl"  onClick="enlargetpfu(31)" >
+<div  id=layer2tid31  class="layer2tcl">31</div>
+<br>
+<input  type="image" id="productid32"  class="productcl"  onClick="enlargetpfu(32)" >
+<div  id=layer2tid32  class="layer2tcl">32</div>
+<br>
+<input  type="image" id="productid33"  class="productcl"  onClick="enlargetpfu(33)" >
+<div  id=layer2tid33  class="layer2tcl">33</div>
+<br>
+<input  type="image" id="productid34"  class="productcl"  onClick="enlargetpfu(34)" >
+<div  id=layer2tid34  class="layer2tcl">34</div>
+<br>
+<input  type="image" id="productid35"  class="productcl"  onClick="enlargetpfu(35)" >
+<div  id=layer2tid35  class="layer2tcl">35</div>
+<br>
+<input  type="image" id="productid36"  class="productcl"  onClick="enlargetpfu(36)" >
+<div  id=layer2tid36  class="layer2tcl">36</div>
+<br>
+<input  type="image" id="productid37"  class="productcl"  onClick="enlargetpfu(37)" >
+<div  id=layer2tid37  class="layer2tcl">37</div>
+<br>
+<input  type="image" id="productid38"  class="productcl"  onClick="enlargetpfu(38)" >
+<div  id=layer2tid38  class="layer2tcl">38</div>
+<br>
+<input  type="image" id="productid39"  class="productcl"  onClick="enlargetpfu(39)" >
+<div  id=layer2tid39  class="layer2tcl">39</div>
+<br>
+<input  type="image" id="productid40" class="productcl"  onClick="enlargetpfu(40)" >
+<div  id=layer2tid40  class="layer2tcl">40</div>
+<br>
+<input  type="image" id="productid41" class="productcl"  onClick="enlargetpfu(41)" >
+<div  id=layer2tid41  class="layer2tcl">41</div>
+<br>
+<input  type="image" id="productid42" class="productcl"  onClick="enlargetpfu(42)" >
+<div  id=layer2tid42  class="layer2tcl">42</div>
+<br>
+<input  type="image" id="productid43" class="productcl"  onClick="enlargetpfu(43)" >
+<div  id=layer2tid43  class="layer2tcl">43</div>
+<br>
+<input  type="image" id="productid44" class="productcl"  onClick="enlargetpfu(44)" >
+<div  id=layer2tid44  class="layer2tcl">44</div>
+<br>
+<input  type="image" id="productid45" class="productcl"  onClick="enlargetpfu(45)" >
+<div  id=layer2tid45  class="layer2tcl">45</div>
+<br>
+<input  type="image" id="productid46" class="productcl"  onClick="enlargetpfu(46)" >
+<div  id=layer2tid46  class="layer2tcl">46</div>
+<br>
+<input  type="image" id="productid47" class="productcl"  onClick="enlargetpfu(47)" >
+<div  id=layer2tid47  class="layer2tcl">47</div>
+<br>
+<input  type="image" id="productid48" class="productcl"  onClick="enlargetpfu(48)" >
+<div  id=layer2tid48  class="layer2tcl">48</div>
+<br>
+<input  type="image" id="productid49" class="productcl"  onClick="enlargetpfu(49)" >
+<div  id=layer2tid49  class="layer2tcl">49</div>
+<br>
+<input  type="image" id="productid50" class="productcl"  onClick="enlargetpfu(50)" >
+<div  id=layer2tid50  class="layer2tcl">50</div>
+<br>
+<input  type="image" id="productid51" class="productcl"  onClick="enlargetpfu(51)" >
+<div  id=layer2tid51  class="layer2tcl">51</div>
+<br>
+<input  type="image" id="productid52" class="productcl"  onClick="enlargetpfu(52)" >
+<div  id=layer2tid52  class="layer2tcl">52</div>
+<br>
+<input  type="image" id="productid53" class="productcl"  onClick="enlargetpfu(53)" >
+<div  id=layer2tid53  class="layer2tcl">53</div>
+<br>
+<input  type="image" id="productid54" class="productcl"  onClick="enlargetpfu(54)" >
+<div  id=layer2tid54  class="layer2tcl">54</div>
+<br>
+<input  type="image" id="productid55" class="productcl"  onClick="enlargetpfu(55)" >
+<div  id=layer2tid55  class="layer2tcl">55</div>
+<br>
+<input  type="image" id="productid56" class="productcl"  onClick="enlargetpfu(56)" >
+<div  id=layer2tid56  class="layer2tcl">56</div>
+<br>
+<input  type="image" id="productid57" class="productcl"  onClick="enlargetpfu(57)" >
+<div  id=layer2tid57  class="layer2tcl">57</div>
+<br>
+<input  type="image" id="productid58" class="productcl"  onClick="enlargetpfu(58)" >
+<div  id=layer2tid58  class="layer2tcl">58</div>
+<br>
+<input  type="image" id="productid59" class="productcl"  onClick="enlargetpfu(59)" >
+<div  id=layer2tid59  class="layer2tcl">59</div>
+<br>
+<input  type="image" id="productid60" class="productcl"  onClick="enlargetpfu(60)" >
+<div  id=layer2tid60  class="layer2tcl">60</div>
+<br>
+<input  type="image" id="productid61" class="productcl"  onClick="enlargetpfu(61)" >
+<div  id=layer2tid61  class="layer2tcl">61</div>
+<br>
+<input  type="image" id="productid62" class="productcl"  onClick="enlargetpfu(62)" >
+<div  id=layer2tid62  class="layer2tcl">62</div>
+<br>
+<input  type="image" id="productid63" class="productcl"  onClick="enlargetpfu(63)" >
+<div  id=layer2tid63  class="layer2tcl">63</div>
+<br>
+<input  type="image" id="productid64" class="productcl"  onClick="enlargetpfu(64)" >
+<div  id=layer2tid64  class="layer2tcl">64</div>
+<br>
+<input  type="image" id="productid65" class="productcl"  onClick="enlargetpfu(65)" >
+<div  id=layer2tid65  class="layer2tcl">65</div>
+<br>
+<input  type="image" id="productid66" class="productcl"  onClick="enlargetpfu(66)" >
+<div  id=layer2tid66  class="layer2tcl">66</div>
+<br>
+<input  type="image" id="productid67" class="productcl"  onClick="enlargetpfu(67)" >
+<div  id=layer2tid67  class="layer2tcl">67</div>
+<br>
+<input  type="image" id="productid68" class="productcl"  onClick="enlargetpfu(68)" >
+<div  id=layer2tid68  class="layer2tcl">68</div>
+<br>
+<input  type="image" id="productid69" class="productcl"  onClick="enlargetpfu(69)" >
+<div  id=layer2tid69  class="layer2tcl">69</div>
+<br>
+<input  type="image" id="productid70" class="productcl"  onClick="enlargetpfu(70)" >
+<div  id=layer2tid70  class="layer2tcl">70</div>
+<br>
+</div>
+
+
+<div  id="layer1id"     style="display:none;">
+<button onclick="layer1fu(1)"><div id=id1  class="layer1cl"   >1. 模組 </button>
+<br><br><br>
+<button onclick="layer1fu(2)"><div id=id2 class="layer1cl"  >2. 線 材 </button>
+<br><br><br>
+<button onclick="layer1fu(3)"><div id=id3 class="layer1cl"  >3. 開 關 </button>
+<br><br><br>
+<button onclick="layer1fu(4)"><div id=id4 class="layer1cl"   >4.電 器 材 料 </button>
+<br><br><br>
+<button onclick="layer1fu(5)"><div id=id5 class="layer1cl"  >5.冷氣 遙控器 </button>
+<br><br><br>
+<button onclick="layer1fu(6)"><div id=id6 class="layer1cl"   >6. IC ,電晶體</button>
+<br><br><br>
+<button onclick="layer1fu(7)"><div id=id7 class="layer1cl"   >7. 電路板 </button>
+<br><br><br>
+<button onclick="layer1fu(8)"><div id=id8 class="layer1cl"   >8. 熱縮管 </button>
+<br><br><br>
+<button onclick="layer1fu(9)"><div  id=id9 class="layer1cl"    >9. 電容 </button>
+<br><br><br>
+<button onclick="layer1fu(10)"><div  id=id10 class="layer1cl"    >10. 電 阻 </button>
+<br><br><br>
+<button onclick="layer1fu(11)"><div  id=id11 class="layer1cl"    >11. 工 具 </button>
+<br><br><br>
+<button onclick="layer1fu(12)"><div  id=id12 class="layer1cl"    >12. 保險絲 </button>
+<br><br><br>
+<button onclick="layer1fu(13)"><div  id=id13 class="layer1cl"    >13. 變壓器 </button>
+<br><br><br>
+<button onclick="layer1fu(14)"><div  id=id14 class="layer1cl"    >14. 散熱風扇 </button>
+<br><br><br>
+<button onclick="layer1fu(15)"><div  id=id15 class="layer1cl"    >15. 電池,充電器 </button>
+<br><br><br>
+<button onclick="layer1fu(16)"><div  id=id16 class="layer1cl"    >16. 液晶電視 遙控器 </button>
+<br><br><br>
+<button onclick="layer1fu(17)"><div  id=id17 class="layer1cl"    >17. 端子 配線材料 </button>
+<br><br><br>
+<button onclick="layer1fu(18)"><div  id=id18 class="layer1cl"    >18. 無熔絲開關 </button>
+<br><br><br>
+<button onclick="layer1fu(19)"><div  id=id19 class="layer1cl"    >19. 各式接頭 </button>
+<br><br><br>
+<button onclick="layer1fu(20)"><div  id=id20 class="layer1cl"    >20. 電腦 3C配件 </button>
+<br><br><br>
+<button onclick="layer1fu(21)"><div  id=id21 class="layer1cl"    >21. 排 針 </button>
+<br><br><br>
+<button onclick="layer1fu(22)"><div  id=id22 class="layer1cl"    >22. 手機配件 </button>
+<br><br><br>
+<button onclick="layer1fu(23)"><div  id=id23 class="layer1cl"    >23. 小燈泡 ,燈座 ,發光二極體 </button>
+<br><br><br>
+<button onclick="layer1fu(24)"><div  id=id24 class="layer1cl"    >24. 電池盒,保存盒 </button>
+<br><br><br>
+<button onclick="layer1fu(25)"><div  id=id25 class="layer1cl"    >25. 喇叭 ,蜂鳴器 ,警鈴 </button>
+<br><br><br>
+<button onclick="layer1fu(26)"><div  id=id26 class="layer1cl"    >26. 散熱片,散熱膏 </button>
+<br><br><br>
+<button onclick="layer1fu(27)"><div  id=id27 class="layer1cl"    >27.音響配件 </button>
+<br><br><br>
+<button onclick="layer1fu(28)"><div  id=id28 class="layer1cl"    >28. 銅柱,螺絲 </button>
+<br><br><br>
+<button onclick="layer1fu(29)"><div  id=id29 class="layer1cl"    >29. 繼電器,繼電器座 </button>
+<br><br><br>
+<button onclick="layer1fu(30)"><div  id=id30 class="layer1cl"    >30. 門鈴,來客報知,防盜器 </button>
+<br><br><br>
+<button onclick="layer1fu(31)"><div  id=id31 class="layer1cl"    >31. 點矩陣,7段顯示器 </button>
+<br><br><br>
+<button onclick="layer1fu(32)"><div  id=id32 class="layer1cl"    >32. 延長線,電源線,輪座 </button>
+<br><br><br>
+<button onclick="layer1fu(33)"><div  id=id33 class="layer1cl"    >33. 自動控制系列 </button>
+<br><br><br>
+<button onclick="layer1fu(34)"><div  id=id34 class="layer1cl"    >34. 零件盒,萬用盒,防水盒 </button>
+<br><br><br>
+<button onclick="layer1fu(35)"><div  id=id35 class="layer1cl"    >35. 電源母座 </button>
+<br><br><br>
+<button onclick="layer1fu(36)"><div  id=id36 class="layer1cl"    >36. 出國,國內 萬國轉換頭 </button>
+<br><br><br>
+<button onclick="layer1fu(37)"><div  id=id37 class="layer1cl"    >37. 電工材料 </button>
+<br><br><br>
+<button onclick="layer1fu(38)"><div  id=id38 class="layer1cl"    >38. 燈管,燈泡,燈座 </button>
+<br><br><br>
+<button onclick="layer1fu(39)"><div  id=id39 class="layer1cl"    >39. 計時器,計步器,定時器 </button>
+<br><br><br>
+<button onclick="layer1fu(40)"><div  id=id40 class="layer1cl"    >40. 計算機 </button>
+<br><br><br>
+<button onclick="layer1fu(41)"><div  id=id41 class="layer1cl"    >41. 汽車 燈泡,電料</button>
+<br><br><br>
+<button onclick="layer1fu(42)"><div  id=id42 class="layer1cl"    >42.手電筒,頭燈,自行車燈</button>
+<br><br><br>
+<button onclick="layer1fu(43)"><div  id=id43 class="layer1cl"    >43.電話機,配件,線材</button>
+<br><br><br>
+<button onclick="layer1fu(44)"><div  id=id44 class="layer1cl"    >44.遙 控 器 </button>
+<br><br><br>
+<button onclick="layer1fu(45)"><div  id=id45 class="layer1cl"    >45.小 夜 燈 </button>
+</div>
+
+
+
+
+
+
+<input type="image" id="enlargetpid"  class="enlargetpcl" style="display:none;" onClick="close()" >
+
+<div id="enlargetid" class="enlargetcl" style="display:none;"  >
+<div></div>
+</div>
+
+<div  id="closeid"  style="display:none;">
+<button onclick="closefu()"><div class="closecl" >返 回</button>
+</div>
+
+<div  id="up1id"  style="display:none;">
+<button onclick="up1fu()"><div class="up1cl" >回上層</button>
+</div>
+
+
+<div  id="up2id"  style="display:none;">
+<button onclick="up2fu()"><div class="up2cl" >回上層</button>
+</div>
+
+
+<div  id="up3id"  style="display:none;">
+<button onclick="up3fu()"><div class="up3cl" >回上層</button>
+</div>
+
+<div  id="up4id"  style="display:none;">
+<button onclick="up4fu()"><div class="up4cl" >回上層</button>
+</div>
+
+
+
+
+<div  id="conid"   style="display:none;">
+<a href="https://3a35.github.io/aaaaa/electronic/reb">
+<button><div  class="concl">回主選單</div></button>
+</a> 
+</div>
+
+
+<div id="shopping_cartid"  style="display:none;">
+<input type="image" src="shopping_cart.jpg" class="shopping_cartcl"  width="180"  height="180"  onClick="shopping_cartfu()">
+</div>
+
+
+
+<div id="add_cartid" style="display:none;">
+
+<div id="Increaseid"   >
+<INPUT TYPE="button" class="Increasecl"  VALUE="+" onClick="Increasefu()">
+</div>
+
+
+<div id="reduceid"   >
+<INPUT TYPE="button" class="reducecl" VALUE="-" onClick="reducefu()">
+</div>
+
+
+<div id="quantityid" class="quantitycl"  >1</div>
+
+
+<div id="join_inid"  >
+<INPUT TYPE="button" class="join_incl" VALUE="加入購物車" onClick="join_infu()">
+</div>
+
+
+       
+
+
+</div>
+
+
+
+<div  id="removeid"  style="display:none;">
+<button onclick="removefu()"><div class="removecl" >購物車清空</button>
+</div>
+
+<div  id="remove1id"  style="display:none;">
+<button onclick="remove1fu()"><div class="remove1cl" >單筆資料刪除</button>
+</div>
+
+
+<div  id="input_remove1id" class="input_remove1cl" style="display:none;">
+<label for="te">第幾項要刪除請輸入:</label>
+<input type="number" name="te" min="1" max="50"  id="input_remove2id"  />
+<button type="button" style="font-size:70px" onclick="input_remove1_endfu()">確  認</button>
+</div>
+
+
+
+<div  id="allid" >
+<INPUT TYPE="button" VALUE="電子材料 網路購物" id="menuid11" onClick="get1()">
+<!-- <INPUT TYPE="button" VALUE="限時 特價拍賣" id="menuid22" onClick="get2()">
+<INPUT TYPE="button" VALUE="下架出清產品" id="menuid33" onClick="get3()">
+<INPUT TYPE="button" VALUE="百貨用品 出清 " id="menuid44" onClick="get4()">
+<INPUT TYPE="button" VALUE="二手商品 出清" id="menuid55" onClick="get5()">
+<INPUT TYPE="button" VALUE="與 我 聯 絡" id="menuid66" onClick="get6()">    -->
+<INPUT TYPE="button" VALUE="關 於 本 店" id="menuid77" onClick="get7()">
+</div>
+
+
+<dvi  class="t1cl" id="t1id"   >
+<span style="font-size:140px;color:green;font-weight:bold;">六捷 </span>
+<span style="font-size:120px;color:purple;font-weight:bold;background-color:orange;"> 電子材料</span>
+</dvi>
+
+
+</body>
+
+
+<script type="text/javascript">
+
+  const scriptURL='https://script.google.com/macros/s/AKfycbygh47F_E9c66nPL4jAfe6o7T6EzJgc-8q_4F7Nn5UsR-3yge65_Q8pzWCLebO4rrAb/exec'
+
+        const form = document.forms['google']
+          
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("上傳成功！！"))
+              .catch(error => console.error('Error!', error.message))
+          })
+function upfu(){
+var Today=new Date();
+up_time1=Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日"
+up_time2=Today.getHours()+"點"+Today.getMinutes()+"分"+Today.getSeconds()+"秒";
+
+
+document.getElementById("shopid").value =rrr2;
+document.getElementById("itemsid1").value =up_time1+"\n"+up_time2;
+document.getElementById("itemsid3").value ="客編 "+rrr1+"名稱"+rrr2;
+document.getElementById("itemsid4").value =proo;
+
+}
+</script>
+
+
+</html>
