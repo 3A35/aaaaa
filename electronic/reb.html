@@ -16,8 +16,53 @@ document.getElementById("allid").style.display="none";
 document.getElementById("t1id").style.display="none";
 document.getElementById("conid").style.display="block";
 document.getElementById("layer1id").style.display="block";
+
+
+  const scriptURL='https://script.google.com/macros/s/AKfycbygh47F_E9c66nPL4jAfe6o7T6EzJgc-8q_4F7Nn5UsR-3yge65_Q8pzWCLebO4rrAb/exec'
+
+        const form = document.forms['google']
+          
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("上傳成功！！"))
+              .catch(error => console.error('Error!', error.message))
+          })
+}
+function upfu(){
+var Today=new Date();
+up_time1=Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日"
+up_time2=Today.getHours()+"點"+Today.getMinutes()+"分"+Today.getSeconds()+"秒";
+
+
+document.getElementById("shopid").value =rrr2;
+document.getElementById("itemsid1").value =up_time1+"\n"+up_time2;
+document.getElementById("itemsid3").value ="客編 "+rrr1+"名稱"+rrr2;
+document.getElementById("itemsid4").value =proo;
 }
 
+
+function get7(){
+document.getElementById("in").style.display="none";
+document.getElementById("allid").style.display="none";
+document.getElementById("t1id").style.display="none";
+document.getElementById("stranger_allid").style.display="block";
+document.getElementById("conid").style.display="block";
+const scriptURL='https://script.google.com/macros/s/AKfycbygh47F_E9c66nPL4jAfe6o7T6EzJgc-8q_4F7Nn5UsR-3yge65_Q8pzWCLebO4rrAb/exec'
+
+        const form = document.forms['google1']
+          
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("上傳成功！！"))
+              .catch(error => console.error('Error!', error.message))
+          })
+
+}
+
+function stranger_upfu(){
+}
 
 
 function  layer1fu(fff){
@@ -542,7 +587,7 @@ border-radius:50px;
 .concl{
  touch-action: auto;
  position: fixed;
-  top: 1200px;  
+  top: 1450px;  
   left: 700px;
   background-color:red;
   border:none;
@@ -1046,8 +1091,8 @@ transition:width 1s;
 
 #menuid77{
 position:fixed;
-top:1600px;
-left:250px;
+top:900px;
+left:320px;
 font-size:80px;
 color:blue;
 background-color:orange;
@@ -1067,7 +1112,49 @@ top: 60px;
 left:150px;
 text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 font-weight:bold;
+}
 
+
+
+ .stranger_upcl{
+ position:fixed;
+  top: 1400px; 
+  left:100px;
+  width:500px;
+  background: orangered;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 4rem;
+  outline: none;
+  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+ }
+
+#strangeridn{
+ position:fixed;
+  top: 100px;
+  left:50px;
+  font-size:60px;
+   color:green;
+}
+
+#strangeridt{
+ position:fixed;
+  top: 200px;
+  left:50px;
+  font-size:60px;
+   color:green;
+}
+
+
+
+
+#strangerid{
+ position:fixed;
+  top: 300px;
+  left:50px;
+  font-size:60px;
+   color:green;
 }
 
 
@@ -2695,8 +2782,8 @@ font-weight:bold;
 <INPUT TYPE="button" VALUE="下架出清產品" id="menuid33" onClick="get3()">
 <INPUT TYPE="button" VALUE="百貨用品 出清 " id="menuid44" onClick="get4()">
 <INPUT TYPE="button" VALUE="二手商品 出清" id="menuid55" onClick="get5()">
-<INPUT TYPE="button" VALUE="與 我 聯 絡" id="menuid66" onClick="get6()">    -->
-<INPUT TYPE="button" VALUE="關 於 本 店" id="menuid77" onClick="get7()">
+<INPUT TYPE="button" VALUE="關 於 本 店" id="menuid66" onClick="get6()">    -->
+<INPUT TYPE="button" VALUE="與 我 聯 絡" id="menuid77" onClick="get7()">
 </div>
 
 
@@ -2706,34 +2793,20 @@ font-weight:bold;
 </dvi>
 
 
+<div id="stranger_allid" style="display:none;">
+<form action="#" method="post" name="google1"  >
+<textarea   id="strangeridn" name="strangern"  rows="1" cols="30"  placeholder="請輸入姓名..."></textarea>
+<textarea   id="strangeridt" name="strangert"  rows="1" cols="30"  placeholder="請輸入聯絡電話..."></textarea>
+<textarea   id="strangerid" name="stranger"  rows="15" cols="30"  placeholder="請輸入留言..."></textarea>
+<button onclick="stranger_upfu( )"><div class="stranger_upcl" >上傳 留言</button>
+</form>
+
 </body>
 
 
-<script type="text/javascript">
-
-  const scriptURL='https://script.google.com/macros/s/AKfycbygh47F_E9c66nPL4jAfe6o7T6EzJgc-8q_4F7Nn5UsR-3yge65_Q8pzWCLebO4rrAb/exec'
-
-        const form = document.forms['google']
-          
-          form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              .then(response => alert("上傳成功！！"))
-              .catch(error => console.error('Error!', error.message))
-          })
-function upfu(){
-var Today=new Date();
-up_time1=Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日"
-up_time2=Today.getHours()+"點"+Today.getMinutes()+"分"+Today.getSeconds()+"秒";
 
 
-document.getElementById("shopid").value =rrr2;
-document.getElementById("itemsid1").value =up_time1+"\n"+up_time2;
-document.getElementById("itemsid3").value ="客編 "+rrr1+"名稱"+rrr2;
-document.getElementById("itemsid4").value =proo;
 
-}
-</script>
 
 
 </html>
