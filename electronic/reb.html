@@ -139,7 +139,7 @@ document.getElementById("add_cartid").style.display="block";
  rrr2=localStorage.getItem(28422842);
  
 
-document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+" 光臨";
+document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+" "+" 光臨";
 document.getElementById("loginid").style.display="block";
 document.getElementById("establishid").style.display="block";
 // establish 建立
@@ -292,7 +292,7 @@ localStorage.setItem(mobile+2,0);
 rrr1=localStorage.getItem(mobile);
 rrr2=localStorage.getItem(mobile+1);
 document.getElementById("welcomeid").style.display="block";
-document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+"光臨"
+document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+" "+"光臨"
 localStorage.setItem(10501050,rrr1);
 localStorage.setItem(28422842,rrr2);
 }
@@ -339,7 +339,7 @@ rrr2="未建檔";}
 localStorage.setItem(10501050,rrr1);
 localStorage.setItem(28422842,rrr2);
 document.getElementById("welcomeid").style.display="block";
-document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+"光臨"
+document.getElementById("welcomeid").innerHTML="歡迎 "+rrr2+" "+"光臨"
 
 }
 
@@ -587,8 +587,8 @@ border-radius:50px;
 .concl{
  touch-action: auto;
  position: fixed;
-  top: 1100px;  
-  left: 700px;
+  top: 1300px;  
+  left: 600px;
   background-color:red;
   border:none;
   font-weight:bold;
@@ -687,7 +687,7 @@ padding: 10px 20px
 .establishcl{
    font-size:70px;
   position:fixed;
-  top:140px;
+  top:130px;
   left:500px;
  background-color:green;
   border:none;
@@ -713,7 +713,7 @@ padding: 10px 20px
 .logincl{
 font-size:70px;
  position:fixed;
-  top:140px;
+  top:130px;
   left: 50px;
   background-color:green;
   border:none;
@@ -730,7 +730,10 @@ padding: 10px 20px
 .shopping_cartcl{
  position:fixed;
   top:10px;
-  left: 750px;}
+  left: 800px;
+ border-radius:20px;
+
+}
 
 
 
@@ -1118,7 +1121,7 @@ font-weight:bold;
 
  .stranger_upcl{
  position:fixed;
-  top: 1200px; 
+  top: 1300px; 
   left:20px;
   width:400px;
   background: orangered;
@@ -1132,7 +1135,7 @@ font-weight:bold;
 
 #strangeridn{
  position:fixed;
-  top: 50px;
+  top: 100px;
   left:50px;
   font-size:60px;
    color:green;
@@ -1140,7 +1143,7 @@ font-weight:bold;
 
 #strangeridt{
  position:fixed;
-  top: 200px;
+  top: 250px;
   left:50px;
   font-size:60px;
    color:green;
@@ -1151,7 +1154,7 @@ font-weight:bold;
 
 #strangerid{
  position:fixed;
-  top: 300px;
+  top: 400px;
   left:50px;
   font-size:60px;
    color:green;
@@ -2795,12 +2798,11 @@ font-weight:bold;
 
 <div id="stranger_allid" style="display:none;">
 <form action="#" method="post" name="google1"  >
-<textarea   id="strangeridn" name="strangern"  rows="1" cols="20"  placeholder="請輸入姓名..."></textarea>
-<textarea   id="strangeridt" name="strangert"  rows="1" cols="20"  placeholder="請輸入聯絡電話..."></textarea>
-<textarea   id="strangerid" name="stranger"  rows="10" cols="20"  placeholder="請輸入留言..."></textarea>
-<button onclick="stranger_upfu( )"><div class="stranger_upcl" >上傳 留言</button>
+<input  type="text" id="strangeridn" name="strangern" placeholder="請輸入姓名...">
+<input  type="text" id="strangeridt" name="strangert" placeholder="請輸入聯絡電話...">
+<textarea   id="strangerid" name="stranger"  rows="10" cols="23"  placeholder="請輸入留言..."></textarea>
+<button onclick="stranger_upfu( )"><div class="stranger_upcl" >留言 上傳</button>
 </form>
-
 </body>
 
 
