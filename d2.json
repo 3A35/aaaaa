@@ -1,0 +1,24 @@
+{
+    st: [
+      {
+        "Name": "Jason",
+        "Age": 18,
+        "Gender": "male"
+      },
+      {
+        "Name": "Wendy",
+        "Age": 30,
+        "Gender": "female"
+      },
+      {
+        "Name": "Alex",
+        "Age": 50,
+        "Gender": "male"
+      },
+      {
+        "Name": "Amanda",
+        "Age": 21,
+        "Gender": "female"
+      }
+    ]
+}
