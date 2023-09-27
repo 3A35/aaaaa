@@ -18,7 +18,9 @@
 2c-1nf*hdmi 線 長度3米*2c-1nl    2c-1pf*120*2c-1pl
 2c-2nf*hdmi 線 長度 1.5米*2c-2nl    2c-2pf*90*2c-2pl
 2d-1nf*網路線 長度 1米*2d-1nl    2d-1pf*40*2d-1pl
-
+2e-1nf*公對公 杜邦線  長度 30公分 40pin  ,*2e-1nl    2e-1pf*60  *2e-1pl
+2e-2nf*公對母 杜邦線  長度 30公分 40pin  ,*2e-2nl    2e-2pf*60  *2e-2pl
+2e-3nf*母對母 杜邦線  長度 30公分 40pin  ,*2e-3nl    2e-3pf*60  *2e-3pl
 
 9a-1nf*10uf 250v 電解電容*9a-1nl    9a-1pf*15*9a-1pl
 9a-2nf*0.47uf  50v 電解電容*9a-2nl    9a-2pf*5*9a-2pl
