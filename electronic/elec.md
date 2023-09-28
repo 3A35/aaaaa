@@ -38,6 +38,20 @@
 2e-1nf*公對公 杜邦線  長度 30公分 40pin  ,*2e-1nl    2e-1pf*60  *2e-1pl
 2e-2nf*公對母 杜邦線  長度 30公分 40pin  ,*2e-2nl    2e-2pf*60  *2e-2pl
 2e-3nf*母對母 杜邦線  長度 30公分 40pin  ,*2e-3nl    2e-3pf*60  *2e-3pl
+2f-1nf*硬碟 光碟  SATA 線 公對公 長度 30公分 ,*2f-1nl    2f-1pf*40  *2f-1pl
+2f-2nf*90度 硬碟 光碟  SATA 線 公對公 長度 30公分 ,*2f-2nl    2f-2pf*40  *2f-2pl
+2g-1nf*大4P公 轉 SATA母*2  短線 ,*2g-1nl    2g-1pf*80  *2g-1pl
+2g-2nf*IDE  40pin 轉 44pin   短線 ,*2g-2nl    2g-2pf*50  *2g-2pl
+2g-3nf*大4P公 轉 4pin  短線 ,*2g-3nl    2g-3pf*40  *2g-3pl
+2h-1nf*DC 2.1 公頭  10公分短線 ,*2h-1nl    2h-1pf*20  *2h-1pl
+2h-2nf*DC 2.1 母頭  10公分短線 ,*2h-2nl    2h-2pf*20  *2h-2pl
+2h-3nf*DC 2.1   1母轉4公頭  20公分短線 ,*2h-3nl    2h-3pf*80  *2h-3pl
+2h-4nf*DC 2.1   1母轉3公頭  20公分短線 ,*2h-4nl    2h-4pf*60  *2h-4pl
+2h-5nf*DC 2.1  公頭  轉 usb 公頭  長度1米 ,*2h-5nl    2h-5pf*50  *2h-5pl
+2h-6nf*DC 1.3  母頭  轉 usb 公頭  長度1米 ,*2h-6nl    2h-6pf*50  *2h-6pl
+2h-7nf*DC 1.1  公頭  轉 usb 公頭  長度1米 ,*2h-7nl    2h-7pf*50  *2h-7pl
+2h-8nf*DC 1.3  公頭  轉 usb 公頭  長度1米 ,*2h-8nl    2h-8pf*50  *2h-8pl
+
 
 9a-1nf*10uf 250v 電解電容*9a-1nl    9a-1pf*15*9a-1pl
 9a-2nf*0.47uf  50v 電解電容*9a-2nl    9a-2pf*5*9a-2pl
