@@ -25,7 +25,16 @@
 2c-8nf*15米長  HDMI 線 1.4版 ,*2c-8nl    2c-8pf*350  *2c-8pl
 2c-9nf*20米長  HDMI 線 1.4版 ,*2c-9nl    2c-9pf*450  *2c-9pl
 2c-10nf*30米長  HDMI 線 1.4版 ,*2c-10nl    2c-10pf*600  *2c-10pl
-2d-1nf*網路線 長度 1米*2d-1nl    2d-1pf*40*2d-1pl
+2d-1nf*1米 Cat.5e網路線 ,*2d-1nl    2d-1pf*30  *2d-1pl
+2d-2nf*2米 Cat.5e網路線 ,*2d-2nl    2d-2pf*40  *2d-2pl
+2d-3nf*3米 Cat.5e網路線 ,*2d-3nl    2d-3pf*60  *2d-3pl
+2d-4nf*5米 Cat.5e網路線 ,*2d-4nl    2d-4pf*100  *2d-4pl
+2d-5nf*10米 Cat.5e網路線150 ,*2d-5nl    2d-5pf*150  *2d-5pl
+2d-6nf*15米 Cat.5e網路線 ,*2d-6nl    2d-6pf*200  *2d-6pl
+2d-7nf*20米 Cat.5e網路線 ,*2d-7nl    2d-7pf*240  *2d-7pl
+2d-8nf*30米 Cat.5e網路線 ,*2d-8nl    2d-8pf*290  *2d-8pl
+2d-9nf*50米 Cat.5e網路線 ,*2d-9nl    2d-9pf*380  *2d-9pl
+2d-10nf*1.5米 Cat.5e網路線 ,*2d-10nl    2d-10pf*35  *2d-10pl
 2e-1nf*公對公 杜邦線  長度 30公分 40pin  ,*2e-1nl    2e-1pf*60  *2e-1pl
 2e-2nf*公對母 杜邦線  長度 30公分 40pin  ,*2e-2nl    2e-2pf*60  *2e-2pl
 2e-3nf*母對母 杜邦線  長度 30公分 40pin  ,*2e-3nl    2e-3pf*60  *2e-3pl
