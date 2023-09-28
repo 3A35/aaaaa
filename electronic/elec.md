@@ -15,8 +15,16 @@
 2b-1nf*mini 5pin usb線 長度1米*2b-1nl    2b-1pf*40*2b-1pl
 2b-2nf*usb  公母 延長線 長度1米*2b-2nl    2b-2pf*50*2b-2pl
 2b-3nf*usb 線  公對公 長度1米*2b-3nl    2b-3pf*50*2b-3pl
-2c-1nf*hdmi 線 長度3米*2c-1nl    2c-1pf*120*2c-1pl
-2c-2nf*hdmi 線 長度 1.5米*2c-2nl    2c-2pf*90*2c-2pl
+2c-1nf*30公分長  HDMI 線 1.4版 ,*2c-1nl    2c-1pf*30  *2c-1pl
+2c-2nf*1米 長  HDMI 線 1.4版 ,*2c-2nl    2c-2pf*50  *2c-2pl
+2c-3nf*1.5 米長  HDMI 線 1.4版 ,*2c-3nl    2c-3pf*60  *2c-3pl
+2c-4nf*2米長  HDMI 線 1.4版 ,*2c-4nl    2c-4pf*80  *2c-4pl
+2c-5nf*3米長  HDMI 線 1.4版 ,*2c-5nl    2c-5pf*120  *2c-5pl
+2c-6nf*5米長  HDMI 線 1.4版 ,*2c-6nl    2c-6pf*180  *2c-6pl
+2c-7nf*10米長  HDMI 線 1.4版 ,*2c-7nl    2c-7pf*250  *2c-7pl
+2c-8nf*15米長  HDMI 線 1.4版 ,*2c-8nl    2c-8pf*350  *2c-8pl
+2c-9nf*20米長  HDMI 線 1.4版 ,*2c-9nl    2c-9pf*450  *2c-9pl
+2c-10nf*30米長  HDMI 線 1.4版 ,*2c-10nl    2c-10pf*600  *2c-10pl
 2d-1nf*網路線 長度 1米*2d-1nl    2d-1pf*40*2d-1pl
 2e-1nf*公對公 杜邦線  長度 30公分 40pin  ,*2e-1nl    2e-1pf*60  *2e-1pl
 2e-2nf*公對母 杜邦線  長度 30公分 40pin  ,*2e-2nl    2e-2pf*60  *2e-2pl
