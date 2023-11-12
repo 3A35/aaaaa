@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+<title>週末 happy</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+function sho(){
+ document.getElementById("in").style.display="none" ;
+document.getElementById("tid").style.display="block";  
+document.getElementById("v7id").style.display="none" ;
+document.getElementById("v1id").style.display="block" ;
+
+ 
+s1id=document.getElementById("s1id");
+
+s1id.play();
+
+
+
+setTimeout(get2,20000);
+}
+
+function get2(){
+document.getElementById("v1id").style.display="none" ;
+document.getElementById("v2id").style.display="block" ;
+
+
+setTimeout(get3,20000);
+
+}
+
+
+function get3(){
+document.getElementById("v2id").style.display="none" ;
+document.getElementById("v3id").style.display="block" ;
+setTimeout(get4,20000);
+
+}
+
+
+function get4(){
+document.getElementById("v3id").style.display="none" ;
+document.getElementById("v4id").style.display="block" ;
+setTimeout(get5,20000);
+
+}
+
+
+function get5(){
+document.getElementById("v4id").style.display="none" ;
+document.getElementById("v5id").style.display="block" ;
+setTimeout(get6,20000);
+
+}
+
+function get6(){
+document.getElementById("v5id").style.display="none" ;
+document.getElementById("v6id").style.display="block" ;
+setTimeout(get7,20000);
+
+}
+
+
+function get6(){
+document.getElementById("v6id").style.display="none" ;
+document.getElementById("v7id").style.display="block" ;
+
+setTimeout(sho,20000);
+
+}
+
+
+
+
+</script>
+
+<style type="text/css">
+.video-back{
+position:fixed;
+top:0;
+left:0;
+min-width:100%;
+min-height:100%;
+}
+
+
+ .tcl{
+position: fixed;
+  top: 50px;
+  left:60px;
+
+
+text-shadow: black 0.1em 0.1em 0.2em
+
+ 
+ 
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+<div  id="v1id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v1.mp4">
+</video>
+</div>
+
+
+<div  id="v2id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v2.mp4">
+</video>
+</div>
+
+
+
+
+<div  id="v3id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v3.mp4">
+</video>
+</div>
+
+
+<div  id="v4id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v4.mp4">
+</video>
+</div>
+
+
+<div  id="v5id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v5.mp4">
+</video>
+</div>
+
+
+<div  id="v6id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v6.mp4">
+</video>
+</div>
+
+
+<div  id="v7id" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="v7.mp4">
+</video>
+</div>
+
+
+
+
+
+<audio id="s1id" src="s1.mp4"  autoplay loop controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="in.jpg" width="1200"  height="1600"  onClick="sho()">
+</div>
+
+
+
+
+<div id = "tid" class = "tcl" style="display:none;" >
+
+<div  style="font-size:400px;color:pink;font-weight: bold;">週 末 愉 快</div>
+
+</div>
+
+                
+
+
+
+</body>
+</html>
