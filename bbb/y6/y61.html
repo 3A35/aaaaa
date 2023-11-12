@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<head>
+<title>weekend</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function sho(){
+
+document.getElementById("in").style.display="none";
+document.getElementById("tid").style.display="block";
+document.getElementById("bl").style.display="block";
+
+aaa=document.getElementById("bau");
+
+aaa.play();
+
+var fff;
+var si;
+
+ 
+fff=document.getElementById("tid"); 
+si1=document.getElementById("ph1"); 
+si2=document.getElementById("ph2"); 
+si3=document.getElementById("ph3"); 
+var  clo1=setInterval(ep1, 1);
+
+ var yyy=1800;
+ var kkk=85;
+ function ep1(){  
+  yyy--;  
+
+ if (yyy<250) { 
+kkk++;
+}
+
+ if (yyy==150) { 
+clearInterval(clo1);
+}
+ else { 
+ fff.style.top=yyy+"px";
+ fff.style.left="250px";
+si1.style.fontSize=kkk+ "px";
+si2.style.fontSize=kkk+ "px";
+si3.style.fontSize=kkk+ "px";
+}
+
+
+}
+
+ var  clo2=setInterval(ep2, 200);
+var ii=1
+ function ep2() {
+ if(ii==1){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="yellow"; 
+  document.getElementById("ph3").style.color="yellow";
+   
+ }
+ if(ii==2){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="yellow"; 
+ document.getElementById("ph3").style.color="yellow";
+ 
+}  
+
+ if(ii==3){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="orange";
+  
+}   
+     
+
+ if(ii==4){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="orange";
+ 
+}   
+
+ if(ii==5){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="red"; 
+ document.getElementById("ph3").style.color="red";
+  
+}  
+
+ if(ii==6){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="red"; 
+ document.getElementById("ph3").style.color="red";
+  
+}   
+     
+
+ if(ii==7){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="yellow"; 
+ document.getElementById("ph3").style.color="yellow";
+ 
+}   
+
+ if(ii==8){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="yellow"; 
+ document.getElementById("ph3").style.color="yellow";
+ 
+}   
+
+
+ if(ii==9){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="orange";
+ 
+}   
+
+ if(ii==10){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="orange";
+
+}   
+     
+
+ if(ii==11){
+  document.getElementById("ph1").style.color="red";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="orange";
+ 
+}   
+
+ ii++;
+if(ii==12) {ii=1;}
+
+}
+
+
+}
+</script>
+
+<style type="text/css">
+
+ .ttt{
+position: fixed;
+  top: 1600px;
+  left: 280px;
+}
+
+
+ .bbbg img {
+            min-height: 100%;
+            width: 100%;
+
+        }
+
+.video-back{
+
+
+
+height:1800px;
+}
+
+</style>
+</head>
+<body>
+<div  class="ttt"  id="tid" style="display:none;">
+<div id="ph1" style="color:red;font-weight:bold;" >2 0 2 3   </div>
+<br> <br> <br>  <br> <br>
+<div id="ph2" style="color:red;font-weight:bold;">週  末</div>
+<br> <br> <br>  <br> <br>
+<div  id="ph3" style="color:red;font-weight:bold;"> 愉 快 happy !</div>
+</div>               
+
+
+<div id="in">
+<input type="image" src="in.jpg"  width="1200"  height="2000"  onClick="sho()">
+</div>
+
+<audio id="bau" src="new.mp4" loop controls="controls" hidden="true"></audio>
+
+<div  id="bl" style="display:none;">
+<video class="video-back" autoplay loop muted>
+<source src="new.mp4" width="2000" height="3000" >
+</video>
+</div>
+
+
+</body>
+</html>
